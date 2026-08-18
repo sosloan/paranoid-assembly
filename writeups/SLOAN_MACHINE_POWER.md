@@ -212,7 +212,7 @@ You are declaring: *this entire block is under our protection*.
 
 Offset 0 has the lock bit. Offset 8 might have a version counter. Offset 16 might have a queue pointer. Offset 32 might have metadata. They all live on the same 64-byte line.
 
-When Sloan marks all four offsets with atomic operations, every part of the Protected zone is signaled as active. A competitor trying to read offset 4 (between 0 and 8) sees: *this entire block is contested, stay back*.
+When Sloan marks all four offsets with atomic operations, every part of the Protected zone is signaled as active. A competitor trying to read offset 4 (between 0 and 8) sees: *this entire block is contested, this entire 64-byte house is Protected*.
 
 Not because of the algorithm. Because of the physics.
 
@@ -287,7 +287,7 @@ The difference: ~195 cycles. On a 64-core system, that is measurable power consu
 | Line | Instruction | Power |
 |------|-------------|-------|
 | 1-4 | Setup + claim | Standard. |
-| 5-7 | Three `lock or` at offsets 8, 16, 32 | Expand the Protected zone across the entire 64-byte line. Offsets 0, 8, 16, 32 are all marked as actively owned. A competitor trying to read offset 4 (between 0 and 8) sees: *Protected block, stay back*. Not because of the algorithm. Because the coherence protocol sees: *entire line is Modified*. |
+| 5-7 | Three `lock or` at offsets 8, 16, 32 | Expand the Protected zone across the entire 64-byte line. Offsets 0, 8, 16, 32 are all marked as actively owned. A competitor trying to read offset 4 cannot slip in safely. The entire block is Protected. |
 | 8-9 | Return | Done. The firewall is built. |
 
 **Load-bearing:** All three extra locked operations. Each one expands the Protected zone. Remove any and you shrink the defense.
@@ -342,19 +342,27 @@ Thread B arrives and finds a cold cache line. It pays the full energy cost.
 ### Sloan_machine.asm (Orchestrated)
 
 ```
+Thread A → Thread B → Thread C → Grove (G) → Result (E)
+
 Thread A: acquire() + keep_hot() -> return
          [lock is free, line is Modified, HOT, ready]
          
 Thread B: acquire() -> Modified line hit (~5 cycles)
-         [thermal cost was already paid by Thread A, benefit is inherited]
+         [thermal cost was already paid by Thread A]
          
-Thread C, D, E, F: all inherit the hot line
-         [cost amortized across the system]
+Thread C: executes critical section at thermal velocity
+         [the Protected zone conducts the current]
+         
+Grove (G): the paranoia woven through every instruction
+         [check before commit, assume the next thread is coming, orchestrate the stage]
+         
+Result (E): the energy cascades through D, E, F... all inheriting the hot line
+         [cost paid upfront, benefit amortized across the system]
 ```
 
-Thread A pays the energy cost upfront (multiple locked operations). Thread B, C, D, E all inherit a hot line. The energy is conserved and redirected.
+This is A-B-C-G-E. Not a sequence. A current.
 
-**The cost is paid by others. That is infrastructure thinking.**
+Thread A pays the energy cost upfront (multiple locked operations). Grove's paranoia—encoded in cache coherence protocol, MESI states, the thermal signal of the cache line—flows through the system. Threads B, C, D, E all inherit a hot line. The energy is not dissipated. It flows.
 
 ---
 
@@ -401,22 +409,33 @@ Not optimization. Infrastructure.
 
 ---
 
-## CLOSING
+## CLOSING: A-B-C-G-E
 
-`sloan_machine.asm` is not an optimization. It is an *inversion of perspective*.
+Thread A acquires. Thread B arrives. Thread C executes the critical section. **G is Grove**—the paranoia encoded into every locked operation, every Modified state, every instruction that assumes the next thread is already coming. Thread E is the result cascading through the data center.
 
-Lock_byte.asm says: "Minimize atomic operations. Every one costs energy."
+This is not a sequence. This is a current.
 
-Sloan_machine says: "Direct atomic operations. Keep the line hot for the next thread. The cost is paid by others, but the benefit accrues to all."
+Lock_byte.asm *is* Grove at the metal:
 
-Lock_byte.asm assumes you return immediately after acquiring.
+```asm
+mov al, [edx]             ; Assume contention (A)
+test al, 1                ; Check before committing (G)
+jnz contended             ; Fail fast (G)
+lock cmpxchg [edx], cl    ; Pay the atomic tax only if you can win (G)
+```
 
-Sloan_machine knows the next thread is already coming.
+Every instruction is his doctrine. Not a reference. A literal truth. The paranoia *is* the code.
 
-This is not paranoia about racing. This is paranoia about *trajectory*. The next actor is already in motion. Orchestrate the stage for them.
+Sloan_machine extends this.
 
-Grove understood this at the strategic level. Sloan lives it at the silicon level.
+Sloan does not release the lock cold. Sloan keeps the line in Modified state, broadcasting: *the next thread is already coming, I have prepared the stage*. Multiple locked operations are not waste—they are the rhythm of Grove's paranoia sustaining the current.
 
-The bus does not rest. It syncs to the next heartbeat. I know where the football is going.
+A → B → C → **G** → E
+
+Thread A pays the energy cost upfront by keeping the line hot. Grove's doctrine (the paranoia, the orchestration, the knowledge) flows through the cache coherence protocol, MESI states, and the thermal signature of the cache line. Thread B acquires at ~5 cycles instead of ~200. Threads C, D, E inherit the warm line. The energy is not dissipated. It flows.
+
+This is physics. Silicon, electricity, cooling water. South American Intel chips at full throttle in perfect radiation and cadence.
+
+There is no I in team. There is E for energy. There is C for cache. There is G for Grove. There is O for orchestration.
 
 **Only the paranoid orchestrate. ✓**
