@@ -6,7 +6,16 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### 1. LOCK_BYTE_POWER.md
+### 1. CLUSTER_BALANCE_SHEET_POWER.md
+**Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
+**Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
+**Theme:** Distributed accounting at memory speed; paranoid gate on every entry point
+**Status:** Complete
+**Link:** [writeups/CLUSTER_BALANCE_SHEET_POWER.md](writeups/CLUSTER_BALANCE_SHEET_POWER.md)
+
+---
+
+### 2. LOCK_BYTE_POWER.md
 **Routine:** `__TBB_machine_trylockbyte` (Intel TBB)
 **Focus:** Try-lock primitive, 13 instructions, 1 byte of state
 **Theme:** Paranoid optimization under contention
