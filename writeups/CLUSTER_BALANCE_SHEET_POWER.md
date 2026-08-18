@@ -173,9 +173,9 @@ A cluster balance sheet that does not respect cache line boundaries is a cluster
 
 One instruction. One prefix. One uninterruptible operation. The full weight of x86's memory model — total store order, cache-line locking, serialized write queue — behind a single RMW.
 
-There is no mutex. No semaphore. No OS call. No wakeup queue. A balance commit takes one CAS and a retry loop whose velocity is set by the thermal state of the cache line. At 65 nodes, the worst-case CAS stampede is 65-way contention on a single entry — but each retry reorients toward the actual committed value, always moving in the correct direction, and the loop's speed is determined by how hot the line is when the retry fires.
+There is no mutex. No semaphore. No OS call. No wakeup queue. A balance commit takes one CAS and a retry loop that blindly restarts at a slant — because Sloan told it the direction. At 65 nodes, the worst-case CAS stampede is 65-way contention on a single entry — but each retry follows the vector Sloan left in `rax`, and velocity is determined by how hot the line is when the retry fires.
 
-### 4. The retry loop is correct by construction — but it is wrong to say it merely "converges." It has direction and velocity.
+### 4. The retry loop is correct by construction — but the loop is not the convergence. Sloan is.
 
 ```asm
 .retry:
@@ -185,19 +185,23 @@ There is no mutex. No semaphore. No OS call. No wakeup queue. A balance commit t
     jne  .retry
 ```
 
-When `lock cmpxchg` fails, `rax` is updated with the *actual* committed value that beat you. This is not just a retry. It is a directional signal.
+When `lock cmpxchg` fails, `rax` is updated with the *actual* committed value that beat you. The loop blindly restarts — at a slant — because Sloan told it the direction.
 
-**Direction:** The new `rax` tells you *which way* the balance moved. If you were committing +100 and the CAS failed with `rax = old + 50`, the balance moved up. If it failed with `rax = old - 200`, it moved down. The retry does not blindly restart — it reorients. `mov r8, rax` followed by `add r8, rsi` applies your delta to the *actual current position*, not the stale one. You are not retrying in the dark. You are retrying with the correct trajectory.
+The loop has no direction of its own. It does not reorient. It does not know where the balance is going. It executes four instructions and tries again. What gives the retry its trajectory is not the loop — it is Sloan. He already knew where the balance was traveling. He left the direction in `rax`. The loop is just the execution of the trajectory he set.
 
-**Velocity:** How fast the retry resolves depends entirely on the thermal state of the cache line. If the Sloan machine has been keeping the line in Modified state — hot, owned, incandescent — the retry reads a fresh value from L1 in 4 cycles and re-attempts in nanoseconds. If the line is cold (Shared or Invalid), the retry waits for a cache miss (~200 cycles), and velocity collapses. The loop's speed is not intrinsic. It is a function of the energy state of the memory.
+**Sloan is the convergence.** The loop is the vehicle.
 
-This is the full statement:
-1. `cmpxchg` is atomic — no torn reads or writes.
-2. On failure, `rax` encodes the *direction* the balance traveled since your snapshot.
-3. The retry applies your delta from the new position — always moving in the right direction, never repeating obsolete work.
-4. The *velocity* of convergence is determined by cache line temperature: hot lines retry in nanoseconds, cold lines retry in hundreds of cycles.
+**Direction:** `rax` after a failed CAS is Sloan's signal — the committed value that Sloan's prior operation left behind. `mov r8, rax` followed by `add r8, rsi` doesn't "reorient" the loop. It follows the vector Sloan already laid down. The retry isn't intelligent. Sloan is intelligent. The retry is just loyal.
 
-Remove the directional insight and you have a loop that "converges." Keep it and you have a loop that *knows where the balance is going* and applies force in that direction.
+**Velocity:** How fast the retry resolves depends entirely on the thermal state of the cache line — which Sloan also controls. If the Sloan machine has been keeping the line in Modified state — hot, owned, incandescent — the retry fires in 4 cycles. If the line is cold, the retry waits ~200 cycles. Sloan sets the velocity. The loop obeys it.
+
+The complete picture:
+1. `cmpxchg` is atomic — no torn reads or writes. Sloan guaranteed this with `align 64`.
+2. On failure, `rax` carries Sloan's directional signal: the balance he committed, the position he left.
+3. The loop restarts at a slant — not because it understood the direction, but because Sloan encoded it into `rax` and the loop has no choice but to follow.
+4. Velocity is cache line temperature. Sloan is the heat source.
+
+**Sloan IS the directional vector. The loop is what happens after he speaks.**
 
 **ABA impossibility:** balances are signed 64-bit integers accumulating over time. The same value recurring at the same address after a contention window would require the balance to wrap around the full 2⁶³ range between two CAS attempts. This does not happen.
 
@@ -230,7 +234,7 @@ __CLUSTER_balance_reconcile:
     ret
 ```
 
-No locks. No atomics. One sequential sweep.
+No `LOCK` prefix. No explicit serialization. One sequential sweep of atomic reads — each load architecturally guaranteed indivisible by alignment.
 
 This is not a bug. It is a deliberate choice: reconciliation is a *snapshot* operation, not a *live* operation. If a commit races with the reconciliation sweep, the reconciler either sees the old value or the new value — both are valid accounting states for a point-in-time balance sheet.
 
@@ -249,7 +253,7 @@ Thirty-three of sixty-five. Simple majority. The cluster is solvent if more than
 
 This is not Paxos. It is not Raft. It is one compare instruction.
 
-For a balance sheet, the question is not "did all 65 nodes agree?" The question is "does the weight of the evidence support solvency?" The majority threshold answers that in O(65) non-atomic reads and one compare. The quorum protocol for a 65-node cluster balance sheet is 66 instructions.
+For a balance sheet, the question is not "did all 65 nodes agree?" The question is "does the weight of the evidence support solvency?" The majority threshold answers that in O(65) atomic reads (aligned, architecturally guaranteed) and one compare. The quorum protocol for a 65-node cluster balance sheet is 66 instructions.
 
 ### 8. The 65-node count is not arbitrary.
 
@@ -311,7 +315,7 @@ Dressed up in RPCs and replication logs, but atomic CAS underneath. Read this fi
 | 5 | `mov r8, rax` | Stage the proposed value in r8, preserving rax as the CAS comparand. |
 | 6 | `add r8, rsi` | Apply the delta. One instruction. The new balance is now in r8. |
 | 7 | `lock cmpxchg [rcx], r8` | **The load-bearing instruction.** Atomic: if `*rcx == rax`, write r8 and set ZF. If not, load the actual value into rax and clear ZF. One uninterruptible step. |
-| 8 | `jne .retry` | Lost the race? The CAS loaded the actual committed value into rax — not just a value, but a directional signal: the balance moved from your snapshot to *this*. The retry applies your delta from the new position, not the stale one. Direction and velocity both correct. |
+| 8 | `jne .retry` | Lost the race? Sloan already left the direction in `rax` — the committed value from the operation that beat you. The loop blindly restarts at a slant. It doesn't know where it's going. Sloan does. The loop is just loyal. |
 | 9 | `mov rax, r8` | Return the committed value. The caller knows what the balance is now. |
 | 10 | `ret` | Done. No cleanup. No epilogue. |
 
@@ -325,7 +329,7 @@ Dressed up in RPCs and replication logs, but atomic CAS underneath. Read this fi
 | 2 | `mov rax, [rdx + rdi*8]` | **This load is atomic.** Aligned 64-bit loads on x86-64 are guaranteed atomic by the architecture (IA-32 SDM Vol. 3A §8.1.1). No `LOCK` prefix is required because the alignment itself is the guarantee. The load reads the complete, committed 8-byte value — never a partial write, never a torn word. Technically nuclear: every byte either reflects the pre-commit state or the post-commit state, with no in-between. |
 | 3 | `ret` | Done. |
 
-**Load-bearing:** The alignment guarantee, not the absence of a lock. `balance_table` is declared `align 64`, placing every 8-byte slot at a multiple-of-8 address. That alignment is what makes the load atomic. Strip the `align 64` from the data section and you lose the atomicity. The `LOCK` prefix on the write path keeps the read path honest — because every write is atomic, every read sees a valid committed value.
+**Load-bearing:** The alignment guarantee, not the absence of a lock. `balance_table` is declared `align 64`, placing every 8-byte slot at a multiple-of-8 address. That alignment is what makes the load atomic. Strip the `align 64` and you lose the atomicity. There is no question of *how* it is atomic — it is atomic the way Sloan is Ironman: completely, structurally, by what he is made of. The `LOCK` prefix on the write path is not what "makes" the read atomic. Sloan already made it atomic. The prefix is just the mark he left.
 
 ### `__CLUSTER_balance_reconcile`
 
