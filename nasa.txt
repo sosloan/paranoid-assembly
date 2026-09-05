@@ -1,0 +1,117 @@
+SEL-95-001 WRITEUP: FLIGHT DYNAMICS ADA/OOD OUTCOMES
+
+REPORT SUMMARY: SEL-95-001 documents NASA Goddard Flight Dynamics Division's Ada and object-oriented design transition across the late 1980s and early 1990s, with emphasis on reuse strategy, development outcomes, and organizational adoption constraints.
+
+Status: COMPLETE
+Subject: SEL-95-001 (NASA GSFC Flight Dynamics Division)
+Form: Structured technical writeup (quick reference, context, insights, verification, closing)
+
+------------------------------------------------------------
+QUICK REFERENCE
+------------------------------------------------------------
+
+File: nasa.txt
+Origin: Synopsis by Ann Brandon of NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
+Study Period Covered: 1985-1993 project activity analyzed in this 1995 report
+Baseline Reference Year: 1985 (used in report comparisons)
+Case-Study System Types: telemetry simulators and dynamic simulators
+Language Focus: Ada with object-oriented design practices
+
+------------------------------------------------------------
+THE SYSTEM, IN FULL CONTEXT
+------------------------------------------------------------
+
+The report chronicles a decade-long transition in a mission-critical environment where software defects are operational risks, not mere inconveniences. The Flight Dynamics Division compared Ada and FORTRAN trajectories while introducing object-oriented design methods centered on:
+
+- Information hiding
+- Generic packages
+- Domain analysis
+- Data abstraction
+- Reuse-oriented architecture
+
+The headline outcomes are strategic, not cosmetic:
+Attribution note: The percentage figures below are drawn from the synopsis source "A Synopsis of NASA's Report: Impact of Ada and Object-Oriented Design in the Flight Dynamics Division at Goddard Space Flight Center" (SEL-95-001).
+Synopsis attribution: Ann Brandon; Software Engineering Laboratory Series SEL-95-001 synopsis document.
+
+- Reuse increased by 300% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cost reduced by 40% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cycle time reduced by 25% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+
+Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
+- See telemetry-scope source statements in the EVIDENCE SUMMARY section below.
+
+
+------------------------------------------------------------
+KEY IMPLICATIONS (WRITEUP SYNTHESIS)
+------------------------------------------------------------
+
+1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
+
+Writeup synthesis: Several later projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits.
+
+2) IT TURNS GENERICS INTO RISK CONTROL
+
+Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation, with adaptation performed through parameterization and instantiation for different simulator targets.
+
+3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
+
+Writeup synthesis: The report narrative links early uneven outcomes to tooling maturity, training quality, and project-constraint mismatch, and it reports stronger outcomes in later phases after reuse discipline stabilized.
+
+4) IT DISTINGUISHES SHORT-LIFE VS LONG-LIFE ECONOMICS
+
+Writeup synthesis: The report distinguishes lifecycle economics, with FORTRAN often practical for short-lived single-use software and Ada showing stronger returns in long-lived reusable systems.
+
+5) IT ENFORCES DESIGN FOR FUTURE MISSIONS, NOT JUST CURRENT DEADLINES
+
+Writeup synthesis: Projects like UARSTELS were designed with upcoming systems in mind, enabling high follow-on reuse in later simulator efforts.
+
+6) IT MAKES ORGANIZATIONAL MEMORY A TECHNICAL ASSET
+
+Writeup synthesis: The report highlights reusable libraries and trained maintainers as mechanisms that reduce rediscovery costs in later projects.
+
+------------------------------------------------------------
+DECISION ANALYSIS BY DECISION LAYER (WRITEUP SYNTHESIS)
+------------------------------------------------------------
+
+Decision Layer: Architecture
+Writeup synthesis: Generic package strategy creates stable interfaces that outlive individual projects.
+
+Decision Layer: Development Workflow
+Writeup synthesis: Verbatim reuse minimizes local modifications and limits defect injection opportunities.
+
+Decision Layer: Toolchain
+Writeup synthesis: Compiler maturity plus diagnostic and library-management tooling materially affected adoption velocity and confidence.
+
+Decision Layer: Training
+Writeup synthesis: Hands-on project exposure converts skepticism into operational competence.
+
+Decision Layer: Portfolio Strategy
+Writeup synthesis: Matching language/process to system lifetime maximizes return and reduces systemic risk.
+
+------------------------------------------------------------
+EVIDENCE SUMMARY FROM REPORTED OUTCOMES
+------------------------------------------------------------
+
+Property: Reuse scaling
+Source statement (synopsis): FDD-wide reuse increased by 300% versus 1985 baseline.
+Source statement (report details): Telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
+
+Property: Quality improvement
+Source statement (synopsis): Development error rates reduced by 62% against the 1985 baseline.
+Source statement (synopsis): Telemetry simulators built since 1990 reported 85% fewer development errors.
+
+Property: Cycle-time reduction
+Source statement (synopsis): Cycle time reduced by 25% against the 1985 baseline.
+Source statement (synopsis, telemetry-only metric): Telemetry simulators built since 1990 were delivered in half the time versus the 1985 baseline for the systems.
+
+Property: Cost improvement
+Source statement (synopsis): Cost reduced by 40% versus the 1985 baseline.
+Writeup synthesis: The report context indicates strongest gains in long-lived reuse-oriented Ada efforts.
+
+------------------------------------------------------------
+CLOSING
+------------------------------------------------------------
+
+Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
+Writeup synthesis of reported conclusions: Long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.

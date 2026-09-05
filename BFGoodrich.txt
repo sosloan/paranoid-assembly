@@ -1,0 +1,36 @@
+
+Flexible software pleases both commercial and military aerospace customers, but is often expensive and puts projects in the red. The rigidity of off-the-shelf software pleases neither market entirely but results in a black bottom line. Meanwhile, aerospace companies have to compete well in both markets to stay profitable.
+
+Sometimes, a paradox can only be solved with a new paradigm. At BFGoodrich Aerospace Aircraft Integrated Systems, software technical leads Mark Chaffee and Hal Clark engineered both flexibility and rigidity in software programming in Ada. The result is the Integrated Mechanical Diagnostics Helicopter Usage and Maintenance System (IMD-HUMS).
+
+"Data change, not software"
+
+The two veteran programmers' paradigm is a mantra that they submitted their design criteria to throughout the two-year project: "Data change, not software." Simple, direct, and revolutionary. The "box," which technically only refers to the main processor unit that flies on the helicopter and measures no more than a foot [30 cm] in any direction, won the engineers the BFGoodrich Engineering Innovation Award in 1998.
+
+The Dual Usage HUMS collects data on and measures the wear and tear that a flight causes a helicopter. It smooths the helicopter's vibration level and the rotor system without dedicated flights, and monitors flight parameters, such as air speed and engine torque, and the helicopter's structural usage. It also performs mechanical diagnostics from drive shafts to gear boxes. Designed to check normal flight use, IMD-HUMS also registers anything out of the ordinary, such as a hard landing.
+
+IMD-HUMS acquires data from 150 input channels at a high sample rate. It stores additional data if it detects an anomalous condition, and displays a warning to the pilot on a three-inch [7.6 cm] cockpit indicator. Up to 20 hours of flight data are stored in an on-board PCMCIA flash memory card. After each flight, the data are transferred to a ground station computer running Windows NT. IMD- HUMS then generates a series of operations, maintenance, and engineering reports. The networked-based system manages all flight maintenance and parts data from the fleet's various locations.
+
+Currently [Fall 1999] in flight test on a CH-53E Naval Helicopter, IMD-HUMS will also be installed in H-60s. According to Chaffee, the testing is "going very well" at Patuxent River Naval Station (PAX). The 40K SLOC of Ada95 code, counting terminal semicolons, is a new system. IMD-HUMS's predecessor was installed in the Agusta A109K2 helicopters used in Switzer-land's REGA air ambulances, and in several Eurocopter models AS350/355s that are used by the Spanish traffic police. The HUMS box was a limited version of the current functions written in C++, and STC certified by the Federal Aviation Administration.
+
+Fluid Requirements
+
+The Navy contracted for the new version for their Sikorsky SH60 and CH53 fleet in 1997. The open architecture is also based on the functional and performance requirements of Sikorsky's commercial S-76s and S-92s. From the design stage onwards, the Dual Use HUMS software had to accommodate requirements changes and yet be precise enough to pass FAA standards for commercial flight certification.
+
+Chaffee and Clark decided to program in Ada specifically because the software had to pass FAA's rigorous standards, in which every line of code, including in the runtime system, must be executed and tested. A veteran of building runtime systems to FAA standards, Aonix agreed to create ObjectAda Real-Time RAVEN™ and use BFGoodrich as the compiler's kick-off customer.
+
+Small Size, Fast Performance
+
+Aonix's RAVEN is based on an emerging standard called the Ravenscar Profile, which accommodates certification requirements for safety-critical, real-time systems. The profile defines a special tasking model that emphasizes small size, fast performance, and deterministic behavior.
+
+Aonix's expert on FAA certification traveled many times from Cambridge, Mass., to iron out wrinkles with Chaffee and Clark in Vergennes, Vt.. "Aonix was solid from the beginning," Chaffee said. "We took advantage of Ada95 and used every possible function. If it's in the Ravenscar, we exploited it."
+
+Chaffee and Clark agree that language issues never stalled the project. In fact, they had very few problems with Ada95 after the initial startup. The wrinkles came from changing requirements and integrating them into the design and hardware. However, the engineers found that their object-oriented design provided them with both the flexibility and solidity that they needed even when a new requirement threatened to "stop the whole show."
+
+"The OOD was robust," Clark said. "We added components and objectives very easily. We still are, as requests for new features come back to us."
+
+HUMS runs on a Power PC, which, again, was a new processor for the two engineers. So were the development and test tools they used. Today, they are using Ada Cast™ for the FAA testing, which they estimate will require four months and 3.5 staff years to pass.
+
+"Not as Painful as C++"
+
+Tools and processor were not the only untested components to the IMD-HUMS development. While Chaffee and Clark are experienced Ada83 programmers, neither had worked in Ada95. Clark, who has tested soft-ware for commercial flight in his career, said that to develop IMD-HUMS in Ada83 would have been "painful, but not as painful as C++." New software development tools, new compiler, new processor, new language, new markets to conquer. No wonder Chaffee and Clark were forced to invent a new software development methodology, to coin a new mantra, and to discover a new design paradigm.

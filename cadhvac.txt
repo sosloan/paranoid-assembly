@@ -1,0 +1,118 @@
+Flyer U149-0596
+cadhvac.txt
+
+Ada Used to Develop "Super-CAD" System in the HVAC Industry
+
+The Developer
+
+Byron Informatik is dedicated to software development and 
+consulting for engineering companies in the HVAC (Heating 
+Ventilation and Air Conditioning) sector and for companies 
+doing facility management. Its clientele are from companies 
+around the world, including from Germany and Switzerland, 
+and will soon include many more European countries. 
+
+The System
+
+Byron Informatik used the Alsys Ada development 
+environment to develop a super-CAD system, the "Integrated 
+Engineering System."  The system is far more than a regular 
+CAD-system because all information about the objects is 
+stored in a database.  The CAD-like applications, when 
+plugged into the database, directly manipulate the objects 
+in the database; there is no difference between applications 
+offering the information CAD-like and textual.  In contrast, 
+other CAD systems store the drawings in a separate, internal 
+file format; even when coupled with a database, they tend to 
+dominate the whole system. 
+
+The Integrated Engineering System helps the design of 
+premises to optimize heating, ventilation, and air 
+conditioning effectiveness.  The six-person team originally 
+developed a kernel for the HVAC engineer.  It combines a 
+tight coupling between integrated tools through an 
+underlying object-oriented database and a uniform user 
+interface.  The system allows an easy integration of new 
+tools.  The kernel also fits well for Facility Management 
+tasks, namely Building and Cable Management. 
+
+The project is now six years old and the software 
+includes CAD-like features for the construction of schemes 
+and 3-D plant and building models.  Additionally, it enables 
+users to make relevant calculations on these models for heat 
+loss and for the dimensioning of pipes and radiators.  In 
+facility management applications, the dense information 
+available in a fully developed building model is presented 
+and used to organize administrative tasks (for  instance, 
+services and moves). 
+
+The Development
+
+The application was developed with the Alsys Ada compiler, 
+AdaWorld for HP9000/700 following the Object-Oriented Design 
+method (from Booch).  It took about 300 person-months for 
+the six engineers to develop about 900,000 lines of code.  
+The application was developed with the help of several tools 
+and third-parties: Object Store (Object Design) as Database, 
+PHIGS (Figaro from Liant) and Xll (Motif for the user-
+interface).  A TCP/IP communication network has been used 
+for Object Store and X-Windows information exchange. 
+
+The Ada Advantages
+
+Ada was chosen by the team for this project because it 
+perfectly meets the requirements of the application.  
+"First, Ada is a standard, which enables easy porting on 
+every platform. Second, it provides high-quality support 
+for large programs developed by several developers.  Third 
+and finally, its safety features, like strong typing and 
+packages, are a key point, since it allows package 
+modification without affecting other program modules," says 
+Mr. Duppenthaler, Project Manager. In addition, Byron 
+Informatik developers were able to take advantage of code 
+reuse, made possible with Ada's generic features. 
+
+Ada's Future with Byron Informatik
+
+In the near future, the application will be ported to 
+other Unix workstations and PCs using Solaris.  At the  same 
+time, the software will be loaded with enhanced 
+capabilities.  Convinced of the benefits of Alsys and Ada,  
+Byron Informatik engineers also plan to start developing a 
+new facility management tool in Ada.  They are looking 
+forward to the release of Ada 95.
+
+For further information, please contact: 
+Ann Trib 
+Alsys GMBH & Co.KG 
+Kleinoberfeld 7 
+D-75135 Karlsruhe 
+Germany 
+Tel: + 49 721 985 530 
+Fax: + 49 49 721 985 5398
+										
+Produced in cooperation with the AdaIC, Ada Software 
+Alliance, and ACM SIGAda.
+
+
+********************** 
+The views, opinions, and findings contained in this report are those of 
+the author(s) and should not be construed as an official Agency 
+position, policy, or decision, unless so designated by other official 
+documentation.
+
+Copyright 1996.  IIT Research Institute.  All rights assigned to the 
+U.S. Government (Ada Joint Program Office).  Permission to reprint this 
+flyer, in whole or in part, is granted, provided the AdaIC is 
+acknowledged as the source.
+**********************
+
+Ada Information Clearinghouse (AdaIC)
+P.O. Box 1866
+Falls Church, VA  22041
+Telephone:  1-800-AdaIC-11 (1-800/232-4211) or 703/681-2466
+Fax:  703/681-2869
+E-mail:  adainfo@sw-eng.falls-church.va.us
+
+The AdaIC is sponsored by the Ada Joint Program Office and operated by 
+IIT Research Institute.
