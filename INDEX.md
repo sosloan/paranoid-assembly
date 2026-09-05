@@ -58,6 +58,16 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### SWIZZLING_SSE_POWER.md
+**Routine:** `swizzling_sse.asm` (Intel SSE AOS→SOA vertex transpose)
+**Focus:** Dual-dance half-register + `shufps` weave; 4 vertices / 64 bytes; Windows x64 ABI spills
+**Theme:** Ada Lovelace's algebraic loom meets Grove's layout paranoia at the SIMD boundary
+**Status:** Complete
+**Link:** [writeups/SWIZZLING_SSE_POWER.md](writeups/SWIZZLING_SSE_POWER.md)
+**Dual-Dance:** [SWIZZLING_SSE_POWER.html](SWIZZLING_SSE_POWER.html) — Nikolas Bourbaki × Andy Grove
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:

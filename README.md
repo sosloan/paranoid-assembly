@@ -13,6 +13,8 @@ This repository is a collection of **reverential technical documentation** for a
 - **writeups/** — deep dives on canonical routines (lock_byte.asm, spin loops, atomic operations, etc.)
 - **templates/** — structure and format for new analyses
 - **INDEX.md** — catalog of completed and pending analyses
+- **Ada-Lovelace-Grove.html** — creative coding voyage (Ada · Grove · Bourbaki pirate)
+- **SWIZZLING_SSE_POWER.html** — Nikolas Bourbaki × Andy Grove dual-dance for the SSE AOS→SOA weave
 
 ---
 
@@ -67,6 +69,9 @@ See **CONTRIBUTING.md** for guidelines.
 ## License
 
 Original assembly and reference material is sourced from projects under their original licenses (typically Apache 2.0 for Intel TBB). Writeups and analysis are provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+File-specific provenance note (this repository does not define a blanket reproduction policy):
+- `writeups/SUPERHVAC_POWER.md` reproduces `cadhvac.txt` for archival analysis and keeps the original flyer attribution and in-text reprint permission language intact.
 
 ---
 
