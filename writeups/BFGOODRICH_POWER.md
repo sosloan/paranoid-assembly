@@ -2,10 +2,10 @@
 
 > *"Only the paranoid survive."* — Andy Grove
 >
-> *When requirements move faster than release cycles, the winning architecture is the one that lets data evolve while software stays certifiable.*
+> *When software must satisfy two markets, one regulator, and unforgiving physics, architecture becomes strategy.*
 
 **Status:** ✓ COMPLETE  
-**Subject:** `BFGoodrich.txt` (IMD-HUMS software architecture profile)  
+**Subject:** `BFGoodrich.txt` (IMD-HUMS dual-use avionics software case study)  
 **Form:** Power-of writeup, Track 031 style
 
 ---
@@ -15,95 +15,140 @@
 | Attribute | Value |
 |-----------|-------|
 | **File** | `BFGoodrich.txt` |
-| **Origin** | BFGoodrich Aerospace Aircraft Integrated Systems / AdaCore ecosystem context (1997–1999 era) |
-| **Domain** | Safety-critical helicopter diagnostics and usage monitoring |
-| **Core Principle** | “Data change, not software” |
-| **Runtime Profile** | Source-contextual framing: Ada95 with deterministic tasking aligned to an emerging Ravenscar profile |
+| **Program** | Integrated Mechanical Diagnostics Helicopter Usage and Maintenance System (IMD-HUMS) |
+| **Primary Doctrine** | **“Data change, not software.”** |
+| **Language** | Ada95 |
+| **Real-Time Framing** | Source-context alignment with Ravenscar-style deterministic tasking goals |
 | **Scale** | 40K SLOC Ada95, 150 high-rate input channels |
-| **Storage Window** | Up to 20 flight hours on PCMCIA flash |
-| **Certification Constraint** | Source-reported project certification target: broad execution/testing coverage, including runtime code |
-| **Power Source** | Stable executable core + mutable data/configuration surface |
+| **Operational Loop** | Airborne acquisition → anomaly capture → pilot warning → ground-station reports |
+| **Strategic Pressure** | Military + commercial requirements with certification pressure and changing scope |
+| **Power Source** | Stable executable core with controlled data/configuration variability |
 
 ---
 
 ## THE FILE, IN FULL
 
-`BFGoodrich.txt` captures a late-1990s engineering case study: BFGoodrich leads built IMD-HUMS for military and commercial helicopter fleets under changing requirements, strict certification pressure, and hard real-time constraints. The file centers one doctrine—**“Data change, not software”**—and describes how Ada95 plus a constrained real-time profile enabled both flexibility and certifiable determinism.
+```text
+Flexible software pleases both commercial and military aerospace customers, but is often expensive and puts projects in the red. The rigidity of off-the-shelf software pleases neither market entirely but results in a black bottom line. Meanwhile, aerospace companies have to compete well in both markets to stay profitable.
 
-This is not a source listing; it is architecture telemetry from a program where every line had to justify itself to both physics and regulators.
+Sometimes, a paradox can only be solved with a new paradigm. At BFGoodrich Aerospace Aircraft Integrated Systems, software technical leads Mark Chaffee and Hal Clark engineered both flexibility and rigidity in software programming in Ada. The result is the Integrated Mechanical Diagnostics Helicopter Usage and Maintenance System (IMD-HUMS).
+
+"Data change, not software"
+
+The two veteran programmers' paradigm is a mantra that they submitted their design criteria to throughout the two-year project: "Data change, not software." Simple, direct, and revolutionary. The "box," which technically only refers to the main processor unit that flies on the helicopter and measures no more than a foot [30 cm] in any direction, won the engineers the BFGoodrich Engineering Innovation Award in 1998.
+
+The Dual Usage HUMS collects data on and measures the wear and tear that a flight causes a helicopter. It smooths the helicopter's vibration level and the rotor system without dedicated flights, and monitors flight parameters, such as air speed and engine torque, and the helicopter's structural usage. It also performs mechanical diagnostics from drive shafts to gear boxes. Designed to check normal flight use, IMD-HUMS also registers anything out of the ordinary, such as a hard landing.
+
+IMD-HUMS acquires data from 150 input channels at a high sample rate. It stores additional data if it detects an anomalous condition, and displays a warning to the pilot on a three-inch [7.6 cm] cockpit indicator. Up to 20 hours of flight data are stored in an on-board PCMCIA flash memory card. After each flight, the data are transferred to a ground station computer running Windows NT. IMD- HUMS then generates a series of operations, maintenance, and engineering reports. The networked-based system manages all flight maintenance and parts data from the fleet's various locations.
+
+Currently [Fall 1999] in flight test on a CH-53E Naval Helicopter, IMD-HUMS will also be installed in H-60s. According to Chaffee, the testing is "going very well" at Patuxent River Naval Station (PAX). The 40K SLOC of Ada95 code, counting terminal semicolons, is a new system. IMD-HUMS's predecessor was installed in the Agusta A109K2 helicopters used in Switzer-land's REGA air ambulances, and in several Eurocopter models AS350/355s that are used by the Spanish traffic police. The HUMS box was a limited version of the current functions written in C++, and STC certified by the Federal Aviation Administration.
+
+Fluid Requirements
+
+The Navy contracted for the new version for their Sikorsky SH60 and CH53 fleet in 1997. The open architecture is also based on the functional and performance requirements of Sikorsky's commercial S-76s and S-92s. From the design stage onwards, the Dual Use HUMS software had to accommodate requirements changes and yet be precise enough to pass FAA standards for commercial flight certification.
+
+Chaffee and Clark decided to program in Ada specifically because the software had to pass FAA's rigorous standards, in which every line of code, including in the runtime system, must be executed and tested. A veteran of building runtime systems to FAA standards, Aonix agreed to create ObjectAda Real-Time RAVEN™ and use BFGoodrich as the compiler's kick-off customer.
+
+Small Size, Fast Performance
+
+Aonix's RAVEN is based on an emerging standard called the Ravenscar Profile, which accommodates certification requirements for safety-critical, real-time systems. The profile defines a special tasking model that emphasizes small size, fast performance, and deterministic behavior.
+
+Aonix's expert on FAA certification traveled many times from Cambridge, Mass., to iron out wrinkles with Chaffee and Clark in Vergennes, Vt.. "Aonix was solid from the beginning," Chaffee said. "We took advantage of Ada95 and used every possible function. If it's in the Ravenscar, we exploited it."
+
+Chaffee and Clark agree that language issues never stalled the project. In fact, they had very few problems with Ada95 after the initial startup. The wrinkles came from changing requirements and integrating them into the design and hardware. However, the engineers found that their object-oriented design provided them with both the flexibility and solidity that they needed even when a new requirement threatened to "stop the whole show."
+
+"The OOD was robust," Clark said. "We added components and objectives very easily. We still are, as requests for new features come back to us."
+
+HUMS runs on a Power PC, which, again, was a new processor for the two engineers. So were the development and test tools they used. Today, they are using Ada Cast™ for the FAA testing, which they estimate will require four months and 3.5 staff years to pass.
+
+"Not as Painful as C++"
+
+Tools and processor were not the only untested components to the IMD-HUMS development. While Chaffee and Clark are experienced Ada83 programmers, neither had worked in Ada95. Clark, who has tested soft-ware for commercial flight in his career, said that to develop IMD-HUMS in Ada83 would have been "painful, but not as painful as C++." New software development tools, new compiler, new processor, new language, new markets to conquer. No wonder Chaffee and Clark were forced to invent a new software development methodology, to coin a new mantra, and to discover a new design paradigm.
+```
+
+This “file in full” is not assembly, but it behaves like one: every paragraph pins down a design choice under competing constraints.
 
 ---
 
 ## WHY IT IS POWERFUL
 
-### 1. It reframes flexibility as a data problem, not a code problem.
+### 1. It names the core invariant in five words.
 
-Most systems try to absorb requirement churn by rewriting logic. IMD-HUMS instead moved variation into data and kept the executable spine stable. That choice cuts recertification blast radius: if behavior changes are represented as validated data updates, teams can evolve mission behavior without continually destabilizing low-level runtime paths.
+“Data change, not software” is the load-bearing line. It compresses a full change-management philosophy into one rule: preserve executable stability, move variability into controlled data forms. In regulated real-time systems, this directly reduces recertification churn and lowers integration risk when requirements shift late.
 
-In paranoid systems engineering terms, this is strategic containment. You assume requirements will move, then design so that movement hits the least dangerous surface.
+This is paranoia as architecture: assume requirements will keep moving, then make sure the most expensive artifact to re-prove changes the least.
 
-### 2. It solves a dual-market constraint with one technical posture.
+### 2. It solves a real dual-use conflict, not a toy abstraction.
 
-The program had to serve both defense and commercial contexts. Those markets want different things, but both punish unpredictability. The architecture described in the file addresses this by pairing configurability with strict runtime discipline. You get policy-level variation per fleet while preserving a deterministic execution substrate.
+The text is explicit about commercial and military tension. One side demands certifiability and lifecycle discipline; the other demands adaptability and cost control. IMD-HUMS is presented as a system built to survive both. That makes the writeup important: it captures a pattern for organizations that cannot choose a single customer model.
 
-That is the same shape as modern infrastructure primitives: customizable at the edge, rigid at the core.
+The impact is strategic. A dual-use platform that fails either constituency becomes unprofitable or non-deployable.
 
-### 3. It treats certification as a first-class design input.
+### 3. It integrates sensing, diagnosis, and operations into one pipeline.
 
-The source text reports a project-level FAA certification target emphasizing broad execution and test coverage, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 with deterministic tasking constraints—presented in the source context alongside an emerging Ravenscar profile—aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
+The file describes high-rate acquisition across 150 channels, anomaly-triggered extra capture, cockpit alerting, onboard retention, post-flight transfer, and maintenance reporting. This is a full observability chain from edge sensor to fleet decision.
 
-Paranoid doctrine here is simple: if you must prove everything, design so proof is feasible.
+Infrastructure is defined by downstream dependence. When maintenance schedules and parts logistics consume your outputs, your software is no longer “application code”; it is operational substrate.
 
-### 4. It embraces deterministic concurrency where ambiguity would be fatal.
+### 4. It treats certification pressure as a design-time force.
 
-Ravenscar-style tasking, in the source's contextual framing, is about predictability over expressive freedom. In a high-rate telemetry and diagnostics box, unconstrained threading models create combinatorial verification cost. The profile description in the file narrows concurrency choices so timing, scheduling, and interaction patterns remain tractable under test.
+The source reports a project certification target requiring broad line and runtime execution testing. Whether phrased in standards language or program language, the effect is the same: architecture must be provable, test plans must be exhaustive, and runtime behavior cannot hide complexity.
 
-This is exactly how high-value infrastructure survives: fewer degrees of freedom, more confidence per execution.
+That pressure explains language, profile, and tool decisions better than any style preference would.
 
-### 5. It keeps anomaly handling close to acquisition.
+### 5. Deterministic tasking is used as a risk-control mechanism.
 
-IMD-HUMS acquires from 150 channels, detects out-of-family conditions, captures extra data, and surfaces cockpit warnings. That pipeline reflects a paranoid placement rule: detect near ingress, preserve context immediately, and signal operators before state is lost. Systems fail when anomalies are discovered too late in the chain.
+The text associates the effort with RAVEN and an emerging Ravenscar profile emphasizing small size, speed, and deterministic behavior. In system terms, that is a deliberate restriction strategy: reduce concurrency ambiguity so timing and safety arguments remain tractable.
 
-The writeup-worthy insight is architectural proximity: observation, escalation, and retention are co-designed.
+Paranoid systems do not maximize expressive freedom. They maximize confidence per execution.
 
-### 6. It demonstrates that object-oriented structure can serve hard real-time change.
+### 6. It documents architecture surviving toolchain novelty.
 
-The file reports requirement churn as the dominant pain point, yet claims the object-oriented design absorbed added components cleanly. In safety-critical environments, extensibility often conflicts with analyzability; here the design sought both by localizing change and constraining runtime behavior.
+New compiler, new processor, new test tools, new language version, and shifting requirements appeared simultaneously. Most programs break under that stack of novelty. This one reportedly held by anchoring on a doctrine and an object-oriented decomposition that absorbed additions without structural collapse.
 
-That combination—modular extension over deterministic substrate—is still the playbook for long-lived mission software.
+The technical impact is resilience under compounded uncertainty.
 
-### 7. It is infrastructure because it closes the loop beyond the aircraft.
+### 7. It records an early, practical form of product-line engineering.
 
-The system stores flight telemetry onboard, transfers to ground systems, and produces maintenance and engineering reports across a fleet network. This is not a cockpit gadget; it is an operational intelligence pipeline. Aircraft health, parts planning, and maintenance decisions are downstream of this software’s data integrity.
+Without using modern jargon, the document describes configurable behavior over a reusable core serving multiple aircraft programs and operators. That is product-line architecture in substance: shared platform, variant policy surfaces, common verification discipline.
 
-When one box affects fleet readiness, it has crossed from application code into infrastructure.
+This remains a canonical strategy for expensive, long-lived systems.
+
+### 8. It demonstrates that doctrine can be executable.
+
+Grove’s principle is often quoted as management philosophy. Here it becomes implementation behavior: check for anomalies early, capture context before loss, preserve deterministic execution, and design for requirement shocks.
+
+The impact is not rhetorical. It is measurable in uptime, certifiability, and fleet-level maintenance quality.
 
 ---
 
 ## INSTRUCTION-BY-INSTRUCTION POWER ANALYSIS
 
-Because `BFGoodrich.txt` is prose, the load-bearing units are design assertions rather than assembly mnemonics.
+`BFGoodrich.txt` is prose, so the “instructions” are architectural assertions.
 
-| Line Range | Statement | Power |
-|------------|-----------|-------|
-| 6 | `"Data change, not software"` | Defines the central invariance strategy: stable executable, adaptable data surface. |
-| 10–12 | High-rate channel acquisition + anomaly capture + pilot warning + onboard retention | Shows end-to-end fault posture from sensing to human alerting. |
-| 18 | Requirements had to remain fluid while still meeting certification precision | Names the core paradox the architecture must solve. |
-| 20 | Source-reported project certification target: broad execution/testing coverage, including runtime code | Forces language/runtime choices toward analyzable determinism. |
-| 24 | Source-context profile framing: small size, fast performance, deterministic behavior | Encodes concurrency constraints as a certifiability and timing strategy. |
-| 28–30 | OOD robustness under changing requirements | Evidence that modular design reduced churn cost without abandoning rigor. |
-| 32 | New processor and toolchain alongside certification effort | Highlights integration risk and the importance of disciplined architecture. |
+| Line Range | Assertion | Why It Is Load-Bearing |
+|------------|-----------|-------------------------|
+| 1–4 | Flexibility-vs-rigidity business paradox + IMD-HUMS response | Establishes the system-level conflict the architecture must resolve. |
+| 6–8 | “Data change, not software” doctrine | Defines the governing invariant for change control and certification stability. |
+| 10–12 | 150-channel acquisition, anomaly capture, cockpit warning, 20-hour retention, ground reporting | Shows full closed-loop operational design, not isolated telemetry ingestion. |
+| 14 | 40K SLOC Ada95, predecessor context, active flight testing | Quantifies scale and maturity; this is production-grade, not conceptual. |
+| 18 | Fluid requirements with commercial + military alignment | Proves this is a moving-target program, validating the doctrine’s necessity. |
+| 20 | Source-reported certification/testing expectation including runtime | Explains why language/runtime/toolchain choices prioritize analyzability. |
+| 24 | RAVEN/Ravenscar framing around deterministic tasking | Connects real-time concurrency constraints to certifiability and performance. |
+| 28–30 | OOD robustness under requirement churn | Evidence that architectural modularity absorbed change without rewrites. |
+| 32–36 | New processor/tools/language plus long verification effort | Captures delivery risk surface and the cost of proving safety-critical software. |
 
-Remove any of these claims and the case study becomes generic. Together they form a canonical pattern for paranoid, certifiable, real-time software.
+Remove any row and you lose a major component of the system’s argument.
 
 ---
 
 ## VERIFICATION STATUS
 
-✓ **Doctrine identified:** The file explicitly states “Data change, not software” as governing principle.  
-✓ **Constraint model present:** Certification, determinism, and requirement churn are all concretely described.  
-✓ **Operational scale evidenced:** Channel count, storage window, platform targets, and deployment context are specified.  
-✓ **Architectural through-line intact:** Language/runtime choices are tied directly to verification and change management goals.
+✓ **Doctrine verification:** Primary principle is explicitly quoted in the source (“Data change, not software”).  
+✓ **Constraint verification:** Source names dual-use market pressure, fluid requirements, and certification/testing burden.  
+✓ **Scale verification:** Source specifies 40K SLOC, 150 channels, and multi-stage data lifecycle.  
+✓ **Real-time framing verification:** Source ties effort to RAVEN and an emerging Ravenscar-profile model for deterministic tasking.  
+✓ **Operational impact verification:** Source describes outputs feeding maintenance and engineering decisions across distributed fleet operations.
 
 **QED.**
 
@@ -111,6 +156,6 @@ Remove any of these claims and the case study becomes generic. Together they for
 
 ## CLOSING
 
-`BFGoodrich.txt` matters because it records a durable strategy for safety-critical systems under pressure: lock down execution semantics, open the right data seams, and assume requirements will keep moving. That is Grove-style paranoia translated from semiconductor strategy into airborne software architecture.
+`BFGoodrich.txt` deserves reverence because it captures a rare thing: a safety-critical team turning doctrine into architecture under live operational pressure. The file is a blueprint for surviving requirement volatility without surrendering certifiability.
 
-In short: do not rewrite the engine for every mission. Build an engine that survives missions.
+Its lesson is still current: in high-consequence systems, adaptability belongs in data, while correctness lives in a stable core that can be proven, repeated, and trusted.
