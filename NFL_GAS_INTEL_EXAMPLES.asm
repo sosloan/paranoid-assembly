@@ -1,6 +1,6 @@
 # GAS Intel syntax examples: running backs and linebackers.
 # Assemble on Linux:
-#   gcc -c NFL_GAS_INTEL_EXAMPLES.asm -o NFL_GAS_INTEL_EXAMPLES.o
+#   gcc -x assembler -c NFL_GAS_INTEL_EXAMPLES.asm -o NFL_GAS_INTEL_EXAMPLES.o
 
         .intel_syntax noprefix
         .text
