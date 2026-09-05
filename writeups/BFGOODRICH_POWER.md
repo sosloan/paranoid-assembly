@@ -50,7 +50,7 @@ That is the same shape as modern infrastructure primitives: customizable at the 
 
 ### 3. It treats certification as a first-class design input.
 
-The text explicitly notes FAA expectations that every line—including runtime paths—be exercised and tested. That requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 and a Ravenscar-constrained runtime aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
+The source text reports FAA-certification expectations in this program context as requiring execution and test coverage across all code paths, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 and a Ravenscar-constrained runtime aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
 
 Paranoid doctrine here is simple: if you must prove everything, design so proof is feasible.
 
@@ -89,7 +89,7 @@ Because `BFGoodrich.txt` is prose, the load-bearing units are design assertions 
 | 6 | `"Data change, not software"` | Defines the central invariance strategy: stable executable, adaptable data surface. |
 | 10–12 | High-rate channel acquisition + anomaly capture + pilot warning + onboard retention | Shows end-to-end fault posture from sensing to human alerting. |
 | 18 | Requirements had to remain fluid while still meeting certification precision | Names the core paradox the architecture must solve. |
-| 20 | Every line, including runtime system, must be tested for FAA standards | Forces language/runtime choices toward analyzable determinism. |
+| 20 | Source-reported FAA expectation: certify with execution/testing across all code paths, including runtime behavior | Forces language/runtime choices toward analyzable determinism. |
 | 24 | Ravenscar profile: small size, fast performance, deterministic behavior | Encodes concurrency constraints as a certifiability and timing strategy. |
 | 28–30 | OOD robustness under changing requirements | Evidence that modular design reduced churn cost without abandoning rigor. |
 | 32 | New processor and toolchain alongside certification effort | Highlights integration risk and the importance of disciplined architecture. |
