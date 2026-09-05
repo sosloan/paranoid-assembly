@@ -20,7 +20,7 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Focus:** Safety-critical telemetry software, deterministic concurrency, certification-driven design
 **Theme:** “Data change, not software” as paranoid systems doctrine
 **Status:** Complete
-**Link:** [writeups/BFGOODRICH_POWER.md](writeups/BFGOODRICH_POWER.md)
+**Link:** [writeups/ASTROPHYSICS_POWER.md](writeups/ASTROPHYSICS_POWER.md)
 
 ---
 
@@ -48,6 +48,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Theme:** Mission-grade schedule specification for an NFL season
 **Status:** Complete
 **Link:** [writeups/FORTY_NINERS_TRAVEL_POWER.md](writeups/FORTY_NINERS_TRAVEL_POWER.md)
+
+---
+
+### TRI_ADA_93_OUTLINE_POWER.md
+**Routine:** `TRI-Ada-93-outline.txt` (TRI-Ada '93 Ada 9X OOP tutorial outline)
+**Focus:** Tagged-type hierarchies, dispatching model, and reuse-first programming techniques under strong typing
+**Theme:** Paranoid language design as upstream infrastructure for safe reusable systems
+**Status:** Complete
+**Link:** [writeups/TRI_ADA_93_OUTLINE_POWER.md](writeups/TRI_ADA_93_OUTLINE_POWER.md)
 
 ---
 
