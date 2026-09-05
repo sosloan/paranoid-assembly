@@ -6,14 +6,12 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### SUPERHVAC_POWER.md
-**Routine:** `cadhvac.txt` (AdaIC flyer on Byron Informatik's Super-CAD Integrated Engineering System)
-**Focus:** Database-first CAD architecture, shared object model, Ada large-system safety constraints
-**Theme:** Paranoid infrastructure design for HVAC and facility-management software
+### CIRCUITS_POWER.md
+**Routine:** `circuits.txt` (AdaIC flyer on Dolphin Integration GDS compiler)
+**Focus:** Parametric generator compiler pipeline, language-level safety, modular VLSI infrastructure
+**Theme:** Grove-style paranoia before tape-out: software flaws must not become silicon defects
 **Status:** Complete
-**Link:** [writeups/SUPERHVAC_POWER.md](writeups/SUPERHVAC_POWER.md)
-
----
+**Link:** [writeups/CIRCUITS_POWER.md](writeups/CIRCUITS_POWER.md)
 
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)

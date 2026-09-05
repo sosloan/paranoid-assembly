@@ -1,0 +1,109 @@
+# THE POWER OF `circuits.txt`
+
+> *"Only the paranoid survive."* — Andy Grove  
+> *"Security: ensuring through integrated exception handling, that programming flaws will not end-up in silicon."* — Dolphin Integration (1996 flyer)
+
+**Status:** ✓ COMPLETE  
+**Subject:** `circuits.txt` (Ada in integrated-circuit generator infrastructure, Dolphin Integration, 1985–1996)  
+**Form:** Power-of writeup, Track 031 style
+
+---
+
+## QUICK REFERENCE
+
+| Attribute | Value |
+|-----------|-------|
+| **File** | `circuits.txt` |
+| **Origin** | Ada Information Clearinghouse flyer U152-0596 (1996), describing Dolphin Integration's GDS compiler work started in 1985 |
+| **Domain** | VLSI-ASIC generator infrastructure |
+| **Core Artifact** | Parameterized generator compiler for layout + routing |
+| **Implementation Scale** | 120,000 lines maintained; 18,000-line datapath generator example |
+| **Critical Constraint** | Errors in code become defects in silicon |
+| **Power Source** | Language-level safety + modular generator architecture |
+
+---
+
+## PARAPHRASED SOURCE OUTLINE
+
+- **Developer context:** Dolphin Integration (founded 1985) built a GDS compiler with Alsys Ada to improve circuitware reliability and cost efficiency.
+- **System implementation:** the compiler transforms parameterized high-level schematic/layout requirements into low-level microcell placement and interconnect routing orders.
+- **Generator model:** RAM/ROM/PLA, analog, and datapath generators are implemented as Ada programs that emit both GDS-2 database artifacts and VHDL module descriptions from selected parameters.
+- **Language rationale:** Ada was chosen over common C-like/Lisp-like tooling because the workload demands modularity, large-codebase handling, and parallelism support.
+- **Named Ada properties:** security via exception handling, readability via package structure/renaming, modular library composition, and portability.
+- **Scale and portability evidence:** platform progression (VMS → PC → Sun SPARCstation), ongoing adaptation to foundry needs, and maintenance of a 120,000-line codebase.
+- **Operational result:** team reports strong Ada performance and planned continued UI/platform migration (including HP targets).
+
+This is an edited, normalized paraphrase of the technical core for readability, preserving the source's section structure and intent.
+
+This is not merely a historical flyer. It is an infrastructure design report about how to keep software faults from becoming hardware defects.
+
+---
+
+## WHY IT IS POWERFUL
+
+### 1. It defines a compiler boundary between intention and silicon.
+
+The file describes a strict transformation pipeline: parameterized macro-level schematic intent down to placement and routing orders. That boundary is where paranoia belongs, because every unchecked ambiguity at this stage can harden into expensive physical failure later.
+
+### 2. It treats generators as first-class infrastructure.
+
+The text centers reusable generators (RAM/ROM/PLA, analog, datapath), not one-off layouts. This is canonical systems thinking: invest in reliable abstractions that produce many chips, not heroic manual fixes for one chip.
+
+### 3. It frames safety as an economic requirement.
+
+"Programming flaws will not end up in silicon" is a cost-control statement as much as a correctness statement. Re-spins are slow and expensive; language-level guardrails are therefore part of manufacturing strategy, not just software taste.
+
+### 4. It selects Ada for properties aligned to VLSI constraints.
+
+The stated reasons—security, readability, modularity, portability—map directly to foundry-facing infrastructure realities: long-lived codebases, changing platforms, and high penalty for latent defects.
+
+### 5. It demonstrates scale under constraint.
+
+The document reports 18,000-line generator modules and 120,000 lines maintained overall. That scale makes accidental complexity a certainty unless the architecture and language discipline are deliberate.
+
+### 6. It encodes portability as survival.
+
+VMS, PC, Sun SPARCstation, and planned HP ports appear as routine evolution, not exception. In infrastructure terms, portability is strategic optionality: the code survives toolchain and platform shifts without resetting the system.
+
+### 7. It captures concurrency awareness early.
+
+The need to handle "parallelisms" appears in the motivation for language choice. This places concurrency pressure in the design center rather than as late optimization—exactly where robust infrastructure decisions are made.
+
+### 8. It is a canonical paranoia document, even without assembly.
+
+It carries the same strategic doctrine found in high-stakes infrastructure work: constrain state transitions, define failure boundaries, and prioritize correctness where failure is most expensive.
+
+---
+
+## LINE-BY-LINE POWER ANALYSIS
+
+| Excerpt segment | Statement | Power |
+|------|-----------|-------|
+| Developer | GDS compiler built to ensure reliable, inexpensive circuitware | Establishes reliability + cost as joint constraints from the outset. |
+| System Implementation (opening) | High-level parametric input compiled to low-level placement/routing orders | Identifies the load-bearing transform where correctness must be enforced. |
+| System Implementation (closing) | Generator library instantiates GDS-2 + VHDL artifacts | Shows integrated physical + logical output pipeline from one parameter source. |
+| Selecting Ada (opening) | Ada selected over C-like/Lisp-like options; large applications + parallelisms required | Language decision is tied to scale and concurrency needs, not ideology. |
+| Selecting Ada (property bullets) | Security, readability, modularity, portability bullets | Enumerates durable engineering invariants for long-lived infrastructure. |
+| Portability paragraph | Ported across VMS/PC/SPARC; 120,000 LOC maintained | Proves the architecture survived platform churn and growth pressure. |
+| Satisfied with Performance | Performance satisfaction + planned UI/platform migration | Confirms the approach is not only safe, but operationally viable at scale. |
+
+Every major paragraph carries a systems invariant: constrain defects early, preserve modular structure, and keep the pipeline portable under real industrial change.
+
+---
+
+## VERIFICATION STATUS
+
+✓ **Industrial scale claim present:** 18,000-line generator and 120,000-line maintenance figures are explicitly stated in `circuits.txt`.  
+✓ **Safety rationale present:** the file explicitly links Ada exception handling to preventing flaws from reaching silicon.  
+✓ **Portability evidence present:** VMS, PC, Sun SPARCstation, and planned HP migration are explicitly listed.  
+✓ **Generator architecture evidence present:** file states macro-level parameters compile into placement/routing outputs and module instantiation artifacts.
+
+**QED.**
+
+---
+
+## CLOSING
+
+`circuits.txt` is power because it documents a strategic decision at the exact leverage point where software becomes hardware reality. The paranoia is explicit: enforce structure early, choose a language that resists silent failure, and build generators that can survive scale and platform turnover.
+
+In Grove's terms, this is how infrastructure survives: not by optimism, but by disciplined constraints before tape-out.
