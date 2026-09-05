@@ -17,7 +17,7 @@
 |-----------|-------|
 | **File** | `TRI-Ada-93-outline.txt` |
 | **Origin** | EPFL tutorial material for TRI-Ada '93 |
-| **License Note** | Viewing permission only, per embedded copyright notice |
+| **License Note** | Embedded notice says permission is for customary WWW viewing and reserves other rights |
 | **Domain** | Ada 9X object-oriented language design and reuse methodology |
 | **Core Symbols** | `tagged types`, `type extension`, `dispatching`, `class-wide entities`, `genericity` |
 | **Primary Objective** | Teach safe OOP mechanisms that preserve Ada's strong typing |
@@ -78,6 +78,8 @@ The entire outline asks: where can abstraction leak, where can reuse break, wher
 ---
 
 ## INSTRUCTION-BY-INSTRUCTION POWER ANALYSIS
+
+Line ranges below refer to the original line numbers in `TRI-Ada-93-outline.txt` as stored in this repository.
 
 | Line Range | Construct | Power |
 |------------|-----------|-------|
