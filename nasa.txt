@@ -35,10 +35,10 @@ The report chronicles a decade-long transition in a mission-critical environment
 The headline outcomes are strategic, not cosmetic:
 Attribution note: The percentage figures below are inherited from the prior synopsis text previously contained in this file and are presented here as synopsis-reported outcomes.
 
-- Reuse increased by 300% (reported FDD-wide summary outcome versus 1985 baseline)
-- Cost reduced by 40% (reported FDD-wide summary outcome versus 1985 baseline)
-- Cycle time reduced by 25% (reported FDD-wide summary outcome versus 1985 baseline)
-- Development error rates reduced by 62% (reported FDD-wide summary outcome versus 1985 baseline)
+- Reuse increased by 300% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cost reduced by 40% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cycle time reduced by 25% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
 - Report states 85% fewer development errors in telemetry simulators built since 1990 versus 1985-era baselines
@@ -97,7 +97,7 @@ EVIDENCE SUMMARY FROM REPORTED OUTCOMES
 ------------------------------------------------------------
 
 Property: Reuse scaling
-Report statement: Telemetry simulator lineage reports high measured reuse percentages.
+Report statement: Synopsis-reported reuse includes a 300% FDD-wide increase and telemetry lineage figures such as 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
 
 Property: Quality improvement
 Report statement: Development error rates are reported as reduced against the 1985 baseline.
