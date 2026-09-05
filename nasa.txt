@@ -1,10 +1,10 @@
-THE POWER OF NASA'S FLIGHT DYNAMICS ADA DOCTRINE
+NASA SEL-95-001 WRITEUP: FLIGHT DYNAMICS ADA/OOD OUTCOMES
 
 "Only the paranoid survive." — Andy Grove
 
-Epigraph note: The Grove quote is a framing device for this repository's engineering perspective, not a quotation from SEL-95-001.
+EDITORIAL FRAME: The Grove quote is included as this repository's lens, not as a quotation from SEL-95-001.
 
-In the late 1980s and early 1990s, NASA Goddard's Flight Dynamics Division did not just adopt Ada; it rebuilt its software strategy around paranoid engineering constraints: reuse before reinvention, architecture before implementation, and measurable quality before rhetoric. This writeup reframes the SEL-95-001 findings as infrastructure doctrine.
+REPORT SUMMARY: SEL-95-001 documents NASA Goddard Flight Dynamics Division's Ada and object-oriented design transition across the late 1980s and early 1990s, with emphasis on reuse strategy, development outcomes, and organizational adoption constraints.
 
 Status: COMPLETE
 Subject: SEL-95-001 (NASA GSFC Flight Dynamics Division)
@@ -37,9 +37,10 @@ The report chronicles a decade-long transition in a mission-critical environment
 The headline outcomes are strategic, not cosmetic:
 
 - Reuse increased dramatically (reported up to 300%)
-- Development error rates fell sharply
-- Delivery speed improved
-- Cost profiles improved for long-lived Ada-centric systems
+- Cost reduced by about 40% (for systems where Ada reuse architecture was sustained)
+- Cycle time reduced by about 25%
+- Development error rates reduced by about 62%
+- Later telemetry baselines reported up to 85% fewer development errors and about half-time delivery versus 1985-era baselines
 
 This is not language evangelism. It is systems economics under pressure.
 
@@ -106,7 +107,7 @@ Status: Supported by schedule comparisons in mature Ada/OOD project phases.
 Property: Cost improvement
 Status: Supported conditionally; strongest for long-lived, reusable Ada-targeted systems.
 
-QED (empirical, organizational, and architectural).
+Summary: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 
 ------------------------------------------------------------
 CLOSING
