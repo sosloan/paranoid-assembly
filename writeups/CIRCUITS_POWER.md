@@ -23,7 +23,7 @@
 
 ---
 
-## THE FILE, IN FULL
+## THE SOURCE, ADAPTED EXCERPT
 
 ```text
 Flyer U152-0596
