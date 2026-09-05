@@ -66,6 +66,8 @@
         .equ    MAX_ROUNDS,       8
         .equ    CONCESSION_SHIFT, 3
         .equ    TICK,             1
+        .equ    LEVY_QUOTE_BYTES, 0x1C
+        .equ    LEVY_STACK_BYTES, LEVY_QUOTE_BYTES + 12
         .equ    PRICE_MIN,        1
         .equ    PRICE_MAX,        0x7FFFFFFF
 
@@ -176,7 +178,7 @@ _barter_open:
         call    market_rate_ok
         test    eax, eax
         jz      .Lopen_rate
-        jmp     .Lopen_empty
+        jmp     .Lopen_band_fail
 
 .Lopen_ok:
 
@@ -185,6 +187,14 @@ _barter_open:
         ret
 
 .Lopen_empty:
+        mov     rdi, r12
+        call    barter_walk_away
+        mov     dword ptr [r12 + S_STATUS], ST_RANGE
+        add     rsp, 32
+        pop     r12
+        ret
+
+.Lopen_band_fail:
         mov     rdi, r12
         call    barter_walk_away
         mov     dword ptr [r12 + S_STATUS], ST_RANGE
@@ -323,7 +333,7 @@ _barter_settle:
         # at S_NET. Layout: net,vat,gross,rate,lo,hi,status — but our
         # session stores net,vat,gross at +0x24 and rate already at +0x18.
         # Call levy with a scratch quote on the stack, then copy back.
-        sub     rsp, 40
+        sub     rsp, LEVY_STACK_BYTES     # full quote scratch + call-alignment slack
         lea     rdi, [rsp]
         mov     esi, r13d
         mov     edx, dword ptr [r12 + S_RATE]
@@ -336,7 +346,7 @@ _barter_settle:
         mov     dword ptr [r12 + S_VAT], eax
         mov     eax, dword ptr [rsp + 0x08]
         mov     dword ptr [r12 + S_GROSS], eax
-        add     rsp, 40
+        add     rsp, LEVY_STACK_BYTES
 
         test    ebx, ebx
         jnz     .Lsettle_fail
