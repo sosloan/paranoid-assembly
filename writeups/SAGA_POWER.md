@@ -152,7 +152,7 @@ In Sweden, they handed each one a hard hat.
 Jean-Pierre, in Paris, will always remember
 How they failed to distinguish the restrooms by gender.
 
-Rudolf, in Frankfort [sic], helped them to dine
+Rudolf, in Frankfurt, helped them to dine
 As he taught them the pleasures of fine German wine.
 
 Joyce, the world traveler, wishing not to be rude,
