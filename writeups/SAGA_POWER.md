@@ -152,7 +152,7 @@ In Sweden, they handed each one a hard hat.
 Jean-Pierre, in Paris, will always remember
 How they failed to distinguish the restrooms by gender.
 
-Rudolf, in Frankfort, helped them to dine
+Rudolf, in Frankfort [sic], helped them to dine
 As he taught them the pleasures of fine German wine.
 
 Joyce, the world traveler, wishing not to be rude,
@@ -249,17 +249,17 @@ Most standards show final grammar, not battle scars. `saga.txt` preserves the in
 
 | Line Range | Event | Power |
 |-----------|-------|-------|
-| 14–16 | “planned not to fail… shall prevail” | Declares non-negotiable delivery posture under uncertainty. |
-| 29–33 | “750th Revision Request… arranged them in groups” | Shows scale and triage discipline for proposal load. |
-| 35–37 | “Requirements written by John Goodenough” | Establishes formal requirements as the de-chaos mechanism. |
-| 38–43 | OOP debate and final decision | Captures strategic lock-in point for the language’s future. |
-| 47–67 | Rules simplification, tagged/protected types | Documents concrete semantics added for extensibility and safety. |
-| 80–84 | Formal methods and dragon-slaying | Encodes verification and defect-hunting as first-class workflow. |
-| 86–91 | Naming/finalization refinements | Highlights precision edits that prevent long-tail ecosystem pain. |
-| 101–103 | “rubbish” test | Represents hard quality gate before acceptance. |
-| 107–133 | ISO delegate integration | Records international governance coupling to technical closure. |
-| 149–153 | Copyleft/GNU/GNAT pressure | Exposes policy and tooling friction impacting standardization. |
-| 167–172 | Final deliverable claim | States outcome in system terms: readability, strong typing, OOP, distribution. |
+| 47–49 | “planned not to fail… shall prevail” | Declares non-negotiable delivery posture under uncertainty. |
+| 62–66 | “750th Revision Request… arranged them in groups” | Shows scale and triage discipline for proposal load. |
+| 68–70 | “Requirements written by John Goodenough” | Establishes formal requirements as the de-chaos mechanism. |
+| 71–76 | OOP debate and final decision | Captures strategic lock-in point for the language’s future. |
+| 80–100 | Rules simplification, tagged/protected types | Documents concrete semantics added for extensibility and safety. |
+| 113–117 | Formal methods and dragon-slaying | Encodes verification and defect-hunting as first-class workflow. |
+| 119–124 | Naming/finalization refinements | Highlights precision edits that prevent long-tail ecosystem pain. |
+| 134–136 | “rubbish” test | Represents hard quality gate before acceptance. |
+| 140–166 | ISO delegate integration | Records international governance coupling to technical closure. |
+| 182–186 | Copyleft/GNU/GNAT pressure | Exposes policy and tooling friction impacting standardization. |
+| 200–205 | Final deliverable claim | States outcome in system terms: readability, strong typing, OOP, distribution. |
 
 Every stanza carries operational state. Remove the humor and what remains is a rigorous process log.
 
