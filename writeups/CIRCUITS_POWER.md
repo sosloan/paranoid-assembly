@@ -23,39 +23,15 @@
 
 ---
 
-## THE SOURCE, ADAPTED EXCERPT
+## PARAPHRASED SOURCE OUTLINE
 
-```text
-Flyer U152-0596
-circuits.txt
-
-Ada Used in Integrated Circuits Industrial Design
-
-The Developer
-
-Created in 1985, Dolphin Integration is a design center for integrated circuits renowned for the quality of its contributions to VLSI-ASICs (Very Large Scale Integrated-Application Specific Integrated Circuits). In order to insure the reliable and inexpensive design of Circuitware, Dolphin Integration developed the Graphical Dolphin Solution (GDS) compiler with the Alsys Ada environment.
-
-System Implementation
-
-The GDS compiler is a true compiler. It compiles high-level, parameterized schematics, or parameterized layout requirements for a given macrocell, into low-level placement orders of microcells and routing orders of interconnections. Providing the control of automatic layout for repetitive circuitware upon specified structural parameters, it is a tool to develop circuitware generators. Powerful generators, from the most classical ones (RAM, ROM, PLA), to intricate analog cell generators (BANDGAP) and datapath generators (SPOT, ALEAS), have been developed from the GDS library. Such generators are Ada programs with parameters to instantiate modules (that is to say, their GDS-2 data base and their VHDL description) upon parameter selection.
-
-Selecting Ada
-
-"While many such development tools for module generators are offered in a C-like or Lisp-like language (SKILL for example), our GDS compiler has been developed with Ada, mostly inspired by the modularity of VLSI", explains Louis Zangara, Microelectronic Services Manager. The development of generators requires the capability to handle large applications (a datapath generator takes 18,000 lines of Ada) and parallelisms.
-
-"Ada's essential properties meet perfectly with VLSI design requirements," points out Louis Zangara. He specifically alludes to Ada's:
-
-* Security: ensuring through its integrated exception handling, that programming flaws will not end-up in silicon.
-* Readability: providing the ASIC-expert with the power of data-processing specialists, thanks to "packages" and renaming capability.
-* Modularity: granting the same approach as for VLSI design, namely the easy to use of a library of modules together with dynamic link-edition.
-* Software portability: granting truly normalized compiler to diverse platform.
-
-Originally developed on VMS and then on a PC, the GDS compiler has been ported to the Sun SPARCstation. The use of Alsys Ada technology enabled the team to complete the development; now Dolphin Integration maintains its 120,000 lines of code and adapts it to new foundry requirements.
-
-Satisfied with Performance
-
-Very satisfied with the performance of the Ada language, the Dolphin Integration team is now looking forward to further development opportunities that will employ them both. With the recent switch from Sun View to OSF Motif, the current GDS graphical interface will soon be ported to and modified on new platforms. In addition, plans to port this application to HP platforms are in process.
-```
+- **Developer context:** Dolphin Integration (founded 1985) built a GDS compiler with Alsys Ada to improve circuitware reliability and cost efficiency.
+- **System implementation:** the compiler transforms parameterized high-level schematic/layout requirements into low-level microcell placement and interconnect routing orders.
+- **Generator model:** RAM/ROM/PLA, analog, and datapath generators are implemented as Ada programs that emit both GDS-2 database artifacts and VHDL module descriptions from selected parameters.
+- **Language rationale:** Ada was chosen over common C-like/Lisp-like tooling because the workload demands modularity, large-codebase handling, and parallelism support.
+- **Named Ada properties:** security via exception handling, readability via package structure/renaming, modular library composition, and portability.
+- **Scale and portability evidence:** platform progression (VMS → PC → Sun SPARCstation), ongoing adaptation to foundry needs, and maintenance of a 120,000-line codebase.
+- **Operational result:** team reports strong Ada performance and planned continued UI/platform migration (including HP targets).
 
 This is an edited, normalized paraphrase of the technical core for readability, preserving the source's section structure and intent.
 
