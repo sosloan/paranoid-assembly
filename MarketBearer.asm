@@ -41,6 +41,8 @@
         .extern _market_in_range
         .extern market_band_ok
         .extern _market_band_ok
+        .extern market_rate_ok
+        .extern _market_rate_ok
         .extern market_levy
         .extern _market_levy
         .equ    S_ASK,          0x00
@@ -69,6 +71,7 @@
 
         .equ    ST_OK,          0
         .equ    ST_RANGE,       1
+        .equ    ST_RATE,        2
         .equ    ST_NO_DEAL,     4
 
         .equ    Q_STATUS,       0x18
@@ -167,7 +170,15 @@ _barter_open:
         mov     edx, dword ptr [r12 + S_RATE]
         call    market_band_ok
         test    eax, eax
-        jz      .Lopen_empty
+        jnz     .Lopen_ok
+
+        mov     edi, dword ptr [r12 + S_RATE]
+        call    market_rate_ok
+        test    eax, eax
+        jz      .Lopen_rate
+        jmp     .Lopen_empty
+
+.Lopen_ok:
 
         add     rsp, 32
         pop     r12
@@ -177,6 +188,14 @@ _barter_open:
         mov     rdi, r12
         call    barter_walk_away
         mov     dword ptr [r12 + S_STATUS], ST_RANGE
+        add     rsp, 32
+        pop     r12
+        ret
+
+.Lopen_rate:
+        mov     rdi, r12
+        call    barter_walk_away
+        mov     dword ptr [r12 + S_STATUS], ST_RATE
         add     rsp, 32
         pop     r12
         ret
