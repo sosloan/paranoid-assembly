@@ -10,6 +10,7 @@
 **Subject:** `swizzling_sse.asm` (Intel AOS→SOA vertex transpose, SSE)
 **Form:** Power-of writeup, Track 031 style
 **Album Tie-In:** ONLY THE PARANOID SURVIVE — SIMD Layout Edition
+**Dual-Dance:** [SWIZZLING_SSE_POWER.html](../SWIZZLING_SSE_POWER.html) — Nikolas Bourbaki × Andy Grove interactive weave
 
 ---
 
