@@ -6,6 +6,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
+### BFGOODRICH_POWER.md
+**Routine:** `BFGoodrich.txt` (IMD-HUMS architecture case study)
+**Focus:** Safety-critical telemetry software, deterministic concurrency, certification-driven design
+**Theme:** “Data change, not software” as paranoid systems doctrine
+**Status:** Complete
+**Link:** [writeups/BFGOODRICH_POWER.md](writeups/BFGOODRICH_POWER.md)
+
+---
+
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
