@@ -270,8 +270,9 @@ _barter_settle:
         push    r13
         mov     r12, rdi
 
-        cmp     dword ptr [r12 + S_STATUS], ST_RANGE
-        je      .Lsettle_range          # open already found no window
+        mov     ebx, dword ptr [r12 + S_STATUS]
+        test    ebx, ebx
+        jnz     .Lsettle_existing_fail  # open already failed (range/rate)
 
         mov     ebx, MAX_ROUNDS
 .Lhaggle:
@@ -369,11 +370,11 @@ _barter_settle:
         pop     rbx
         ret
 
-.Lsettle_range:
+.Lsettle_existing_fail:
         mov     rdi, r12
         call    barter_walk_away
-        mov     dword ptr [r12 + S_STATUS], ST_RANGE
-        mov     eax, ST_RANGE
+        mov     dword ptr [r12 + S_STATUS], ebx
+        mov     eax, ebx
         pop     r13
         pop     r12
         pop     rbx
