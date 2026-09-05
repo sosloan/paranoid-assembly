@@ -79,7 +79,7 @@ The entire outline asks: where can abstraction leak, where can reuse break, wher
 
 ## INSTRUCTION-BY-INSTRUCTION POWER ANALYSIS
 
-Line ranges below refer to the original line numbers in `TRI-Ada-93-outline.txt` as stored in this repository.
+Line ranges below refer to the original line numbers in `TRI-Ada-93-outline.txt` as stored in this repository. Ranges are grouped by semantic blocks (header, contents, bibliography, mechanisms, techniques), and small uncovered gaps are intentional separators (blank lines or section breaks) rather than omitted analysis.
 
 | Line Range | Construct | Power |
 |------------|-----------|-------|
