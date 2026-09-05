@@ -101,17 +101,15 @@ It carries the same strategic doctrine found in high-stakes infrastructure work:
 
 ## LINE-BY-LINE POWER ANALYSIS
 
-Line ranges below refer to `circuits.txt` source line numbers.
-
-| Lines (`circuits.txt`) | Statement | Power |
+| Excerpt segment | Statement | Power |
 |------|-----------|-------|
-| 8–14 | GDS compiler built to ensure reliable, inexpensive circuitware | Establishes reliability + cost as joint constraints from the outset. |
-| 18–24 | High-level parametric input compiled to low-level placement/routing orders | Identifies the load-bearing transform where correctness must be enforced. |
-| 24–30 | Generator library instantiates GDS-2 + VHDL artifacts | Shows integrated physical + logical output pipeline from one parameter source. |
-| 34–41 | Ada selected over C-like/Lisp-like options; large applications + parallelisms required | Language decision is tied to scale and concurrency needs, not ideology. |
-| 43–57 | Security, readability, modularity, portability bullets | Enumerates durable engineering invariants for long-lived infrastructure. |
-| 59–63 | Ported across VMS/PC/SPARC; 120,000 LOC maintained | Proves the architecture survived platform churn and growth pressure. |
-| 67–73 | Performance satisfaction + planned UI/platform migration | Confirms the approach is not only safe, but operationally viable at scale. |
+| Developer | GDS compiler built to ensure reliable, inexpensive circuitware | Establishes reliability + cost as joint constraints from the outset. |
+| System Implementation (opening) | High-level parametric input compiled to low-level placement/routing orders | Identifies the load-bearing transform where correctness must be enforced. |
+| System Implementation (closing) | Generator library instantiates GDS-2 + VHDL artifacts | Shows integrated physical + logical output pipeline from one parameter source. |
+| Selecting Ada (opening) | Ada selected over C-like/Lisp-like options; large applications + parallelisms required | Language decision is tied to scale and concurrency needs, not ideology. |
+| Selecting Ada (property bullets) | Security, readability, modularity, portability bullets | Enumerates durable engineering invariants for long-lived infrastructure. |
+| Portability paragraph | Ported across VMS/PC/SPARC; 120,000 LOC maintained | Proves the architecture survived platform churn and growth pressure. |
+| Satisfied with Performance | Performance satisfaction + planned UI/platform migration | Confirms the approach is not only safe, but operationally viable at scale. |
 
 Every major paragraph carries a systems invariant: constrain defects early, preserve modular structure, and keep the pipeline portable under real industrial change.
 
