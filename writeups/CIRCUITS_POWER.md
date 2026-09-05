@@ -33,7 +33,7 @@ Ada Used in Integrated Circuits Industrial Design
 
 The Developer
 
-Created in 1985, Dolphin Integration is a design center for integrated circuits renowned for the quality of its contributions to VLSI-ASIC's (Very Large Scale Integrated-Application Specific Integrated Circuits). In order to insure the reliable and inexpensive design of Circuitware, Dolphin Integration developed the Graphical Dolphin Solution (GDS) compiler with the Alsys Ada environment.
+Created in 1985, Dolphin Integration is a design center for integrated circuits renowned for the quality of its contributions to VLSI-ASICs (Very Large Scale Integrated-Application Specific Integrated Circuits). In order to insure the reliable and inexpensive design of Circuitware, Dolphin Integration developed the Graphical Dolphin Solution (GDS) compiler with the Alsys Ada environment.
 
 System Implementation
 
@@ -57,7 +57,7 @@ Satisfied with Performance
 Very satisfied with the performance of the Ada language, the Dolphin Integration team is now looking forward to further development opportunities that will employ them both. With the recent switch from Sun View to OSF Motif, the current GDS graphical interface will soon be ported to and modified on new platforms. In addition, plans to port this application to HP platforms are in process.
 ```
 
-This is an adapted transcription of the technical core for readability, with line-wrap normalization, preserving the original technical meaning and section structure.
+This is an edited, normalized paraphrase of the technical core for readability, preserving the source's section structure and intent.
 
 This is not merely a historical flyer. It is an infrastructure design report about how to keep software faults from becoming hardware defects.
 
