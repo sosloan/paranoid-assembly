@@ -8,7 +8,7 @@ REPORT SUMMARY: SEL-95-001 documents NASA Goddard Flight Dynamics Division's Ada
 
 Status: COMPLETE
 Subject: SEL-95-001 (NASA GSFC Flight Dynamics Division)
-Form: Structured Power-of writeup (quick reference, context, insights, verification, closing)
+Form: Structured technical writeup (quick reference, context, insights, verification, closing)
 
 ------------------------------------------------------------
 QUICK REFERENCE
@@ -50,7 +50,7 @@ WHY IT IS POWERFUL
 
 1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
 
-The highest-performing projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits. That shifts effort from repeated coding to architecture quality. In paranoid terms: fewer edits, fewer new failure modes.
+The highest-performing projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits. That shifts effort from repeated coding to architecture quality. In paranoid terms: fewer edits, fewer opportunities for new defects.
 
 2) IT TURNS GENERICS INTO RISK CONTROL
 
@@ -113,4 +113,4 @@ Summary: The report presents measured reuse, quality, schedule, and cost outcome
 CLOSING
 ------------------------------------------------------------
 
-Editorial interpretation: NASA's Flight Dynamics transition illustrates a paranoia-aligned infrastructure posture—design so the next mission does not require starting over, structure change through parameters instead of repeated source edits, and evaluate technical decisions against operational survivability. In that reading, the lesson extends beyond Ada to disciplined system design under pressure.
+EDITORIAL INTERPRETATION (Repository lens): NASA's Flight Dynamics transition illustrates a paranoia-aligned infrastructure posture—design so the next mission does not require starting over, structure change through parameters instead of repeated source edits, and evaluate technical decisions against operational survivability. In that reading, the lesson extends beyond Ada to disciplined system design under pressure.
