@@ -6,12 +6,12 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### BFGOODRICH_POWER.md
-**Routine:** `BFGoodrich.txt` (IMD-HUMS architecture case study)
-**Focus:** Safety-critical telemetry software, deterministic concurrency, certification-driven design
-**Theme:** “Data change, not software” as paranoid systems doctrine
+### ASTROPHYSICS_POWER.md
+**Routine:** `astrophysics.txt` (Koenighofer & Stift, 1994 astrophysical modeling memo)
+**Focus:** Adaptive 2D grid architecture, radiative-transfer workload constraints, Ada package boundaries for scientific code
+**Theme:** Paranoid software design for numerically intensive astrophysics
 **Status:** Complete
-**Link:** [writeups/BFGOODRICH_POWER.md](writeups/BFGOODRICH_POWER.md)
+**Link:** [writeups/ASTROPHYSICS_POWER.md](writeups/ASTROPHYSICS_POWER.md)
 
 ---
 
