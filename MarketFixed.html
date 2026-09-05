@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MARKETFIXED — Nikolas Bourbaki × Andy Grove Tri-Partner Dance</title>
+  <meta name="description" content="Nikolas Bourbaki, Andy Grove, and the Posted Stall tri-partner the MarketFixed range-rate gate. Tick algebra, 1p levy, wallet paranoia — only the paranoid survive." />
+  <style>
+    :root {
+      --ink: #0b1220;
+      --parchment: #f4efe4;
+      --brass: #c9a227;
+      --ada: #6ec6ff;
+      --grove: #7dffa8;
+      --shake: #ffd6a5;
+      --bourbaki: #ff8fab;
+      --stall: #c4b5fd;
+      --ok: #7dffa8;
+      --range: #ffd6a5;
+      --rate: #ff8fab;
+      --funds: #6ec6ff;
+      --sea: #12324d;
+      --foam: rgba(244, 239, 228, 0.08);
+      --glow: 0 0 24px rgba(110, 198, 255, 0.25);
+      --glow-b: 0 0 24px rgba(255, 143, 171, 0.28);
+      --glow-g: 0 0 24px rgba(125, 255, 168, 0.28);
+      --glow-s: 0 0 24px rgba(196, 181, 253, 0.28);
+      --mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--parchment);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1a3a5c 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #3a1d4a 0%, transparent 50%),
+        radial-gradient(700px 400px at 50% 100%, #1a2a1a 0%, transparent 45%),
+        linear-gradient(180deg, #071018 0%, var(--ink) 40%, #0a1628 100%);
+      font-family: var(--serif);
+      line-height: 1.55;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, #fff8, transparent),
+        radial-gradient(1px 1px at 28% 42%, #fff6, transparent),
+        radial-gradient(1.5px 1.5px at 67% 22%, #fffc, transparent),
+        radial-gradient(1px 1px at 81% 58%, #fff7, transparent),
+        radial-gradient(1px 1px at 45% 76%, #fff5, transparent),
+        radial-gradient(1.5px 1.5px at 92% 12%, #fff9, transparent),
+        radial-gradient(1px 1px at 8% 88%, #fff4, transparent);
+      animation: drift 80s linear infinite;
+    }
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-40px); }
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--foam);
+      margin-bottom: 2rem;
+    }
+    .sigil {
+      display: inline-flex;
+      gap: 0.55rem;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 1rem;
+    }
+    .sigil span {
+      display: inline-block;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--brass);
+      box-shadow: 0 0 10px var(--brass);
+    }
+    h1 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.6rem, 4.2vw, 2.75rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--bourbaki), var(--stall), var(--grove));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 18px rgba(196, 181, 253, 0.2));
+    }
+    .epigraph {
+      max-width: 42rem;
+      margin: 1rem auto 0;
+      font-style: italic;
+      color: #d7cfc0;
+      font-size: 1.05rem;
+    }
+    .epigraph cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--brass);
+      letter-spacing: 0.06em;
+    }
+    .dual-cite {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      justify-content: center;
+      margin-top: 1.1rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: #9fb0c3;
+    }
+    .dual-cite .b { color: var(--bourbaki); }
+    .dual-cite .g { color: var(--grove); }
+    .dual-cite .s { color: var(--stall); }
+
+    .crew {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.85rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid var(--foam);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover, .card:focus-within {
+      transform: translateY(-3px);
+      border-color: rgba(201, 162, 39, 0.45);
+      box-shadow: var(--glow);
+    }
+    .card h2 {
+      margin: 0 0 0.35rem;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: #cfc6b6;
+    }
+    .card .role {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+      opacity: 0.85;
+    }
+    .card.bourbaki h2, .card.bourbaki .role { color: var(--bourbaki); }
+    .card.grove h2, .card.grove .role { color: var(--grove); }
+    .card.stall h2, .card.stall .role { color: var(--stall); }
+    .card.ada h2, .card.ada .role { color: var(--ada); }
+    .card.bourbaki:hover { box-shadow: var(--glow-b); border-color: rgba(255, 143, 171, 0.45); }
+    .card.grove:hover { box-shadow: var(--glow-g); border-color: rgba(125, 255, 168, 0.45); }
+    .card.stall:hover { box-shadow: var(--glow-s); border-color: rgba(196, 181, 253, 0.45); }
+
+    section.panel {
+      margin: 2.25rem 0;
+      padding: 1.35rem 1.25rem;
+      border-radius: 16px;
+      background: rgba(8, 16, 28, 0.72);
+      border: 1px solid var(--foam);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+    section.panel h3 {
+      margin: 0 0 0.85rem;
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    section.panel h3 .tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-left: 0.55rem;
+      vertical-align: middle;
+    }
+
+    .voyage p {
+      margin: 0 0 0.95rem;
+      font-size: 1.05rem;
+    }
+    .voyage p:last-child { margin-bottom: 0; }
+
+    .kw {
+      font-family: var(--mono);
+      font-size: 0.9em;
+      color: var(--ada);
+      background: rgba(110, 198, 255, 0.1);
+      border: 1px solid rgba(110, 198, 255, 0.22);
+      border-radius: 5px;
+      padding: 0.05em 0.35em;
+      white-space: nowrap;
+    }
+    .kw.b {
+      color: var(--bourbaki);
+      background: rgba(255, 143, 171, 0.1);
+      border-color: rgba(255, 143, 171, 0.28);
+    }
+    .kw.g {
+      color: var(--grove);
+      background: rgba(125, 255, 168, 0.1);
+      border-color: rgba(125, 255, 168, 0.28);
+    }
+    .kw.s {
+      color: var(--stall);
+      background: rgba(196, 181, 253, 0.1);
+      border-color: rgba(196, 181, 253, 0.28);
+    }
+    .kw.imm {
+      color: var(--shake);
+      background: rgba(255, 214, 165, 0.1);
+      border-color: rgba(255, 214, 165, 0.28);
+    }
+
+    pre.asm {
+      margin: 0;
+      padding: 1rem 1.05rem;
+      overflow-x: auto;
+      border-radius: 12px;
+      background: #050b14;
+      border: 1px solid rgba(125, 255, 168, 0.18);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: #b8c7d9;
+      max-height: 420px;
+    }
+    pre.asm .c { color: #6b7c90; }
+    pre.asm .d { color: var(--grove); }
+    pre.asm .i { color: #ffe08a; }
+    pre.asm .r { color: var(--ada); }
+    pre.asm .l { color: var(--bourbaki); }
+    pre.asm .n { color: var(--shake); }
+    pre.asm .hi {
+      background: rgba(201, 162, 39, 0.18);
+      box-shadow: inset 3px 0 0 var(--brass);
+      display: inline-block;
+      width: 100%;
+      margin-left: -0.25rem;
+      padding-left: 0.25rem;
+      border-radius: 3px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    button, .btn {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f0e6cf, var(--brass));
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.25);
+    }
+    button:hover, .btn:hover { filter: brightness(1.08); }
+    button:active { transform: translateY(1px); }
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      filter: none;
+    }
+    button.ghost {
+      background: transparent;
+      color: var(--parchment);
+      border: 1px solid rgba(244, 239, 228, 0.25);
+      box-shadow: none;
+    }
+    button.bourbaki-btn {
+      background: linear-gradient(180deg, #ffc2d1, var(--bourbaki));
+      color: #1a0a10;
+    }
+    button.grove-btn {
+      background: linear-gradient(180deg, #c8ffe0, var(--grove));
+      color: #0a1a12;
+    }
+    button.stall-btn {
+      background: linear-gradient(180deg, #ddd6fe, var(--stall));
+      color: #1a1028;
+    }
+    .status {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #9fb0c3;
+    }
+
+    .inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+      padding: 0.85rem;
+      border-radius: 12px;
+      border: 1px dashed rgba(201, 162, 39, 0.3);
+      background: rgba(201, 162, 39, 0.04);
+    }
+    .inputs label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+    .inputs input {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: var(--parchment);
+      background: #050b14;
+      border: 1px solid rgba(244, 239, 228, 0.18);
+      border-radius: 8px;
+      padding: 0.45rem 0.55rem;
+    }
+    .inputs input:focus {
+      outline: none;
+      border-color: rgba(201, 162, 39, 0.55);
+      box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.15);
+    }
+
+    .dance-stage {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 820px) {
+      .dance-stage { grid-template-columns: 1fr 1fr; }
+    }
+
+    .floor {
+      background: #050b14;
+      border: 1px solid var(--foam);
+      border-radius: 14px;
+      padding: 1rem;
+      min-height: 280px;
+    }
+    .floor h4 {
+      margin: 0 0 0.75rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      font-weight: 500;
+    }
+    .floor.bourbaki-floor { border-color: rgba(255, 143, 171, 0.25); box-shadow: inset 0 0 40px rgba(255, 143, 171, 0.04); }
+    .floor.grove-floor { border-color: rgba(125, 255, 168, 0.25); box-shadow: inset 0 0 40px rgba(125, 255, 168, 0.04); }
+    .floor.stall-floor { border-color: rgba(196, 181, 253, 0.25); box-shadow: inset 0 0 40px rgba(196, 181, 253, 0.04); }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 4.2rem 1fr auto;
+      gap: 0.45rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+    .field-name {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: #8fa3b8;
+      text-align: right;
+    }
+    .field-val {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      padding: 0.42rem 0.55rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: rgba(255,255,255,0.04);
+      color: #cfd8e6;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      min-height: 2rem;
+    }
+    .field-val.pulse {
+      transform: scale(1.03);
+      box-shadow: 0 0 16px rgba(201, 162, 39, 0.35);
+    }
+    .field-val.net { background: rgba(125, 255, 168, 0.12); border-color: rgba(125, 255, 168, 0.3); color: var(--grove); }
+    .field-val.vat { background: rgba(255, 143, 171, 0.12); border-color: rgba(255, 143, 171, 0.3); color: var(--bourbaki); }
+    .field-val.gross { background: rgba(255, 214, 165, 0.12); border-color: rgba(255, 214, 165, 0.3); color: var(--shake); }
+    .field-val.rate { background: rgba(196, 181, 253, 0.12); border-color: rgba(196, 181, 253, 0.3); color: var(--stall); }
+    .field-val.lo, .field-val.hi { background: rgba(110, 198, 255, 0.1); border-color: rgba(110, 198, 255, 0.28); color: var(--ada); }
+    .field-val.status-ok { background: rgba(125, 255, 168, 0.18); border-color: rgba(125, 255, 168, 0.45); color: var(--ok); }
+    .field-val.status-range { background: rgba(255, 214, 165, 0.18); border-color: rgba(255, 214, 165, 0.45); color: var(--range); }
+    .field-val.status-rate { background: rgba(255, 143, 171, 0.18); border-color: rgba(255, 143, 171, 0.45); color: var(--rate); }
+    .field-val.status-funds { background: rgba(110, 198, 255, 0.18); border-color: rgba(110, 198, 255, 0.45); color: var(--funds); }
+    .field-val.empty { opacity: 0.4; font-style: italic; }
+    .field-off {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: #6b7c90;
+    }
+
+    .gate-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .gate {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(244, 239, 228, 0.15);
+      background: rgba(255,255,255,0.03);
+      color: #8fa3b8;
+      transition: all 0.25s ease;
+    }
+    .gate.pass {
+      color: var(--grove);
+      border-color: rgba(125, 255, 168, 0.45);
+      background: rgba(125, 255, 168, 0.1);
+    }
+    .gate.fail {
+      color: var(--bourbaki);
+      border-color: rgba(255, 143, 171, 0.45);
+      background: rgba(255, 143, 171, 0.1);
+    }
+    .gate.active {
+      box-shadow: 0 0 14px rgba(201, 162, 39, 0.4);
+      transform: scale(1.05);
+    }
+
+    .callout {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px dashed rgba(201, 162, 39, 0.35);
+      background: rgba(201, 162, 39, 0.05);
+      font-size: 0.98rem;
+      min-height: 4.2rem;
+    }
+    .callout strong {
+      font-family: var(--mono);
+      font-weight: 600;
+    }
+    .callout .who-b { color: var(--bourbaki); }
+    .callout .who-g { color: var(--grove); }
+    .callout .who-s { color: var(--stall); }
+    .callout .who-both {
+      background: linear-gradient(90deg, var(--bourbaki), var(--stall), var(--grove));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-family: var(--mono);
+      font-weight: 600;
+    }
+
+    .step-rail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 0.75rem 0 0.25rem;
+    }
+    .step-dot {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      padding: 0.28rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(244, 239, 228, 0.18);
+      background: rgba(255,255,255,0.03);
+      color: #9fb0c3;
+      cursor: pointer;
+    }
+    .step-dot.active {
+      color: var(--ink);
+      background: linear-gradient(180deg, #f0e6cf, var(--brass));
+      border-color: transparent;
+    }
+    .step-dot.done {
+      border-color: rgba(125, 255, 168, 0.4);
+      color: var(--grove);
+    }
+    .step-dot.dance1 { border-color: rgba(255, 143, 171, 0.35); }
+    .step-dot.dance2 { border-color: rgba(125, 255, 168, 0.35); }
+    .step-dot.dance3 { border-color: rgba(196, 181, 253, 0.35); }
+
+    .motif {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .motif .pill {
+      border-radius: 12px;
+      padding: 0.85rem;
+      border: 1px solid var(--foam);
+      background: rgba(255,255,255,0.03);
+      font-size: 0.9rem;
+    }
+    .motif .pill code {
+      font-family: var(--mono);
+      color: var(--shake);
+      font-size: 0.85em;
+    }
+    .motif .pill h5 {
+      margin: 0 0 0.35rem;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+    }
+
+    .ledger {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .ledger th, .ledger td {
+      text-align: left;
+      padding: 0.55rem 0.45rem;
+      border-bottom: 1px solid var(--foam);
+      vertical-align: top;
+    }
+    .ledger th {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brass);
+      font-weight: 500;
+    }
+    .ledger td.role { color: var(--ada); font-family: var(--mono); font-size: 0.85rem; }
+
+    .oracle {
+      min-height: 4.5rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px dashed rgba(255, 214, 165, 0.35);
+      background: rgba(255, 214, 165, 0.05);
+      font-size: 1.02rem;
+    }
+    .oracle strong {
+      font-family: var(--mono);
+      color: var(--shake);
+      font-weight: 600;
+    }
+
+    .chip-sea {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      max-height: 220px;
+      overflow: auto;
+      padding: 0.25rem;
+    }
+    .chip {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 0.28rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(110, 198, 255, 0.25);
+      background: rgba(110, 198, 255, 0.08);
+      color: var(--ada);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .chip:hover { background: rgba(110, 198, 255, 0.2); transform: scale(1.04); }
+    .chip.active {
+      background: rgba(125, 255, 168, 0.18);
+      border-color: rgba(125, 255, 168, 0.5);
+      color: var(--grove);
+      box-shadow: 0 0 12px rgba(125, 255, 168, 0.2);
+    }
+    .chip.b-chip {
+      border-color: rgba(255, 143, 171, 0.3);
+      background: rgba(255, 143, 171, 0.08);
+      color: var(--bourbaki);
+    }
+    .chip.b-chip.active {
+      background: rgba(255, 143, 171, 0.2);
+      border-color: rgba(255, 143, 171, 0.55);
+      color: #ffd0db;
+    }
+    .chip.s-chip {
+      border-color: rgba(196, 181, 253, 0.3);
+      background: rgba(196, 181, 253, 0.08);
+      color: var(--stall);
+    }
+    .chip.s-chip.active {
+      background: rgba(196, 181, 253, 0.2);
+      border-color: rgba(196, 181, 253, 0.55);
+      color: #e9e0ff;
+    }
+
+    .ticker {
+      margin-top: 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: #8fa3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      border-top: 1px solid var(--foam);
+      padding-top: 0.85rem;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 56s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--foam);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #8093a8;
+      text-align: center;
+    }
+    footer a { color: var(--ada); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stars, .ticker span { animation: none; }
+      .chip, .card, button, .field-val, .gate { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero">
+      <div class="sigil"><span></span> paranoid-assembly · tri-partner dance <span></span></div>
+      <h1><em>MARKETFIXED</em></h1>
+      <p class="epigraph">
+        Posted price. No haggle. The range-rate gate is the whole job —
+        three partners, one fill, zero lost pennies.
+        <cite>— Nikolas Bourbaki × Andy Grove × Posted Stall · MarketFixed.asm</cite>
+      </p>
+      <div class="dual-cite" aria-label="Tri-partner epigraph">
+        <span class="b">Bourbaki: the band is a closed interval; the tick is the unit.</span>
+        <span class="s">Stall: list price or nothing — the sticker does not move.</span>
+        <span class="g">Grove: gate rate, range, funds before you clear a single penny.</span>
+      </div>
+    </header>
+
+    <div class="crew" role="list">
+      <article class="card bourbaki" role="listitem">
+        <div class="role">Dance I · band algebra</div>
+        <h2>Nikolas Bourbaki</h2>
+        <p>Collective under one mask. Orders the interval: <span class="kw b">lo ≤ hi</span>, both on-tick, both inside the book. Structure before any coin moves.</p>
+      </article>
+      <article class="card grove" role="listitem">
+        <div class="role">Dance II · levy paranoia</div>
+        <h2>Andy Grove</h2>
+        <p>Quartermaster of the exchange. Legal VAT is 0 or 1 penny. Levy by subtraction so <span class="kw g">net + vat == gross</span>. Fail fast on rate.</p>
+      </article>
+      <article class="card stall" role="listitem">
+        <div class="role">Dance III · wallet gate</div>
+        <h2>Posted Stall</h2>
+        <p>No haggle partner. List must sit in the band, on-tick; wallet must cover list. Status is the only speech: <span class="kw s">OK · RANGE · RATE · FUNDS</span>.</p>
+      </article>
+      <article class="card ada" role="listitem">
+        <div class="role">Identity · clearing</div>
+        <h2>Ada Lovelace</h2>
+        <p>Names the invariant. Money is unsigned pennies; the tick is 1p; the VAT rate is 1p flat. Algebra weaves the clearing ledger.</p>
+      </article>
+    </div>
+
+    <section class="panel voyage" aria-labelledby="voyage-title">
+      <h3 id="voyage-title">The Tri-Partner Charter <span class="tag">range · rate · funds</span></h3>
+      <p>
+        <strong>Nikolas Bourbaki</strong> boarded with a commutative diagram of prices.
+        “A fill is legal only when the band is a non-empty closed interval on the tick lattice,”
+        he said, drawing <span class="kw b">PRICE_MIN…PRICE_MAX</span> as the ambient book.
+        Dance&nbsp;I is pure structure: <span class="kw b">market_on_tick</span>,
+        <span class="kw b">market_in_range</span>, <span class="kw b">market_band_ok</span>.
+      </p>
+      <p>
+        <strong>Andy Grove</strong> answered with the inflection of the exchange levy.
+        “Assume a bad rate arrives,” he said. “Gate it before you write net.
+        Collect VAT by subtraction so no penny evaporates under wrap.”
+        Dance&nbsp;II is the levy: <span class="kw g">market_rate_ok</span>,
+        <span class="kw g">market_levy</span> — <span class="kw imm">ST_RATE</span> or
+        <span class="kw imm">ST_RANGE</span> before any handshake.
+      </p>
+      <p>
+        <strong>The Posted Stall</strong> holds the third position. No haggle.
+        The list price is the list price. After band and levy clear, the wallet must cover
+        gross. Dance&nbsp;III is <span class="kw s">market_quote_fixed</span> composing the
+        gates and writing <span class="kw s">Q_STATUS</span>. Three incomplete motions;
+        one total order on a fill.
+      </p>
+      <p>
+        Delete any partner and the stall either over-clears, under-taxes, or spends a short wallet.
+        That is tri-partner engineering: band, levy, funds — and only the paranoid survive.
+      </p>
+    </section>
+
+    <section class="panel" aria-labelledby="dance-title">
+      <h3 id="dance-title">Tri-Partner Floor <span class="tag">step the gate</span></h3>
+      <p style="margin-top:0;color:#cfc6b6;font-size:0.95rem;">
+        Bourbaki leads Dance&nbsp;I (band). Grove leads Dance&nbsp;II (levy).
+        The Stall leads Dance&nbsp;III (wallet &amp; status). Tune the inputs; step the choreography.
+      </p>
+
+      <div class="inputs" aria-label="Quote inputs">
+        <label>list (pennies)
+          <input type="number" id="in-list" value="100" min="0" max="2147483647" />
+        </label>
+        <label>lo
+          <input type="number" id="in-lo" value="50" min="0" max="2147483647" />
+        </label>
+        <label>hi
+          <input type="number" id="in-hi" value="200" min="0" max="2147483647" />
+        </label>
+        <label>rate (0|1)
+          <input type="number" id="in-rate" value="1" min="0" max="10" />
+        </label>
+        <label>wallet
+          <input type="number" id="in-wallet" value="150" min="0" max="2147483647" />
+        </label>
+      </div>
+
+      <div class="controls">
+        <button type="button" class="ghost" id="btn-reset">Reset quote</button>
+        <button type="button" class="bourbaki-btn" id="btn-prev">◀ Back</button>
+        <button type="button" class="grove-btn" id="btn-next">Step ▶</button>
+        <button type="button" class="stall-btn" id="btn-play">Play tri-partner</button>
+        <button type="button" class="ghost" id="btn-clear">Jump to clear</button>
+        <button type="button" class="ghost" id="btn-recompute">Recompute gates</button>
+        <span class="status" id="step-status" aria-live="polite"></span>
+      </div>
+      <div class="step-rail" id="step-rail" aria-label="Dance steps"></div>
+      <div class="dance-stage">
+        <div class="floor bourbaki-floor" aria-label="MarketQuote ledger">
+          <h4 id="floor-a-title">Floor A · MarketQuote</h4>
+          <div id="floor-a"></div>
+        </div>
+        <div class="floor stall-floor" aria-label="Gate board">
+          <h4 id="floor-b-title">Floor B · gates &amp; inputs</h4>
+          <div id="floor-b"></div>
+          <div class="gate-row" id="gate-row" aria-label="Gate outcomes"></div>
+        </div>
+      </div>
+      <div class="callout" id="narration" role="status" aria-live="polite">
+        Press <strong>Step</strong>. Bourbaki, Grove, and the Stall take the floor.
+      </div>
+      <div class="motif">
+        <div class="pill">
+          <h5 style="color:var(--bourbaki)">Bourbaki motif</h5>
+          Band algebra: <code>lo ≤ hi</code>, both on-tick, both in <code>[PRICE_MIN, PRICE_MAX]</code>. Empty bands fail closed.
+        </div>
+        <div class="pill">
+          <h5 style="color:var(--grove)">Grove motif</h5>
+          Levy by subtraction: <code>net = gross − rate</code>, <code>vat = rate</code>. Identity holds; no modular wrap on short books.
+        </div>
+        <div class="pill">
+          <h5 style="color:var(--stall)">Stall motif</h5>
+          Posted price: list in band, on-tick, wallet ≥ list. Status is the only reply.
+        </div>
+        <div class="pill">
+          <h5 style="color:var(--ada)">Lovelace identity</h5>
+          Unsigned pennies · tick = 1p · VAT = 1p flat · <code>net + vat == gross</code>.
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="asm-title">
+      <h3 id="asm-title">GAS Intel Manifest <span class="tag">market_quote_fixed</span></h3>
+      <p style="margin-top:0;color:#cfc6b6;font-size:0.95rem;">
+        System V x86-64: <code>rdi=q  esi=list  edx=lo  ecx=hi  r8d=rate  r9d=wallet</code>.
+        Highlight tracks the current tri-partner step.
+      </p>
+      <pre class="asm" id="asm-source"></pre>
+    </section>
+
+    <section class="panel" aria-labelledby="oracle-title">
+      <h3 id="oracle-title">Instruction Oracle <span class="tag">click a chip</span></h3>
+      <div class="controls">
+        <button type="button" id="btn-shuffle">Shuffle the hold</button>
+        <button type="button" class="ghost" id="btn-clear-chip">Clear active</button>
+        <button type="button" class="ghost" id="btn-speak-dance">Speak the tri-partner</button>
+        <span class="status" id="chip-count" aria-live="polite"></span>
+      </div>
+      <div class="chip-sea" id="chip-sea" aria-label="MarketFixed tri-partner vocabulary"></div>
+      <div class="oracle" id="oracle" role="status" aria-live="polite">
+        Choose a chip. Bourbaki names the interval; Grove names the survival pressure; the Stall names the sticker.
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="roles-title">
+      <h3 id="roles-title">Watch Bill <span class="tag">three partners, one fill</span></h3>
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Partner</th>
+            <th>Station</th>
+            <th>GAS instinct</th>
+            <th>Doctrine</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nikolas Bourbaki</td>
+            <td>Dance I · band algebra</td>
+            <td class="role">on_tick · in_range · band_ok</td>
+            <td>Presentations of price live on a lattice. Order the interval before you clear.</td>
+          </tr>
+          <tr>
+            <td>Andy Grove</td>
+            <td>Dance II · levy paranoia</td>
+            <td class="role">rate_ok · levy · sub</td>
+            <td>Gate the rate. Subtract the levy. Never invent a penny; never lose one to wrap.</td>
+          </tr>
+          <tr>
+            <td>Posted Stall</td>
+            <td>Dance III · wallet &amp; status</td>
+            <td class="role">quote_fixed · cmp wallet · status</td>
+            <td>No haggle. List in band or ST_RANGE. Wallet short or ST_FUNDS. Silence is not consent.</td>
+          </tr>
+          <tr>
+            <td>Ada Lovelace</td>
+            <td>Clearing identity</td>
+            <td class="role">net + vat == gross</td>
+            <td>The Engine weaves algebraic patterns; unsigned pennies are the punched cards of the stall.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ticker" aria-hidden="true">
+        <span id="ticker-text"></span>
+      </div>
+    </section>
+
+    <footer>
+      Creative coding for <a href="README.md">paranoid-assembly</a> ·
+      Companion to <a href="writeups/MARKETFIXED_POWER.md">writeups/MARKETFIXED_POWER.md</a> ·
+      Source <a href="MarketFixed.asm">MarketFixed.asm</a> ·
+      Kin to <a href="SWIZZLING_SSE_POWER.html">SWIZZLING_SSE_POWER.html</a> ·
+      Inspired by <a href="Ada-Lovelace-Grove.html">Ada-Lovelace-Grove.html</a> ·
+      “Only the paranoid survive.”
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const ST = { OK: 0, RANGE: 1, RATE: 2, FUNDS: 3 };
+      const ST_NAME = ["ST_OK", "ST_RANGE", "ST_RATE", "ST_FUNDS"];
+      const PRICE_MIN = 1;
+      const PRICE_MAX = 0x7fffffff;
+      const RATE_MIN = 0;
+      const RATE_MAX = 1;
+      const TICK = 1;
+
+      function u32(n) {
+        n = Number(n);
+        if (!isFinite(n) || n < 0) return 0;
+        return Math.min(Math.floor(n), 0xffffffff);
+      }
+
+      function onTick(p) {
+        return TICK === 1 ? true : (u32(p) % TICK) === 0;
+      }
+
+      function inRange(p, lo, hi) {
+        p = u32(p); lo = u32(lo); hi = u32(hi);
+        return p >= lo && p <= hi;
+      }
+
+      function rateOk(rate) {
+        rate = u32(rate);
+        return rate >= RATE_MIN && rate <= RATE_MAX;
+      }
+
+      function bandOk(lo, hi, rate) {
+        if (!rateOk(rate)) return false;
+        if (u32(lo) > u32(hi)) return false;
+        if (!onTick(lo) || !onTick(hi)) return false;
+        if (!inRange(lo, PRICE_MIN, PRICE_MAX)) return false;
+        if (!inRange(hi, PRICE_MIN, PRICE_MAX)) return false;
+        return true;
+      }
+
+      function readInputs() {
+        return {
+          list: u32(document.getElementById("in-list").value),
+          lo: u32(document.getElementById("in-lo").value),
+          hi: u32(document.getElementById("in-hi").value),
+          rate: u32(document.getElementById("in-rate").value),
+          wallet: u32(document.getElementById("in-wallet").value)
+        };
+      }
+
+      function simulate(inp) {
+        const q = {
+          net: 0, vat: 0, gross: 0,
+          rate: inp.rate, lo: inp.lo, hi: inp.hi, status: ST.OK
+        };
+        const gates = {
+          rate_ok: rateOk(inp.rate),
+          band_ordered: u32(inp.lo) <= u32(inp.hi),
+          lo_tick: onTick(inp.lo),
+          hi_tick: onTick(inp.hi),
+          lo_book: inRange(inp.lo, PRICE_MIN, PRICE_MAX),
+          hi_book: inRange(inp.hi, PRICE_MIN, PRICE_MAX),
+          band_ok: false,
+          list_in_band: false,
+          list_tick: false,
+          levy_ok: false,
+          wallet_ok: false
+        };
+        gates.band_ok = bandOk(inp.lo, inp.hi, inp.rate);
+
+        if (!gates.band_ok) {
+          if (!gates.rate_ok) q.status = ST.RATE;
+          else q.status = ST.RANGE;
+          return { q, gates, path: "band_fail" };
+        }
+
+        gates.list_in_band = inRange(inp.list, inp.lo, inp.hi);
+        gates.list_tick = onTick(inp.list);
+        if (!gates.list_in_band || !gates.list_tick) {
+          q.status = ST.RANGE;
+          return { q, gates, path: "price_fail" };
+        }
+
+        // levy
+        q.gross = inp.list;
+        q.rate = inp.rate;
+        if (!gates.rate_ok) {
+          q.status = ST.RATE;
+          return { q, gates, path: "levy_rate" };
+        }
+        if (inp.list < inp.rate) {
+          q.status = ST.RANGE;
+          return { q, gates, path: "levy_range" };
+        }
+        q.net = inp.list - inp.rate;
+        q.vat = inp.rate;
+        gates.levy_ok = true;
+
+        if (inp.wallet < inp.list) {
+          q.status = ST.FUNDS;
+          gates.wallet_ok = false;
+          return { q, gates, path: "funds" };
+        }
+        gates.wallet_ok = true;
+        q.status = ST.OK;
+        return { q, gates, path: "ok" };
+      }
+
+      function statusClass(st) {
+        if (st === ST.OK) return "status-ok";
+        if (st === ST.RANGE) return "status-range";
+        if (st === ST.RATE) return "status-rate";
+        return "status-funds";
+      }
+
+      function buildSteps(sim, inp) {
+        const emptyQ = { net: 0, vat: 0, gross: 0, rate: inp.rate, lo: inp.lo, hi: inp.hi, status: ST.OK };
+        const steps = [];
+
+        steps.push({
+          id: "prolog",
+          dance: 0,
+          label: "0·zero",
+          title: "Prologue · zero the quote",
+          who: "both",
+          whoLabel: "prologue",
+          narration:
+            "Five callee-saved pushes. Zero net/vat/gross/status; pin rate, lo, hi onto the quote. Inputs on the floor: list=" +
+            inp.list + ", wallet=" + inp.wallet + ".",
+          quote: emptyQ,
+          pulse: ["rate", "lo", "hi"],
+          activeGates: [],
+          aTitle: "Floor A · MarketQuote zeroed",
+          bTitle: "Floor B · inputs staged",
+          asmLines: [0]
+        });
+
+        steps.push({
+          id: "d1a",
+          dance: 1,
+          label: "1a·rate",
+          title: "Dance I · market_rate_ok inside band_ok",
+          who: "b",
+          whoLabel: "Nikolas Bourbaki",
+          narration: sim.gates.rate_ok
+            ? "Bourbaki opens band_ok with <span class='kw b'>market_rate_ok</span>: rate " + inp.rate + " ∈ [0,1]. Structure admits the levy parameter."
+            : "Bourbaki’s first gate fails: rate " + inp.rate + " ∉ [0,1]. The interval diagram collapses before lo/hi are judged.",
+          quote: emptyQ,
+          pulse: ["rate"],
+          activeGates: ["rate_ok"],
+          aTitle: "Floor A · rate under inspection",
+          bTitle: "Floor B · rate_ok",
+          asmLines: [1]
+        });
+
+        steps.push({
+          id: "d1b",
+          dance: 1,
+          label: "1b·order",
+          title: "Dance I · lo ≤ hi",
+          who: "b",
+          whoLabel: "Nikolas Bourbaki",
+          narration: sim.gates.band_ordered
+            ? "Order holds: lo=" + inp.lo + " ≤ hi=" + inp.hi + ". The band is a non-empty closed interval on ℤ₊."
+            : "Empty band: lo=" + inp.lo + " > hi=" + inp.hi + ". Bourbaki refuses the empty set as a posted range.",
+          quote: emptyQ,
+          pulse: ["lo", "hi"],
+          activeGates: ["rate_ok", "band_ordered"],
+          aTitle: "Floor A · band endpoints",
+          bTitle: "Floor B · ordered?",
+          asmLines: [1]
+        });
+
+        steps.push({
+          id: "d1c",
+          dance: 1,
+          label: "1c·tick",
+          title: "Dance I · on_tick lo &amp; hi",
+          who: "b",
+          whoLabel: "Nikolas Bourbaki",
+          narration:
+            "Tick lattice check (TICK=1): lo on-tick=" + sim.gates.lo_tick +
+            ", hi on-tick=" + sim.gates.hi_tick +
+            ". With a 1p tick every integer is legal; the call still earns its place as the lattice gate.",
+          quote: emptyQ,
+          pulse: ["lo", "hi"],
+          activeGates: ["rate_ok", "band_ordered", "lo_tick", "hi_tick"],
+          aTitle: "Floor A · tick lattice",
+          bTitle: "Floor B · on_tick",
+          asmLines: [1]
+        });
+
+        steps.push({
+          id: "d1d",
+          dance: 1,
+          label: "1d·book",
+          title: "Dance I complete · band in book",
+          who: "b",
+          whoLabel: "Nikolas Bourbaki",
+          narration: sim.gates.band_ok
+            ? "Both endpoints inside [PRICE_MIN, PRICE_MAX]. <span class='kw b'>market_band_ok</span> returns 1. Bourbaki bows; Grove steps to the levy."
+            : "Band fails closed. band_ok=0. Path will classify RATE vs RANGE before any levy writes net.",
+          quote: emptyQ,
+          pulse: ["lo", "hi", "rate"],
+          activeGates: ["rate_ok", "band_ordered", "lo_tick", "hi_tick", "lo_book", "hi_book", "band_ok"],
+          aTitle: "Floor A · band_ok settled",
+          bTitle: "Floor B · Dance I done",
+          asmLines: [1]
+        });
+
+        if (!sim.gates.band_ok) {
+          const st = !sim.gates.rate_ok ? ST.RATE : ST.RANGE;
+          const failQ = Object.assign({}, emptyQ, { status: st });
+          steps.push({
+            id: "fail-band",
+            dance: 0,
+            label: "✗·band",
+            title: "Fail-closed · " + ST_NAME[st],
+            who: "both",
+            whoLabel: "fail-closed",
+            narration:
+              "Band gate refused the fill. Status <span class='kw imm'>" + ST_NAME[st] +
+              "</span>. No net, no vat, no handshake. Grove’s paranoia: assume invalid bands arrive.",
+            quote: failQ,
+            pulse: ["status"],
+            activeGates: ["rate_ok", "band_ok"],
+            aTitle: "Floor A · status written",
+            bTitle: "Floor B · refuse",
+            asmLines: [2]
+          });
+          return steps;
+        }
+
+        steps.push({
+          id: "d3a",
+          dance: 3,
+          label: "3a·list",
+          title: "Dance III prelude · list in band &amp; on-tick",
+          who: "s",
+          whoLabel: "Posted Stall",
+          narration: (sim.gates.list_in_band && sim.gates.list_tick)
+            ? "Stall checks the sticker: list=" + inp.list + " ∈ [" + inp.lo + "," + inp.hi + "] and on-tick. Posted price stands."
+            : "Stall refuses: list=" + inp.list + " fails band or tick. <span class='kw imm'>ST_RANGE</span> — no haggle means no rescue.",
+          quote: emptyQ,
+          pulse: ["lo", "hi"],
+          activeGates: ["band_ok", "list_in_band", "list_tick"],
+          aTitle: "Floor A · awaiting levy",
+          bTitle: "Floor B · list vs band",
+          asmLines: [3]
+        });
+
+        if (!sim.gates.list_in_band || !sim.gates.list_tick) {
+          const failQ = Object.assign({}, emptyQ, { status: ST.RANGE });
+          steps.push({
+            id: "fail-price",
+            dance: 0,
+            label: "✗·price",
+            title: "Fail-closed · ST_RANGE",
+            who: "s",
+            whoLabel: "Posted Stall",
+            narration: "List outside the posted band or off-tick. Status ST_RANGE. The stall does not move the sticker for a short or wild price.",
+            quote: failQ,
+            pulse: ["status"],
+            activeGates: ["list_in_band", "list_tick"],
+            aTitle: "Floor A · ST_RANGE",
+            bTitle: "Floor B · refuse list",
+            asmLines: [2]
+          });
+          return steps;
+        }
+
+        steps.push({
+          id: "d2a",
+          dance: 2,
+          label: "2a·levy",
+          title: "Dance II · market_levy",
+          who: "g",
+          whoLabel: "Andy Grove",
+          narration: sim.gates.levy_ok
+            ? "Grove writes gross=list, then <span class='kw g'>sub</span>: net=" +
+              (inp.list - inp.rate) + ", vat=" + inp.rate +
+              ". Identity net+vat==gross holds by construction."
+            : "Levy cannot clear (bad rate or gross &lt; rate). Grove fail-closes before any false net.",
+          quote: sim.gates.levy_ok
+            ? { net: inp.list - inp.rate, vat: inp.rate, gross: inp.list, rate: inp.rate, lo: inp.lo, hi: inp.hi, status: ST.OK }
+            : Object.assign({}, emptyQ, { gross: inp.list, status: sim.path === "levy_rate" ? ST.RATE : ST.RANGE }),
+          pulse: ["net", "vat", "gross"],
+          activeGates: ["band_ok", "list_in_band", "list_tick", "levy_ok"],
+          aTitle: "Floor A · levy applied",
+          bTitle: "Floor B · Dance II",
+          asmLines: [4]
+        });
+
+        if (!sim.gates.levy_ok) {
+          steps.push({
+            id: "fail-levy",
+            dance: 0,
+            label: "✗·levy",
+            title: "Fail-closed · levy",
+            who: "g",
+            whoLabel: "Andy Grove",
+            narration: "Levy path wrote status without a clean net. No phantom credit. Only the paranoid survive bad rates and zero books.",
+            quote: Object.assign({}, emptyQ, {
+              gross: inp.list,
+              status: sim.path === "levy_rate" ? ST.RATE : ST.RANGE
+            }),
+            pulse: ["status"],
+            activeGates: ["levy_ok"],
+            aTitle: "Floor A · levy refused",
+            bTitle: "Floor B · refuse",
+            asmLines: [2]
+          });
+          return steps;
+        }
+
+        steps.push({
+          id: "d3b",
+          dance: 3,
+          label: "3b·wallet",
+          title: "Dance III · wallet ≥ list",
+          who: "s",
+          whoLabel: "Posted Stall",
+          narration: sim.gates.wallet_ok
+            ? "Wallet " + inp.wallet + " ≥ list " + inp.list + ". Stall allows the handshake. Status remains ST_OK."
+            : "Wallet " + inp.wallet + " &lt; list " + inp.list + ". <span class='kw imm'>ST_FUNDS</span> — short wallets never wrap (see also market_change_due).",
+          quote: Object.assign({}, {
+            net: inp.list - inp.rate,
+            vat: inp.rate,
+            gross: inp.list,
+            rate: inp.rate,
+            lo: inp.lo,
+            hi: inp.hi,
+            status: sim.gates.wallet_ok ? ST.OK : ST.FUNDS
+          }),
+          pulse: ["status", "gross"],
+          activeGates: ["band_ok", "list_in_band", "levy_ok", "wallet_ok"],
+          aTitle: "Floor A · funds gate",
+          bTitle: "Floor B · wallet vs list",
+          asmLines: [5]
+        });
+
+        steps.push({
+          id: "clear",
+          dance: 0,
+          label: "✓·clear",
+          title: sim.q.status === ST.OK ? "Clearing sealed · ST_OK" : "Terminal status · " + ST_NAME[sim.q.status],
+          who: "both",
+          whoLabel: "epilogue",
+          narration: sim.q.status === ST.OK
+            ? "Three partners hold: band ordered, levy exact, wallet solvent. net=" +
+              sim.q.net + " vat=" + sim.q.vat + " gross=" + sim.q.gross +
+              ". Pop r15–rbx. Leave no false pennies. Grove’s contract; Bourbaki’s interval; Stall’s sticker."
+            : "Terminal status " + ST_NAME[sim.q.status] + " written. Restore callee-saved. The stall told the truth.",
+          quote: sim.q,
+          pulse: ["net", "vat", "gross", "status"],
+          activeGates: ["band_ok", "list_in_band", "list_tick", "levy_ok", "wallet_ok"],
+          aTitle: "Floor A · final MarketQuote",
+          bTitle: "Floor B · tri-partner done",
+          asmLines: [6]
+        });
+
+        return steps;
+      }
+
+      const ASM_LINES = [
+        { html: '<span class="c"># market_quote_fixed — tri-partner gate (excerpt)</span>', step: -1 },
+        { html: '<span class="l">market_quote_fixed</span>:', step: -1 },
+        { html: '        <span class="i">push</span>    <span class="r">rbx</span> / <span class="r">r12</span>–<span class="r">r15</span>', step: -1 },
+        { html: '        <span class="i">mov</span>     <span class="r">r12</span>, <span class="r">rdi</span>                 <span class="c">; q*</span>', step: -1 },
+        { html: '        <span class="i">mov</span>     <span class="r">r13d</span>, <span class="r">esi</span>                <span class="c">; list</span>', step: -1 },
+        { html: '        <span class="i">mov</span>     <span class="r">r14d</span>, <span class="r">edx</span>                <span class="c">; lo</span>', step: -1 },
+        { html: '        <span class="i">mov</span>     <span class="r">r15d</span>, <span class="r">ecx</span>                <span class="c">; hi</span>', step: -1 },
+        { html: '        <span class="i">mov</span>     <span class="r">ebx</span>, <span class="r">r8d</span>                 <span class="c">; rate</span>', step: -1 },
+        { html: '        <span class="c">; r9d = wallet</span>', step: -1 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- 0 · zero quote, pin rate/lo/hi ----</span>', step: 0 },
+        { html: '        <span class="i">xor</span>     <span class="r">eax</span>, <span class="r">eax</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_NET], <span class="r">eax</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_VAT], <span class="r">eax</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_GROSS], <span class="r">eax</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_RATE], <span class="r">ebx</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_LO], <span class="r">r14d</span>', step: 0 },
+        { html: '        <span class="i">mov</span>     dword ptr [<span class="r">r12</span>+Q_HI], <span class="r">r15d</span>', step: 0 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- 1 · Dance I · band_ok ----</span>', step: 1 },
+        { html: '        <span class="i">mov</span>     <span class="r">edi</span>, <span class="r">r14d</span>', step: 1 },
+        { html: '        <span class="i">mov</span>     <span class="r">esi</span>, <span class="r">r15d</span>', step: 1 },
+        { html: '        <span class="i">mov</span>     <span class="r">edx</span>, <span class="r">ebx</span>', step: 1 },
+        { html: '        <span class="i">call</span>    <span class="l">market_band_ok</span>', step: 1 },
+        { html: '        <span class="i">test</span>    <span class="r">eax</span>, <span class="r">eax</span>', step: 1 },
+        { html: '        <span class="i">jnz</span>     <span class="l">.Lqf_price</span>', step: 1 },
+        { html: '        <span class="c">; classify ST_RATE vs ST_RANGE</span>', step: 2 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- 3a · list in band + on_tick ----</span>', step: 3 },
+        { html: '<span class="l">.Lqf_price</span>:', step: 3 },
+        { html: '        <span class="i">call</span>    <span class="l">market_in_range</span>           <span class="c">; list ∈ [lo,hi]</span>', step: 3 },
+        { html: '        <span class="i">call</span>    <span class="l">market_on_tick</span>            <span class="c">; list on lattice</span>', step: 3 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- 2 · Dance II · levy ----</span>', step: 4 },
+        { html: '        <span class="i">mov</span>     <span class="r">rdi</span>, <span class="r">r12</span>', step: 4 },
+        { html: '        <span class="i">mov</span>     <span class="r">esi</span>, <span class="r">r13d</span>                <span class="c">; gross = list</span>', step: 4 },
+        { html: '        <span class="i">mov</span>     <span class="r">edx</span>, <span class="r">ebx</span>                 <span class="c">; rate</span>', step: 4 },
+        { html: '        <span class="i">call</span>    <span class="l">market_levy</span>               <span class="c">; net = gross − vat</span>', step: 4 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- 3b · Dance III · wallet ----</span>', step: 5 },
+        { html: '        <span class="i">cmp</span>     <span class="r">r9d</span>, <span class="r">r13d</span>                <span class="c">; wallet ≥ list?</span>', step: 5 },
+        { html: '        <span class="i">jb</span>      <span class="l">.Lqf_funds</span>', step: 5 },
+        { html: '        <span class="i">xor</span>     <span class="r">eax</span>, <span class="r">eax</span>                 <span class="c">; ST_OK</span>', step: 5 },
+        { html: '', step: -1 },
+        { html: '        <span class="c">; ---- clear / status paths ----</span>', step: 6 },
+        { html: '<span class="l">.Lqf_done</span>:', step: 6 },
+        { html: '        <span class="i">pop</span>     <span class="r">r15</span>–<span class="r">rbx</span>', step: 6 },
+        { html: '        <span class="i">ret</span>', step: 6 }
+      ];
+
+      const VOCAB = [
+        { w: "market_on_tick", kind: "b", line: "Bourbaki: p is a whole number of ticks. With TICK=1 every integer passes; the gate still names the lattice." },
+        { w: "market_in_range", kind: "b", line: "Bourbaki: unsigned closed interval. cmp/jb/ja — no signed surprise at the high end of the book." },
+        { w: "market_band_ok", kind: "b", line: "Bourbaki: rate legal, lo≤hi, both on-tick, both in book. Structure before commerce." },
+        { w: "market_rate_ok", kind: "g", line: "Grove: VAT ∈ {0,1} pennies. Anything else is not a rate — it is an attack on the ledger." },
+        { w: "market_levy", kind: "g", line: "Grove: write gross, subtract rate into net, copy rate into vat. Identity by construction." },
+        { w: "market_quote_fixed", kind: "s", line: "Stall: compose band → price → levy → wallet. One entry, four possible statuses, zero haggle." },
+        { w: "market_change_due", kind: "g", line: "Grove: wallet−gross saturates at zero. Short change never wraps to a fortune." },
+        { w: "ST_OK", kind: "g", line: "Clear path. net+vat==gross, list in band, wallet solvent." },
+        { w: "ST_RANGE", kind: "b", line: "Interval fault: empty band, off-book ends, list outside band, or gross&lt;rate on levy." },
+        { w: "ST_RATE", kind: "g", line: "Rate outside [0,1]. Fail before any net is invented." },
+        { w: "ST_FUNDS", kind: "s", line: "Wallet &lt; list. The stall will not extend credit in this routine." },
+        { w: "Q_NET", kind: "g", line: "+0x00 · seller proceeds after the 1p exchange levy." },
+        { w: "Q_VAT", kind: "g", line: "+0x04 · levy collected; equals rate on success." },
+        { w: "Q_GROSS", kind: "s", line: "+0x08 · list price that cleared the band." },
+        { w: "Q_RATE", kind: "s", line: "+0x0C · 0 or 1 penny VAT parameter." },
+        { w: "Q_LO", kind: "b", line: "+0x10 · posted band floor." },
+        { w: "Q_HI", kind: "b", line: "+0x14 · posted band ceiling." },
+        { w: "Q_STATUS", kind: "s", line: "+0x18 · the only speech the stall makes." },
+        { w: "TICK", kind: "b", line: "1 penny. The discrete unit of the price lattice." },
+        { w: "VAT_RATE", kind: "g", line: "1 penny flat — not a percentage. Paranoid simplicity at clearing." },
+        { w: "unsigned", kind: "b", line: "Pennies never go negative in representation. Comparisons are jb/ja, not jl/jg." },
+        { w: "sub", kind: "g", line: "Levy by subtraction so net+vat reconstructs gross with no lost penny." },
+        { w: "no-haggle", kind: "s", line: "Posted price. List is list. Barter is a different file." },
+        { w: "tri-partner", kind: "b", line: "Band · levy · funds. Three incomplete motions; one total order on a fill." },
+        { w: "Bourbaki", kind: "b", line: "Collective mask. The interval is the object; the tick is the generator." },
+        { w: "Grove", kind: "g", line: "Only the paranoid survive. Gate rate and funds before you clear." },
+        { w: "Stall", kind: "s", line: "Third partner. Holds the sticker still while the gates speak." },
+        { w: "Lovelace", kind: "b", line: "Algebraic pattern of clearing: net + vat == gross is the woven identity." },
+        { w: "System V", kind: "g", line: "rdi/rsi/rdx/rcx/r8/r9. Callee-saved rbx,r12–r15 earn their pushes." },
+        { w: "fail-closed", kind: "g", line: "Invalid input yields status, not a partial fill. Silence is not consent." }
+      ];
+
+      const DANCE_LINES = [
+        "Bourbaki orders the band; Grove subtracts the levy; the Stall checks the wallet — three partners, one fill.",
+        "Dance I is structure. Dance II is survival. Dance III is solvency. Together they are the posted stall.",
+        "net + vat == gross by subtraction. No percentage math. No lost penny. No modular fortune.",
+        "ST_OK is earned. ST_RANGE, ST_RATE, ST_FUNDS are spoken early. Only the paranoid survive the short book.",
+        "List in band, on-tick, rate in {0,1}, wallet ≥ list. Delete any conjunct and the handshake is a lie.",
+        "MarketFixed does not haggle. MarketBarter can concede; this stall holds the sticker still."
+      ];
+
+      let stepIndex = 0;
+      let playing = false;
+      let playTimer = null;
+      let activeChip = null;
+      let vocab = VOCAB.slice();
+      let STEPS = [];
+      let lastSim = null;
+
+      const floorA = document.getElementById("floor-a");
+      const floorB = document.getElementById("floor-b");
+      const floorATitle = document.getElementById("floor-a-title");
+      const floorBTitle = document.getElementById("floor-b-title");
+      const gateRow = document.getElementById("gate-row");
+      const narration = document.getElementById("narration");
+      const stepStatus = document.getElementById("step-status");
+      const stepRail = document.getElementById("step-rail");
+      const asmSource = document.getElementById("asm-source");
+      const chipSea = document.getElementById("chip-sea");
+      const oracle = document.getElementById("oracle");
+      const chipCount = document.getElementById("chip-count");
+      const ticker = document.getElementById("ticker-text");
+
+      const GATE_LABELS = [
+        ["rate_ok", "rate_ok"],
+        ["band_ordered", "lo≤hi"],
+        ["lo_tick", "lo tick"],
+        ["hi_tick", "hi tick"],
+        ["lo_book", "lo book"],
+        ["hi_book", "hi book"],
+        ["band_ok", "band_ok"],
+        ["list_in_band", "list∈band"],
+        ["list_tick", "list tick"],
+        ["levy_ok", "levy_ok"],
+        ["wallet_ok", "wallet_ok"]
+      ];
+
+      function recompute() {
+        const inp = readInputs();
+        lastSim = simulate(inp);
+        STEPS = buildSteps(lastSim, inp);
+        if (stepIndex >= STEPS.length) stepIndex = Math.max(0, STEPS.length - 1);
+        render();
+      }
+
+      function renderField(name, value, cls, pulse, off) {
+        const row = document.createElement("div");
+        row.className = "field-row";
+        const nm = document.createElement("div");
+        nm.className = "field-name";
+        nm.textContent = name;
+        const val = document.createElement("div");
+        val.className = "field-val " + (cls || "");
+        if (pulse) val.classList.add("pulse");
+        val.textContent = String(value);
+        const o = document.createElement("div");
+        o.className = "field-off";
+        o.textContent = off || "";
+        row.appendChild(nm);
+        row.appendChild(val);
+        row.appendChild(o);
+        return row;
+      }
+
+      function renderQuote(el, q, pulseKeys) {
+        el.innerHTML = "";
+        const fields = [
+          ["net", q.net, "net", "+0x00"],
+          ["vat", q.vat, "vat", "+0x04"],
+          ["gross", q.gross, "gross", "+0x08"],
+          ["rate", q.rate, "rate", "+0x0C"],
+          ["lo", q.lo, "lo", "+0x10"],
+          ["hi", q.hi, "hi", "+0x14"],
+          ["status", ST_NAME[q.status] + " (" + q.status + ")", statusClass(q.status), "+0x18"]
+        ];
+        fields.forEach(([name, value, cls, off]) => {
+          const pulse = pulseKeys.indexOf(name) !== -1;
+          el.appendChild(renderField(name, value, cls, pulse, off));
+        });
+      }
+
+      function renderInputsFloor(el, inp, pulseKeys) {
+        el.innerHTML = "";
+        const fields = [
+          ["list", inp.list, "gross", "esi"],
+          ["wallet", inp.wallet, "lo", "r9d"],
+          ["identity", (lastSim && lastSim.gates.levy_ok)
+            ? (inp.list - inp.rate) + "+" + inp.rate + "=" + inp.list
+            : "—", lastSim && lastSim.gates.levy_ok ? "net" : "empty", "net+vat"]
+        ];
+        fields.forEach(([name, value, cls, off]) => {
+          const pulse = pulseKeys.indexOf(name) !== -1 || (name === "identity" && pulseKeys.indexOf("net") !== -1);
+          el.appendChild(renderField(name, value, cls, pulse, off));
+        });
+      }
+
+      function renderGates(gates, active) {
+        gateRow.innerHTML = "";
+        GATE_LABELS.forEach(([key, label]) => {
+          if (!(key in gates) && key !== "rate_ok") return;
+          const g = document.createElement("span");
+          g.className = "gate";
+          const val = gates[key];
+          if (val === true) g.classList.add("pass");
+          else if (val === false) g.classList.add("fail");
+          if (active && active.indexOf(key) !== -1) g.classList.add("active");
+          g.textContent = label + (val === true ? " ✓" : val === false ? " ✗" : "");
+          gateRow.appendChild(g);
+        });
+      }
+
+      function whoHtml(step) {
+        if (step.who === "b") return "<strong class='who-b'>" + step.whoLabel + "</strong>";
+        if (step.who === "g") return "<strong class='who-g'>" + step.whoLabel + "</strong>";
+        if (step.who === "s") return "<strong class='who-s'>" + step.whoLabel + "</strong>";
+        return "<strong class='who-both'>" + step.whoLabel + "</strong>";
+      }
+
+      function renderAsm(activeStepId) {
+        // Map step id categories to asm step numbers via step.asmLines[0]
+        const step = STEPS[stepIndex];
+        const active = step && step.asmLines ? step.asmLines[0] : -1;
+        asmSource.innerHTML = ASM_LINES.map((line) => {
+          if (!line.html) return "";
+          const hi = line.step === active ? " hi" : "";
+          return "<span class='" + hi.trim() + "'>" + line.html + "</span>";
+        }).join("\n");
+      }
+
+      function renderRail() {
+        stepRail.innerHTML = "";
+        STEPS.forEach((s, i) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "step-dot";
+          if (s.dance === 1) b.classList.add("dance1");
+          if (s.dance === 2) b.classList.add("dance2");
+          if (s.dance === 3) b.classList.add("dance3");
+          if (i === stepIndex) b.classList.add("active");
+          else if (i < stepIndex) b.classList.add("done");
+          b.textContent = s.label;
+          b.title = s.title;
+          b.addEventListener("click", () => {
+            stopPlay();
+            stepIndex = i;
+            render();
+          });
+          stepRail.appendChild(b);
+        });
+      }
+
+      function render() {
+        if (!STEPS.length) return;
+        const step = STEPS[stepIndex];
+        const inp = readInputs();
+        floorATitle.textContent = step.aTitle;
+        floorBTitle.textContent = step.bTitle;
+        renderQuote(floorA, step.quote, step.pulse || []);
+        renderInputsFloor(floorB, inp, step.pulse || []);
+        renderGates(lastSim.gates, step.activeGates || []);
+        narration.innerHTML = whoHtml(step) + " — " + step.narration;
+        stepStatus.textContent =
+          "Step " + (stepIndex + 1) + " / " + STEPS.length + " · " + step.title;
+        renderRail();
+        renderAsm();
+        document.getElementById("btn-prev").disabled = stepIndex === 0;
+        document.getElementById("btn-next").disabled = stepIndex === STEPS.length - 1;
+      }
+
+      function stopPlay() {
+        playing = false;
+        if (playTimer) {
+          clearInterval(playTimer);
+          playTimer = null;
+        }
+        document.getElementById("btn-play").textContent = "Play tri-partner";
+      }
+
+      function startPlay() {
+        if (playing) {
+          stopPlay();
+          return;
+        }
+        playing = true;
+        document.getElementById("btn-play").textContent = "Pause";
+        if (stepIndex >= STEPS.length - 1) stepIndex = 0;
+        render();
+        const ms = reducedMotion ? 1400 : 1000;
+        playTimer = setInterval(() => {
+          if (stepIndex >= STEPS.length - 1) {
+            stopPlay();
+            return;
+          }
+          stepIndex += 1;
+          render();
+        }, ms);
+      }
+
+      document.getElementById("btn-reset").addEventListener("click", () => {
+        stopPlay();
+        document.getElementById("in-list").value = 100;
+        document.getElementById("in-lo").value = 50;
+        document.getElementById("in-hi").value = 200;
+        document.getElementById("in-rate").value = 1;
+        document.getElementById("in-wallet").value = 150;
+        stepIndex = 0;
+        recompute();
+      });
+      document.getElementById("btn-prev").addEventListener("click", () => {
+        stopPlay();
+        if (stepIndex > 0) {
+          stepIndex -= 1;
+          render();
+        }
+      });
+      document.getElementById("btn-next").addEventListener("click", () => {
+        stopPlay();
+        if (stepIndex < STEPS.length - 1) {
+          stepIndex += 1;
+          render();
+        }
+      });
+      document.getElementById("btn-play").addEventListener("click", startPlay);
+      document.getElementById("btn-clear").addEventListener("click", () => {
+        stopPlay();
+        stepIndex = STEPS.length - 1;
+        render();
+      });
+      document.getElementById("btn-recompute").addEventListener("click", () => {
+        stopPlay();
+        stepIndex = 0;
+        recompute();
+        oracle.textContent = "Gates recomputed from the posted inputs. The stall rereads the sticker.";
+      });
+
+      ["in-list", "in-lo", "in-hi", "in-rate", "in-wallet"].forEach((id) => {
+        document.getElementById(id).addEventListener("change", () => {
+          stopPlay();
+          stepIndex = 0;
+          recompute();
+        });
+      });
+
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const tmp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = tmp;
+        }
+        return arr;
+      }
+
+      function renderChips() {
+        chipSea.innerHTML = "";
+        vocab.forEach((item) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          let kind = "";
+          if (item.kind === "b") kind = " b-chip";
+          else if (item.kind === "s") kind = " s-chip";
+          b.className = "chip" + kind + (activeChip === item.w ? " active" : "");
+          b.textContent = item.w;
+          b.setAttribute("aria-pressed", activeChip === item.w ? "true" : "false");
+          b.addEventListener("click", () => {
+            activeChip = item.w;
+            oracle.innerHTML = "<strong>" + item.w + "</strong> — " + item.line;
+            renderChips();
+          });
+          chipSea.appendChild(b);
+        });
+        chipCount.textContent = vocab.length + " tri-partner tokens in the hold";
+      }
+
+      document.getElementById("btn-shuffle").addEventListener("click", () => {
+        shuffle(vocab);
+        renderChips();
+        oracle.textContent = "The hold is reshuffled. Bourbaki pretends the order was always canonical.";
+      });
+      document.getElementById("btn-clear-chip").addEventListener("click", () => {
+        activeChip = null;
+        renderChips();
+        oracle.textContent = "Active token cleared. Quote fields read free—for now.";
+      });
+      document.getElementById("btn-speak-dance").addEventListener("click", () => {
+        const line = DANCE_LINES[Math.floor(Math.random() * DANCE_LINES.length)];
+        const item = vocab[Math.floor(Math.random() * vocab.length)];
+        activeChip = item.w;
+        oracle.innerHTML = "<strong>tri-partner</strong> — " + line + " <em>(token: " + item.w + ")</em>";
+        renderChips();
+      });
+
+      ticker.textContent =
+        "market_band_ok · market_levy · market_quote_fixed · net+vat==gross · ST_OK · ST_RANGE · ST_RATE · ST_FUNDS · Nikolas Bourbaki · Andy Grove · Posted Stall · only the paranoid survive · no haggle · 1p tick · 1p VAT · tri-partner · ";
+
+      recompute();
+      renderChips();
+    })();
+  </script>
+</body>
+</html>
