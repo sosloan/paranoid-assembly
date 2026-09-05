@@ -151,7 +151,8 @@ The AdaIC is sponsored by the Ada Joint Program Office and operated by
 IIT Research Institute.
 ```
 
-A legacy field report in plain text, but the architecture it describes still feels contemporary: one canonical model, many tools, zero tolerance for divergence.
+A legacy field report in plain text, but the architecture it describes still feels contemporary: one canonical model, many tools, zero tolerance for divergence.  
+Reproduced here under the flyer's stated in-text permission to reprint with AdaIC acknowledgment.
 
 ---
 
