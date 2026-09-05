@@ -42,29 +42,29 @@ module Nfl {
       venue: string
       city: string
       region: string
-      kickoffDate: string
+      kickoffLabel: string
     }
 
     array SeasonSchedule = [18] TravelLeg
 
-    constant week1 = { week = 1, opponent = "Los Angeles Rams", siteKind = SiteKind.INTERNATIONAL_AWAY, venue = "Melbourne Cricket Ground", city = "Melbourne", region = "Australia", kickoffDate = "2026-09-10" }
-    constant week2 = { week = 2, opponent = "Miami Dolphins", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-09-20" }
-    constant week3 = { week = 3, opponent = "Arizona Cardinals", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-09-27" }
-    constant week4 = { week = 4, opponent = "Denver Broncos", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-10-04" }
-    constant week5 = { week = 5, opponent = "Seattle Seahawks", siteKind = SiteKind.AWAY, venue = "Lumen Field", city = "Seattle", region = "WA", kickoffDate = "2026-10-11" }
-    constant week6 = { week = 6, opponent = "Washington Commanders", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-10-19" }
-    constant week7 = { week = 7, opponent = "Atlanta Falcons", siteKind = SiteKind.AWAY, venue = "Mercedes-Benz Stadium", city = "Atlanta", region = "GA", kickoffDate = "2026-10-25" }
-    constant week8 = { week = 8, opponent = "BYE", siteKind = SiteKind.BYE, venue = "Recovery Window", city = "Santa Clara", region = "CA", kickoffDate = "2026-11-01" }
-    constant week9 = { week = 9, opponent = "Las Vegas Raiders", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-11-08" }
-    constant week10 = { week = 10, opponent = "Dallas Cowboys", siteKind = SiteKind.AWAY, venue = "AT&T Stadium", city = "Arlington", region = "TX", kickoffDate = "2026-11-15" }
-    constant week11 = { week = 11, opponent = "Minnesota Vikings", siteKind = SiteKind.INTERNATIONAL_HOME, venue = "Estadio Banorte", city = "Mexico City", region = "Mexico", kickoffDate = "2026-11-22" }
-    constant week12 = { week = 12, opponent = "Seattle Seahawks", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-11-29" }
-    constant week13 = { week = 13, opponent = "New York Giants", siteKind = SiteKind.AWAY, venue = "MetLife Stadium", city = "East Rutherford", region = "NJ", kickoffDate = "2026-12-06" }
-    constant week14 = { week = 14, opponent = "Los Angeles Rams", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2026-12-13" }
-    constant week15 = { week = 15, opponent = "Los Angeles Chargers", siteKind = SiteKind.AWAY, venue = "SoFi Stadium", city = "Inglewood", region = "CA", kickoffDate = "2026-12-17" }
-    constant week16 = { week = 16, opponent = "Kansas City Chiefs", siteKind = SiteKind.AWAY, venue = "Arrowhead Stadium", city = "Kansas City", region = "MO", kickoffDate = "2026-12-27" }
-    constant week17 = { week = 17, opponent = "Philadelphia Eagles", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffDate = "2027-01-03" }
-    constant week18 = { week = 18, opponent = "Arizona Cardinals", siteKind = SiteKind.AWAY, venue = "State Farm Stadium", city = "Glendale", region = "AZ", kickoffDate = "TBD" }
+    constant week1 = { week = 1, opponent = "Los Angeles Rams", siteKind = SiteKind.INTERNATIONAL_AWAY, venue = "Melbourne Cricket Ground", city = "Melbourne", region = "Australia", kickoffLabel = "2026-09-10" }
+    constant week2 = { week = 2, opponent = "Miami Dolphins", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-09-20" }
+    constant week3 = { week = 3, opponent = "Arizona Cardinals", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-09-27" }
+    constant week4 = { week = 4, opponent = "Denver Broncos", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-10-04" }
+    constant week5 = { week = 5, opponent = "Seattle Seahawks", siteKind = SiteKind.AWAY, venue = "Lumen Field", city = "Seattle", region = "WA", kickoffLabel = "2026-10-11" }
+    constant week6 = { week = 6, opponent = "Washington Commanders", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-10-19" }
+    constant week7 = { week = 7, opponent = "Atlanta Falcons", siteKind = SiteKind.AWAY, venue = "Mercedes-Benz Stadium", city = "Atlanta", region = "GA", kickoffLabel = "2026-10-25" }
+    constant week8 = { week = 8, opponent = "BYE", siteKind = SiteKind.BYE, venue = "Recovery Window", city = "Santa Clara", region = "CA", kickoffLabel = "2026-11-01" }
+    constant week9 = { week = 9, opponent = "Las Vegas Raiders", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-11-08" }
+    constant week10 = { week = 10, opponent = "Dallas Cowboys", siteKind = SiteKind.AWAY, venue = "AT&T Stadium", city = "Arlington", region = "TX", kickoffLabel = "2026-11-15" }
+    constant week11 = { week = 11, opponent = "Minnesota Vikings", siteKind = SiteKind.INTERNATIONAL_HOME, venue = "Estadio Banorte", city = "Mexico City", region = "Mexico", kickoffLabel = "2026-11-22" }
+    constant week12 = { week = 12, opponent = "Seattle Seahawks", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-11-29" }
+    constant week13 = { week = 13, opponent = "New York Giants", siteKind = SiteKind.AWAY, venue = "MetLife Stadium", city = "East Rutherford", region = "NJ", kickoffLabel = "2026-12-06" }
+    constant week14 = { week = 14, opponent = "Los Angeles Rams", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2026-12-13" }
+    constant week15 = { week = 15, opponent = "Los Angeles Chargers", siteKind = SiteKind.AWAY, venue = "SoFi Stadium", city = "Inglewood", region = "CA", kickoffLabel = "2026-12-17" }
+    constant week16 = { week = 16, opponent = "Kansas City Chiefs", siteKind = SiteKind.AWAY, venue = "Arrowhead Stadium", city = "Kansas City", region = "MO", kickoffLabel = "2026-12-27" }
+    constant week17 = { week = 17, opponent = "Philadelphia Eagles", siteKind = SiteKind.HOME, venue = "Levi's Stadium", city = "Santa Clara", region = "CA", kickoffLabel = "2027-01-03" }
+    constant week18 = { week = 18, opponent = "Arizona Cardinals", siteKind = SiteKind.AWAY, venue = "State Farm Stadium", city = "Glendale", region = "AZ", kickoffLabel = "TBD" }
 
     constant schedule = [
       week1, week2, week3, week4, week5, week6, week7, week8, week9,
@@ -82,13 +82,13 @@ Thirty-one declarations, no ambiguity, and not a single unlabeled border crossin
 
 ### 1. It turns an NFL season into a typed mission manifest.
 
-Most schedules are written for eyeballs: opponent, date, network, maybe a logo. This one is written for a system. Week number is a number. Venue class is an enum. Every travel leg carries a city, a region, and a kickoff date. The model is not asking the reader to infer whether Mexico City is a home game, whether Melbourne is neutral-but-away, or whether Week 8 is actual movement versus recovery. It states each case directly.
+Most schedules are written for eyeballs: opponent, date, network, maybe a logo. This one is written for a system. Week number is a number. Venue class is an enum. Every travel leg carries a city, a region, and a kickoff label. The model is not asking the reader to infer whether Mexico City is a home game, whether Melbourne is neutral-but-away, or whether Week 8 is actual movement versus recovery. It states each case directly.
 
 That is the quiet strength of FPP. The language was built to describe missions, components, and interfaces that do not benefit from ambiguity. A football season with two international games and a bye week is smaller than a spacecraft, but it has the same appetite for exactness.
 
 ### 2. It makes the strange weeks first-class instead of comment-only exceptions.
 
-The 2026 49ers schedule is not a normal home-away ledger. Week 1 is a Rams home game staged in Melbourne. Week 11 is a 49ers home game staged in Mexico City. Week 8 is not a game at all. In a spreadsheet, these become footnotes. In this model, they become values of `SiteKind`.
+The 2026 49ers schedule is not a normal home-away ledger. Week 1 is modeled as an international away leg against the Rams in Melbourne. Week 11 is modeled as an international home leg against the Vikings in Mexico City. Week 8 is not a game at all. In a spreadsheet, these become footnotes. In this model, they become values of `SiteKind`.
 
 That matters because the unusual cases drive the logistics. Customs, flight length, recovery, and facility planning live in those exceptions. By promoting them into the type system, the file refuses to let the reader forget which weeks are operationally exotic.
 
@@ -139,7 +139,7 @@ Every declaration earns its place. Remove the enum and the anomalies blur. Remov
 
 ✓ **Week coverage:** The model contains exactly 18 ordered entries, including the bye week.
 ✓ **Venue semantics:** Home, away, international home, international away, and bye states are explicitly distinguished.
-✓ **Travel traceability:** Every week names a venue, city, region, and kickoff date placeholder for downstream logistics.
+✓ **Travel traceability:** Every week names a venue, city, region, and kickoff label for downstream logistics.
 
 **QED.**
 
