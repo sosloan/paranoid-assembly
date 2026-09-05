@@ -371,10 +371,11 @@ _barter_settle:
         ret
 
 .Lsettle_existing_fail:
+        mov     r13d, ebx
         mov     rdi, r12
         call    barter_walk_away
-        mov     dword ptr [r12 + S_STATUS], ebx
-        mov     eax, ebx
+        mov     dword ptr [r12 + S_STATUS], r13d
+        mov     eax, r13d
         pop     r13
         pop     r12
         pop     rbx
