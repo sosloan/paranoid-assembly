@@ -2,11 +2,13 @@ THE POWER OF NASA'S FLIGHT DYNAMICS ADA DOCTRINE
 
 "Only the paranoid survive." — Andy Grove
 
+Epigraph note: The Grove quote is a framing device for this repository's engineering perspective, not a quotation from SEL-95-001.
+
 In the late 1980s and early 1990s, NASA Goddard's Flight Dynamics Division did not just adopt Ada; it rebuilt its software strategy around paranoid engineering constraints: reuse before reinvention, architecture before implementation, and measurable quality before rhetoric. This writeup reframes the SEL-95-001 findings as infrastructure doctrine.
 
 Status: COMPLETE
 Subject: SEL-95-001 (NASA GSFC Flight Dynamics Division)
-Form: Power-of writeup, Track 031 style adaptation
+Form: Structured Power-of writeup (quick reference, context, insights, verification, closing)
 
 ------------------------------------------------------------
 QUICK REFERENCE
@@ -110,4 +112,4 @@ QED (empirical, organizational, and architectural).
 CLOSING
 ------------------------------------------------------------
 
-NASA's Flight Dynamics transition shows what paranoia looks like in software infrastructure: design so the next mission does not require starting over, structure code so change happens through parameters instead of edits, and evaluate every decision by operational survivability. The doctrine is larger than Ada. It is the discipline of building systems that stay correct under pressure, iteration, and scale.
+Editorial interpretation: NASA's Flight Dynamics transition illustrates a paranoia-aligned infrastructure posture—design so the next mission does not require starting over, structure change through parameters instead of repeated source edits, and evaluate technical decisions against operational survivability. In that reading, the lesson extends beyond Ada to disciplined system design under pressure.
