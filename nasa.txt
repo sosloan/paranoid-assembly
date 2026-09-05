@@ -39,7 +39,7 @@ The headline outcomes are strategic, not cosmetic:
 - Cycle time reduced by 25% (reported FDD-wide summary outcome versus 1985 baseline)
 - Development error rates reduced by 62% (reported FDD-wide summary outcome versus 1985 baseline)
 
-Telemetry-simulator-specific later result (narrower scope, late telemetry simulator cohort):
+Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
 - 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
 - Delivered in half the time in later telemetry simulator programs versus 1985-era baselines
 
@@ -96,16 +96,16 @@ EVIDENCE SUMMARY FROM REPORTED OUTCOMES
 ------------------------------------------------------------
 
 Property: Reuse scaling
-Status: Supported by telemetry simulator lineage and measured reuse percentages.
+Report statement: Telemetry simulator lineage reports high measured reuse percentages.
 
 Property: Quality improvement
-Status: Supported by reported reductions in development error rates against baseline.
+Report statement: Development error rates are reported as reduced against the 1985 baseline.
 
 Property: Cycle-time reduction
-Status: Supported by schedule comparisons in mature Ada/OOD project phases.
+Report statement: Schedule duration is reported as reduced in mature Ada/OOD project phases.
 
 Property: Cost improvement
-Status: Supported conditionally; strongest for long-lived, reusable Ada-targeted systems.
+Report statement: Cost reduction is reported, with strongest effect in long-lived reuse-oriented Ada efforts.
 
 Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 
