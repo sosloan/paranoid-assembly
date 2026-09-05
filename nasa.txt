@@ -33,7 +33,7 @@ The report chronicles a decade-long transition in a mission-critical environment
 - Reuse-oriented architecture
 
 The headline outcomes are strategic, not cosmetic:
-Attribution note: The percentage figures below are reported in the SEL-95-001 synopsis text previously contained in this file.
+Attribution note: The percentage figures below are inherited from the prior synopsis text previously contained in this file and are presented here as synopsis-reported outcomes.
 
 - Reuse increased by 300% (reported FDD-wide summary outcome versus 1985 baseline)
 - Cost reduced by 40% (reported FDD-wide summary outcome versus 1985 baseline)
@@ -51,11 +51,11 @@ KEY IMPLICATIONS (WRITEUP SYNTHESIS)
 
 1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
 
-Writeup synthesis: The highest-performing projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits.
+Writeup synthesis: Several later projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits.
 
 2) IT TURNS GENERICS INTO RISK CONTROL
 
-Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation, with adaptation performed through parameterized instantiation for different simulator targets.
+Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation, with adaptation performed through parameterization and instantiation for different simulator targets.
 
 3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
 
