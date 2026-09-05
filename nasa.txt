@@ -16,7 +16,7 @@ Primary Domain: Flight dynamics simulators and telemetry simulators
 Language Focus: Ada with object-oriented design practices
 Core Mechanism: Generic architecture + verbatim reuse
 Strategic Result: Reuse up, errors down, cycle time down, cost down (for the right class of systems)
-Paranoid Principle: Fail soft under change by designing components to be reused without edits
+Engineering Principle: Reduce change risk by designing components to be reused without edits
 
 ------------------------------------------------------------
 THE SYSTEM, IN FULL CONTEXT
@@ -36,7 +36,9 @@ The headline outcomes are strategic, not cosmetic:
 - Cost reduced by about 40% (division-level summary for systems where Ada reuse architecture was sustained)
 - Cycle time reduced by about 25% (division-level summary versus 1985-era baselines)
 - Development error rates reduced by about 62% (division-level summary versus 1985-era baselines)
-- Later telemetry simulator reporting cited up to 85% fewer development errors and roughly half-time delivery for that simulator class versus 1985-era baselines
+
+Telemetry-simulator-specific later result (narrower scope):
+- Up to 85% fewer development errors and roughly half-time delivery for later telemetry simulator programs versus 1985-era baselines
 
 This is not language evangelism. It is systems economics under pressure.
 
@@ -46,7 +48,7 @@ WHY IT IS POWERFUL
 
 1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
 
-The highest-performing projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits. That shifts effort from repeated coding to architecture quality. In paranoid terms: fewer edits, fewer opportunities for new defects.
+The highest-performing projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits. That shifts effort from repeated coding to architecture quality and reduces opportunities for new defects.
 
 2) IT TURNS GENERICS INTO RISK CONTROL
 
@@ -54,11 +56,11 @@ Ada generics were used to encode stable abstractions that survived mission varia
 
 3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
 
-The report documents uneven early outcomes caused by tooling maturity, training quality, and mismatched project constraints. The long-run wins came when architecture and reuse discipline stabilized, not merely when "Ada was chosen." The paranoid lesson: governance and execution determine whether technical advantages materialize.
+The report documents uneven early outcomes caused by tooling maturity, training quality, and mismatched project constraints. The long-run wins came when architecture and reuse discipline stabilized, not merely when "Ada was chosen." Governance and execution determined whether technical advantages materialized.
 
 4) IT DISTINGUISHES SHORT-LIFE VS LONG-LIFE ECONOMICS
 
-FORTRAN remained practical for short-lived, single-purpose systems, while Ada architectures delivered superior returns for long-lived reusable platforms. This boundary is crucial: paranoid engineering means selecting tools by lifecycle economics, not ideology.
+FORTRAN remained practical for short-lived, single-purpose systems, while Ada architectures delivered superior returns for long-lived reusable platforms. This boundary is crucial: teams selected tools by lifecycle economics, not ideology.
 
 5) IT ENFORCES DESIGN FOR FUTURE MISSIONS, NOT JUST CURRENT DEADLINES
 
@@ -66,7 +68,7 @@ Projects like UARSTELS were designed with upcoming systems in mind, enabling ver
 
 6) IT MAKES ORGANIZATIONAL MEMORY A TECHNICAL ASSET
 
-The report highlights how reusable libraries and trained maintainers reduce rediscovery costs. In infrastructure code, forgetting architecture is a hidden tax. Paranoid organizations preserve that memory as part of the system.
+The report highlights how reusable libraries and trained maintainers reduce rediscovery costs. In infrastructure code, forgetting architecture is a hidden tax. Preserving organizational memory became part of the technical system.
 
 ------------------------------------------------------------
 POWER ANALYSIS BY DECISION LAYER
@@ -103,10 +105,10 @@ Status: Supported by schedule comparisons in mature Ada/OOD project phases.
 Property: Cost improvement
 Status: Supported conditionally; strongest for long-lived, reusable Ada-targeted systems.
 
-Summary: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
+Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 
 ------------------------------------------------------------
 CLOSING
 ------------------------------------------------------------
 
-The report's central technical conclusion is that long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.
+Writeup synthesis of reported conclusions: Long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.
