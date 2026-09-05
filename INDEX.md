@@ -24,6 +24,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### 3. FORTY_NINERS_TRAVEL_POWER.md
+**Routine:** `forty_niners_schedule.fpp` (San Francisco 49ers 2026 season travel model)
+**Focus:** Typed weekly travel legs, international venue semantics, explicit bye-week state
+**Theme:** Mission-grade schedule specification for an NFL season
+**Status:** Complete
+**Link:** [writeups/FORTY_NINERS_TRAVEL_POWER.md](writeups/FORTY_NINERS_TRAVEL_POWER.md)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
