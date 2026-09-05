@@ -39,8 +39,8 @@ Synopsis attribution: Ann Brandon; Software Engineering Laboratory Series SEL-95
 - Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
-- Source statement (synopsis): 85% fewer development errors in telemetry simulators built since 1990 versus 1985-era baselines
-- Source statement (synopsis): delivery in half the time in telemetry simulators built since 1990 versus 1985-era baselines
+- Source statement (synopsis): 85% fewer development errors in telemetry simulators built since 1990 versus the 1985 baseline for the systems
+- Source statement (synopsis): delivery in half the time in telemetry simulators built since 1990 versus the 1985 baseline for the systems
 
 
 ------------------------------------------------------------
@@ -110,10 +110,9 @@ Property: Cost improvement
 Source statement (synopsis): Cost reduced by 40% versus the 1985 baseline.
 Writeup synthesis: The report context indicates strongest gains in long-lived reuse-oriented Ada efforts.
 
-Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
-
 ------------------------------------------------------------
 CLOSING
 ------------------------------------------------------------
 
+Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 Writeup synthesis of reported conclusions: Long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.
