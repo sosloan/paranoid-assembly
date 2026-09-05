@@ -6,12 +6,12 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### BANKING_POWER.md
-**Routine:** `banking.txt` (Swiss PTT financial system case study)
-**Focus:** Centralized account state, distributed workstation access, Ada-driven reliability at national transaction scale
-**Theme:** Financial infrastructure paranoia: one source of truth, explicit failure posture
+### SUPERHVAC_POWER.md
+**Routine:** `cadhvac.txt` (AdaIC flyer on Byron Informatik's Super-CAD Integrated Engineering System)
+**Focus:** Database-first CAD architecture, shared object model, Ada large-system safety constraints
+**Theme:** Paranoid infrastructure design for HVAC and facility-management software
 **Status:** Complete
-**Link:** [writeups/BANKING_POWER.md](writeups/BANKING_POWER.md)
+**Link:** [writeups/SUPERHVAC_POWER.md](writeups/SUPERHVAC_POWER.md)
 
 ---
 

@@ -68,6 +68,9 @@ See **CONTRIBUTING.md** for guidelines.
 
 Original assembly and reference material is sourced from projects under their original licenses (typically Apache 2.0 for Intel TBB). Writeups and analysis are provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
+File-specific provenance note (this repository does not define a blanket reproduction policy):
+- `writeups/SUPERHVAC_POWER.md` reproduces `cadhvac.txt` for archival analysis and keeps the original flyer attribution and in-text reprint permission language intact.
+
 ---
 
 ## Status
