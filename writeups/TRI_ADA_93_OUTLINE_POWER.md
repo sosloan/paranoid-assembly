@@ -65,7 +65,7 @@ Visibility boundaries, subsystem structuring, abstract types, controlled initial
 
 ### 6. It acknowledges missing multiple inheritance and provides alternatives.
 
-Instead of imitating C++ directly, the material teaches composition techniques and mixin-oriented patterns that respect Ada semantics. Constraint becomes design leverage.
+Instead of imitating C++ directly, the material teaches composition techniques and explicitly covers "mixin inheritance" in ways that respect Ada semantics. Constraint becomes design leverage.
 
 ### 7. It bridges language theory and operational programming.
 
