@@ -57,7 +57,7 @@ Satisfied with Performance
 Very satisfied with the performance of the Ada language, the Dolphin Integration team is now looking forward to further development opportunities that will employ them both. With the recent switch from Sun View to OSF Motif, the current GDS graphical interface will soon be ported to and modified on new platforms. In addition, plans to port this application to HP platforms are in process.
 ```
 
-This is a faithful transcription with line-wrap normalization only; original wording (including period spelling) is preserved from the source artifact.
+This is an adapted transcription for readability (line-wrap and minor copy normalization), preserving the original technical meaning and structure of the source artifact.
 
 This is not merely a historical flyer. It is an infrastructure design report about how to keep software faults from becoming hardware defects.
 
