@@ -108,7 +108,7 @@ _barter_intersect:
 barter_open:
 _barter_open:
         push    r12
-        sub     rsp, 16                 # two uint32 temps; stack stays 16-aligned
+        sub     rsp, 32                 # two uint32 temps + call-safe scratch
         mov     r12, rdi
 
         mov     eax, dword ptr [r12 + S_ASK]
@@ -169,7 +169,7 @@ _barter_open:
         test    eax, eax
         jz      .Lopen_empty
 
-        add     rsp, 16
+        add     rsp, 32
         pop     r12
         ret
 
@@ -177,7 +177,7 @@ _barter_open:
         mov     rdi, r12
         call    barter_walk_away
         mov     dword ptr [r12 + S_STATUS], ST_RANGE
-        add     rsp, 16
+        add     rsp, 32
         pop     r12
         ret
 
@@ -252,7 +252,7 @@ _barter_settle:
         mov     r12, rdi
 
         cmp     dword ptr [r12 + S_STATUS], ST_RANGE
-        je      .Lsettle_walk           # open already found no window
+        je      .Lsettle_range          # open already found no window
 
         mov     ebx, MAX_ROUNDS
 .Lhaggle:
@@ -344,6 +344,16 @@ _barter_settle:
         mov     rdi, r12
         call    barter_walk_away
         mov     eax, ST_NO_DEAL
+        pop     r13
+        pop     r12
+        pop     rbx
+        ret
+
+.Lsettle_range:
+        mov     rdi, r12
+        call    barter_walk_away
+        mov     dword ptr [r12 + S_STATUS], ST_RANGE
+        mov     eax, ST_RANGE
         pop     r13
         pop     r12
         pop     rbx
