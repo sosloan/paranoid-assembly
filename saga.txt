@@ -1,0 +1,180 @@
+The Saga of the Ada 9X Team
+An ungainly name, is "Ada 9X"
+It lacks a degree of excitement or sex.
+
+Could anyone picture that name up in lights,
+If Chris tried to sell the movie rights?
+
+A more resonant sound is "Ada 94"
+To that, one could set a musical score.
+
+Or possibly - "Ada 95" -
+A language name that could survive.
+
+Either way, the team planned not to fail -
+Nor merely survive - they shall prevail!
+
+Jinny called Chris in July '88.
+Sucker that she was, she took the bait.
+
+She went to work and made decisions,
+On plans for mapping and revisions.
+
+The DR's joined the following Spring,
+And lively debates became "the thing."
+
+Meetings were often about to unravel,
+But Erhard controlled by pounding his gavel.
+
+Numerous problems endangered the quest,
+Like the 750th Revision Request.
+
+Audrey and company arranged them in groups,
+Keeping them free of endless loops.
+
+Then, clarity emerged from chaos and fluff,
+In Requirements written by John Goodenough.
+
+The first major issue was OOP.
+Was it merely a fad, or a golden key?
+
+The argument lasted for many days.
+Then Chris decided - OOP stays.
+
+Folks used to say that "Ada's too large."
+She fixed that by putting Tucker in charge.
+
+He simplified rules, and worked with great vigor,
+And gave us a language that's ten percent bigger.
+
+The Reference Manual for Ada 9X
+Grew larger and larger with each new Annex.
+
+But not to worry - enjoy and relax -
+Each brings new goodies, without new syntax.
+
+The list of reserved words has six that are new,
+Like "abstract" and "aliased," "until" and "requeue."
+
+Tuck added some features - clearly eye-catching
+Such as polymorphic run-time dispatching,
+
+And types that are "tagged," allowing the masses
+To build up some dandy derivation classes.
+
+The world's more secure since he elected
+To add in some types that are safely "protected."
+
+He led us away from spaghetti, anarchical,
+Into the land of libraries, hierarchical.
+
+And callbacks can now be coded by amateurs,
+With subprogram accesses passed as parameters.
+
+When asked to explain, team members will say,
+"It's really quite simple: Tucker wants it that way."
+
+The UI teams tried out the new features.
+Found some delights, and some wild creatures.
+
+David and company applied Methods Formal,
+To find lurking dangers in places abnormal.
+
+The team greeted these like so many dragons.
+They slew each in turn, then circled the wagons.
+
+Momentous decisions, they could not ignore,
+Like the ban of the trailing_underscore.
+
+Finalization refinements were clearly a must,
+From "duplicate" to "split" and "split" to "adjust."
+
+The DR discussions, as mentioned before,
+Were full of debate, and seldom a bore.
+
+A common occurrence in meetings like that
+Was the noisy arrival of Robert of GNAT.
+
+In he would roll with rumbles and squeals,
+Pulling his suitcase and computer on wheels.
+
+The fate of proposals tended to rest
+On whether they passed his "rubbish" test.
+
+Anthony silently endured the name "Tony"
+But call Robert "Bob" and you're full of bologna.
+
+The team got lucky in '92
+When the ISO Delegates joined the crew.
+
+Meetings were hosted in places quite rare.
+But Chris "can't take them anywhere!"
+
+John Barnes began tossing paper airplanes around
+In a posh Swiss restaurant Alfred had found.
+
+Lennart and Björn prepared for that;
+In Sweden, they handed each one a hard hat.
+
+Jean-Pierre, in Paris, will always remember
+How they failed to distinguish the restrooms by gender.
+
+Rudolf, in Frankfort, helped them to dine
+As he taught them the pleasures of fine German wine.
+
+Joyce, the world traveler, wishing not to be rude,
+Tried not to notice local swimmers were nude.
+
+In Portsmouth, Kit hosted a dinner sublime;
+And they used the right spoons - most of the time.
+
+Through the standards quagmire they'd still be careening,
+If not for Brave Bob's expert convening.
+
+And who can forget Mark's buttermilk fit,
+Norm's good humor, or Bevin's dry wit?
+
+Norm suggested a wonderful thing.
+"Pragma Silver Bullet" had a nice ring.
+
+We all should apply it regularly.
+It asserts that the program is problem free.
+
+So Chris and her team endured and outlasted
+Three AJPO Directors - a result not forecasted.
+
+Government Advisors kept everyone straight
+By reminding the team not to be late.
+
+Government lawyers were mentally bereft
+By the strange new concept of "Copyleft."
+
+And DoD brass felt an aversion
+To words like GNU and GNAT and recursion.
+
+Fran, and then Robin, coped with office specifics -
+Mass mailings, phone calls, and Chris' hieroglyphics.
+
+After thousands of miles and notes by e-mail.
+Chris claims to be weary of all the travail.
+
+While she's glad it is ending, she has feelings complex;
+She will "terribly miss" her "family-9X"
+
+And when they have scattered, who knows what they'll do.
+But one thing is certain -- they'll miss her too!
+
+So, their gift to the world - not to be over-hyped -
+Is a language both readable and strongly typed.
+
+An ISO Standard - the first you will see -
+To support distribution and OOP.
+
+If that's not enough for the programming masses,
+It will call into question their inheritance classes.
+
+Now the team has arrived at the end of their quest.
+Ada 9X is finished, and it's simply THE BEST.
+
+The Bard of Ada 9X
+10 November 1994

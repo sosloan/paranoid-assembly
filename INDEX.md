@@ -33,12 +33,30 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### SUPER_HVAC_POWER.md
+**Routine:** `cadhvac.txt` (Ada Super-CAD / Integrated Engineering System)
+**Focus:** Database-first engineering model, integrated HVAC/FM tools, typed large-scale evolution
+**Theme:** Shared object truth as anti-fragile infrastructure for design and operations
+**Status:** Complete
+**Link:** [writeups/SUPER_HVAC_POWER.md](writeups/SUPER_HVAC_POWER.md)
+
+---
+
 ### 3. FORTY_NINERS_TRAVEL_POWER.md
 **Routine:** `forty_niners_schedule.fpp` (San Francisco 49ers 2026 season travel model)
 **Focus:** Typed weekly travel legs, international venue semantics, explicit bye-week state
 **Theme:** Mission-grade schedule specification for an NFL season
 **Status:** Complete
 **Link:** [writeups/FORTY_NINERS_TRAVEL_POWER.md](writeups/FORTY_NINERS_TRAVEL_POWER.md)
+
+---
+
+### TRI_ADA_93_OUTLINE_POWER.md
+**Routine:** `TRI-Ada-93-outline.txt` (TRI-Ada '93 Ada 9X OOP tutorial outline)
+**Focus:** Tagged-type hierarchies, dispatching model, and reuse-first programming techniques under strong typing
+**Theme:** Paranoid language design as upstream infrastructure for safe reusable systems
+**Status:** Complete
+**Link:** [writeups/TRI_ADA_93_OUTLINE_POWER.md](writeups/TRI_ADA_93_OUTLINE_POWER.md)
 
 ---
 
