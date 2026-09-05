@@ -12,7 +12,7 @@ QUICK REFERENCE
 
 File: nasa.txt
 Origin: NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
-Study Period Covered: approximately the decade preceding the report's 1995 publication
+Study Period Covered: 1985-1993 project activity discussed in the report
 Baseline Reference Year: 1985 (used in report comparisons)
 Case-Study System Types: flight dynamics and telemetry simulators
 Language Focus: Ada with object-oriented design practices
@@ -40,9 +40,9 @@ The headline outcomes are strategic, not cosmetic:
 - Development error rates reduced by about 62% (reported FDD summary outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, late telemetry simulator cohort):
-- Up to 85% fewer development errors and roughly half-time delivery in later telemetry simulator programs versus 1985-era baselines
+- Up to 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
+- About half-time delivery in later telemetry simulator programs versus 1985-era baselines
 
-Writeup synthesis: The reported outcomes are presented as measured software engineering results, not only language preference claims.
 
 ------------------------------------------------------------
 WHY IT IS POWERFUL (WRITEUP SYNTHESIS)
