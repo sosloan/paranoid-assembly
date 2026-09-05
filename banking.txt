@@ -1,0 +1,118 @@
+Flyer U126-0596
+banking.txt
+
+Ada Used to Automate Swiss Banking System
+	
+Based on a flyer by Alan Paterson, Paranor AG.
+
+The Swiss post/telegraph/telephone company includes a 
+department that runs a financial payments system.  Customers 
+hold interest-bearing accounts, and transactions on these 
+accounts are made in a similar fashion to 'normal' banks.  
+In practice, these accounts form the major means of non-cash 
+payments (also to and from banking accounts) in Switzerland.
+
+The Development
+
+The project is being realized in two phases.  First, all 
+customer information is collected in a central database.  
+This information comprises:
+
+* Details of the customer, e.g., address(es)
+* Details of all accounts held by each customer
+* Details of all Postcards (check guarantee, cash 
+dispenser & EFTPOS) held on each account
+* Details of checks issued for each account
+This system is the central store of knowledge about all 
+customers using the financial services of the PTT, which 
+involves:
+* 350 graphical workstations throughout Switzerland
+* Between 1.2 and 1.4 million customer records and 
+approximately the same number of account records
+* Approximately 10,000 modifications per day (eight 
+hours).
+* Approximately  20,000 inquiries per day.
+* Approximately  7,000 orders for checks per day.
+
+With the system in place (Version 2 is now in operation), 
+the data records are brought on-line.  Work also proceeds on 
+Versions 3 and 4 of the system, which add functionality.
+
+The Implementation
+
+To date, the system runs only on VAX computers, although 
+future versions will use Alpha-AXP machines.  There is a 
+central cluster of database servers, connected (by X25) to 
+remote clusters of VAX workstations.  The operating system 
+is OpenVMS and the database system is DEC RdB.  With the 
+exception of the database interface modules, three macro 
+assembler files and one C source file, all software is 
+written in (DEC) Ada.  So far in the development, there are 
+approximately 2,200 Ada source files.  
+
+There is extensive use of an in-house CASE tool 
+supporting OOA/OOD and finite-state automata.  The GUI is 
+implemented with OSF/Motif and is highly structured to use 
+finite-state automata with the previously mentioned tool.  
+The GUI is multi-lingual (German, French, Italian), and 
+adjusts to the mother-tongue of the user, producing output 
+in the language of the customer.  Communication between 
+workstations and the central server cluster happens via an 
+in-house Remote Procedure Call mechanism that supports load 
+distribution, exception passing over the network, and 
+automatic recovery on errors.
+
+Selecting Ada
+
+Ada has been in use at Paranor, the system developer, since 
+1985 and there was never any consideration given to the use 
+of any other language.  All active programmers are agreed 
+that a switch to another language would mean a marked 
+reduction in programming comfort and ultimately result an 
+inferior product.  The principal features of Ada which make 
+it superior include:
+
+* Data abstraction/Information hiding (there is 
+extensive use of private and derived types)
+* Tasking (especially for communication between 
+computers)
+* Generics (extensively used in the GUI)
+* Highly readable source code
+
+Phase 2
+
+Phase 2 includes the use of actual financial transactions 
+and user accounts.  This phase is planned to be completed by 
+Jan. 1995 and to be fully operational in Jan 1996.  Ada 
+enthusiasts around the world await news of the project's 
+success and can expect to learn that the system, upon its 
+completion, handles 2,000,000 financial transactions per 
+day.
+
+
+********************** 
+The views, opinions, and findings contained in this report are those of 
+the author(s) and should not be construed as an official Agency 
+position, policy, or decision, unless so designated by other official 
+documentation.
+
+Copyright 1996.  IIT Research Institute.  All rights assigned to the 
+U.S. Government (Ada Joint Program Office).  Permission to reprint this 
+flyer, in whole or in part, is granted, provided the AdaIC is 
+acknowledged as the source.
+**********************
+
+Ada Information Clearinghouse (AdaIC)
+P.O. Box 1866
+Falls Church, VA  22041
+Telephone:  1-800-AdaIC-11 (1-800/232-4211) or 703/681-2466
+Fax:  703/681-2869
+E-mail:  adainfo@sw-eng.falls-church.va.us
+
+The AdaIC is sponsored by the Ada Joint Program Office and operated by 
+IIT Research Institute.
+
+
+
+
+
