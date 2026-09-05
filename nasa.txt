@@ -38,8 +38,8 @@ Attribution note: The percentage figures below are drawn from the synopsis sourc
 - Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
-- Report states 85% fewer development errors in telemetry simulators built since 1990 versus 1985-era baselines
-- Report states delivery in half the time in telemetry simulators built since 1990 versus 1985-era baselines
+- Source statement (synopsis): 85% fewer development errors in telemetry simulators built since 1990 versus 1985-era baselines
+- Source statement (synopsis): delivery in half the time in telemetry simulators built since 1990 versus 1985-era baselines
 
 
 ------------------------------------------------------------
@@ -98,13 +98,16 @@ Source statement (synopsis): FDD-wide reuse increased by 300% versus 1985 baseli
 Source statement (report details): Telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
 
 Property: Quality improvement
-Report statement: Development error rates are reported as reduced by 62% against the 1985 baseline, with telemetry-simulator-since-1990 reporting at 85% fewer development errors.
+Source statement (synopsis): Development error rates reduced by 62% against the 1985 baseline.
+Source statement (synopsis): Telemetry simulators built since 1990 reported 85% fewer development errors.
 
 Property: Cycle-time reduction
-Report statement: Cycle time is reported as reduced by 25% against the 1985 baseline, with telemetry-simulator-since-1990 reporting delivery in half the time.
+Source statement (synopsis): Cycle time reduced by 25% against the 1985 baseline.
+Source statement (synopsis): Telemetry simulators built since 1990 were delivered in half the time.
 
 Property: Cost improvement
-Report statement: Cost is reported as reduced by 40% versus the 1985 baseline, with strongest effect in long-lived reuse-oriented Ada efforts.
+Source statement (synopsis): Cost reduced by 40% versus the 1985 baseline.
+Writeup synthesis: The report context indicates strongest gains in long-lived reuse-oriented Ada efforts.
 
 Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 
