@@ -1,7 +1,7 @@
 # Bandit.asm
-# General adversarial bandit interval primitives.
-# Semantics do not matter here: these entry points only do overlap and midpoint
-# selection over unsigned price intervals.
+# General adversarial bandit for a CME-style lane:
+# price discovery is noise, discipline is geometry.
+# Semantics do not matter here; only interval intersections and midpoints clear.
 # x86-64 System V, GAS intel syntax.
 
         .intel_syntax noprefix
@@ -12,6 +12,7 @@
 #                           uint32_t b_lo, uint32_t b_hi,
 #                           uint32_t *out_lo, uint32_t *out_hi)
 #   rdi=a_lo  esi=a_hi  edx=b_lo  ecx=b_hi  r8=out_lo  r9=out_hi
+#   Two books enter. We keep only the executable overlap:
 #   lo = max(a_lo, b_lo), hi = min(a_hi, b_hi). Returns 1 if lo <= hi.
 #------------------------------------------------------------------------------
         .globl  bandit_intersect
@@ -36,7 +37,7 @@ bandit_intersect:
 #------------------------------------------------------------------------------
 # uint32_t bandit_midpoint(uint32_t lo, uint32_t hi)
 #   edi=lo  esi=hi
-#   Returns floor((lo + hi) / 2), computed without overflow.
+#   Returns the clearing center floor((lo + hi) / 2), computed without overflow.
 #------------------------------------------------------------------------------
         .globl  bandit_midpoint
 bandit_midpoint:
@@ -52,8 +53,8 @@ bandit_midpoint:
 #                      uint32_t b_lo, uint32_t b_hi,
 #                      uint32_t *out_mid)
 #   rdi=a_lo  esi=a_hi  edx=b_lo  ecx=b_hi  r8=out_mid
-#   Returns 1 and writes midpoint of the intersection on success.
-#   Returns 0 when intersection is empty and leaves *out_mid unchanged.
+#   Returns 1 and writes the midpoint of the overlap when a market exists.
+#   Returns 0 when books do not cross and leaves *out_mid unchanged.
 #------------------------------------------------------------------------------
         .globl  bandit_pick
 bandit_pick:
