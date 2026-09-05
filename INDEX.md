@@ -6,6 +6,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
+### BANKING_POWER.md
+**Routine:** `banking.txt` (Swiss PTT financial system case study)
+**Focus:** Centralized account state, distributed workstation access, Ada-driven reliability at national transaction scale
+**Theme:** Financial infrastructure paranoia: one source of truth, explicit failure posture
+**Status:** Complete
+**Link:** [writeups/BANKING_POWER.md](writeups/BANKING_POWER.md)
+
+---
+
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
@@ -21,6 +30,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Theme:** Paranoid optimization under contention
 **Status:** Complete
 **Link:** [writeups/LOCK_BYTE_POWER.md](writeups/LOCK_BYTE_POWER.md)
+
+---
+
+### SUPER_HVAC_POWER.md
+**Routine:** `cadhvac.txt` (Ada Super-CAD / Integrated Engineering System)
+**Focus:** Database-first engineering model, integrated HVAC/FM tools, typed large-scale evolution
+**Theme:** Shared object truth as anti-fragile infrastructure for design and operations
+**Status:** Complete
+**Link:** [writeups/SUPER_HVAC_POWER.md](writeups/SUPER_HVAC_POWER.md)
 
 ---
 
