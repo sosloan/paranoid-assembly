@@ -21,10 +21,10 @@
 | **Language** | FPP (F Prime Prime) |
 | **Topology** | `FortyNinersSeason` |
 | **Primary Components** | `FrontOffice`, `Offense`, `Defense`, `SpecialTeams`, `Quarterback1` |
-| **Argument** | 17-game regular season + postseason contingencies |
+| **Argument** | 18-week regular-season calendar with one bye + postseason contingencies |
 | **Return** | NFC West control, playoff seeding, or graceful failure report |
 | **Critical Construct** | `topology FortyNinersSeason` |
-| **Bytes of State** | 53-man roster, 17 scheduled transactions, weekly health telemetry |
+| **Bytes of State** | 53-man roster, 18 scheduled weeks, weekly health telemetry |
 | **Power Source** | Typed structure + explicit connections |
 
 ---
@@ -39,7 +39,7 @@ module NFL {
     BYE
   }
 
-  struct Game {
+  struct WeekRecord {
     week: U32
     opponent: string size 32
     venue: string size 16
@@ -49,7 +49,7 @@ module NFL {
     pointsAgainst: U32
   }
 
-  array RegularSeason = [18] Game
+  array RegularSeasonWeeks = [18] WeekRecord
 
   constant NFC_WEST_TARGET_WINS = 10
   constant PLAYOFF_FLOOR = 11
@@ -91,7 +91,7 @@ module NFL {
 ```
 
 This is not an assembly listing. It is a season rendered as a mission topology:
-typed data for games, named instances for stars, and explicit connections for
+typed data for weeks, named instances for stars, and explicit connections for
 the handoffs that decide January.
 
 ---
@@ -129,9 +129,9 @@ motion identifies leverage, Purdy distributes on time, McCaffrey punishes light
 boxes, Warner closes the middle, Bosa compresses the pocket. The topology
 describes a season in the same way the season must actually function to work.
 
-### 3. The typed `Game` struct prevents lazy storytelling.
+### 3. The typed `WeekRecord` struct prevents lazy storytelling.
 
-Each game carries a fixed schema: week, opponent, venue, phase, outcome,
+Each week carries a fixed schema: week, opponent, venue, phase, outcome,
 points-for, and points-against. No field for "almost." No field for "felt
 different." No field for "the discourse was positive on Tuesday." This is a
 systems language, so every week must serialize into explicit state.
@@ -221,8 +221,8 @@ watch where the mission diverges from the model.
 |------|-----------|-------|
 | 1 | `module NFL` | Establishes the domain boundary. This is a league-scale namespace, not a single anecdote. |
 | 2-6 | `enum Outcome` | Forces every week into a finite result set. No ambiguity leaks into the model. |
-| 8-16 | `struct Game` | Declares the exact telemetry each Sunday must emit. |
-| 18 | `array RegularSeason = [18] Game` | Reserves a full season envelope, including the bye as an explicit state. |
+| 8-16 | `struct WeekRecord` | Declares the exact telemetry each week must emit. |
+| 18 | `array RegularSeasonWeeks = [18] WeekRecord` | Reserves the full 18-week calendar and models the bye as explicit state. |
 | 20-22 | constants | Encodes contender thresholds up front instead of discovering them too late. |
 | 24 | `topology FortyNinersSeason` | The load-bearing declaration: names the season as an integrated system. |
 | 25-38 | `instance ...` | Binds concrete franchise actors into typed roles with stable identifiers. |
