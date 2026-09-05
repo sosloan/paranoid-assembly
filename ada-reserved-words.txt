@@ -1,0 +1,50 @@
+Ada Lovelace looked across the winter Thames and did not see a machine
+that could merely calculate. She saw an engine able to accept symbols,
+abstract their patterns, and return a new kind of thought.
+
+With Charles Babbage, she began a patient task: to declare each wheel,
+column, and card as part of a larger design. Her notes were a package
+of ideas, private at first but meant for all. A number was not only a
+constant; it could be a record of a melody, a map, or a calculation.
+She imagined an array of such records, indexed over a range and altered
+by procedure rather than accident. The delta between two figures was
+not a mystery; it was a difference the Engine could name.
+
+If the Engine received a question, then it could select a method. Case
+by case, it might add, subtract, or multiply; elsif the answer required
+another card, it could delay its work; else it could proceed. Its
+instructions might say, "do
+this," yet a careful pragma would make clear that no shortcut was
+overriding the design. For each operation, a loop would
+begin, continue while its condition held, and exit when the work was
+done. Ada knew that an exception must not become an excuse for chaos:
+when a result was null, the operator should raise a signal, not hide it.
+
+Her celebrated plan for Bernoulli numbers was a function in spirit,
+though the Engine had no body to run it. It would use variables with
+digits, carry a remainder by rem or mod, and reverse a sequence when
+the cards required it. Some values would be in, others out; access to
+them would be limited, aliased only with care, and never trusted merely
+because they were new.
+
+She described the Engine as a general instrument. It could be generic
+enough to serve astronomy or music, yet a subtype could keep each
+quantity within its proper bounds. A type might be tagged, an interface
+might be synchronized, and a protected task might wait at an entry.
+Such order, she believed, would let separate parts work together without
+confusing one another.
+
+Ada would not abort an inquiry because its first path failed. She would
+requeue the question, use another method, or goto the evidence and
+begin again. She renames no uncertainty as certainty, nor would she
+terminate a question before its proof is complete. Not every insight is
+immediate: abs alone did not explain
+the negative, xor did not settle a choice, and neither and nor or could
+replace imagination. Yet she held that a machine could follow rules
+until it reached the end of a calculation—and that people could use
+those rules to discover what had not been seen before.
+
+In that vision, every instruction had a place: at the right moment,
+with the right value, for the right purpose. The Analytical Engine
+would be an instrument of reason; Ada Lovelace made it, in language,
+an instrument of possibility.
