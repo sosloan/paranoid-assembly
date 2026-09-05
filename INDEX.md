@@ -6,7 +6,7 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### 1. CLUSTER_BALANCE_SHEET_POWER.md
+### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
 **Theme:** Distributed accounting at memory speed; paranoid gate on every entry point
@@ -15,12 +15,21 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
-### 2. LOCK_BYTE_POWER.md
+### LOCK_BYTE_POWER.md
 **Routine:** `__TBB_machine_trylockbyte` (Intel TBB)
 **Focus:** Try-lock primitive, 13 instructions, 1 byte of state
 **Theme:** Paranoid optimization under contention
 **Status:** Complete
 **Link:** [writeups/LOCK_BYTE_POWER.md](writeups/LOCK_BYTE_POWER.md)
+
+---
+
+### NINERS_SEASON_POWER.md
+**Routine:** `season_49ers.fpp` (San Francisco 49ers season model)
+**Focus:** FPP topology, typed game telemetry, explicit offense-defense-special teams connections
+**Theme:** A football season rendered as a mission-ready component graph
+**Status:** Complete
+**Link:** [writeups/NINERS_SEASON_POWER.md](writeups/NINERS_SEASON_POWER.md)
 
 ---
 
