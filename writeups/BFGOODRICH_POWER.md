@@ -21,7 +21,7 @@
 | **Runtime Profile** | Ada95 with Ravenscar-style deterministic tasking |
 | **Scale** | 40K SLOC Ada95, 150 high-rate input channels |
 | **Storage Window** | Up to 20 flight hours on PCMCIA flash |
-| **Certification Constraint** | FAA-level full-code execution and test coverage expectations |
+| **Certification Constraint** | Source-reported FAA certification context requiring execution/testing coverage across code paths |
 | **Power Source** | Stable executable core + mutable data/configuration surface |
 
 ---
@@ -50,7 +50,7 @@ That is the same shape as modern infrastructure primitives: customizable at the 
 
 ### 3. It treats certification as a first-class design input.
 
-The source text reports FAA-certification expectations in this program context as requiring execution and test coverage across all code paths, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 and a Ravenscar-constrained runtime aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
+The source text reports FAA-certification expectations in this program context as requiring execution and test coverage across all code paths, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 with Ravenscar-style deterministic tasking constraints aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
 
 Paranoid doctrine here is simple: if you must prove everything, design so proof is feasible.
 
