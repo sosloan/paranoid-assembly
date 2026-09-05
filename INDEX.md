@@ -6,6 +6,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
+### CIRCUITS_POWER.md
+**Routine:** `circuits.txt` (AdaIC flyer on Dolphin Integration GDS compiler)
+**Focus:** Parametric generator compiler pipeline, language-level safety, modular VLSI infrastructure
+**Theme:** Grove-style paranoia before tape-out: software flaws must not become silicon defects
+**Status:** Complete
+**Link:** [writeups/CIRCUITS_POWER.md](writeups/CIRCUITS_POWER.md)
+
+---
+
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
