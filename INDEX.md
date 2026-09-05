@@ -70,6 +70,16 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### MARKETFIXED_POWER.md
+**Routine:** `MarketFixed.asm` (posted-price stall · range-rate gate · 1p levy)
+**Focus:** Band algebra, levy-by-subtraction identity, wallet fail-closed composition; 28-byte MarketQuote
+**Theme:** Tri-partner paranoia — structure, tax, solvency before any handshake
+**Status:** Complete
+**Link:** [writeups/MARKETFIXED_POWER.md](writeups/MARKETFIXED_POWER.md)
+**Tri-Partner Dance:** [MarketFixed.html](MarketFixed.html) — Nikolas Bourbaki × Andy Grove × Posted Stall
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
