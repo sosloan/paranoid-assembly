@@ -42,12 +42,12 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
-### SAGA_POWER.md
-**Routine:** `saga.txt` (*The Saga of the Ada 9X Team*, 1994)
-**Focus:** Standards-process hardening, feature governance, and paranoia-driven language design
-**Theme:** Socio-technical control under specification pressure
+### TRI_ADA_93_OUTLINE_POWER.md
+**Routine:** `TRI-Ada-93-outline.txt` (TRI-Ada '93 Ada 9X OOP tutorial outline)
+**Focus:** Tagged-type hierarchies, dispatching model, and reuse-first programming techniques under strong typing
+**Theme:** Paranoid language design as upstream infrastructure for safe reusable systems
 **Status:** Complete
-**Link:** [writeups/SAGA_POWER.md](writeups/SAGA_POWER.md)
+**Link:** [writeups/TRI_ADA_93_OUTLINE_POWER.md](writeups/TRI_ADA_93_OUTLINE_POWER.md)
 
 ---
 
