@@ -13,6 +13,8 @@ This repository is a collection of **reverential technical documentation** for a
 - **writeups/** — deep dives on canonical routines (lock_byte.asm, spin loops, atomic operations, etc.)
 - **templates/** — structure and format for new analyses
 - **INDEX.md** — catalog of completed and pending analyses
+- **Ada-Lovelace-Grove.html** — creative coding voyage (Ada · Grove · Bourbaki pirate)
+- **SWIZZLING_SSE_POWER.html** — Nikolas Bourbaki × Andy Grove dual-dance for the SSE AOS→SOA weave
 
 ---
 

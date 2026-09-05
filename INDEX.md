@@ -66,6 +66,7 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Theme:** Ada Lovelace's algebraic loom meets Grove's layout paranoia at the SIMD boundary
 **Status:** Complete
 **Link:** [writeups/SWIZZLING_SSE_POWER.md](writeups/SWIZZLING_SSE_POWER.md)
+**Dual-Dance:** [SWIZZLING_SSE_POWER.html](SWIZZLING_SSE_POWER.html) — Nikolas Bourbaki × Andy Grove
 
 ---
 
