@@ -84,7 +84,7 @@ Line ranges below refer to the original line numbers in `TRI-Ada-93-outline.txt`
 | Line Range | Construct | Power |
 |------------|-----------|-------|
 | 1-9 | Title, authorship, and provenance | Establishes authenticity and technical origin before doctrinal claims. |
-| 10-13 | Copyright and viewing constraints | Defines distribution boundaries that shape how this artifact can be reused and cited. |
+| 10-13 | Copyright and viewing constraints | Defines access and redistribution boundaries before technical content begins. |
 | 15-27 | Table of contents skeleton | Declares end-to-end structure: objectives, mechanisms, techniques, and references. |
 | 28-37 | Abstract and learning outcomes | Defines the mission as safe OOP plus reusable component construction. |
 | 39-110 | Bibliography | Anchors every claim to the Ada 9X standards effort and OOP literature. |
