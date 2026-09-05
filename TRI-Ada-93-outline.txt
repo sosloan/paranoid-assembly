@@ -1,0 +1,254 @@
+Objected-Oriented Programming
+and Reuse in Ada 9X
+Stéphane Barbey, Magnus Kempe, Alfred Strohmeier
+
+Swiss Federal Institute of Technology in Lausanne
+EPFL-DI-LGL
+CH-1015 Lausanne
+Switzerland
+e-mail: {Stephane.Barbey, Magnus.Kempe, Alfred.Strohmeier} @ di.epfl.ch
+Copyright 1993 by S. Barbey, M. Kempe, and A. Strohmeier.
+Permission granted only for customary viewing via WWW. All other rights, including reproduction on other electronic media or non-electronic media, reserved.
+This is an outline of the tutorial we gave at TRI-Ada'93 (about 10 pages long). This HTML version of the outline is provided for viewing in WWW only.
+
+
+Table of Contents
+Abstract
+Objectives
+Bibliography
+Part I: Outline
+Ada Revision Process
+Tutorial Scope
+Tutorial Contents
+Introduction
+Mechanisms
+Programming Techniques
+Part II: Transparencies
+Abstract
+Ada 9X, the revised definition of the Ada programming language, provides support for object-oriented programming. This course examines the new, object-oriented features of the language, their use, and how they fit into Ada's strong type system and genericity mechanisms. Basic object-oriented mechanisms are covered, such as: extension, inheritance, and polymorphism. We then show how to integrate these mechanisms into good programming practice; topics include incremental programming, heterogeneous data structures, and mixin inheritance. The running theme is design for reuse.
+
+Objectives
+The tutorial is intended to present the object-oriented extensions of Ada 9X and to teach their methodological use. It demonstrates how Ada 9X supports the creation and use of reusable software components.
+At the end of the tutorial, you will understand the basics of object-oriented programming with Ada 9X; you will be familiar with the new mechanisms of the language and will have seen techniques to build extensible, reusable software components. Specifically, you will have learned:
+
+Mechanisms: to declare a hierarchy of tagged types (i.e. a class and subclasses), the associated types (class-wide types, access types) and operations.
+Programming techniques: to understand the proper use of Ada's new mechanisms and to integrate them in the design of programs. A few advanced concepts will be examined in this context, including by-reference object semantics and mixin inheritance.
+Also, with the material taught, you will have the basic knowledge necessary to implement object-oriented designs or to adapt programs written in other object-oriented languages (by finding and applying equivalent constructs in Ada 9X).
+
+
+Bibliography
+[AARM 93]
+	Annotated Ada 9X Reference Manual (Draft Version 3.0)
+	Ada 9X Mapping/Revision Team, Intermetrics, June 1993
+[ARM 93]
+	Ada 9X Reference Manual (Draft Version 3.0)
+	Ada 9X Mapping/Revision Team, Intermetrics, June 1993
+[Banner 92]
+	Assessing Ada 9X OOP: Building a Reusable Components Library
+	B. Banner, E. Schönberg
+	TRI-Ada '92 Conference Proceedings, pp. 79-90
+[Barnes 93]
+	Introducing Ada 9X
+	J. Barnes
+	Ada 9X Project Report, February 1993
+[Booch 87a]
+	Software Engineering with Ada
+	G.Booch
+	Benjamin/Cummings Publishing Company, 1987 (2nd ed.)
+[Booch 87b]
+	Software Components with Ada: Structures, Tools, and Subsystems
+	G.Booch
+	Benjamin/Cummings Publishing Company, 1987
+[Bracha 90]
+	Mixin-Based Inheritance
+	G. Bracha, W. Cook
+	ECOOP/OOPSLA '90 Conference Proceedings, pp. 303-311
+[Dismukes 92]
+	Implementing Tagged Types and Types Extensions for Ada 9X
+	G. Dismukes, M.A. Rome
+	TRI-Ada '92 Conference Proceedings, pp. 62-67
+[Genillard 89]
+	Rationale for the Design of Reusable Abstract Data Types Implemented in Ada
+	C. Genillard, N. Ebel, A. Strohmeier
+	ACM Ada Letters, Vol. IX, No 2, Mar/Apr 1989, pp. 62-71
+[Guimarães 91]
+	Building Generic User Interface Tools: an Experience with Multiple Inheritance
+	N. Guimarães
+	OOPSLA '91 Conference Proceedings, pp. 89-96
+[MR 92]
+	Draft Ada 9X Mapping Document, Volume I: Mapping Rationale (Version 4.1)
+	Ada 9X Mapping/Revision Team, Intermetrics, March 1992
+[MS 92]
+	Ada 9X Snapshot of Mapping Specification Prior to Revision (Version 4.6)
+	Ada 9X Mapping/Revision Team, Intermetrics, June 1992
+[Ploedereder 92]
+	How to Program in Ada 9X, Using Ada 83
+	E. Ploedereder
+	ACM Ada Letters, Vol. XII, No 6, Nov/Dec 1992, pp. 50-58
+[Requirements 90]
+	Ada 9X Requirements
+	Ada 9X Project Report, December 1990
+[Schönberg 92]
+	Contrasts: Ada 9X and C++
+	E. Schönberg
+	Unpublished, April 1992
+[Seidewitz 91]
+	Object-Oriented Programming Through Type Extension in Ada 9X
+	E. Seidewitz
+	ACM Ada Letters, Vol. XI, No 2, Mar/Apr 1991, pp. 86-97
+[Seidewitz 92]
+	Object-Oriented Programming with Mixins in Ada
+	E. Seidewitz
+	ACM Ada Letters, Vol. XII, No 2, Mar/Apr 1992, pp. 76-90
+[Taft 92]
+	Ada 9X: a Technical Study
+	S.T. Taft
+	Communications of the ACM, November 1992, Vol. 35, No 11, pp. 77-82
+[Wegner 87]
+	Dimensions of Object-Based Language Design
+	P. Wegner
+	OOPSLA '87 Conference Proceedings, pp. 168-182
+Part I: Outline
+"We have made some innovations in the design for the Ada 9X OOP facilities. We believe the innovation [...] should provide a discriminator that will make Ada 9X not just a "me-too" OOPL. We believe Ada 9X will be a particularly safe and maintainable OOPL, while still providing all the power and flexibility needed."
+-- S. Tucker Taft (1993), main architect of the revision
+
+1. Ada Revision Process
+In the Babel tower of programming languages, Ada is known for the quality of its design. Several languages have borrowed from Ada (e.g. exceptions and genericity). At the age of ten, Ada is emerging from its first revision process, where it has acquired "object-orientation". It is natural that the quality, maturity and increased power of the language will attract much attention.
+Although [Booch 87a] explains how to do objected-oriented design with Ada 83 as an implementation language, Ada 83 itself is generally not considered to be object-oriented; rather, according to the terminology of [Wegner 87], it is said to be object-based, since it lacks polymorphism and provides only a restricted form of inheritance. Both full inheritance and polymorphism are now considered essential for reuse and software engineering.
+
+These shortcomings have been acknowledged by the Ada community; the revision requirements [Requirements 90] include a section for programming by specialization/extension: Ada 9X must allow the definition of "new declared entities whose properties are adapted from those of existing entities by the addition or modification of properties or operations."
+
+After three years of intensive work, the Ada 9X Mapping/Revision Team has completed the revised Ada definition for ISO ballot and ANSI canvass. It includes support for object-oriented programming, among other things (e.g. data-oriented synchronization). The new Ada Language Reference Manual [ARM 93] was released for public review in June 1993.
+
+
+2. Tutorial Scope
+The object-oriented extensions of Ada 9X will be presented and showcased with powerful programming techniques. A running theme of the tutorial is design for reuse.
+There are some fundamental differences between Ada 9X and other well-known object-oriented languages, both in syntax and semantics. They will be described to show how Ada 9X relates to "classical" object-oriented programming languages (e.g. C++) and concepts. For example, an Ada 9X class does not simply denote a collection of instances, instead it subsumes an open-ended hierarchy of types, including the union of their sets of values and operations (this is different from other object-oriented programming languages; it will be explained carefully).
+
+The differences arise because Ada 9X takes advantage of and enhances the existing Ada 83 features (e.g. its strong type system). The revision process did not lead to a hybrid language: only a small number of building blocks have been added. For instance, no encapsulating "class" construct-as found in C++ and Simula-is needed to provide the full power of object-oriented programming.
+
+The tutorial is divided in two parts. First, we will introduce the fundamental object-oriented mechanisms of Ada 9X, and subsequently we will explain their application to programming techniques for reusable components. The tutorial is example-driven; throughout, as each notion is introduced, it is illustrated with relevant examples.
+
+
+3. Tutorial Contents
+The following subjects will be covered, and are briefly described below:
+Introduction
+Object-Oriented Programming with Ada 83
+Mechanisms
+Inheritance
+Polymorphism
+Genericity
+Visibility and Subsystems
+Abstract Types
+Programming Techniques
+Variant Programming vs. Incremental Programming
+Heterogeneous Data Structures
+Combining Abstractions without Multiple Inheritance
+Initialization, Duplication and Finalization
+Software Components
+
+4. Introduction
+4.1. Object-Oriented Programming with Ada 83
+In Ada 9X, object-oriented programming may be described in a symbolic equation as a sum of supporting mechanisms:
+
+OOP = objects + operations + encapsulation + inheritance + polymorphism
+This section shows how Ada 83 already supports some basic necessary elements of object-oriented programming (the first line in the above equation).
+Object-oriented programming is not entirely new to Ada, since Ada 83 already provides for the concepts of objects, their operations and encapsulation (using packages).
+
+There is also a limited form of inheritance, with refinement and extension of behavior, but no extension of state. This simple inheritance is accomplished through type derivation. Although type derivation is not widely used in Ada 83, it is a cornerstone of the Ada 9X object-oriented extensions.
+
+5. Mechanisms
+5.1. Inheritance
+Inheritance = derivation + overriding + type extension + run-time type identification
+In Ada 9X, inheritance is based on four mechanisms: derivation, overriding, type extension and type identification.
+Derivation is the mechanism used to let a new type (the derived type) "share" the structure and operations of another type (the parent type). A derived type can, instead of "sharing" the implementation of an operation, redefine it; the operation is said to be overridden.
+
+Type extension is a mechanism to add components to another type. In Ada 9X, type extension is linked to type derivation: the extended type is a new type created by derivation from an existing type.
+
+All types derived and extended (directly or indirectly) from one particular type belong to a class rooted at the latter type. Each type in such a class is identified by a tag, held by each object belonging to the type. This information allows to determine at run-time what the specific type of an object is and to find the implementations of its operations-i.e. to identify the type of the object. Extensible types are called tagged types.
+
+We will see how to define a tagged type, how operations-called primitive operations-are bound to such a type, and how to extend it. Extending a type is achieved by deriving from a chosen parent type, by adding components, and by defining new primitive operations and/or overriding others.
+
+Illustrations: several hierarchies of types with associated operations.
+
+
+5.2. Polymorphism
+From a general point of view, programming languages divide into two groups: untyped and typed languages. Among the former, strong, static typing is closest to the original purpose of typing, viz. compile-time diagnosis of programming errors. Statically typed variables denote objects of exclusively one specific type. However, there is, in some situations, a need for variables to dynamically denote objects of different types and to find the implementations of operations associated with each type-i.e. polymorphism.
+The general solution for this need, within the bounds of a statically typed language, has three ingredients: overloading, class-wide entities, and dynamic binding:
+
+Polymorphism = overloading + class-wide entities + dispatching
+Dynamic binding = dispatching
+Overloading is an ad-hoc, static form of polymorphism: one operation name stands for many different, not necessarily related, subprogram implementations.
+Class-wide entities can adapt to any type within a given hierarchy.
+
+Dynamic binding is the run-time determination, in the presence of a polymorphic actual parameter, of which version of an overloaded operation to call. In Ada 9X, dynamic binding is resolved by dispatching to the appropriate implementation of the operation; the operation is called a dispatching operation.
+
+The typical source for the need of polymorphism is that, since all objects in a class share some properties (state and behavior), it is convenient to handle these properties and objects in a uniform way. There are two means to achieve this:
+
+One can program in terms of common properties. When calling a primitive operation for which several implementations are provided, the appropriate implementation is selected according to the specific type of the object. The selection can be made either at compile-time (static binding) or at run-time (dispatching-i.e. dynamic binding). In the latter case, selection is made according to the object's tag, which identifies its specific type and operations.
+
+One can design class-wide subprograms. A class-wide subprogram is not bound to one specific type but to all types in a given class. Similarly, class-wide variables can hold an object of any specific type in a given class. Primitive operations are dispatching if called with class-wide actual parameters. Even though subprogram parameters are not always bound to exactly one type, there are no holes in the Ada type system; type-loss is impossible, since each object has a tag and keeps it; thus the safety of Ada's strong typing is preserved.
+Illustrations: class-wide variables and subprograms in the hierarchies used earlier.
+
+5.3. Genericity
+Several new forms of generic formal parameters have been introduced in Ada 9X. They combine with the object-oriented extensions of the language.
+Illustrations: variations on an abstract data type (ADT).
+
+
+5.4. Visibility and Subsystems
+This part deals with visibility issues-i.e. how and where to adequately place definitions, in order to declare public, private and internal types, objects, components and operations.
+The notion of child unit is introduced: a child unit is bound to a parent package (the parent unit), and transitively to all parents of the parent unit (the ancestor units); the parent's private declarations are visible to its children, but the parent's internals (its body declarations) are not.
+
+The child construct allows one to structure modules into a subsystem, to select partial views of a subsystem, to extend an existing abstraction and therefore to augment and facilitate the reusability of software components.
+
+Illustrations: families of ADTs and related utilities.
+
+
+5.5. Abstract Types
+An abstract type (not to be confused with an abstract data type, i.e. an ADT) provides the specification of a class the implementation of which is incomplete-i.e. it is an interface with neither full data representation nor complete algorithms. Such a specification can be shared by many different implementations of the same abstraction.
+For instance, an abstract stack can be defined as a data structure with three operations, push, pop and size, without presuming any specific implementation. Various concrete stack types (bounded or unbounded, managed or unmanaged, concurrent or sequential,...) can then implement this specification.
+
+Illustrations: specification and implementation of ADTs (families of geometrical shapes and stacks).
+
+
+6. Programming Techniques
+Once the basics have been presented per se, the second part of the tutorial shows techniques to integrate them in Ada programs and to foster reusability of program components. This part shows how Ada's new mechanisms are best put to use.
+
+6.1. Variant Programming vs. Incremental Programming
+(Using OOP as a tool for classification)
+Frequently, programmers seek to construct variants of abstractions by specifying small, incremental differences only (in data representations and operation implementations).
+In Ada 83, this could be done using exhaustive variant records and case statements based on discriminant values (hence the name variant programming). Experience proved that large scale use of this approach was too tedious, costly, and even error-prone.
+
+In Ada 9X, variant programming can be replaced by the construction of a hierarchy of tagged types, since incremental differences are cleanly handled with inheritance and polymorphism (hence the name incremental programming). (This section reviews most concepts introduced so far.)
+
+Illustrations: design of an alert system with priorities, contrasting solutions in Ada 83 and Ada 9X.
+
+
+6.2. Heterogeneous Data Structures
+(Collecting polymorphic items in a structure)
+Since Ada 9X has by-value semantics, we examine how the user can manage by-reference semantics.
+In opposition to the lazy type system of languages that offer object polymorphism (e.g. CLOS), Ada has a strong type system: its objects are monomorphic; they must be declared as belonging to a specific type, and they never change their type.
+
+Nevertheless, it is possible to safely build a collection of objects not having the same (specific) type, but belonging to the same class-i.e. a heterogeneous collection. This can be achieved with class-wide access types. Variables of a class-wide access type can designate any object in the specified class.
+
+Illustrations: miscellaneous heterogeneous collections, and the definition and use of a heterogeneous symbol table based on a heterogeneous doubly-linked list.
+
+
+6.3. Combining Abstractions without Multiple Inheritance
+There is no multiple inheritance in Ada 9X, because, unlike languages in which inheritance is also used as a composition mechanism, Ada 9X has many different, better ways to compose abstractions.
+Here we show some Ada 9X programming techniques to solve problems that often require multiple inheritance in other languages. For instance, a pattern of subclassing (type extension) may arise across several, otherwise unrelated, classes. Such a pattern may be abstracted into an abstract subclass. With multiple inheritance, such an abstract subclass becomes-in a reversal of the inheritance hierarchy-an (abstract) parent class to inherit from; this is called mixin inheritance. We focus on the elegant programming of abstract subclasses without multiple inheritance in Ada 9X.
+
+In addition, a somewhat ad-hoc implementation (with access discriminants) of conceptual multiple inheritance is shown, to demonstrate that it can also be achieved in Ada 9X, if really needed.
+
+Illustrations: case-studies to contrast implementation dependence, mixin inheritance and conceptual multiple inheritance.
+
+
+6.4. Initialization, Duplication, and Finalization
+(Storage management for objects and values)
+Ada 9X supports user-defined initialization and finalization of objects and values; this allows precise control over allocation, duplication, and deallocation of data storage. It is thus possible to safely modify the assignment operation. This control is directly available for types in two predefined classes (the controlled classes).
+Illustrations: automatic counting of instances, and automatic file closure.
+
+
+6.5. Software Components
+This is a wrap-up of the techniques presented so far. The characteristics deemed essential to the design of reusable components are examined, taking into account genericity and Ada's new object-oriented mechanisms.
+Illustrations: A guided tour to the design of families of ADTs.
