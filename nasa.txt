@@ -11,7 +11,7 @@ QUICK REFERENCE
 ------------------------------------------------------------
 
 File: nasa.txt
-Origin: NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
+Origin: Synopsis by Ann Brandon of NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
 Study Period Covered: 1985-1993 project activity analyzed in this 1995 report
 Baseline Reference Year: 1985 (used in report comparisons)
 Case-Study System Types: flight dynamics and telemetry simulators
@@ -31,6 +31,7 @@ The report chronicles a decade-long transition in a mission-critical environment
 
 The headline outcomes are strategic, not cosmetic:
 Attribution note: The percentage figures below are drawn from the synopsis source "A Synopsis of NASA's Report: Impact of Ada and Object-Oriented Design in the Flight Dynamics Division at Goddard Space Flight Center" (SEL-95-001).
+Synopsis attribution: Ann Brandon; Software Engineering Laboratory Series SEL-95-001 synopsis document.
 
 - Reuse increased by 300% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 - Cost reduced by 40% (synopsis-reported FDD-wide outcome versus 1985 baseline)
@@ -71,7 +72,7 @@ Writeup synthesis: Projects like UARSTELS were designed with upcoming systems in
 Writeup synthesis: The report highlights reusable libraries and trained maintainers as mechanisms that reduce rediscovery costs in later projects.
 
 ------------------------------------------------------------
-POWER ANALYSIS BY DECISION LAYER (WRITEUP SYNTHESIS)
+DECISION ANALYSIS BY DECISION LAYER (WRITEUP SYNTHESIS)
 ------------------------------------------------------------
 
 Decision Layer: Architecture
