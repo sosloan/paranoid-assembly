@@ -42,6 +42,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### SAGA_POWER.md
+**Routine:** `saga.txt` (*The Saga of the Ada 9X Team*, 1994)
+**Focus:** Standards-process hardening, feature governance, and paranoia-driven language design
+**Theme:** Socio-technical control under specification pressure
+**Status:** Complete
+**Link:** [writeups/SAGA_POWER.md](writeups/SAGA_POWER.md)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
