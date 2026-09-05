@@ -51,7 +51,7 @@ The text centers reusable generators (RAM/ROM/PLA, analog, datapath), not one-of
 
 ### 3. It frames safety as an economic requirement.
 
-"Programming flaws will not end-up in silicon" is a cost-control statement as much as a correctness statement. Re-spins are slow and expensive; language-level guardrails are therefore part of manufacturing strategy, not just software taste.
+"Programming flaws will not end up in silicon" is a cost-control statement as much as a correctness statement. Re-spins are slow and expensive; language-level guardrails are therefore part of manufacturing strategy, not just software taste.
 
 ### 4. It selects Ada for properties aligned to VLSI constraints.
 
