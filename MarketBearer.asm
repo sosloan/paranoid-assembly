@@ -35,8 +35,6 @@
         .intel_syntax noprefix
         .text
 
-        .extern market_on_tick
-        .extern _market_on_tick
         .extern market_in_range
         .extern _market_in_range
         .extern market_band_ok
@@ -309,20 +307,6 @@ _barter_settle:
         mov     r13d, eax               # candidate fill
 
         mov     edi, r13d
-        call    market_on_tick
-        test    eax, eax
-        jnz     .Lon_tick
-        # TICK is 1 so this never fires; keep the snap for a coarser tick.
-        mov     edi, r13d
-        xor     edx, edx
-        mov     ecx, TICK
-        mov     eax, edi
-        div     ecx
-        mul     ecx
-        mov     r13d, eax
-.Lon_tick:
-
-        mov     edi, r13d
         mov     esi, dword ptr [r12 + S_MATCH_LO]
         mov     edx, dword ptr [r12 + S_MATCH_HI]
         call    market_in_range
@@ -338,7 +322,7 @@ _barter_settle:
         mov     esi, r13d
         mov     edx, dword ptr [r12 + S_RATE]
         call    market_levy
-        mov     ebx, eax                # status
+        mov     ebx, dword ptr [rsp + Q_STATUS]
 
         mov     eax, dword ptr [rsp + 0x00]
         mov     dword ptr [r12 + S_NET], eax
