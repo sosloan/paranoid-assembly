@@ -97,16 +97,16 @@ EVIDENCE SUMMARY FROM REPORTED OUTCOMES
 ------------------------------------------------------------
 
 Property: Reuse scaling
-Report statement: Synopsis-reported reuse includes a 300% FDD-wide increase and telemetry lineage figures such as 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
+Report statement: Synopsis-reported FDD-wide reuse increased by 300%; report-reported telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
 
 Property: Quality improvement
-Report statement: Development error rates are reported as reduced against the 1985 baseline.
+Report statement: Development error rates are reported as reduced by 62% against the 1985 baseline, with telemetry-simulator-since-1990 reporting at 85% fewer development errors.
 
 Property: Cycle-time reduction
-Report statement: Schedule duration is reported as reduced in mature Ada/OOD project phases.
+Report statement: Cycle time is reported as reduced by 25% against the 1985 baseline, with telemetry-simulator-since-1990 reporting delivery in half the time.
 
 Property: Cost improvement
-Report statement: Cost reduction is reported, with strongest effect in long-lived reuse-oriented Ada efforts.
+Report statement: Cost is reported as reduced by 40% versus the 1985 baseline, with strongest effect in long-lived reuse-oriented Ada efforts.
 
 Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
 
