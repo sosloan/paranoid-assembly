@@ -6,10 +6,19 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
-### ASTROPHYSICS_POWER.md
-**Routine:** `astrophysics.txt` (Koenighofer & Stift, 1994 astrophysical modeling memo)
-**Focus:** Adaptive 2D grid architecture, radiative-transfer workload constraints, Ada package boundaries for scientific code
-**Theme:** Paranoid software design for numerically intensive astrophysics
+### ADA_TYPES_POWER.md
+**Routine:** `ada-types.txt` (Ada 95 language overview)
+**Focus:** Type constraints, abstraction boundaries, protected concurrency, and explicit low-level control
+**Theme:** Strategic paranoia encoded before code reaches silicon
+**Status:** Complete
+**Link:** [writeups/ADA_TYPES_POWER.md](writeups/ADA_TYPES_POWER.md)
+
+---
+
+### BFGOODRICH_POWER.md
+**Routine:** `BFGoodrich.txt` (IMD-HUMS architecture case study)
+**Focus:** Safety-critical telemetry software, deterministic concurrency, certification-driven design
+**Theme:** “Data change, not software” as paranoid systems doctrine
 **Status:** Complete
 **Link:** [writeups/ASTROPHYSICS_POWER.md](writeups/ASTROPHYSICS_POWER.md)
 
