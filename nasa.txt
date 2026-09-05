@@ -14,7 +14,7 @@ File: nasa.txt
 Origin: Synopsis by Ann Brandon of NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
 Study Period Covered: 1985-1993 project activity analyzed in this 1995 report
 Baseline Reference Year: 1985 (used in report comparisons)
-Case-Study System Types: flight dynamics and telemetry simulators
+Case-Study System Types: telemetry simulators and dynamic simulators
 Language Focus: Ada with object-oriented design practices
 
 ------------------------------------------------------------
@@ -103,7 +103,7 @@ Source statement (synopsis): Telemetry simulators built since 1990 reported 85% 
 
 Property: Cycle-time reduction
 Source statement (synopsis): Cycle time reduced by 25% against the 1985 baseline.
-Source statement (synopsis): Telemetry simulators built since 1990 were delivered in half the time.
+Source statement (synopsis, telemetry-only metric): Telemetry simulators built since 1990 were delivered in half the time versus the 1985 baseline for the systems.
 
 Property: Cost improvement
 Source statement (synopsis): Cost reduced by 40% versus the 1985 baseline.
