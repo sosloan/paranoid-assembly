@@ -40,8 +40,8 @@ The headline outcomes are strategic, not cosmetic:
 - Development error rates reduced by 62% (reported FDD-wide summary outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
-- 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
-- Delivered in half the time in later telemetry simulator programs versus 1985-era baselines
+- Report states 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
+- Report states delivery in half the time in later telemetry simulator programs versus 1985-era baselines
 
 
 ------------------------------------------------------------
