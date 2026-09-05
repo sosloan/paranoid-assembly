@@ -6,6 +6,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
+### SUPERHVAC_POWER.md
+**Routine:** `cadhvac.txt` (AdaIC flyer on Byron Informatik's Super-CAD Integrated Engineering System)
+**Focus:** Database-first CAD architecture, shared object model, Ada large-system safety constraints
+**Theme:** Paranoid infrastructure design for HVAC and facility-management software
+**Status:** Complete
+**Link:** [writeups/SUPERHVAC_POWER.md](writeups/SUPERHVAC_POWER.md)
+
+---
+
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
