@@ -152,7 +152,7 @@ IIT Research Institute.
 ```
 
 A legacy field report in plain text, but the architecture it describes still feels contemporary: one canonical model, many tools, zero tolerance for divergence.  
-Reproduced here for technical analysis with source attribution preserved inline, consistent with the flyer's stated in-text reprint permission and this repository's LICENSE policy note in `README.md`.
+Provenance note: this writeup preserves the flyer's in-text attribution and permission language verbatim; `README.md` states that "original assembly and reference material is sourced from projects under their original licenses."
 
 ---
 
