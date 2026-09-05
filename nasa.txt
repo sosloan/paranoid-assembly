@@ -16,9 +16,6 @@ Study Period Covered: 1985-1993 project activity analyzed in this 1995 report
 Baseline Reference Year: 1985 (used in report comparisons)
 Case-Study System Types: flight dynamics and telemetry simulators
 Language Focus: Ada with object-oriented design practices
-Core Mechanism: Generic architecture + verbatim reuse
-Strategic Result: Reuse up, errors down, cycle time down, cost down (strongest in long-lived, reuse-oriented simulator systems)
-Engineering Principle: Reduce change risk by designing components to be reused without edits
 
 ------------------------------------------------------------
 THE SYSTEM, IN FULL CONTEXT
@@ -33,7 +30,7 @@ The report chronicles a decade-long transition in a mission-critical environment
 - Reuse-oriented architecture
 
 The headline outcomes are strategic, not cosmetic:
-Attribution note: The percentage figures below are inherited from the prior synopsis text previously contained in this file and are presented here as synopsis-reported outcomes.
+Attribution note: The percentage figures below are drawn from the synopsis source "A Synopsis of NASA's Report: Impact of Ada and Object-Oriented Design in the Flight Dynamics Division at Goddard Space Flight Center" (SEL-95-001).
 
 - Reuse increased by 300% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 - Cost reduced by 40% (synopsis-reported FDD-wide outcome versus 1985 baseline)
@@ -97,7 +94,8 @@ EVIDENCE SUMMARY FROM REPORTED OUTCOMES
 ------------------------------------------------------------
 
 Property: Reuse scaling
-Report statement: Synopsis-reported FDD-wide reuse increased by 300%; report-reported telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
+Source statement (synopsis): FDD-wide reuse increased by 300% versus 1985 baseline.
+Source statement (report details): Telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
 
 Property: Quality improvement
 Report statement: Development error rates are reported as reduced by 62% against the 1985 baseline, with telemetry-simulator-since-1990 reporting at 85% fewer development errors.
