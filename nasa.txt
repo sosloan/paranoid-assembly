@@ -33,6 +33,7 @@ The report chronicles a decade-long transition in a mission-critical environment
 - Reuse-oriented architecture
 
 The headline outcomes are strategic, not cosmetic:
+Attribution note: The percentage figures below are reported in the SEL-95-001 synopsis text previously contained in this file.
 
 - Reuse increased by 300% (reported FDD-wide summary outcome versus 1985 baseline)
 - Cost reduced by 40% (reported FDD-wide summary outcome versus 1985 baseline)
@@ -40,8 +41,8 @@ The headline outcomes are strategic, not cosmetic:
 - Development error rates reduced by 62% (reported FDD-wide summary outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
-- Report states 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
-- Report states delivery in half the time in later telemetry simulator programs versus 1985-era baselines
+- Report states 85% fewer development errors in telemetry simulators built since 1990 versus 1985-era baselines
+- Report states delivery in half the time in telemetry simulators built since 1990 versus 1985-era baselines
 
 
 ------------------------------------------------------------
@@ -54,7 +55,7 @@ Writeup synthesis: The highest-performing projects in the report were explicitly
 
 2) IT TURNS GENERICS INTO RISK CONTROL
 
-Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation; instead of cloning and mutating code per spacecraft, teams adapted by instantiation.
+Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation, with adaptation performed through parameterized instantiation for different simulator targets.
 
 3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
 
@@ -83,7 +84,7 @@ Decision Layer: Development Workflow
 Writeup synthesis: Verbatim reuse minimizes local modifications and limits defect injection opportunities.
 
 Decision Layer: Toolchain
-Writeup synthesis: Compiler/runtime maturity and diagnostics materially affect adoption velocity and confidence.
+Writeup synthesis: Compiler maturity plus diagnostic and library-management tooling materially affected adoption velocity and confidence.
 
 Decision Layer: Training
 Writeup synthesis: Hands-on project exposure converts skepticism into operational competence.
