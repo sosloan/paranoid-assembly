@@ -323,7 +323,7 @@ _barter_settle:
         # at S_NET. Layout: net,vat,gross,rate,lo,hi,status — but our
         # session stores net,vat,gross at +0x24 and rate already at +0x18.
         # Call levy with a scratch quote on the stack, then copy back.
-        sub     rsp, 32
+        sub     rsp, 40
         lea     rdi, [rsp]
         mov     esi, r13d
         mov     edx, dword ptr [r12 + S_RATE]
@@ -336,7 +336,7 @@ _barter_settle:
         mov     dword ptr [r12 + S_VAT], eax
         mov     eax, dword ptr [rsp + 0x08]
         mov     dword ptr [r12 + S_GROSS], eax
-        add     rsp, 32
+        add     rsp, 40
 
         test    ebx, ebx
         jnz     .Lsettle_fail
