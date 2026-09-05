@@ -65,7 +65,7 @@
         .equ    CONCESSION_SHIFT, 3
         .equ    TICK,             1
         .equ    LEVY_QUOTE_BYTES, 0x1C
-        .equ    LEVY_STACK_BYTES, LEVY_QUOTE_BYTES + 12
+        .equ    LEVY_STACK_BYTES, LEVY_QUOTE_BYTES + 4
         .equ    PRICE_MIN,        1
         .equ    PRICE_MAX,        0x7FFFFFFF
 
@@ -164,18 +164,19 @@ _barter_open:
         test    eax, eax
         jz      .Lopen_empty
 
-        # band itself must carry a legal rate
+        # rate must be legal before the band gate runs
+        mov     edi, dword ptr [r12 + S_RATE]
+        call    market_rate_ok
+        test    eax, eax
+        jz      .Lopen_rate
+
+        # band itself must now validate as range/order/book/tick correct
         mov     edi, dword ptr [r12 + S_LO]
         mov     esi, dword ptr [r12 + S_HI]
         mov     edx, dword ptr [r12 + S_RATE]
         call    market_band_ok
         test    eax, eax
         jnz     .Lopen_ok
-
-        mov     edi, dword ptr [r12 + S_RATE]
-        call    market_rate_ok
-        test    eax, eax
-        jz      .Lopen_rate
         jmp     .Lopen_band_fail
 
 .Lopen_ok:
@@ -317,12 +318,14 @@ _barter_settle:
         # at S_NET. Layout: net,vat,gross,rate,lo,hi,status — but our
         # session stores net,vat,gross at +0x24 and rate already at +0x18.
         # Call levy with a scratch quote on the stack, then copy back.
-        sub     rsp, LEVY_STACK_BYTES     # full quote scratch + call-alignment slack
+        sub     rsp, LEVY_STACK_BYTES     # full quote scratch + alignment slack
         lea     rdi, [rsp]
         mov     esi, r13d
         mov     edx, dword ptr [r12 + S_RATE]
         call    market_levy
         mov     ebx, dword ptr [rsp + Q_STATUS]
+        test    ebx, ebx
+        jnz     .Lsettle_fail_levy
 
         mov     eax, dword ptr [rsp + 0x00]
         mov     dword ptr [r12 + S_NET], eax
@@ -331,9 +334,6 @@ _barter_settle:
         mov     eax, dword ptr [rsp + 0x08]
         mov     dword ptr [r12 + S_GROSS], eax
         add     rsp, LEVY_STACK_BYTES
-
-        test    ebx, ebx
-        jnz     .Lsettle_fail
 
         mov     dword ptr [r12 + S_DEAL], 1
         mov     eax, dword ptr [r12 + S_LIST]
@@ -345,6 +345,16 @@ _barter_settle:
         pop     r12
         pop     rbx
         ret
+
+.Lsettle_fail_levy:
+        add     rsp, LEVY_STACK_BYTES
+        xor     eax, eax
+        mov     dword ptr [r12 + S_DEAL], eax
+        mov     dword ptr [r12 + S_NET], eax
+        mov     dword ptr [r12 + S_VAT], eax
+        mov     dword ptr [r12 + S_GROSS], eax
+        mov     dword ptr [r12 + S_SAVED], eax
+        jmp     .Lsettle_fail
 
 .Lsettle_fail:
         mov     dword ptr [r12 + S_STATUS], ebx
