@@ -29,7 +29,7 @@
 
 ## THE FILE, IN FULL
 
-The source file carries a redistribution-restricted notice, so this writeup does not reproduce it verbatim. Instead, it summarizes structure and quotes only short fragments needed for technical analysis.
+The source file carries a redistribution-restricted notice (see `TRI-Ada-93-outline.txt`, lines 10-13), so this writeup does not reproduce it verbatim. Instead, it summarizes structure and quotes only short fragments needed for technical analysis.
 
 Quoted anchors from the document:
 
