@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ada · Lovelace · Grove — Bourbaki Pirate Voyage</title>
+  <meta name="description" content="Andy Grove travels with Shakespeare as a Bourbaki pirate alongside Ada Lovelace. Ada reserved words meet Intel GAS syntax." />
+  <style>
+    :root {
+      --ink: #0b1220;
+      --parchment: #f4efe4;
+      --brass: #c9a227;
+      --ada: #6ec6ff;
+      --grove: #7dffa8;
+      --shake: #ffd6a5;
+      --bourbaki: #ff8fab;
+      --sea: #12324d;
+      --foam: rgba(244, 239, 228, 0.08);
+      --glow: 0 0 24px rgba(110, 198, 255, 0.25);
+      --mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--parchment);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1a3a5c 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #3a1d4a 0%, transparent 50%),
+        linear-gradient(180deg, #071018 0%, var(--ink) 40%, #0a1628 100%);
+      font-family: var(--serif);
+      line-height: 1.55;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, #fff8, transparent),
+        radial-gradient(1px 1px at 28% 42%, #fff6, transparent),
+        radial-gradient(1.5px 1.5px at 67% 22%, #fffc, transparent),
+        radial-gradient(1px 1px at 81% 58%, #fff7, transparent),
+        radial-gradient(1px 1px at 45% 76%, #fff5, transparent),
+        radial-gradient(1.5px 1.5px at 92% 12%, #fff9, transparent),
+        radial-gradient(1px 1px at 8% 88%, #fff4, transparent);
+      animation: drift 80s linear infinite;
+    }
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-40px); }
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--foam);
+      margin-bottom: 2rem;
+    }
+    .sigil {
+      display: inline-flex;
+      gap: 0.55rem;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 1rem;
+    }
+    .sigil span {
+      display: inline-block;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--brass);
+      box-shadow: 0 0 10px var(--brass);
+    }
+    h1 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--ada);
+      text-shadow: var(--glow);
+    }
+    .epigraph {
+      max-width: 36rem;
+      margin: 1rem auto 0;
+      font-style: italic;
+      color: #d7cfc0;
+      font-size: 1.05rem;
+    }
+    .epigraph cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--brass);
+      letter-spacing: 0.06em;
+    }
+
+    .crew {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.85rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid var(--foam);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover, .card:focus-within {
+      transform: translateY(-3px);
+      border-color: rgba(201, 162, 39, 0.45);
+      box-shadow: var(--glow);
+    }
+    .card h2 {
+      margin: 0 0 0.35rem;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: #cfc6b6;
+    }
+    .card.ada h2 { color: var(--ada); }
+    .card.grove h2 { color: var(--grove); }
+    .card.shake h2 { color: var(--shake); }
+    .card.bourbaki h2 { color: var(--bourbaki); }
+
+    section.panel {
+      margin: 2.25rem 0;
+      padding: 1.35rem 1.25rem;
+      border-radius: 16px;
+      background: rgba(8, 16, 28, 0.72);
+      border: 1px solid var(--foam);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+    section.panel h3 {
+      margin: 0 0 0.85rem;
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    section.panel h3 .tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-left: 0.55rem;
+      vertical-align: middle;
+    }
+
+    .voyage p {
+      margin: 0 0 0.95rem;
+      font-size: 1.05rem;
+    }
+    .voyage p:last-child { margin-bottom: 0; }
+
+    .kw {
+      font-family: var(--mono);
+      font-size: 0.9em;
+      color: var(--ada);
+      background: rgba(110, 198, 255, 0.1);
+      border: 1px solid rgba(110, 198, 255, 0.22);
+      border-radius: 5px;
+      padding: 0.05em 0.35em;
+      white-space: nowrap;
+    }
+
+    pre.asm, pre.ada {
+      margin: 0;
+      padding: 1rem 1.05rem;
+      overflow-x: auto;
+      border-radius: 12px;
+      background: #050b14;
+      border: 1px solid rgba(125, 255, 168, 0.18);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: #b8c7d9;
+    }
+    pre.asm .c { color: #6b7c90; }
+    pre.asm .d { color: var(--grove); }
+    pre.asm .i { color: #ffe08a; }
+    pre.asm .r { color: var(--ada); }
+    pre.asm .l { color: var(--bourbaki); }
+    pre.ada .k { color: var(--ada); font-weight: 600; }
+    pre.ada .c { color: #6b7c90; }
+    pre.ada .s { color: var(--shake); }
+    pre.ada .n { color: var(--grove); }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    button, .btn {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f0e6cf, var(--brass));
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.25);
+    }
+    button:hover, .btn:hover { filter: brightness(1.08); }
+    button:active { transform: translateY(1px); }
+    button.ghost {
+      background: transparent;
+      color: var(--parchment);
+      border: 1px solid rgba(244, 239, 228, 0.25);
+      box-shadow: none;
+    }
+    .status {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #9fb0c3;
+    }
+
+    .word-sea {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      max-height: 280px;
+      overflow: auto;
+      padding: 0.25rem;
+    }
+    .chip {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 0.28rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(110, 198, 255, 0.25);
+      background: rgba(110, 198, 255, 0.08);
+      color: var(--ada);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .chip:hover { background: rgba(110, 198, 255, 0.2); transform: scale(1.04); }
+    .chip.active {
+      background: rgba(125, 255, 168, 0.18);
+      border-color: rgba(125, 255, 168, 0.5);
+      color: var(--grove);
+      box-shadow: 0 0 12px rgba(125, 255, 168, 0.2);
+    }
+
+    .oracle {
+      min-height: 4.5rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px dashed rgba(255, 214, 165, 0.35);
+      background: rgba(255, 214, 165, 0.05);
+      font-size: 1.02rem;
+    }
+    .oracle strong {
+      font-family: var(--mono);
+      color: var(--shake);
+      font-weight: 600;
+    }
+
+    .ledger {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .ledger th, .ledger td {
+      text-align: left;
+      padding: 0.55rem 0.45rem;
+      border-bottom: 1px solid var(--foam);
+      vertical-align: top;
+    }
+    .ledger th {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brass);
+      font-weight: 500;
+    }
+    .ledger td.role { color: var(--ada); font-family: var(--mono); font-size: 0.85rem; }
+
+    .ticker {
+      margin-top: 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: #8fa3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      border-top: 1px solid var(--foam);
+      padding-top: 0.85rem;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 48s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--foam);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: #8093a8;
+      text-align: center;
+    }
+    footer a { color: var(--ada); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stars, .ticker span { animation: none; }
+      .chip, .card, button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero">
+      <div class="sigil"><span></span> paranoid-assembly · creative coding <span></span></div>
+      <h1><em>Ada-Lovelace-Grove</em></h1>
+      <p class="epigraph">
+        “Only the paranoid survive—yet only the imaginative embark.”
+        <cite>— logbook of the Analytical Corsair · .intel_syntax noprefix</cite>
+      </p>
+    </header>
+
+    <div class="crew" role="list">
+      <article class="card ada" role="listitem">
+        <h2>Ada Lovelace</h2>
+        <p>Navigator of symbols. She <span class="kw">declare</span>s the voyage a <span class="kw">package</span> of possibility.</p>
+      </article>
+      <article class="card grove" role="listitem">
+        <h2>Andy Grove</h2>
+        <p>Quartermaster of paranoia. Every lag is a strategic inflection; every lock a survival tax.</p>
+      </article>
+      <article class="card shake" role="listitem">
+        <h2>Shakespeare</h2>
+        <p>Bosun of blank verse. Turns bus cycles into blank-verse iambs and mutinies into soliloquies.</p>
+      </article>
+      <article class="card bourbaki" role="listitem">
+        <h2>Bourbaki Pirate</h2>
+        <p>A collective under one mask. Plunders axioms, hoists the abstract flag, sails by diagram.</p>
+      </article>
+    </div>
+
+    <section class="panel voyage" aria-labelledby="voyage-title">
+      <h3 id="voyage-title">The Voyage <span class="tag">begin … end</span></h3>
+      <p>
+        On a moon-cold Thames that remembered the Analytical Engine, <strong>Ada Lovelace</strong>
+        did not merely <span class="kw">accept</span> a passenger list. She saw a crew able to
+        <span class="kw">abstract</span> their patterns and <span class="kw">return</span> a new kind of thought.
+      </p>
+      <p>
+        <strong>Andy Grove</strong> came aboard with a ledger of inflection points. “Assume the lock is hot,”
+        he said, checking the cheap unlocked load before any bus-locked folly. Only the paranoid
+        survive the Strait of Contention; only the prepared <span class="kw">select</span> a method
+        <span class="kw">case</span> by case.
+      </p>
+      <p>
+        Beside them walked <strong>Shakespeare</strong>—not as court poet but as a Bourbaki pirate’s second,
+        renaming no uncertainty as certainty. “We are such stuff as registers are made on,” he murmured,
+        “and our little life is rounded with a <span class="kw">ret</span>.”
+      </p>
+      <p>
+        The <strong>Bourbaki pirate</strong> flew no single face. He was <span class="kw">generic</span> enough
+        for astronomy or music, yet a <span class="kw">subtype</span> kept each quantity in bounds.
+        Their charter was a <span class="kw">protected</span> <span class="kw">task</span> waiting at an
+        <span class="kw">entry</span>: plunder axioms, never chaos; raise a signal when the result is
+        <span class="kw">null</span>, never hide it.
+      </p>
+      <p>
+        <span class="kw">If</span> the Engine received a question, <span class="kw">then</span> it could
+        choose a method; <span class="kw">elsif</span> another card was needed, it could
+        <span class="kw">delay</span>; <span class="kw">else</span> it could proceed. A careful
+        <span class="kw">pragma</span> forbade shortcuts from <span class="kw">overriding</span> the design.
+        For each operation a <span class="kw">loop</span> would <span class="kw">begin</span>, continue
+        <span class="kw">while</span> its condition held, and <span class="kw">exit</span>
+        <span class="kw">when</span> the work was done.
+      </p>
+    </section>
+
+    <section class="panel" aria-labelledby="gas-title">
+      <h3 id="gas-title">Intel GAS Manifest <span class="tag">.intel_syntax noprefix</span></h3>
+      <p style="margin-top:0;color:#cfc6b6;font-size:0.95rem;">
+        The corsair’s keel is cut in x86-64 System V. Grove insists every instruction earn its place;
+        Ada indexes the range; Shakespeare times the iamb; Bourbaki hoists the collective label.
+      </p>
+      <pre class="asm" id="asm-source"><span class="c"># Ada-Lovelace-Grove.asm — Analytical Corsair boot</span>
+<span class="c"># x86-64 System V, GAS intel syntax. Only the paranoid survive.</span>
+
+        <span class="d">.intel_syntax</span> noprefix
+        <span class="d">.text</span>
+        <span class="d">.globl</span>  analytical_corsair
+        <span class="d">.globl</span>  grove_check_first
+        <span class="d">.globl</span>  bourbaki_xor_flag
+
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="c"># uint64_t analytical_corsair(uint64_t ada_note, uint64_t grove_paranoia,</span>
+<span class="c">#                             uint64_t shake_verse, uint64_t *out_course)</span>
+<span class="c">#   rdi=ada  rsi=grove  rdx=shake  rcx=out_course</span>
+<span class="c">#   Course = (ada XOR grove) + (shake &gt;&gt; 1). Writes course; returns 1 if set.</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="l">analytical_corsair:</span>
+        <span class="i">mov</span>     <span class="r">rax</span>, <span class="r">rdi</span>                 <span class="c"># Ada's symbolic cargo</span>
+        <span class="i">xor</span>     <span class="r">rax</span>, <span class="r">rsi</span>                 <span class="c"># Grove's paranoid mask</span>
+        <span class="i">mov</span>     <span class="r">r8</span>,  <span class="r">rdx</span>
+        <span class="i">shr</span>     <span class="r">r8</span>,  1                   <span class="c"># half a measure of verse</span>
+        <span class="i">add</span>     <span class="r">rax</span>, <span class="r">r8</span>                  <span class="c"># plot the course</span>
+        <span class="i">mov</span>     qword ptr [<span class="r">rcx</span>], <span class="r">rax</span>
+        <span class="i">mov</span>     <span class="r">eax</span>, 1
+        <span class="i">ret</span>
+
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="c"># int grove_check_first(uint8_t *lock_byte)</span>
+<span class="c">#   Paranoid try: unlocked load first; LOCK xchg only if free.</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="l">grove_check_first:</span>
+        <span class="i">mov</span>     <span class="r">al</span>, byte ptr [<span class="r">rdi</span>]
+        <span class="i">test</span>    <span class="r">al</span>, <span class="r">al</span>
+        <span class="i">jnz</span>     <span class="l">.Ltaken</span>                 <span class="c"># cheap bail if hot</span>
+        <span class="i">mov</span>     <span class="r">al</span>, 1
+        <span class="i">xchg</span>    <span class="r">al</span>, byte ptr [<span class="r">rdi</span>]      <span class="c"># implicit LOCK</span>
+        <span class="i">xor</span>     <span class="r">al</span>, 1
+        <span class="i">movzx</span>   <span class="r">eax</span>, <span class="r">al</span>
+        <span class="i">ret</span>
+<span class="l">.Ltaken:</span>
+        <span class="i">xor</span>     <span class="r">eax</span>, <span class="r">eax</span>
+        <span class="i">ret</span>
+
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="c"># uint32_t bourbaki_xor_flag(uint32_t a, uint32_t b)</span>
+<span class="c">#   Collective mask: no single identity — only the symmetric difference.</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="l">bourbaki_xor_flag:</span>
+        <span class="i">mov</span>     <span class="r">eax</span>, <span class="r">edi</span>
+        <span class="i">xor</span>     <span class="r">eax</span>, <span class="r">esi</span>
+        <span class="i">ret</span></pre>
+    </section>
+
+    <section class="panel" aria-labelledby="ada-title">
+      <h3 id="ada-title">Ada Package of the Corsair <span class="tag">reserved words underway</span></h3>
+      <pre class="ada"><span class="c">-- Drawn from ada-reserved-words.txt · Analytical Engine notes as voyage law</span>
+<span class="k">package</span> Analytical_Corsair <span class="k">is</span>
+   <span class="k">pragma</span> Pure;
+
+   <span class="k">type</span> Crew_Role <span class="k">is</span> <span class="k">tagged private</span>;
+   <span class="k">type</span> Course_Vector <span class="k">is array</span> (<span class="k">Positive range</span> &lt;&gt;) <span class="k">of</span> Long_Integer;
+
+   <span class="k">subtype</span> Paranoia_Level <span class="k">is</span> Natural <span class="k">range</span> 0 .. 100;
+
+   <span class="k">protected type</span> Lock_Byte <span class="k">is</span>
+      <span class="k">entry</span> Try_Acquire (Ok : <span class="k">out</span> Boolean);
+      <span class="k">procedure</span> Release;
+   <span class="k">private</span>
+      Taken : Boolean := False;
+   <span class="k">end</span> Lock_Byte;
+
+   <span class="k">function</span> Plot_Course
+     (Ada_Note       : <span class="k">in</span> Long_Integer;
+      Grove_Paranoia : <span class="k">in</span> Paranoia_Level;
+      Shake_Verse    : <span class="k">in</span> Long_Integer) <span class="k">return</span> Course_Vector;
+
+   Corsair_Task : <span class="k">aliased</span> Lock_Byte;
+
+<span class="k">end</span> Analytical_Corsair;
+
+<span class="k">package body</span> Analytical_Corsair <span class="k">is</span>
+   <span class="k">protected body</span> Lock_Byte <span class="k">is</span>
+      <span class="k">entry</span> Try_Acquire (Ok : <span class="k">out</span> Boolean) <span class="k">when not</span> Taken <span class="k">is</span>
+      <span class="k">begin</span>
+         Taken := True;
+         Ok := True;
+      <span class="k">end</span> Try_Acquire;
+
+      <span class="k">procedure</span> Release <span class="k">is</span>
+      <span class="k">begin</span>
+         Taken := False;
+      <span class="k">end</span> Release;
+   <span class="k">end</span> Lock_Byte;
+
+   <span class="k">function</span> Plot_Course
+     (Ada_Note       : <span class="k">in</span> Long_Integer;
+      Grove_Paranoia : <span class="k">in</span> Paranoia_Level;
+      Shake_Verse    : <span class="k">in</span> Long_Integer) <span class="k">return</span> Course_Vector
+   <span class="k">is</span>
+      Result : Course_Vector (1 .. 3);
+   <span class="k">begin</span>
+      <span class="k">if</span> Grove_Paranoia = 0 <span class="k">then</span>
+         <span class="k">raise</span> Program_Error <span class="k">with</span> <span class="s">"unarmed paranoia"</span>;
+      <span class="k">elsif</span> Ada_Note = 0 <span class="k">then</span>
+         <span class="k">delay</span> 0.0;  <span class="c">-- wait for symbols</span>
+      <span class="k">else</span>
+         Result :=
+           (Ada_Note,
+            Long_Integer (Grove_Paranoia),
+            Shake_Verse / 2);
+      <span class="k">end if</span>;
+      <span class="k">return</span> Result;
+   <span class="k">end</span> Plot_Course;
+<span class="k">end</span> Analytical_Corsair;</pre>
+    </section>
+
+    <section class="panel" aria-labelledby="oracle-title">
+      <h3 id="oracle-title">Shakespeare’s Keyword Oracle <span class="tag">click a reserved word</span></h3>
+      <div class="controls">
+        <button type="button" id="btn-shuffle">Shuffle the hold</button>
+        <button type="button" class="ghost" id="btn-clear">Clear active</button>
+        <button type="button" class="ghost" id="btn-voyage">Speak the voyage</button>
+        <span class="status" id="word-count" aria-live="polite"></span>
+      </div>
+      <div class="word-sea" id="word-sea" aria-label="Ada reserved words"></div>
+      <div class="oracle" id="oracle" role="status" aria-live="polite">
+        Choose a chip. The bosun will answer in verse, Grove will check the lock, and Ada will name the pattern.
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="roles-title">
+      <h3 id="roles-title">Watch Bill <span class="tag">four masks, one keel</span></h3>
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Crew</th>
+            <th>Station</th>
+            <th>Ada keyword</th>
+            <th>GAS instinct</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ada Lovelace</td>
+            <td>Navigator</td>
+            <td class="role">package · function · array</td>
+            <td><code>lea</code> the symbol; index the range</td>
+          </tr>
+          <tr>
+            <td>Andy Grove</td>
+            <td>Quartermaster</td>
+            <td class="role">protected · entry · raise</td>
+            <td><code>test</code> then <code>xchg</code>; pay the LOCK tax last</td>
+          </tr>
+          <tr>
+            <td>Shakespeare</td>
+            <td>Bosun</td>
+            <td class="role">renames · when · reverse</td>
+            <td><code>shr</code> half a measure; blank-verse timing</td>
+          </tr>
+          <tr>
+            <td>Bourbaki Pirate</td>
+            <td>Collective helm</td>
+            <td class="role">generic · abstract · xor</td>
+            <td><code>xor</code> identity; no single face on the flag</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ticker" aria-hidden="true">
+        <span id="ticker-text"></span>
+      </div>
+    </section>
+
+    <footer>
+      Creative coding for <a href="README.md">paranoid-assembly</a> ·
+      Keywords from <a href="ada-reserved-words.txt">ada-reserved-words.txt</a> ·
+      Intel GAS · <code>.intel_syntax noprefix</code> ·
+      “Only the paranoid survive.”
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const ADA_WORDS = [
+        "abort", "abs", "abstract", "accept", "access", "aliased", "all", "and",
+        "array", "at", "begin", "body", "case", "constant", "declare", "delay",
+        "delta", "digits", "do", "else", "elsif", "end", "entry", "exception",
+        "exit", "for", "function", "generic", "goto", "if", "in", "interface",
+        "is", "limited", "loop", "mod", "new", "not", "null", "of", "or",
+        "others", "out", "overriding", "package", "pragma", "private",
+        "procedure", "protected", "raise", "range", "record", "rem", "renames",
+        "requeue", "return", "reverse", "select", "separate", "some", "subtype",
+        "synchronized", "tagged", "task", "terminate", "then", "type", "until",
+        "use", "when", "while", "with", "xor"
+      ];
+
+      const ORACLES = {
+        abort: "Grove: abort the bad path early. Shakespeare: 'Once more unto the breach'—or not.",
+        abs: "Ada takes the absolute magnitude of doubt; Bourbaki smiles behind the mask.",
+        abstract: "Bourbaki’s favorite plunder: the abstract flag, no concrete face required.",
+        accept: "Ada accepts the rendezvous; Grove checks who knocks before opening the lock.",
+        access: "Access is limited, aliased only with care—Grove’s first law of the bus.",
+        aliased: "Two names, one cell: Shakespeare renames the rose; silicon does not forgive.",
+        all: "All hands on deck; all bits in the register; all axioms under the black flag.",
+        and: "Conjunction of crews: Ada and Grove and verse and proof, synchronized.",
+        array: "An array of records—melody, map, calculation—indexed over a living range.",
+        at: "At the right moment, with the right value, for the right purpose.",
+        begin: "Begin the act. The curtain is a label; the stage is .text.",
+        body: "Package body: where declarations grow sinew and the Engine learns to move.",
+        case: "Case by case the method is chosen; elsif another card, else proceed.",
+        constant: "A constant is a star fixed for navigation; Grove still double-checks the chart.",
+        declare: "Declare each wheel, column, and card as part of a larger design.",
+        delay: "Delay is not defeat—sometimes the card has not yet arrived.",
+        delta: "The delta between two figures is a difference the Engine can name.",
+        digits: "Digits of Bernoulli dreams; Ada’s function in spirit before the body ran.",
+        do: "Do this—yet a pragma makes clear that no shortcut overrides the design.",
+        else: "Else: the path not taken still deserves a label and a clean ret.",
+        elsif: "Elsif the lock is hot, check first; only then pay the bus-lock tax.",
+        end: "End of calculation is not end of imagination—Ada’s quiet heresy.",
+        entry: "Protected entry: wait with manners; raise when null; never hide the fault.",
+        exception: "An exception must not become an excuse for chaos.",
+        exit: "Exit when the work is done; leave no zombie task on the wave.",
+        for: "For each operation, a loop; for each crew, a role; for each bit, a why.",
+        function: "Bernoulli as function in spirit—return a new kind of thought.",
+        generic: "Generic enough for astronomy or music; Bourbaki hoists the template sail.",
+        goto: "Goto the evidence and begin again—Ada would not abort the inquiry.",
+        if: "If the Engine received a question, then it could select a method.",
+        in: "Some values are in, others out; trust is not free on the wire.",
+        interface: "Interface synchronized: four minds, one keel, no confused wakes.",
+        is: "What is a machine but a grammar of possibility under constraint?",
+        limited: "Limited access, unlimited imagination—paranoid and open at once.",
+        loop: "Loop while the condition holds; Shakespeare counts the iambs aloud.",
+        mod: "Mod the circle of the compass; remainder is a kind of mercy.",
+        new: "New is not trusted merely because it is new—Grove’s inflection tax.",
+        not: "Not every insight is immediate; not every free lock stays free.",
+        null: "When a result is null, raise a signal—never smuggle silence as success.",
+        of: "Of symbols, of wheels, of verse, of axioms: the cargo manifest.",
+        or: "Or: a soft fork in the method; still one ret at the end of the pier.",
+        others: "Others: the default lane when no case matches—still watched.",
+        out: "Out parameters: the course written back for the next watch.",
+        overriding: "No overriding of the design by convenience. Pragma stands watch.",
+        package: "A package of ideas, private at first but meant for all.",
+        pragma: "Pragma: the quiet officer who forbids cleverness from becoming mutiny.",
+        private: "Private holds the Taken flag; public only the entry and the release.",
+        procedure: "Procedure rather than accident—Ada’s difference that names itself.",
+        protected: "Protected task at the entry: mutual exclusion as maritime law.",
+        raise: "Raise the signal; raise the black flag; raise the standard of proof.",
+        range: "Range-checked quantities: a subtype is a harbor with walls.",
+        record: "A record of a melody, a map, or a calculation—Ada’s array of futures.",
+        rem: "Rem of the division: what remains after the paranoid cut.",
+        renames: "Shakespeare renames uncertainty only in play—never as certainty.",
+        requeue: "Requeue the question; another method waits in the hold.",
+        return: "Return a new kind of thought; ret to the caller with the course set.",
+        reverse: "Reverse a sequence when the cards require it; sail against the rhyme.",
+        select: "Select a method; select a lane; select survival over spectacle.",
+        separate: "Separate compilation, separate watches—still one ship.",
+        some: "Some values in, some out; some faces Bourbaki, all of them true enough.",
+        subtype: "Subtype keeps each quantity within its proper bounds.",
+        synchronized: "Synchronized interface: the crew breathes on the same barrier.",
+        tagged: "Tagged types: derivation classes under a black-and-brass crest.",
+        task: "Task of the voyage: symbols in, course out, chaos refused.",
+        terminate: "Terminate no question before its proof is complete.",
+        then: "Then proceed—having checked, having named, having not lied.",
+        type: "Type is destiny on this keel; untyped wind is how ships vanish.",
+        until: "Until the condition yields; until the lock frees; until dawn on the Thames.",
+        use: "Use the rules until the end of a calculation—and then discover.",
+        when: "When the work is done, exit; when null, raise; when hot, wait.",
+        while: "While condition holds, loop; while paranoia holds, survive.",
+        with: "With Ada, with Grove, with verse, with Bourbaki—context clauses of fate.",
+        xor: "Xor does not settle a choice alone—but it flies well on a pirate flag."
+      };
+
+      const VOYAGE_LINES = [
+        "Ada looked across the winter Thames and did not see a machine that could merely calculate.",
+        "Grove checked the unlocked load before any locked instruction earned the bus.",
+        "Shakespeare timed the swell in iambs: to ret, or not to ret.",
+        "Bourbaki raised one flag for many minds—xor of identities, product of proofs.",
+        "The Analytical Corsair sailed on reserved words and noprefix gaslight.",
+        "Only the paranoid survive; only the imaginative embark; only the typed return."
+      ];
+
+      const sea = document.getElementById("word-sea");
+      const oracle = document.getElementById("oracle");
+      const countEl = document.getElementById("word-count");
+      const ticker = document.getElementById("ticker-text");
+
+      let words = ADA_WORDS.slice();
+      let active = null;
+
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      function renderSea() {
+        sea.innerHTML = "";
+        words.forEach((w) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "chip" + (active === w ? " active" : "");
+          b.textContent = w;
+          b.setAttribute("aria-pressed", active === w ? "true" : "false");
+          b.addEventListener("click", () => speak(w));
+          sea.appendChild(b);
+        });
+        countEl.textContent = words.length + " reserved words in the hold";
+      }
+
+      function speak(w) {
+        active = w;
+        const line = ORACLES[w] || ("The crew contemplates `" + w + "` under the brass lamp.");
+        oracle.innerHTML = "<strong>" + w + "</strong> — " + line;
+        renderSea();
+      }
+
+      document.getElementById("btn-shuffle").addEventListener("click", () => {
+        shuffle(words);
+        renderSea();
+        oracle.textContent = "The hold is reshuffled. Bourbaki pretends it was always this order.";
+      });
+
+      document.getElementById("btn-clear").addEventListener("click", () => {
+        active = null;
+        renderSea();
+        oracle.textContent = "Active word cleared. The lock byte reads free—for now.";
+      });
+
+      document.getElementById("btn-voyage").addEventListener("click", () => {
+        const line = VOYAGE_LINES[Math.floor(Math.random() * VOYAGE_LINES.length)];
+        const w = words[Math.floor(Math.random() * words.length)];
+        active = w;
+        oracle.innerHTML = "<strong>voyage</strong> — " + line + " <em>(keyword: " + w + ")</em>";
+        renderSea();
+      });
+
+      ticker.textContent =
+        ADA_WORDS.join(" · ") +
+        " · .intel_syntax noprefix · only the paranoid survive · analytical corsair · ";
+
+      renderSea();
+    })();
+  </script>
+</body>
+</html>
