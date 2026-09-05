@@ -57,6 +57,8 @@ Satisfied with Performance
 Very satisfied with the performance of the Ada language, the Dolphin Integration team is now looking forward to further development opportunities that will employ them both. With the recent switch from Sun View to OSF Motif, the current GDS graphical interface will soon be ported to and modified on new platforms. In addition, plans to port this application to HP platforms are in process.
 ```
 
+This is a faithful transcription with line-wrap normalization only; original wording (including period spelling) is preserved from the source artifact.
+
 This is not merely a historical flyer. It is an infrastructure design report about how to keep software faults from becoming hardware defects.
 
 ---
@@ -91,9 +93,9 @@ VMS, PC, Sun SPARCstation, and planned HP ports appear as routine evolution, not
 
 The need to handle "parallelisms" appears in the motivation for language choice. This places concurrency pressure in the design center rather than as late optimization—exactly where robust infrastructure decisions are made.
 
-### 8. It is a canonical paranoia document, even without mnemonics.
+### 8. It is a canonical paranoia document, even without assembly.
 
-This file has no `cmpxchg`, but it carries the same doctrine as lock primitives: constrain state transitions, define failure boundaries, and prioritize correctness where failure is most expensive.
+It carries the same strategic doctrine found in high-stakes infrastructure work: constrain state transitions, define failure boundaries, and prioritize correctness where failure is most expensive.
 
 ---
 
