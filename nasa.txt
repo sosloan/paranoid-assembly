@@ -1,8 +1,4 @@
-NASA SEL-95-001 WRITEUP: FLIGHT DYNAMICS ADA/OOD OUTCOMES
-
-"Only the paranoid survive." — Andy Grove
-
-EDITORIAL FRAME: The Grove quote is included as this repository's lens, not as a quotation from SEL-95-001.
+SEL-95-001 WRITEUP: FLIGHT DYNAMICS ADA/OOD OUTCOMES
 
 REPORT SUMMARY: SEL-95-001 documents NASA Goddard Flight Dynamics Division's Ada and object-oriented design transition across the late 1980s and early 1990s, with emphasis on reuse strategy, development outcomes, and organizational adoption constraints.
 
@@ -36,11 +32,11 @@ The report chronicles a decade-long transition in a mission-critical environment
 
 The headline outcomes are strategic, not cosmetic:
 
-- Reuse increased dramatically (reported up to 300%)
-- Cost reduced by about 40% (for systems where Ada reuse architecture was sustained)
-- Cycle time reduced by about 25%
-- Development error rates reduced by about 62%
-- Later telemetry baselines reported up to 85% fewer development errors and about half-time delivery versus 1985-era baselines
+- Reuse increased dramatically (reported up to 300% in division-level comparisons to 1985-era baselines)
+- Cost reduced by about 40% (division-level summary for systems where Ada reuse architecture was sustained)
+- Cycle time reduced by about 25% (division-level summary versus 1985-era baselines)
+- Development error rates reduced by about 62% (division-level summary versus 1985-era baselines)
+- Later telemetry simulator reporting cited up to 85% fewer development errors and roughly half-time delivery for that simulator class versus 1985-era baselines
 
 This is not language evangelism. It is systems economics under pressure.
 
@@ -113,4 +109,4 @@ Summary: The report presents measured reuse, quality, schedule, and cost outcome
 CLOSING
 ------------------------------------------------------------
 
-EDITORIAL INTERPRETATION (Repository lens): NASA's Flight Dynamics transition illustrates a paranoia-aligned infrastructure posture—design so the next mission does not require starting over, structure change through parameters instead of repeated source edits, and evaluate technical decisions against operational survivability. In that reading, the lesson extends beyond Ada to disciplined system design under pressure.
+The report's central technical conclusion is that long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.
