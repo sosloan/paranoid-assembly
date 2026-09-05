@@ -12,11 +12,12 @@ QUICK REFERENCE
 
 File: nasa.txt
 Origin: NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
-Study Period Covered: roughly the prior decade of FDD work using 1985 baselines
+Study Period Covered: approximately the decade preceding the report's 1995 publication
+Baseline Reference Year: 1985 (used in report comparisons)
 Case-Study System Types: flight dynamics and telemetry simulators
 Language Focus: Ada with object-oriented design practices
 Core Mechanism: Generic architecture + verbatim reuse
-Strategic Result: Reuse up, errors down, cycle time down, cost down (for the right class of systems)
+Strategic Result: Reuse up, errors down, cycle time down, cost down (strongest in long-lived, reuse-oriented simulator systems)
 Engineering Principle: Reduce change risk by designing components to be reused without edits
 
 ------------------------------------------------------------
@@ -38,8 +39,8 @@ The headline outcomes are strategic, not cosmetic:
 - Cycle time reduced by about 25% (reported FDD summary outcome versus 1985 baseline)
 - Development error rates reduced by about 62% (reported FDD summary outcome versus 1985 baseline)
 
-Telemetry-simulator-specific later result (narrower scope):
-- Up to 85% fewer development errors and roughly half-time delivery for later telemetry simulator programs versus 1985-era baselines
+Telemetry-simulator-specific later result (narrower scope, late telemetry simulator cohort):
+- Up to 85% fewer development errors and roughly half-time delivery in later telemetry simulator programs versus 1985-era baselines
 
 Writeup synthesis: The reported outcomes are presented as measured software engineering results, not only language preference claims.
 
@@ -57,7 +58,7 @@ Writeup synthesis: Ada generics were used to encode stable abstractions that sur
 
 3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
 
-Writeup synthesis: The report documents uneven early outcomes linked to tooling maturity, training quality, and mismatched project constraints, with stronger outcomes in later phases after reuse discipline stabilized.
+Writeup synthesis: The report narrative links early uneven outcomes to tooling maturity, training quality, and project-constraint mismatch, and it reports stronger outcomes in later phases after reuse discipline stabilized.
 
 4) IT DISTINGUISHES SHORT-LIFE VS LONG-LIFE ECONOMICS
 
@@ -76,19 +77,19 @@ POWER ANALYSIS BY DECISION LAYER (WRITEUP SYNTHESIS)
 ------------------------------------------------------------
 
 Decision Layer: Architecture
-Power: Generic package strategy creates stable interfaces that outlive individual projects.
+Writeup synthesis: Generic package strategy creates stable interfaces that outlive individual projects.
 
 Decision Layer: Development Workflow
-Power: Verbatim reuse minimizes local modifications and limits defect injection opportunities.
+Writeup synthesis: Verbatim reuse minimizes local modifications and limits defect injection opportunities.
 
 Decision Layer: Toolchain
-Power: Compiler/runtime maturity and diagnostics materially affect adoption velocity and confidence.
+Writeup synthesis: Compiler/runtime maturity and diagnostics materially affect adoption velocity and confidence.
 
 Decision Layer: Training
-Power: Hands-on project exposure converts skepticism into operational competence.
+Writeup synthesis: Hands-on project exposure converts skepticism into operational competence.
 
 Decision Layer: Portfolio Strategy
-Power: Matching language/process to system lifetime maximizes return and reduces systemic risk.
+Writeup synthesis: Matching language/process to system lifetime maximizes return and reduces systemic risk.
 
 ------------------------------------------------------------
 VERIFICATION STATUS (FROM REPORTED OUTCOMES)
