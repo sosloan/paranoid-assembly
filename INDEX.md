@@ -24,6 +24,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### 3. NINERS_SEASON_POWER.md
+**Routine:** `season_49ers.fpp` (San Francisco 49ers season model)
+**Focus:** FPP topology, typed game telemetry, explicit offense-defense-special teams connections
+**Theme:** A football season rendered as a mission-ready component graph
+**Status:** Complete
+**Link:** [writeups/NINERS_SEASON_POWER.md](writeups/NINERS_SEASON_POWER.md)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
