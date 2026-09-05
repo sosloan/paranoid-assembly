@@ -39,8 +39,7 @@ Synopsis attribution: Ann Brandon; Software Engineering Laboratory Series SEL-95
 - Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
-- Source statement (synopsis): 85% fewer development errors in telemetry simulators built since 1990 versus the 1985 baseline for the systems
-- Source statement (synopsis): delivery in half the time in telemetry simulators built since 1990 versus the 1985 baseline for the systems
+- See telemetry-scope source statements in the EVIDENCE SUMMARY section below.
 
 
 ------------------------------------------------------------
