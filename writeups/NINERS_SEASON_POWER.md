@@ -215,26 +215,26 @@ watch where the mission diverges from the model.
 
 ---
 
-## INSTRUCTION-BY-INSTRUCTION POWER ANALYSIS
+## CONSTRUCT-BY-CONSTRUCT POWER ANALYSIS
 
-| Line | Construct | Power |
+| Span | Construct | Power |
 |------|-----------|-------|
-| 1 | `module NFL` | Establishes the domain boundary. This is a league-scale namespace, not a single anecdote. |
-| 2-6 | `enum Outcome` | Forces every week into a finite result set. No ambiguity leaks into the model. |
-| 8-16 | `struct WeekRecord` | Declares the exact telemetry each week must emit. |
-| 18 | `array RegularSeasonWeeks = [18] WeekRecord` | Reserves the full 18-week calendar and models the bye as explicit state. |
-| 20-22 | constants | Encodes contender thresholds up front instead of discovering them too late. |
-| 24 | `topology FortyNinersSeason` | The load-bearing declaration: names the season as an integrated system. |
-| 25-38 | `instance ...` | Binds concrete franchise actors into typed roles with stable identifiers. |
-| 40 | `frontOffice rosterOut -> coaching rosterIn` | Personnel means nothing until the sideline can compile it. |
-| 41-42 | coaching to units | Game planning is the command bus for both sides of the ball. |
-| 43 | `qb1 cadenceOut -> lt1 protectionIn` | Timing starts before the throw; the tackle must hear the mission clock. |
-| 44-47 | quarterback distribution ports | The offense gains power by preserving multiple legal exits. |
-| 48 | `lt1 edgeSealOut -> rb1 laneIn` | Run game architecture begins with one blocking edge holding. |
-| 49-50 | pass rush to linebacker | Pressure is upstream of turnovers. |
-| 51 | `lb1 alertOut -> cb1 breakIn` | Coverage becomes aggressive when the middle communicates early. |
-| 52 | special teams to defense | Hidden yards are still system inputs. |
-| 53 | defense to offense | Sudden-change possessions are part of the design, not a surprise. |
+| Module | `module NFL` | Establishes the domain boundary. This is a league-scale namespace, not a single anecdote. |
+| Outcome enum | `enum Outcome` | Forces every week into a finite result set. No ambiguity leaks into the model. |
+| Weekly record schema | `struct WeekRecord` | Declares the exact telemetry each week must emit. |
+| Season container | `array RegularSeasonWeeks = [18] WeekRecord` | Reserves the full 18-week calendar and models the bye as explicit state. |
+| Thresholds | constants | Encodes contender targets up front instead of discovering them too late. |
+| Topology | `topology FortyNinersSeason` | The load-bearing declaration: names the season as an integrated system. |
+| Instance block | `instance ...` | Binds concrete franchise actors into typed roles with stable identifiers. |
+| Personnel ingest | `frontOffice rosterOut -> coaching rosterIn` | Personnel means nothing until the sideline can compile it. |
+| Command bus | coaching to offense and defense | Game planning is the command bus for both sides of the ball. |
+| Protection timing | `qb1 cadenceOut -> lt1 protectionIn` | Timing starts before the throw; the tackle must hear the mission clock. |
+| Ball distribution | quarterback outgoing ports | The offense gains power by preserving multiple legal exits. |
+| Run lane creation | `lt1 edgeSealOut -> rb1 laneIn` | Run game architecture begins with one blocking edge holding. |
+| Disruption chain | pass rush to linebacker | Pressure is upstream of turnovers. |
+| Coverage trigger | `lb1 alertOut -> cb1 breakIn` | Coverage becomes aggressive when the middle communicates early. |
+| Hidden yards | special teams to defense | Field position is a real system input, not a footnote. |
+| Sudden change | defense to offense | Extra possessions are part of the design, not a surprise. |
 
 Every construct earns its place. Delete the topology and the roster collapses
 into nouns. Delete the connections and the season loses causality.
