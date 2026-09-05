@@ -6,6 +6,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ## ✓ COMPLETE
 
+### ASTROPHYSICS_POWER.md
+**Routine:** `astrophysics.txt` (Koenighofer & Stift, 1994 astrophysical modeling memo)
+**Focus:** Adaptive 2D grid architecture, radiative-transfer workload constraints, Ada package boundaries for scientific code
+**Theme:** Paranoid software design for numerically intensive astrophysics
+**Status:** Complete
+**Link:** [writeups/ASTROPHYSICS_POWER.md](writeups/ASTROPHYSICS_POWER.md)
+
+---
+
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
 **Focus:** Atomic balance commits, quorum mathematics, reconciliation sweep — 520 bytes of state for 65 servers
