@@ -101,7 +101,7 @@ It carries the same strategic doctrine found in high-stakes infrastructure work:
 
 ## LINE-BY-LINE POWER ANALYSIS
 
-Line ranges below refer to `/home/runner/work/paranoid-assembly/paranoid-assembly/circuits.txt` source line numbers.
+Line ranges below refer to `circuits.txt` source line numbers.
 
 | Lines (`circuits.txt`) | Statement | Power |
 |------|-----------|-------|
