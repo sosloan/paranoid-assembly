@@ -343,6 +343,7 @@ _barter_settle:
 .Lsettle_walk:
         mov     rdi, r12
         call    barter_walk_away
+        mov     dword ptr [r12 + S_STATUS], ST_NO_DEAL
         mov     eax, ST_NO_DEAL
         pop     r13
         pop     r12
