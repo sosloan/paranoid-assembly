@@ -21,8 +21,8 @@
 | **Language** | FPP (F Prime Prime) |
 | **Topology** | `FortyNinersSeason` |
 | **Primary Components** | `FrontOffice`, `Offense`, `Defense`, `SpecialTeams`, `Quarterback1` |
-| **Argument** | 18-week regular-season calendar with one bye + postseason contingencies |
-| **Return** | NFC West control, playoff seeding, or graceful failure report |
+| **Argument** | 18-week regular-season calendar: 17 games, 1 bye |
+| **Return** | Regular-season standing report: divisional control, wildcard pressure, or reset required |
 | **Critical Construct** | `topology FortyNinersSeason` |
 | **Bytes of State** | 53-man roster, 18 scheduled weeks, weekly health telemetry |
 | **Power Source** | Typed structure + explicit connections |
@@ -92,7 +92,7 @@ module NFL {
 
 This is not an assembly listing. It is a season rendered as a mission topology:
 typed data for weeks, named instances for stars, and explicit connections for
-the handoffs that decide January.
+the handoffs that decide the regular season.
 
 ---
 
@@ -222,7 +222,7 @@ watch where the mission diverges from the model.
 | Module | `module NFL` | Establishes the domain boundary. This is a league-scale namespace, not a single anecdote. |
 | Outcome enum | `enum Outcome` | Forces every week into a finite result set. No ambiguity leaks into the model. |
 | Weekly record schema | `struct WeekRecord` | Declares the exact telemetry each week must emit. |
-| Season container | `array RegularSeasonWeeks = [18] WeekRecord` | Reserves the full 18-week calendar and models the bye as explicit state. |
+| Season container | `array RegularSeasonWeeks = [18] WeekRecord` | Reserves the full 18-week calendar: 17 games plus one explicit bye week. |
 | Thresholds | constants | Encodes contender targets up front instead of discovering them too late. |
 | Topology | `topology FortyNinersSeason` | The load-bearing declaration: names the season as an integrated system. |
 | Instance block | `instance ...` | Binds concrete franchise actors into typed roles with stable identifiers. |
