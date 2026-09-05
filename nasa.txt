@@ -34,10 +34,10 @@ The report chronicles a decade-long transition in a mission-critical environment
 
 The headline outcomes are strategic, not cosmetic:
 
-- Reuse increased by 300% (reported FDD summary outcome versus 1985 baseline)
-- Cost reduced by 40% (reported FDD summary outcome versus 1985 baseline)
-- Cycle time reduced by 25% (reported FDD summary outcome versus 1985 baseline)
-- Development error rates reduced by 62% (reported FDD summary outcome versus 1985 baseline)
+- Reuse increased by 300% (reported FDD-wide summary outcome versus 1985 baseline)
+- Cost reduced by 40% (reported FDD-wide summary outcome versus 1985 baseline)
+- Cycle time reduced by 25% (reported FDD-wide summary outcome versus 1985 baseline)
+- Development error rates reduced by 62% (reported FDD-wide summary outcome versus 1985 baseline)
 
 Telemetry-simulator-specific later result (narrower scope, late telemetry simulator cohort):
 - 85% fewer development errors in later telemetry simulator programs versus 1985-era baselines
@@ -45,7 +45,7 @@ Telemetry-simulator-specific later result (narrower scope, late telemetry simula
 
 
 ------------------------------------------------------------
-WHY IT IS POWERFUL (WRITEUP SYNTHESIS)
+KEY IMPLICATIONS (WRITEUP SYNTHESIS)
 ------------------------------------------------------------
 
 1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
@@ -92,7 +92,7 @@ Decision Layer: Portfolio Strategy
 Writeup synthesis: Matching language/process to system lifetime maximizes return and reduces systemic risk.
 
 ------------------------------------------------------------
-VERIFICATION STATUS (FROM REPORTED OUTCOMES)
+EVIDENCE SUMMARY FROM REPORTED OUTCOMES
 ------------------------------------------------------------
 
 Property: Reuse scaling
