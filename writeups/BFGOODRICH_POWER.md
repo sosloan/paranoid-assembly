@@ -18,10 +18,10 @@
 | **Origin** | BFGoodrich Aerospace Aircraft Integrated Systems / AdaCore ecosystem context (1997–1999 era) |
 | **Domain** | Safety-critical helicopter diagnostics and usage monitoring |
 | **Core Principle** | “Data change, not software” |
-| **Runtime Profile** | Ada95 with Ravenscar-style deterministic tasking |
+| **Runtime Profile** | Source-contextual framing: Ada95 with deterministic tasking aligned to an emerging Ravenscar profile |
 | **Scale** | 40K SLOC Ada95, 150 high-rate input channels |
 | **Storage Window** | Up to 20 flight hours on PCMCIA flash |
-| **Certification Constraint** | Source-reported FAA certification context requiring execution/testing coverage across code paths |
+| **Certification Constraint** | Source-reported project certification target: broad execution/testing coverage, including runtime code |
 | **Power Source** | Stable executable core + mutable data/configuration surface |
 
 ---
@@ -50,13 +50,13 @@ That is the same shape as modern infrastructure primitives: customizable at the 
 
 ### 3. It treats certification as a first-class design input.
 
-The source text reports FAA-certification expectations in this program context as requiring execution and test coverage across all code paths, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 with Ravenscar-style deterministic tasking constraints aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
+The source text reports a project-level FAA certification target emphasizing broad execution and test coverage, including runtime behavior. Framed that way, the requirement is not post-hoc QA; it is an architectural force. Choosing Ada95 with deterministic tasking constraints—presented in the source context alongside an emerging Ravenscar profile—aligns language and scheduler semantics with auditability: bounded concurrency, analyzable behavior, and reduced hidden state.
 
 Paranoid doctrine here is simple: if you must prove everything, design so proof is feasible.
 
 ### 4. It embraces deterministic concurrency where ambiguity would be fatal.
 
-Ravenscar-oriented tasking is about predictability over expressive freedom. In a high-rate telemetry and diagnostics box, unconstrained threading models create combinatorial verification cost. The profile described in the file narrows concurrency choices so timing, scheduling, and interaction patterns remain tractable under test.
+Ravenscar-style tasking, in the source's contextual framing, is about predictability over expressive freedom. In a high-rate telemetry and diagnostics box, unconstrained threading models create combinatorial verification cost. The profile description in the file narrows concurrency choices so timing, scheduling, and interaction patterns remain tractable under test.
 
 This is exactly how high-value infrastructure survives: fewer degrees of freedom, more confidence per execution.
 
@@ -89,8 +89,8 @@ Because `BFGoodrich.txt` is prose, the load-bearing units are design assertions 
 | 6 | `"Data change, not software"` | Defines the central invariance strategy: stable executable, adaptable data surface. |
 | 10–12 | High-rate channel acquisition + anomaly capture + pilot warning + onboard retention | Shows end-to-end fault posture from sensing to human alerting. |
 | 18 | Requirements had to remain fluid while still meeting certification precision | Names the core paradox the architecture must solve. |
-| 20 | Source-reported FAA expectation: certify with execution/testing across all code paths, including runtime behavior | Forces language/runtime choices toward analyzable determinism. |
-| 24 | Ravenscar profile: small size, fast performance, deterministic behavior | Encodes concurrency constraints as a certifiability and timing strategy. |
+| 20 | Source-reported project certification target: broad execution/testing coverage, including runtime code | Forces language/runtime choices toward analyzable determinism. |
+| 24 | Source-context profile framing: small size, fast performance, deterministic behavior | Encodes concurrency constraints as a certifiability and timing strategy. |
 | 28–30 | OOD robustness under changing requirements | Evidence that modular design reduced churn cost without abandoning rigor. |
 | 32 | New processor and toolchain alongside certification effort | Highlights integration risk and the importance of disciplined architecture. |
 
