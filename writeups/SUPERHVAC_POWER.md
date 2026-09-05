@@ -87,7 +87,7 @@ method (from Booch).  It took about 300 person-months for
 the six engineers to develop about 900,000 lines of code.  
 The application was developed with the help of several tools 
 and third-parties: Object Store (Object Design) as Database, 
-PHIGS (Figaro from Liant) and Xll (Motif for the user-
+PHIGS (Figaro from Liant) and Xll [sic] (Motif for the user-
 interface).  A TCP/IP communication network has been used 
 for Object Store and X-Windows information exchange. 
 
