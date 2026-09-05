@@ -65,7 +65,7 @@
         .equ    CONCESSION_SHIFT, 3
         .equ    TICK,             1
         .equ    LEVY_QUOTE_BYTES, 0x1C
-        .equ    LEVY_STACK_BYTES, LEVY_QUOTE_BYTES + 4
+        .equ    LEVY_STACK_BYTES, LEVY_QUOTE_BYTES + 12
         .equ    PRICE_MIN,        1
         .equ    PRICE_MAX,        0x7FFFFFFF
 
