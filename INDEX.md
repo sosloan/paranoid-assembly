@@ -42,6 +42,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### TRI_ADA_93_OUTLINE_POWER.md
+**Routine:** `TRI-Ada-93-outline.txt` (TRI-Ada '93 Ada 9X OOP tutorial outline)
+**Focus:** Tagged-type hierarchies, dispatching model, and reuse-first programming techniques under strong typing
+**Theme:** Paranoid language design as upstream infrastructure for safe reusable systems
+**Status:** Complete
+**Link:** [writeups/TRI_ADA_93_OUTLINE_POWER.md](writeups/TRI_ADA_93_OUTLINE_POWER.md)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
