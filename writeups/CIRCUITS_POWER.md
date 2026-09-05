@@ -57,7 +57,7 @@ Satisfied with Performance
 Very satisfied with the performance of the Ada language, the Dolphin Integration team is now looking forward to further development opportunities that will employ them both. With the recent switch from Sun View to OSF Motif, the current GDS graphical interface will soon be ported to and modified on new platforms. In addition, plans to port this application to HP platforms are in process.
 ```
 
-This is an adapted transcription for readability (line-wrap and minor copy normalization), preserving the original technical meaning and structure of the source artifact.
+This is an adapted transcription of the technical core for readability, with line-wrap normalization, preserving the original technical meaning and section structure.
 
 This is not merely a historical flyer. It is an infrastructure design report about how to keep software faults from becoming hardware defects.
 
@@ -101,7 +101,9 @@ It carries the same strategic doctrine found in high-stakes infrastructure work:
 
 ## LINE-BY-LINE POWER ANALYSIS
 
-| Lines | Statement | Power |
+Line ranges below refer to `/home/runner/work/paranoid-assembly/paranoid-assembly/circuits.txt` source line numbers.
+
+| Lines (`circuits.txt`) | Statement | Power |
 |------|-----------|-------|
 | 8–14 | GDS compiler built to ensure reliable, inexpensive circuitware | Establishes reliability + cost as joint constraints from the outset. |
 | 18–24 | High-level parametric input compiled to low-level placement/routing orders | Identifies the load-bearing transform where correctness must be enforced. |
