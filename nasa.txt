@@ -1,304 +1,117 @@
-Flyer U-183-0596
-nasa.txt
+SEL-95-001 WRITEUP: FLIGHT DYNAMICS ADA/OOD OUTCOMES
 
-A Synopsis of NASA's Report: 
-"Impact of Ada and Object-Oriented Design in the Flight 
-Dynamics Division at Goddard Space Flight Center"
+REPORT SUMMARY: SEL-95-001 documents NASA Goddard Flight Dynamics Division's Ada and object-oriented design transition across the late 1980s and early 1990s, with emphasis on reuse strategy, development outcomes, and organizational adoption constraints.
 
-Software Engineering Laboratory Series, SEL-95-001, March 1995.
-Synopsis by Ann Brandon
-Contributors to this report:
-Sharon Waligora, Computer Sciences Corporation
-John Baily, Software Metrics, Inc.
-Mike Stark, NASA/Goddard Space Flight Center
+Status: COMPLETE
+Subject: SEL-95-001 (NASA GSFC Flight Dynamics Division)
+Form: Structured technical writeup (quick reference, context, insights, verification, closing)
 
-Influencing Software Development
+------------------------------------------------------------
+QUICK REFERENCE
+------------------------------------------------------------
 
-A decade after NASA's Flight Dynamics Division (FDD) at 
-Goddard Space Flight Center began investigating the use of 
-Ada, the language influences every software development 
-project at the FDD.  Object oriented design (OOD) techniques 
-were introduced simultaneously with Ada, which combined into 
-software engineering principals of portability, legibility, 
-and the wide-spread use of generics.  Adhering to those 
-principals has increased the FDD's reuse of software by 300 
-percent.  It has reduced the costs of all systems, 
-independent of their language, by 40 percent; shortened 
-their cycle time by 25 percent; and slashed error rates by 
-62 percent.
+File: nasa.txt
+Origin: Synopsis by Ann Brandon of NASA GSFC Software Engineering Laboratory report SEL-95-001 (published 1995)
+Study Period Covered: 1985-1993 project activity analyzed in this 1995 report
+Baseline Reference Year: 1985 (used in report comparisons)
+Case-Study System Types: telemetry simulators and dynamic simulators
+Language Focus: Ada with object-oriented design practices
 
-The FDD managers and programmers who were exposed to the 
-successful Ada projects -- 15 in total since 1985 -- learned 
-not only a new programming vocabulary but also a whole new 
-way of structuring software.  They found that the modern 
-design methods, which concentrated on generic packages, 
-information, hiding, domain analysis, and data abstraction, 
-also improved FORTRAN software.
+------------------------------------------------------------
+THE SYSTEM, IN FULL CONTEXT
+------------------------------------------------------------
 
-The object-oriented FORTRAN systems have generated 
-reusable code and, in comparison with their structurally 
-designed counterparts, reduced cycle times and lowered error 
-rates.  When compared with a 1985 baseline, the FORTRAN 
-systems also improved in schedule duration and in quality, 
-which was attributed to the increased levels of reuse in 
-their development.
+The report chronicles a decade-long transition in a mission-critical environment where software defects are operational risks, not mere inconveniences. The Flight Dynamics Division compared Ada and FORTRAN trajectories while introducing object-oriented design methods centered on:
 
-However, the systems did not show the reduction in cost 
-that was found in the OOD Ada systems.  Recent projects have 
-increased in costs because of the overhead in maintaining 
-FORTRAN reuse libraries.  They are more expensive than Ada 
-libraries, because generic components written in Ada can 
-perform more functions in fewer lines of code.
+- Information hiding
+- Generic packages
+- Domain analysis
+- Data abstraction
+- Reuse-oriented architecture
 
-Despite the language's well-documented advantages over 
-FORTRAN, only 15 to 20-percent of the Goddard division's 
-software is actually written in Ada.  The percentage would 
-probably be higher if FORTRAN were not so well established 
-in both existing systems, accounting for 80 percent of 
-current projects, and in the large library of reusable 
-components; if Ada was compatible to the IBM mainframe 
-architecture and affordable on workstations; if the small 
-minorities pushing for and against Ada had not been so 
-adamant in their arguments; and if the language were not now 
-facing new competition from C and C++.
-	
-Software Development in Ada
+The headline outcomes are strategic, not cosmetic:
+Attribution note: The percentage figures below are drawn from the synopsis source "A Synopsis of NASA's Report: Impact of Ada and Object-Oriented Design in the Flight Dynamics Division at Goddard Space Flight Center" (SEL-95-001).
+Synopsis attribution: Ann Brandon; Software Engineering Laboratory Series SEL-95-001 synopsis document.
 
-The FDD develops two similar software systems in Ada, 
-telemetry and dynamic simulators.  Telemetry simulators 
-model and pack into streams a spacecraft's attitude sensors. 
-They are used primarily before launch to test a spacecraft's 
-Attitude Ground Support System (AGSS), for training 
-exercises, and to test modifications to the AGSS during 
-missions.  Dynamic simulators are used both in pre-launch 
-and during mission emergencies to test the robustness and 
-reaction of the spacecraft's attitude control system.  They 
-can model the spacecraft's behavior under normal and 
-degraded conditions, such as failed sensors or thrusters.
+- Reuse increased by 300% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cost reduced by 40% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Cycle time reduced by 25% (synopsis-reported FDD-wide outcome versus 1985 baseline)
+- Development error rates reduced by 62% (synopsis-reported FDD-wide outcome versus 1985 baseline)
 
-The FDD attempted a scientific experiment to test the 
-feasibility of using Ada in July 1988, when it developed a 
-parallel project in FORTRAN.  The Ada prototype of a 
-telemetry simulator, called Gamma Ray Observatory Attitude 
-Dynamics Simulator (GRODY), was not held to the same 
-constraints of performance and deadlines as the FORTRAN 
-project, GROSS.  The software engineers wanted time and 
-freedom enough in which to learn both a new language, Ada 
-rather than FORTRAN, and a new design method, object 
-oriented rather than structural analysis.  One of the 
-lessons of GRODY was that nesting packages reduced the 
-software's reusability.
-
-The next telemetry simulators written in Ada included 
-the Geostationary Operational Environmental Satellite-I 
-(GOES-I) dynamics simulator (GOADA), and the GOES-I 
-telemetry simulator (GOESIM), which was the FDD's first 
-operational Ada software.  The design teams increased 
-reusability and reduced the compilation overhead by creating 
-library rather than nested packages.  With GOESIM, they met 
-their goals of producing on time and within budget the FDD's 
-first telemetry simulator in Ada.
-
-Finally, an FDD team, which included experienced Ada 
-programmers, took a technological leap in designing the 
-Upper Atmosphere Research Satellite Telemetry Simulator 
-(UARSTELS).  They chose a generic architecture that would 
-optimize "verbatim reuse," which is defined as reusing a 
-component without editing it.  Another similar Ada project 
-loomed, the Extreme Ultraviolet Explorer (EUVE) telemetry 
-simulator (EUVETELS), for which the team hoped to reuse much 
-of UARSTELS' code.  Therefore, rather than concern 
-themselves with reusing code from the previous projects, the 
-engineers designed UARSTEL instead for future reuse.  They 
-performed domain analysis simultaneously for UARS and EUVE, 
-and emphasized Ada generics that could be used in both 
-spacecrafts' simulators with no code modification.  
-Tailoring the packages to each simulator only required 
-parameterized instatiation.
-
-UARSTELS' performance and schedule were on target, 
-proving that designing for verbatim reuse is an efficient 
-way to code in Ada.  Another finding was that while UARSTELS 
-(68 KSLOC) was smaller than GOESIM (92 KSLOC), it performed 
-more functions, for which it needed substantially more 
-memory.
-
-The FDD's post-UARSTELS telemetry simulators took full 
-advantage of reusing Ada's generic packages.  In the year 
-1989-1990, 96-percent of EUVETELS' 67 KSLOC was reused from 
-UARSTELS, of which 88-percent was verbatim reuse.  In 1990-
-1991, the SAMPEX Telemetry Simulator (SAMPEXTS) minimized 
-development costs while maximizing software reuse.  UARSTELS 
-and EUVETELS contributed to 95-percent of SAMPEXTS' 60 
-KSLOC, with 85-percent being reused verbatim.
-
-The WIND/POLAR Telemetry Simulator (POWITS -- 1990-1992) 
-differed enough from the UARSTELS to reduce the percentage 
-of reuse.  Also, the development team was new and had to 
-relearn the generic architecture from scratch.  Still, 
-POWITS reused 69-percent of UARSTELS' code, 39-percent with 
-verbatim reuse, and was only a thousand SLOC more than 
-EUVETELS.
-
-Finally, the FAST Telemetry Simulator (FASTELS) and the 
-TOMS Telemetry Simulator (TOMSTELS) were expected to be 
-acceptably operational within a short schedule in the year 
-1992-1993.  The team modified the high-reuse process, 
-deleted one design phase, and held only one design review.  
-Despite the changes, the two projects still met the deadline 
-and performance requirements.
-
-In fact, optimizing reuse was sacrificed in TOMSTELS and 
-FASTELS to focus on and improve performance.  One of the 
-motivations behind conducting the SEL study was to determine 
-if the FDD should pursue performance over reuse, since the 
-two projects' improved performance made the reduction in 
-reuse worthwhile to the users.
-
-Thus in 1993, as the FASTELS and TOMSTELS systems were 
-completed, the FDD started using Ada regularly for a certain 
-class of systems.  It was a full five years after the 
-language's introduction, and the laboratories did not 
-produce a standard process for Ada projects for another two 
-years.
-	
-Accepting Ada
-
-The slow acceptance of Ada can be attributed partly to 
-the loose management of the first project, GRODY.  While the 
-software engineers were able to explore the new technology, 
-there were poor comparisons with the parallel development in 
-FORTRAN, which was held to tight schedule and performance 
-criteria.  Moreover, the two systems, designed to address 
-the same problem, were developed with different goals:  the 
-FORTRAN system was developed to function, the Ada system was 
-developed to teach.  One of the next projects designed for 
-reuse, GOADA, proved to be the slowest simulator in FDD 
-history.
-
-Another factor in Ada's slow acceptance was the 
-affordability and quality of available Ada development 
-environments.  Compiler problems and a lack of diagnostic 
-and library management tools especially affected an attempt 
-to rehost a system from a VAX to an IBM mainframe.  FORTRAN 
-development, in contrast, requires little or no external 
-tool support.
-
-Finally, Ada faces sentiment common to almost all new 
-technology insertion.  There are always a few that stand 
-vehemently against change, especially against the adoption 
-of a new language.
-
-Overcoming these first impressions and obstacles was a 
-monumental task, one which resident Ada experts did not 
-perform well.  Even though the next telemetry simulators 
-written in Ada had high reuse, acceptable performance, and 
-were delivered on time, their success did not completely 
-erase the idea that Ada was experimental.
-	
-To date, the FDD has produced about one million lines of 
-Ada.  Performance tests are no longer run on Ada simulators, 
-even though the requirements have increased for speed and 
-functionality.  The decreased costs of reusing Ada code, 
-rather than FORTRAN code, are well documented and 
-publicized.
-	
-The Role of the Software Developer
-
-Both the Ada naysayers and the Ada evangelists acted to 
-undermine the language's acceptance.  The naysayers resisted 
-the language change, preferring to stay with FORTRAN, a 
-language with which the developers were familiar and for 
-which they had an extensive library of reusable components, 
-maintained by a separately funded team.  The Ada evangelists 
-promised too much too soon and, when problems arose, avoided 
-confronting the real obstacles to the language's acceptance:  
-the lack of an environment designed for the IBM mainframe, 
-on which FDD developed most of its software.
-
-The Ada education program was ineffectual because of the 
-student developers' desire to preserve the status quo.  
-Rather than using resident Ada experts as instructors, 
-trainers from outside the company might have had more 
-success teaching students.  The training graduates who had 
-the opportunity to engage in real-life development were the 
-most enthusiastic about using the Ada language in other 
-projects; those with classroom experience alone, or who were 
-self-taught, often expressed a preference that the FDD stay 
-a FORTRAN shop.
-
-Conclusions
-
-Software Metrics, the consulting firm that researched the 
-Software Engineering Laboratory (SEL) report, recommended 
-that the FDD continue to use Ada whenever possible.  
-Projects most likely to derive the full benefits of  Ada are 
-long-lived, developed by reusing existing Ada modules, and 
-deployed on Ada-capable platforms.  In contrast, FORTRAN is 
-economically best suited for short-lived, single-use 
-software.
-
-As the FDD turns more to workstations, it will probably 
-use Ada more frequently, and replace FORTRAN in the 
-divisions large reusable libraries.  Switching the libraries 
-to Ada and retaining a crew of software librarians would 
-reduce the cost of both FORTRAN and Ada programs.  FORTRAN 
-is expensive to maintain because of the high coupling found 
-in its systems; replacing it altogether with Ada would 
-reduce costs immediately.  The software librarians trained 
-in Ada reuse would understand the architectures and 
-parameters of the generic code; in previous projects, the 
-development team had to rediscover these with each new 
-telemetry simulator.  A reuse library is also necessary for 
-configuration management to be economically efficient, 
-especially as the Ada projects grow in lines of code and 
-complexity.
-
-The up-and-coming competitor for Ada is C++.  Because 
-Ada environments for workstations generally cost 4 to 5 
-times as much as those for C++ and because many programmers 
-consider C++ to be more broadly marketable, the Ada language 
-has still not yet fully won the battle.
-
-Since 1990, the FDD has built all of its telemetry 
-simulators in Ada.  The software now costs 40 percent less 
-to produce, is delivered in half the time, and has 85 
-percent fewer errors during development when compared with 
-the 1985 baseline for the systems.
-
-For more information:
-
-"The Software Engineering Laboratory has published a series 
-of  reports, including this one, on the effects, successes, 
-and failures of  various software development methodologies 
-at the GSFC.  The SEL is accessible on the World Wide Web at 
-http://groucho.gsfc.nasa.gov/Code_550/SEL_hp.html
-Single copies of this report (Software Engineering 
-Laboratory  Series, SEL-95-001) are available if you write to:
- 
-Software Engineering Branch -- Code 552
-Goddard Space Flight Center
-Greenbelt, MD  20771
+Telemetry-simulator-specific later result (narrower scope, telemetry simulators built since 1990):
+- See telemetry-scope source statements in the EVIDENCE SUMMARY section below.
 
 
-********************** 
-The views, opinions, and findings contained in this report are those of 
-the author(s) and should not be construed as an official Agency 
-position, policy, or decision, unless so designated by other official 
-documentation.
+------------------------------------------------------------
+KEY IMPLICATIONS (WRITEUP SYNTHESIS)
+------------------------------------------------------------
 
-Copyright 1996.  IIT Research Institute.  All rights assigned to the 
-U.S. Government (Ada Joint Program Office).  Permission to reprint this 
-flyer, in whole or in part, is granted, provided the AdaIC is 
-acknowledged as the source.
-**********************
+1) IT TREATS REUSE AS A FIRST-CLASS OPERATIONAL CAPABILITY
 
-Ada Information Clearinghouse (AdaIC)
-P.O. Box 1866
-Falls Church, VA  22041
-Telephone:  1-800-AdaIC-11 (1-800/232-4211) or 703/681-2466
-Fax:  703/681-2869
-E-mail:  adainfo@sw-eng.falls-church.va.us
+Writeup synthesis: Several later projects in the report were explicitly engineered for verbatim reuse: components designed once, instantiated with parameters, and integrated without source edits.
 
-The AdaIC is sponsored by the Ada Joint Program Office and operated by 
-IIT Research Institute.
+2) IT TURNS GENERICS INTO RISK CONTROL
+
+Writeup synthesis: Ada generics were used to encode stable abstractions that survived mission variation, with adaptation performed through parameterization and instantiation for different simulator targets.
+
+3) IT SHOWS THAT PROCESS QUALITY CAN DOMINATE LANGUAGE DEBATES
+
+Writeup synthesis: The report narrative links early uneven outcomes to tooling maturity, training quality, and project-constraint mismatch, and it reports stronger outcomes in later phases after reuse discipline stabilized.
+
+4) IT DISTINGUISHES SHORT-LIFE VS LONG-LIFE ECONOMICS
+
+Writeup synthesis: The report distinguishes lifecycle economics, with FORTRAN often practical for short-lived single-use software and Ada showing stronger returns in long-lived reusable systems.
+
+5) IT ENFORCES DESIGN FOR FUTURE MISSIONS, NOT JUST CURRENT DEADLINES
+
+Writeup synthesis: Projects like UARSTELS were designed with upcoming systems in mind, enabling high follow-on reuse in later simulator efforts.
+
+6) IT MAKES ORGANIZATIONAL MEMORY A TECHNICAL ASSET
+
+Writeup synthesis: The report highlights reusable libraries and trained maintainers as mechanisms that reduce rediscovery costs in later projects.
+
+------------------------------------------------------------
+DECISION ANALYSIS BY DECISION LAYER (WRITEUP SYNTHESIS)
+------------------------------------------------------------
+
+Decision Layer: Architecture
+Writeup synthesis: Generic package strategy creates stable interfaces that outlive individual projects.
+
+Decision Layer: Development Workflow
+Writeup synthesis: Verbatim reuse minimizes local modifications and limits defect injection opportunities.
+
+Decision Layer: Toolchain
+Writeup synthesis: Compiler maturity plus diagnostic and library-management tooling materially affected adoption velocity and confidence.
+
+Decision Layer: Training
+Writeup synthesis: Hands-on project exposure converts skepticism into operational competence.
+
+Decision Layer: Portfolio Strategy
+Writeup synthesis: Matching language/process to system lifetime maximizes return and reduces systemic risk.
+
+------------------------------------------------------------
+EVIDENCE SUMMARY FROM REPORTED OUTCOMES
+------------------------------------------------------------
+
+Property: Reuse scaling
+Source statement (synopsis): FDD-wide reuse increased by 300% versus 1985 baseline.
+Source statement (report details): Telemetry lineage includes 96% reuse (88% verbatim) in EUVETELS and 95% reuse (85% verbatim) in SAMPEXTS.
+
+Property: Quality improvement
+Source statement (synopsis): Development error rates reduced by 62% against the 1985 baseline.
+Source statement (synopsis): Telemetry simulators built since 1990 reported 85% fewer development errors.
+
+Property: Cycle-time reduction
+Source statement (synopsis): Cycle time reduced by 25% against the 1985 baseline.
+Source statement (synopsis, telemetry-only metric): Telemetry simulators built since 1990 were delivered in half the time versus the 1985 baseline for the systems.
+
+Property: Cost improvement
+Source statement (synopsis): Cost reduced by 40% versus the 1985 baseline.
+Writeup synthesis: The report context indicates strongest gains in long-lived reuse-oriented Ada efforts.
+
+------------------------------------------------------------
+CLOSING
+------------------------------------------------------------
+
+Writeup synthesis of reported findings: The report presents measured reuse, quality, schedule, and cost outcomes, with strongest gains in long-lived projects designed for systematic Ada-based reuse.
+Writeup synthesis of reported conclusions: Long-lived, reuse-oriented simulator programs benefited most from Ada plus object-oriented design discipline, while adoption speed depended heavily on toolchain maturity, training quality, and platform fit.
