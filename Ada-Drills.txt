@@ -1,0 +1,79 @@
+ADA-DRILLS.TXT
+
+Ada reserved words only. Practice makes perfect. VERB SUBJECT ONLY.
+
+THE FIRST THOUGHT
+
+Meanwhile, here's your Ada-only drill:
+
+begin end. declare begin. is null. loop exit.
+
+Practice makes perfect. 🎯
+
+READING ORDER (THE CATCH)
+
+"EXIT LOOP? NULL ID? BEGIN DECLARE? END BEGIN?"
+
+THE CORRECTION
+
+Good catch — order matters. Corrections:
+
+  DECLARE BEGIN END   (not begin declare)
+  LOOP EXIT END LOOP  (exit lives inside the loop)
+  NULL                — no subject needed; null; is a complete statement
+  BEGIN END           — never end begin
+
+MINIMAL VALID ADA, RESERVED WORDS ONLY
+
+practice.adb
+
+  declare
+  begin
+     null;
+  end;
+
+practice2.adb
+
+  begin
+     loop
+        exit;
+     end loop;
+  end;
+
+practice3.adb
+
+  begin
+     begin
+        null;
+     exception
+        when others =>
+           null;
+     end;
+  end;
+
+NEXT DRILL
+
+Nest them:
+
+  declare
+  begin
+     loop
+        exit;
+     end loop;
+  end;
+
+THE RESERVED WORDS
+
+  abort       abs         abstract    accept      access      aliased
+  all         and         array       at          begin       body
+  case        constant    declare     delay       delta       digits
+  do          else        elsif       end         entry       exception
+  exit        for         function    generic     goto        if
+  in          interface   is          limited     loop        mod
+  new         not         null        of          or          others
+  out         overriding  package     pragma      private     procedure
+  protected   raise       range       record      rem         renames
+  requeue     return      reverse     select      separate    some
+  subtype     synchronized tagged     task        terminate   then
+  type        until       use         when        while       with
+  xor
