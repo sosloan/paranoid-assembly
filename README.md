@@ -16,6 +16,7 @@ This repository is a collection of **reverential technical documentation** for a
 - **Ada-Lovelace-Grove.html** — creative coding voyage (Ada · Grove · Bourbaki pirate)
 - **SWIZZLING_SSE_POWER.html** — Nikolas Bourbaki × Andy Grove dual-dance for the SSE AOS→SOA weave
 - **MarketFixed.html** — Nikolas Bourbaki × Andy Grove × Posted Stall tri-partner dance for the range-rate gate
+- **writeups/graph-examples.html** — circuits & graphs gallery for Dolphin GDS (gates, pipeline, generators, routing)
 
 ---
 
