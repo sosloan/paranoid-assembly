@@ -78,6 +78,15 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### UNO_POWER.md
+**Routine:** `Uno.asm` (complete Game of UNO · Linux x86-64 freestanding)
+**Focus:** One-byte card packing, fail-closed match gate, shared human/AI commit path; 108-card deck
+**Theme:** Tabletop rules as pure data transforms — gate color/rank/wild before the discard mutates
+**Status:** Complete
+**Link:** [writeups/UNO_POWER.md](writeups/UNO_POWER.md)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
