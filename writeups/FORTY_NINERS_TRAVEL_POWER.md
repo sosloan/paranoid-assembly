@@ -16,13 +16,14 @@
 | Attribute | Value |
 |-----------|-------|
 | **File** | `forty_niners_schedule.fpp` |
+| **Ada Companion** | `forty_niners_schedule.ads` (`package Forty_Niners_Schedule`) |
 | **Origin** | San Francisco 49ers 2026 regular season schedule, rendered in NASA FPP |
 | **License** | Schedule facts belong to their sources; writeup text CC BY 4.0 |
-| **Architecture** | F Prime Prime (FPP) specification language |
-| **Symbol** | `Nfl.SanFrancisco49ers.schedule` |
+| **Architecture** | F Prime Prime (FPP) specification language; Ada package translation |
+| **Symbol** | `Nfl.SanFrancisco49ers.schedule` / `Forty_Niners_Schedule.Schedule` |
 | **Argument** | None |
 | **Return** | One typed season itinerary with 18 ordered entries |
-| **Critical Declaration** | `array SeasonSchedule = [18] TravelLeg` |
+| **Critical Declaration** | `array SeasonSchedule = [18] TravelLeg` / `type Season_Schedule is array (Week_Index) of Travel_Leg` |
 | **Weeks of State** | 18 |
 | **Power Source** | Static typing + explicit geography |
 
