@@ -12,6 +12,7 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Theme:** Grove-style paranoia before tape-out: software flaws must not become silicon defects
 **Status:** Complete
 **Link:** [writeups/CIRCUITS_POWER.md](writeups/CIRCUITS_POWER.md)
+**Circuits & Graphs:** [writeups/graph-examples.html](writeups/graph-examples.html) — logic gates, half-adder, GDS pipeline DAG, generator library, netlist & routing graphs
 
 ### CLUSTER_BALANCE_SHEET_POWER.md
 **Routine:** `cluster_balance_sheet.asm` (65-node cluster accounting primitive)
