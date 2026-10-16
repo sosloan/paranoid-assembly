@@ -19,6 +19,7 @@
 | **File** | `ada_thoughts.rb` |
 | **Source Prose** | `ada-reserved-words.txt` |
 | **Companion Index** | `writeups/ada-reserved-words.json` |
+| **Companion Database** | `Ada.db` (built by `generate_ada_db.rb`) |
 | **Origin** | Ada Lovelace reserved-word narrative, rendered as Ruby `Data` records |
 | **License** | Writeup text CC BY 4.0; reserved-word list is language vocabulary |
 | **Architecture** | Ruby 3.2+ `Data.define` immutable records |

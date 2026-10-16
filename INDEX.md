@@ -95,6 +95,10 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Status:** Complete
 **Link:** [writeups/ADA_THOUGHTS_POWER.md](writeups/ADA_THOUGHTS_POWER.md)
 **Ruby:** [ada_thoughts.rb](ada_thoughts.rb)
+**Database:** [Ada.db](Ada.db) — 73 keywords + definitions, thoughts, shared_passage/co_mention relations (via [generate_ada_db.rb](generate_ada_db.rb))
+
+---
+
 ### ADA_REAL_TIME_POWER.md
 **Routine:** `ada_real_time.ads` (`package Ada.Real_Time`, RavenSPARK / ProfileR1 subset)
 **Focus:** Protected `ClockTime` own variable, private `Time`/`Time_Span` algebra, static period constructors, epoch `Clock` at elaboration
