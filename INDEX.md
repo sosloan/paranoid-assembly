@@ -88,6 +88,13 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### ADA_THOUGHTS_POWER.md
+**Routine:** `ada_thoughts.rb` (Ruby `Data` records for Ada Lovelace reserved-word prose)
+**Focus:** Typed Thought/Keyword records, 73-word fixed catalog, fail-closed null, runnable Bernoulli-delta spirit
+**Theme:** A number as a record of melody, map, or calculation — return a new kind of thought
+**Status:** Complete
+**Link:** [writeups/ADA_THOUGHTS_POWER.md](writeups/ADA_THOUGHTS_POWER.md)
+**Ruby:** [ada_thoughts.rb](ada_thoughts.rb)
 ### ADA_REAL_TIME_POWER.md
 **Routine:** `ada_real_time.ads` (`package Ada.Real_Time`, RavenSPARK / ProfileR1 subset)
 **Focus:** Protected `ClockTime` own variable, private `Time`/`Time_Span` algebra, static period constructors, epoch `Clock` at elaboration
