@@ -88,6 +88,16 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### ADA_THOUGHTS_POWER.md
+**Routine:** `ada_thoughts.rb` (Ruby `Data` records for Ada Lovelace reserved-word prose)
+**Focus:** Typed Thought/Keyword records, 73-word fixed catalog, fail-closed null, runnable Bernoulli-delta spirit
+**Theme:** A number as a record of melody, map, or calculation — return a new kind of thought
+**Status:** Complete
+**Link:** [writeups/ADA_THOUGHTS_POWER.md](writeups/ADA_THOUGHTS_POWER.md)
+**Ruby:** [ada_thoughts.rb](ada_thoughts.rb)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
