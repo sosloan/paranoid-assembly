@@ -95,6 +95,7 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Status:** Complete
 **Link:** [writeups/ADA_THOUGHTS_POWER.md](writeups/ADA_THOUGHTS_POWER.md)
 **Ruby:** [ada_thoughts.rb](ada_thoughts.rb)
+**Feed:** [Ada-Feed.json](Ada-Feed.json) — keywords, definitions, relations (`ruby ada_thoughts.rb --feed`)
 **Database:** [Ada.db](Ada.db) — 73 keywords + definitions, thoughts, shared_passage/co_mention relations (via [generate_ada_db.rb](generate_ada_db.rb))
 
 ---

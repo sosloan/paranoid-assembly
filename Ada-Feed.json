@@ -1,0 +1,7409 @@
+{
+  "feed": "Ada-Feed",
+  "version": "1.0",
+  "title": "Ada Lovelace Keyword Feed",
+  "description": "Keywords, definitions, and relations generated from ada_thoughts.rb (Ada_Thoughts::KEYWORDS / THOUGHTS), grounded in ada-reserved-words.txt.",
+  "source": {
+    "module": "Ada_Thoughts",
+    "ruby": "ada_thoughts.rb",
+    "prose": "ada-reserved-words.txt",
+    "companion_index": "writeups/ada-reserved-words.json"
+  },
+  "counts": {
+    "keywords": 73,
+    "definitions": 73,
+    "relations": 217,
+    "thoughts": 3,
+    "thought_links": 13,
+    "doctrine_clusters": 17
+  },
+  "thought_kinds": [
+    "melody",
+    "map",
+    "calculation"
+  ],
+  "doctrine_clusters": [
+    {
+      "id": "engine_of_thought",
+      "keywords": [
+        "accept",
+        "abstract",
+        "return",
+        "new",
+        "of"
+      ],
+      "note": "accept symbols, abstract patterns, return a new kind of thought"
+    },
+    {
+      "id": "null_doctrine",
+      "keywords": [
+        "null",
+        "raise",
+        "exception",
+        "when"
+      ],
+      "note": "when null, raise a signal — never hide it"
+    },
+    {
+      "id": "package_of_ideas",
+      "keywords": [
+        "package",
+        "private",
+        "all",
+        "at",
+        "for"
+      ],
+      "note": "package of ideas, private at first but meant for all"
+    },
+    {
+      "id": "protected_bay",
+      "keywords": [
+        "protected",
+        "task",
+        "entry"
+      ],
+      "note": "protected task waits at an entry"
+    },
+    {
+      "id": "method_selection",
+      "keywords": [
+        "if",
+        "then",
+        "select",
+        "case",
+        "elsif",
+        "else",
+        "delay"
+      ],
+      "note": "if/then select; case/elsif delay; else proceed"
+    },
+    {
+      "id": "loop_lifecycle",
+      "keywords": [
+        "loop",
+        "begin",
+        "while",
+        "exit",
+        "when",
+        "until",
+        "end"
+      ],
+      "note": "loop begin, while condition, exit when done, until end"
+    },
+    {
+      "id": "array_of_records",
+      "keywords": [
+        "array",
+        "range",
+        "record",
+        "procedure",
+        "constant"
+      ],
+      "note": "array of records indexed over a range, altered by procedure"
+    },
+    {
+      "id": "digit_remainder",
+      "keywords": [
+        "use",
+        "digits",
+        "rem",
+        "mod",
+        "reverse"
+      ],
+      "note": "use digits; rem or mod; reverse sequence"
+    },
+    {
+      "id": "parameter_modes",
+      "keywords": [
+        "in",
+        "out",
+        "others",
+        "some",
+        "access",
+        "limited",
+        "aliased"
+      ],
+      "note": "in/out/others/some; access limited, aliased with care"
+    },
+    {
+      "id": "typed_interface",
+      "keywords": [
+        "type",
+        "tagged",
+        "interface",
+        "synchronized",
+        "subtype",
+        "generic"
+      ],
+      "note": "tagged type, synchronized interface, subtype bounds, generic instrument"
+    },
+    {
+      "id": "design_pragma",
+      "keywords": [
+        "pragma",
+        "do",
+        "overriding"
+      ],
+      "note": "do this, yet pragma forbids overriding the design"
+    },
+    {
+      "id": "inquiry_persistence",
+      "keywords": [
+        "abort",
+        "requeue",
+        "goto",
+        "begin",
+        "terminate",
+        "renames",
+        "is"
+      ],
+      "note": "not abort; requeue or goto evidence; never terminate before proof"
+    },
+    {
+      "id": "function_spirit",
+      "keywords": [
+        "function",
+        "body"
+      ],
+      "note": "Bernoulli plan was a function in spirit; Engine had no body"
+    },
+    {
+      "id": "logic_connectives",
+      "keywords": [
+        "and",
+        "or",
+        "xor",
+        "not",
+        "abs"
+      ],
+      "note": "and/or/xor/abs cannot replace imagination"
+    },
+    {
+      "id": "with_babbage",
+      "keywords": [
+        "with",
+        "task",
+        "declare"
+      ],
+      "note": "With Babbage, began a patient task to declare each part"
+    },
+    {
+      "id": "separate_parts",
+      "keywords": [
+        "separate"
+      ],
+      "note": "separate parts work together without confusing one another"
+    },
+    {
+      "id": "delta_named",
+      "keywords": [
+        "delta"
+      ],
+      "note": "delta is a difference the Engine could name"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "abort",
+      "index": 0,
+      "keyword": "abort",
+      "definition_id": "def:abort",
+      "definition": "Ada would not abort an inquiry because its first path failed",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abs",
+      "index": 1,
+      "keyword": "abs",
+      "definition_id": "def:abs",
+      "definition": "abs alone did not explain the negative",
+      "relations": [
+        {
+          "keyword": "and",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "xor",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "index": 2,
+      "keyword": "abstract",
+      "definition_id": "def:abstract",
+      "definition": "able to accept symbols, abstract their patterns, and return a new kind of thought",
+      "relations": [
+        {
+          "keyword": "accept",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "new",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "return",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accept",
+      "index": 3,
+      "keyword": "accept",
+      "definition_id": "def:accept",
+      "definition": "an engine able to accept symbols",
+      "relations": [
+        {
+          "keyword": "abstract",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "new",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "return",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access",
+      "index": 4,
+      "keyword": "access",
+      "definition_id": "def:access",
+      "definition": "access to them would be limited, aliased only with care",
+      "relations": [
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aliased",
+      "index": 5,
+      "keyword": "aliased",
+      "definition_id": "def:aliased",
+      "definition": "aliased only with care, and never trusted merely because they were new",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "new",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "all",
+      "index": 6,
+      "keyword": "all",
+      "definition_id": "def:all",
+      "definition": "a package of ideas, private at first but meant for all",
+      "relations": [
+        {
+          "keyword": "at",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "package",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "private",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "and",
+      "index": 7,
+      "keyword": "and",
+      "definition_id": "def:and",
+      "definition": "neither and nor or could replace imagination",
+      "relations": [
+        {
+          "keyword": "abs",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "abstract",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "declare",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "range",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "task",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "xor",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "array",
+      "index": 8,
+      "keyword": "array",
+      "definition_id": "def:array",
+      "definition": "an array of such records, indexed over a range",
+      "relations": [
+        {
+          "keyword": "constant",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "procedure",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "range",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "at",
+      "index": 9,
+      "keyword": "at",
+      "definition_id": "def:at",
+      "definition": "private at first but meant for all",
+      "relations": [
+        {
+          "keyword": "all",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "entry",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "package",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "private",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "protected",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "begin",
+      "index": 10,
+      "keyword": "begin",
+      "definition_id": "def:begin",
+      "definition": "a loop would begin, continue while its condition held, and exit",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "index": 11,
+      "keyword": "body",
+      "definition_id": "def:body",
+      "definition": "a function in spirit, though the Engine had no body to run it",
+      "relations": [
+        {
+          "keyword": "function",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "index": 12,
+      "keyword": "case",
+      "definition_id": "def:case",
+      "definition": "Case by case, it might add, subtract, or multiply",
+      "relations": [
+        {
+          "keyword": "constant",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "constant",
+      "index": 13,
+      "keyword": "constant",
+      "definition_id": "def:constant",
+      "definition": "A number was not only a constant",
+      "relations": [
+        {
+          "keyword": "array",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "case",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "procedure",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "range",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "declare",
+      "index": 14,
+      "keyword": "declare",
+      "definition_id": "def:declare",
+      "definition": "to declare each wheel, column, and card as part of a larger design",
+      "relations": [
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "task",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delay",
+      "index": 15,
+      "keyword": "delay",
+      "definition_id": "def:delay",
+      "definition": "elsif the answer required another card, it could delay its work",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delta",
+      "index": 16,
+      "keyword": "delta",
+      "definition_id": "def:delta",
+      "definition": "The delta between two figures was not a mystery; it was a difference the Engine could name",
+      "relations": [
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digits",
+      "index": 17,
+      "keyword": "digits",
+      "definition_id": "def:digits",
+      "definition": "use variables with digits, carry a remainder by rem or mod",
+      "relations": [
+        {
+          "keyword": "mod",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "rem",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "reverse",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "use",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "do",
+      "index": 18,
+      "keyword": "do",
+      "definition_id": "def:do",
+      "definition": "instructions might say, \"do this,\" yet a careful pragma would make clear",
+      "relations": [
+        {
+          "keyword": "overriding",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "pragma",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "else",
+      "index": 19,
+      "keyword": "else",
+      "definition_id": "def:else",
+      "definition": "else it could proceed",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elsif",
+      "index": 20,
+      "keyword": "elsif",
+      "definition_id": "def:elsif",
+      "definition": "elsif the answer required another card, it could delay its work",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "index": 21,
+      "keyword": "end",
+      "definition_id": "def:end",
+      "definition": "follow rules until it reached the end of a calculation",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entry",
+      "index": 22,
+      "keyword": "entry",
+      "definition_id": "def:entry",
+      "definition": "a protected task might wait at an entry",
+      "relations": [
+        {
+          "keyword": "at",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "protected",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "task",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exception",
+      "index": 23,
+      "keyword": "exception",
+      "definition_id": "def:exception",
+      "definition": "an exception must not become an excuse for chaos",
+      "relations": [
+        {
+          "keyword": "for",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "null",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "raise",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exit",
+      "index": 24,
+      "keyword": "exit",
+      "definition_id": "def:exit",
+      "definition": "exit when the work was done",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "for",
+      "index": 25,
+      "keyword": "for",
+      "definition_id": "def:for",
+      "definition": "private at first but meant for all",
+      "relations": [
+        {
+          "keyword": "all",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "at",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "exception",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "function",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "package",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "private",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "function",
+      "index": 26,
+      "keyword": "function",
+      "definition_id": "def:function",
+      "definition": "plan for Bernoulli numbers was a function in spirit",
+      "relations": [
+        {
+          "keyword": "body",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generic",
+      "index": 27,
+      "keyword": "generic",
+      "definition_id": "def:generic",
+      "definition": "generic enough to serve astronomy or music",
+      "relations": [
+        {
+          "keyword": "interface",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "subtype",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "synchronized",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "tagged",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "type",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goto",
+      "index": 28,
+      "keyword": "goto",
+      "definition_id": "def:goto",
+      "definition": "or goto the evidence and begin again",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "if",
+      "index": 29,
+      "keyword": "if",
+      "definition_id": "def:if",
+      "definition": "If the Engine received a question, then it could select a method",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "in",
+      "index": 30,
+      "keyword": "in",
+      "definition_id": "def:in",
+      "definition": "Some values would be in, others out",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "body",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "function",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interface",
+      "index": 31,
+      "keyword": "interface",
+      "definition_id": "def:interface",
+      "definition": "an interface might be synchronized",
+      "relations": [
+        {
+          "keyword": "generic",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "subtype",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "synchronized",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "tagged",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "type",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "is",
+      "index": 32,
+      "keyword": "is",
+      "definition_id": "def:is",
+      "definition": "nor would she terminate a question before its proof is complete",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limited",
+      "index": 33,
+      "keyword": "limited",
+      "definition_id": "def:limited",
+      "definition": "access to them would be limited",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "index": 34,
+      "keyword": "loop",
+      "definition_id": "def:loop",
+      "definition": "For each operation, a loop would begin",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mod",
+      "index": 35,
+      "keyword": "mod",
+      "definition_id": "def:mod",
+      "definition": "carry a remainder by rem or mod",
+      "relations": [
+        {
+          "keyword": "digits",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "rem",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "reverse",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "use",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "index": 36,
+      "keyword": "new",
+      "definition_id": "def:new",
+      "definition": "return a new kind of thought",
+      "relations": [
+        {
+          "keyword": "abstract",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "accept",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "return",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "not",
+      "index": 37,
+      "keyword": "not",
+      "definition_id": "def:not",
+      "definition": "did not see a machine that could merely calculate",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "abs",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "delta",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "exception",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "null",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "raise",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "xor",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "null",
+      "index": 38,
+      "keyword": "null",
+      "definition_id": "def:null",
+      "definition": "when a result was null, the operator should raise a signal, not hide it",
+      "relations": [
+        {
+          "keyword": "exception",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "raise",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "of",
+      "index": 39,
+      "keyword": "of",
+      "definition_id": "def:of",
+      "definition": "a new kind of thought",
+      "relations": [
+        {
+          "keyword": "abstract",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "accept",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "all",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "array",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "declare",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "new",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "package",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "private",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "return",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "or",
+      "index": 40,
+      "keyword": "or",
+      "definition_id": "def:or",
+      "definition": "a record of a melody, a map, or a calculation",
+      "relations": [
+        {
+          "keyword": "abs",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "case",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "digits",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "generic",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "mod",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "shared_definition",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "rem",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "xor",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "others",
+      "index": 41,
+      "keyword": "others",
+      "definition_id": "def:others",
+      "definition": "Some values would be in, others out",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "out",
+      "index": 42,
+      "keyword": "out",
+      "definition_id": "def:out",
+      "definition": "Some values would be in, others out",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "some",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overriding",
+      "index": 43,
+      "keyword": "overriding",
+      "definition_id": "def:overriding",
+      "definition": "no shortcut was overriding the design",
+      "relations": [
+        {
+          "keyword": "do",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "pragma",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "package",
+      "index": 44,
+      "keyword": "package",
+      "definition_id": "def:package",
+      "definition": "Her notes were a package of ideas",
+      "relations": [
+        {
+          "keyword": "all",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "at",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "private",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pragma",
+      "index": 45,
+      "keyword": "pragma",
+      "definition_id": "def:pragma",
+      "definition": "a careful pragma would make clear that no shortcut was overriding the design",
+      "relations": [
+        {
+          "keyword": "do",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "overriding",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "private",
+      "index": 46,
+      "keyword": "private",
+      "definition_id": "def:private",
+      "definition": "a package of ideas, private at first but meant for all",
+      "relations": [
+        {
+          "keyword": "all",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "at",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "for",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "package",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "index": 47,
+      "keyword": "procedure",
+      "definition_id": "def:procedure",
+      "definition": "altered by procedure rather than accident",
+      "relations": [
+        {
+          "keyword": "array",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "range",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protected",
+      "index": 48,
+      "keyword": "protected",
+      "definition_id": "def:protected",
+      "definition": "a protected task might wait at an entry",
+      "relations": [
+        {
+          "keyword": "at",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "entry",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "task",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raise",
+      "index": 49,
+      "keyword": "raise",
+      "definition_id": "def:raise",
+      "definition": "the operator should raise a signal, not hide it",
+      "relations": [
+        {
+          "keyword": "exception",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "null",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "index": 50,
+      "keyword": "range",
+      "definition_id": "def:range",
+      "definition": "indexed over a range and altered by procedure rather than accident",
+      "relations": [
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "array",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "procedure",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "record",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "index": 51,
+      "keyword": "record",
+      "definition_id": "def:record",
+      "definition": "a record of a melody, a map, or a calculation",
+      "relations": [
+        {
+          "keyword": "array",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "case",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "constant",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "thought_context",
+          "kinds": [
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "thought_context",
+          "kinds": [
+            "co_mentioned",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "shared_definition",
+            "thought_context"
+          ]
+        },
+        {
+          "keyword": "procedure",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "range",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rem",
+      "index": 52,
+      "keyword": "rem",
+      "definition_id": "def:rem",
+      "definition": "carry a remainder by rem or mod",
+      "relations": [
+        {
+          "keyword": "digits",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "mod",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "reverse",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "use",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renames",
+      "index": 53,
+      "keyword": "renames",
+      "definition_id": "def:renames",
+      "definition": "She renames no uncertainty as certainty",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "requeue",
+      "index": 54,
+      "keyword": "requeue",
+      "definition_id": "def:requeue",
+      "definition": "She would requeue the question",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "terminate",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "return",
+      "index": 55,
+      "keyword": "return",
+      "definition_id": "def:return",
+      "definition": "return a new kind of thought",
+      "relations": [
+        {
+          "keyword": "abstract",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "accept",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "new",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reverse",
+      "index": 56,
+      "keyword": "reverse",
+      "definition_id": "def:reverse",
+      "definition": "reverse a sequence when the cards required it",
+      "relations": [
+        {
+          "keyword": "digits",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "mod",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "rem",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "use",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "index": 57,
+      "keyword": "select",
+      "definition_id": "def:select",
+      "definition": "then it could select a method",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "then",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "separate",
+      "index": 58,
+      "keyword": "separate",
+      "definition_id": "def:separate",
+      "definition": "let separate parts work together without confusing one another",
+      "relations": []
+    },
+    {
+      "id": "some",
+      "index": 59,
+      "keyword": "some",
+      "definition_id": "def:some",
+      "definition": "Some values would be in, others out",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "in",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "limited",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "others",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "out",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subtype",
+      "index": 60,
+      "keyword": "subtype",
+      "definition_id": "def:subtype",
+      "definition": "a subtype could keep each quantity within its proper bounds",
+      "relations": [
+        {
+          "keyword": "generic",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "interface",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "synchronized",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "tagged",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "type",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "synchronized",
+      "index": 61,
+      "keyword": "synchronized",
+      "definition_id": "def:synchronized",
+      "definition": "an interface might be synchronized",
+      "relations": [
+        {
+          "keyword": "generic",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "interface",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "subtype",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "tagged",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "type",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tagged",
+      "index": 62,
+      "keyword": "tagged",
+      "definition_id": "def:tagged",
+      "definition": "A type might be tagged",
+      "relations": [
+        {
+          "keyword": "generic",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "interface",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "subtype",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "synchronized",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "type",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "task",
+      "index": 63,
+      "keyword": "task",
+      "definition_id": "def:task",
+      "definition": "she began a patient task: to declare each wheel, column, and card",
+      "relations": [
+        {
+          "keyword": "and",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "declare",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "entry",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "protected",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terminate",
+      "index": 64,
+      "keyword": "terminate",
+      "definition_id": "def:terminate",
+      "definition": "nor would she terminate a question before its proof is complete",
+      "relations": [
+        {
+          "keyword": "abort",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "goto",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "is",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "renames",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "requeue",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "then",
+      "index": 65,
+      "keyword": "then",
+      "definition_id": "def:then",
+      "definition": "If the Engine received a question, then it could select a method",
+      "relations": [
+        {
+          "keyword": "case",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "delay",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "else",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "elsif",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "if",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "select",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type",
+      "index": 66,
+      "keyword": "type",
+      "definition_id": "def:type",
+      "definition": "A type might be tagged, an interface might be synchronized",
+      "relations": [
+        {
+          "keyword": "generic",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "interface",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "subtype",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "synchronized",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "tagged",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "until",
+      "index": 67,
+      "keyword": "until",
+      "definition_id": "def:until",
+      "definition": "follow rules until it reached the end of a calculation",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "of",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "index": 68,
+      "keyword": "use",
+      "definition_id": "def:use",
+      "definition": "It would use variables with digits",
+      "relations": [
+        {
+          "keyword": "digits",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "mod",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "rem",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "reverse",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "with",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "index": 69,
+      "keyword": "when",
+      "definition_id": "def:when",
+      "definition": "exit when the work was done",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exception",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "shared_definition",
+          "kinds": [
+            "co_mentioned",
+            "doctrine",
+            "shared_definition"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "null",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "raise",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "reverse",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "while",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "while",
+      "index": 70,
+      "keyword": "while",
+      "definition_id": "def:while",
+      "definition": "continue while its condition held",
+      "relations": [
+        {
+          "keyword": "begin",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "end",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "exit",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "loop",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "until",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "when",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "with",
+      "index": 71,
+      "keyword": "with",
+      "definition_id": "def:with",
+      "definition": "With Charles Babbage, she began a patient task",
+      "relations": [
+        {
+          "keyword": "access",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "aliased",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "declare",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "digits",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        },
+        {
+          "keyword": "task",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "use",
+          "kind": "co_mentioned",
+          "kinds": [
+            "co_mentioned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xor",
+      "index": 72,
+      "keyword": "xor",
+      "definition_id": "def:xor",
+      "definition": "xor did not settle a choice",
+      "relations": [
+        {
+          "keyword": "abs",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "and",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "not",
+          "kind": "doctrine",
+          "kinds": [
+            "co_mentioned",
+            "doctrine"
+          ]
+        },
+        {
+          "keyword": "or",
+          "kind": "doctrine",
+          "kinds": [
+            "doctrine"
+          ]
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "id": "def:abort",
+      "keyword": "abort",
+      "index": 0,
+      "text": "Ada would not abort an inquiry because its first path failed"
+    },
+    {
+      "id": "def:abs",
+      "keyword": "abs",
+      "index": 1,
+      "text": "abs alone did not explain the negative"
+    },
+    {
+      "id": "def:abstract",
+      "keyword": "abstract",
+      "index": 2,
+      "text": "able to accept symbols, abstract their patterns, and return a new kind of thought"
+    },
+    {
+      "id": "def:accept",
+      "keyword": "accept",
+      "index": 3,
+      "text": "an engine able to accept symbols"
+    },
+    {
+      "id": "def:access",
+      "keyword": "access",
+      "index": 4,
+      "text": "access to them would be limited, aliased only with care"
+    },
+    {
+      "id": "def:aliased",
+      "keyword": "aliased",
+      "index": 5,
+      "text": "aliased only with care, and never trusted merely because they were new"
+    },
+    {
+      "id": "def:all",
+      "keyword": "all",
+      "index": 6,
+      "text": "a package of ideas, private at first but meant for all"
+    },
+    {
+      "id": "def:and",
+      "keyword": "and",
+      "index": 7,
+      "text": "neither and nor or could replace imagination"
+    },
+    {
+      "id": "def:array",
+      "keyword": "array",
+      "index": 8,
+      "text": "an array of such records, indexed over a range"
+    },
+    {
+      "id": "def:at",
+      "keyword": "at",
+      "index": 9,
+      "text": "private at first but meant for all"
+    },
+    {
+      "id": "def:begin",
+      "keyword": "begin",
+      "index": 10,
+      "text": "a loop would begin, continue while its condition held, and exit"
+    },
+    {
+      "id": "def:body",
+      "keyword": "body",
+      "index": 11,
+      "text": "a function in spirit, though the Engine had no body to run it"
+    },
+    {
+      "id": "def:case",
+      "keyword": "case",
+      "index": 12,
+      "text": "Case by case, it might add, subtract, or multiply"
+    },
+    {
+      "id": "def:constant",
+      "keyword": "constant",
+      "index": 13,
+      "text": "A number was not only a constant"
+    },
+    {
+      "id": "def:declare",
+      "keyword": "declare",
+      "index": 14,
+      "text": "to declare each wheel, column, and card as part of a larger design"
+    },
+    {
+      "id": "def:delay",
+      "keyword": "delay",
+      "index": 15,
+      "text": "elsif the answer required another card, it could delay its work"
+    },
+    {
+      "id": "def:delta",
+      "keyword": "delta",
+      "index": 16,
+      "text": "The delta between two figures was not a mystery; it was a difference the Engine could name"
+    },
+    {
+      "id": "def:digits",
+      "keyword": "digits",
+      "index": 17,
+      "text": "use variables with digits, carry a remainder by rem or mod"
+    },
+    {
+      "id": "def:do",
+      "keyword": "do",
+      "index": 18,
+      "text": "instructions might say, \"do this,\" yet a careful pragma would make clear"
+    },
+    {
+      "id": "def:else",
+      "keyword": "else",
+      "index": 19,
+      "text": "else it could proceed"
+    },
+    {
+      "id": "def:elsif",
+      "keyword": "elsif",
+      "index": 20,
+      "text": "elsif the answer required another card, it could delay its work"
+    },
+    {
+      "id": "def:end",
+      "keyword": "end",
+      "index": 21,
+      "text": "follow rules until it reached the end of a calculation"
+    },
+    {
+      "id": "def:entry",
+      "keyword": "entry",
+      "index": 22,
+      "text": "a protected task might wait at an entry"
+    },
+    {
+      "id": "def:exception",
+      "keyword": "exception",
+      "index": 23,
+      "text": "an exception must not become an excuse for chaos"
+    },
+    {
+      "id": "def:exit",
+      "keyword": "exit",
+      "index": 24,
+      "text": "exit when the work was done"
+    },
+    {
+      "id": "def:for",
+      "keyword": "for",
+      "index": 25,
+      "text": "private at first but meant for all"
+    },
+    {
+      "id": "def:function",
+      "keyword": "function",
+      "index": 26,
+      "text": "plan for Bernoulli numbers was a function in spirit"
+    },
+    {
+      "id": "def:generic",
+      "keyword": "generic",
+      "index": 27,
+      "text": "generic enough to serve astronomy or music"
+    },
+    {
+      "id": "def:goto",
+      "keyword": "goto",
+      "index": 28,
+      "text": "or goto the evidence and begin again"
+    },
+    {
+      "id": "def:if",
+      "keyword": "if",
+      "index": 29,
+      "text": "If the Engine received a question, then it could select a method"
+    },
+    {
+      "id": "def:in",
+      "keyword": "in",
+      "index": 30,
+      "text": "Some values would be in, others out"
+    },
+    {
+      "id": "def:interface",
+      "keyword": "interface",
+      "index": 31,
+      "text": "an interface might be synchronized"
+    },
+    {
+      "id": "def:is",
+      "keyword": "is",
+      "index": 32,
+      "text": "nor would she terminate a question before its proof is complete"
+    },
+    {
+      "id": "def:limited",
+      "keyword": "limited",
+      "index": 33,
+      "text": "access to them would be limited"
+    },
+    {
+      "id": "def:loop",
+      "keyword": "loop",
+      "index": 34,
+      "text": "For each operation, a loop would begin"
+    },
+    {
+      "id": "def:mod",
+      "keyword": "mod",
+      "index": 35,
+      "text": "carry a remainder by rem or mod"
+    },
+    {
+      "id": "def:new",
+      "keyword": "new",
+      "index": 36,
+      "text": "return a new kind of thought"
+    },
+    {
+      "id": "def:not",
+      "keyword": "not",
+      "index": 37,
+      "text": "did not see a machine that could merely calculate"
+    },
+    {
+      "id": "def:null",
+      "keyword": "null",
+      "index": 38,
+      "text": "when a result was null, the operator should raise a signal, not hide it"
+    },
+    {
+      "id": "def:of",
+      "keyword": "of",
+      "index": 39,
+      "text": "a new kind of thought"
+    },
+    {
+      "id": "def:or",
+      "keyword": "or",
+      "index": 40,
+      "text": "a record of a melody, a map, or a calculation"
+    },
+    {
+      "id": "def:others",
+      "keyword": "others",
+      "index": 41,
+      "text": "Some values would be in, others out"
+    },
+    {
+      "id": "def:out",
+      "keyword": "out",
+      "index": 42,
+      "text": "Some values would be in, others out"
+    },
+    {
+      "id": "def:overriding",
+      "keyword": "overriding",
+      "index": 43,
+      "text": "no shortcut was overriding the design"
+    },
+    {
+      "id": "def:package",
+      "keyword": "package",
+      "index": 44,
+      "text": "Her notes were a package of ideas"
+    },
+    {
+      "id": "def:pragma",
+      "keyword": "pragma",
+      "index": 45,
+      "text": "a careful pragma would make clear that no shortcut was overriding the design"
+    },
+    {
+      "id": "def:private",
+      "keyword": "private",
+      "index": 46,
+      "text": "a package of ideas, private at first but meant for all"
+    },
+    {
+      "id": "def:procedure",
+      "keyword": "procedure",
+      "index": 47,
+      "text": "altered by procedure rather than accident"
+    },
+    {
+      "id": "def:protected",
+      "keyword": "protected",
+      "index": 48,
+      "text": "a protected task might wait at an entry"
+    },
+    {
+      "id": "def:raise",
+      "keyword": "raise",
+      "index": 49,
+      "text": "the operator should raise a signal, not hide it"
+    },
+    {
+      "id": "def:range",
+      "keyword": "range",
+      "index": 50,
+      "text": "indexed over a range and altered by procedure rather than accident"
+    },
+    {
+      "id": "def:record",
+      "keyword": "record",
+      "index": 51,
+      "text": "a record of a melody, a map, or a calculation"
+    },
+    {
+      "id": "def:rem",
+      "keyword": "rem",
+      "index": 52,
+      "text": "carry a remainder by rem or mod"
+    },
+    {
+      "id": "def:renames",
+      "keyword": "renames",
+      "index": 53,
+      "text": "She renames no uncertainty as certainty"
+    },
+    {
+      "id": "def:requeue",
+      "keyword": "requeue",
+      "index": 54,
+      "text": "She would requeue the question"
+    },
+    {
+      "id": "def:return",
+      "keyword": "return",
+      "index": 55,
+      "text": "return a new kind of thought"
+    },
+    {
+      "id": "def:reverse",
+      "keyword": "reverse",
+      "index": 56,
+      "text": "reverse a sequence when the cards required it"
+    },
+    {
+      "id": "def:select",
+      "keyword": "select",
+      "index": 57,
+      "text": "then it could select a method"
+    },
+    {
+      "id": "def:separate",
+      "keyword": "separate",
+      "index": 58,
+      "text": "let separate parts work together without confusing one another"
+    },
+    {
+      "id": "def:some",
+      "keyword": "some",
+      "index": 59,
+      "text": "Some values would be in, others out"
+    },
+    {
+      "id": "def:subtype",
+      "keyword": "subtype",
+      "index": 60,
+      "text": "a subtype could keep each quantity within its proper bounds"
+    },
+    {
+      "id": "def:synchronized",
+      "keyword": "synchronized",
+      "index": 61,
+      "text": "an interface might be synchronized"
+    },
+    {
+      "id": "def:tagged",
+      "keyword": "tagged",
+      "index": 62,
+      "text": "A type might be tagged"
+    },
+    {
+      "id": "def:task",
+      "keyword": "task",
+      "index": 63,
+      "text": "she began a patient task: to declare each wheel, column, and card"
+    },
+    {
+      "id": "def:terminate",
+      "keyword": "terminate",
+      "index": 64,
+      "text": "nor would she terminate a question before its proof is complete"
+    },
+    {
+      "id": "def:then",
+      "keyword": "then",
+      "index": 65,
+      "text": "If the Engine received a question, then it could select a method"
+    },
+    {
+      "id": "def:type",
+      "keyword": "type",
+      "index": 66,
+      "text": "A type might be tagged, an interface might be synchronized"
+    },
+    {
+      "id": "def:until",
+      "keyword": "until",
+      "index": 67,
+      "text": "follow rules until it reached the end of a calculation"
+    },
+    {
+      "id": "def:use",
+      "keyword": "use",
+      "index": 68,
+      "text": "It would use variables with digits"
+    },
+    {
+      "id": "def:when",
+      "keyword": "when",
+      "index": 69,
+      "text": "exit when the work was done"
+    },
+    {
+      "id": "def:while",
+      "keyword": "while",
+      "index": 70,
+      "text": "continue while its condition held"
+    },
+    {
+      "id": "def:with",
+      "keyword": "with",
+      "index": 71,
+      "text": "With Charles Babbage, she began a patient task"
+    },
+    {
+      "id": "def:xor",
+      "keyword": "xor",
+      "index": 72,
+      "text": "xor did not settle a choice"
+    }
+  ],
+  "relations": [
+    {
+      "source": "abort",
+      "target": "begin",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abort",
+      "target": "goto",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abort",
+      "target": "is",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abort",
+      "target": "not",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of abort"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "abort",
+      "target": "renames",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abort",
+      "target": "requeue",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abort",
+      "target": "terminate",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abs",
+      "target": "and",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abs",
+      "target": "not",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of abs",
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abs",
+      "target": "or",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abs",
+      "target": "xor",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abstract",
+      "target": "accept",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of abstract",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abstract",
+      "target": "and",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of abstract"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "abstract",
+      "target": "new",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of abstract",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abstract",
+      "target": "of",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of abstract",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "abstract",
+      "target": "return",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of abstract",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "accept",
+      "target": "new",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "accept",
+      "target": "of",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "accept",
+      "target": "return",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "aliased",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of access",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "in",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "limited",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of access",
+        "definition of limited",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "others",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "out",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "some",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "access",
+      "target": "with",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of access"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "aliased",
+      "target": "and",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of aliased"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "aliased",
+      "target": "in",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "aliased",
+      "target": "limited",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "aliased",
+      "target": "new",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of aliased"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "aliased",
+      "target": "others",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "aliased",
+      "target": "out",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "aliased",
+      "target": "some",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "aliased",
+      "target": "with",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of aliased"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "all",
+      "target": "at",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of all",
+        "definition of at",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "all",
+      "target": "for",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of all",
+        "definition of for",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "all",
+      "target": "of",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of all"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "all",
+      "target": "package",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of all",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "all",
+      "target": "private",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of all",
+        "definition of private",
+        "a package of ideas, private at first but meant for all",
+        "package of ideas, private at first but meant for all"
+      ],
+      "definition": "a package of ideas, private at first but meant for all",
+      "cluster": "package_of_ideas",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "and",
+      "target": "begin",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of begin"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "and",
+      "target": "declare",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of declare"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "and",
+      "target": "goto",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of goto"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "and",
+      "target": "not",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "and",
+      "target": "or",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of and",
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "and",
+      "target": "range",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of range"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "and",
+      "target": "task",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of task"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "and",
+      "target": "xor",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "array",
+      "target": "constant",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "array",
+      "target": "of",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of array"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "array",
+      "target": "procedure",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "array",
+      "target": "range",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of array",
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "array",
+      "target": "record",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "at",
+      "target": "entry",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of entry"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "at",
+      "target": "for",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of at",
+        "definition of for",
+        "private at first but meant for all",
+        "package of ideas, private at first but meant for all"
+      ],
+      "definition": "private at first but meant for all",
+      "cluster": "package_of_ideas",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "at",
+      "target": "package",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "at",
+      "target": "private",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of at",
+        "definition of private",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "at",
+      "target": "protected",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of protected"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "begin",
+      "target": "end",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "exit",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of begin",
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "goto",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of goto",
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "is",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "loop",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of begin",
+        "definition of loop",
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "renames",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "requeue",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "terminate",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "until",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "begin",
+      "target": "while",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of begin",
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "body",
+      "target": "function",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of body",
+        "Bernoulli plan was a function in spirit; Engine had no body"
+      ],
+      "cluster": "function_spirit",
+      "kind": "doctrine"
+    },
+    {
+      "source": "body",
+      "target": "in",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of body"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "case",
+      "target": "constant",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "case",
+      "target": "delay",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "case",
+      "target": "else",
+      "kinds": [
+        "doctrine",
+        "thought_context"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed",
+        "thought:calculation"
+      ],
+      "cluster": "method_selection",
+      "thought": "thought:calculation",
+      "kind": "doctrine"
+    },
+    {
+      "source": "case",
+      "target": "elsif",
+      "kinds": [
+        "doctrine",
+        "thought_context"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed",
+        "thought:calculation"
+      ],
+      "cluster": "method_selection",
+      "thought": "thought:calculation",
+      "kind": "doctrine"
+    },
+    {
+      "source": "case",
+      "target": "if",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "case",
+      "target": "or",
+      "kinds": [
+        "co_mentioned",
+        "thought_context"
+      ],
+      "evidence": [
+        "definition of case",
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "case",
+      "target": "record",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "case",
+      "target": "select",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "case",
+      "target": "then",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "constant",
+      "target": "else",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "constant",
+      "target": "elsif",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "constant",
+      "target": "not",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of constant"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "constant",
+      "target": "of",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:map"
+      ],
+      "thought": "thought:map",
+      "kind": "thought_context"
+    },
+    {
+      "source": "constant",
+      "target": "or",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:melody",
+        "thought:map",
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "constant",
+      "target": "procedure",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "constant",
+      "target": "range",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "constant",
+      "target": "record",
+      "kinds": [
+        "doctrine",
+        "thought_context"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure",
+        "thought:melody",
+        "thought:map",
+        "thought:calculation"
+      ],
+      "cluster": "array_of_records",
+      "thought": "thought:calculation",
+      "kind": "doctrine"
+    },
+    {
+      "source": "declare",
+      "target": "of",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of declare"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "declare",
+      "target": "task",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of task",
+        "With Babbage, began a patient task to declare each part"
+      ],
+      "cluster": "with_babbage",
+      "kind": "doctrine"
+    },
+    {
+      "source": "declare",
+      "target": "with",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "With Babbage, began a patient task to declare each part"
+      ],
+      "cluster": "with_babbage",
+      "kind": "doctrine"
+    },
+    {
+      "source": "delay",
+      "target": "else",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "delay",
+      "target": "elsif",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of delay",
+        "definition of elsif",
+        "elsif the answer required another card, it could delay its work",
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "definition": "elsif the answer required another card, it could delay its work",
+      "cluster": "method_selection",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "delay",
+      "target": "if",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "delay",
+      "target": "select",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "delay",
+      "target": "then",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "delta",
+      "target": "not",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of delta"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "digits",
+      "target": "mod",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of digits",
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "digits",
+      "target": "or",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of digits"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "digits",
+      "target": "rem",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of digits",
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "digits",
+      "target": "reverse",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "digits",
+      "target": "use",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of digits",
+        "definition of use",
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "digits",
+      "target": "with",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of digits"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "do",
+      "target": "overriding",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "do this, yet pragma forbids overriding the design"
+      ],
+      "cluster": "design_pragma",
+      "kind": "doctrine"
+    },
+    {
+      "source": "do",
+      "target": "pragma",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of do",
+        "do this, yet pragma forbids overriding the design"
+      ],
+      "cluster": "design_pragma",
+      "kind": "doctrine"
+    },
+    {
+      "source": "else",
+      "target": "elsif",
+      "kinds": [
+        "doctrine",
+        "thought_context"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed",
+        "thought:calculation"
+      ],
+      "cluster": "method_selection",
+      "thought": "thought:calculation",
+      "kind": "doctrine"
+    },
+    {
+      "source": "else",
+      "target": "if",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "else",
+      "target": "or",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "else",
+      "target": "record",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "else",
+      "target": "select",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "else",
+      "target": "then",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "elsif",
+      "target": "if",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "elsif",
+      "target": "or",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "elsif",
+      "target": "record",
+      "kinds": [
+        "thought_context"
+      ],
+      "evidence": [
+        "thought:calculation"
+      ],
+      "thought": "thought:calculation",
+      "kind": "thought_context"
+    },
+    {
+      "source": "elsif",
+      "target": "select",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "elsif",
+      "target": "then",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "end",
+      "target": "exit",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "end",
+      "target": "loop",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "end",
+      "target": "of",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of end"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "end",
+      "target": "until",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of end",
+        "definition of until",
+        "follow rules until it reached the end of a calculation",
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "definition": "follow rules until it reached the end of a calculation",
+      "cluster": "loop_lifecycle",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "end",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "end",
+      "target": "while",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "entry",
+      "target": "protected",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of entry",
+        "definition of protected",
+        "a protected task might wait at an entry",
+        "protected task waits at an entry"
+      ],
+      "definition": "a protected task might wait at an entry",
+      "cluster": "protected_bay",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "entry",
+      "target": "task",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of entry",
+        "protected task waits at an entry"
+      ],
+      "cluster": "protected_bay",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exception",
+      "target": "for",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of exception"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "exception",
+      "target": "not",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of exception"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "exception",
+      "target": "null",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exception",
+      "target": "raise",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exception",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exit",
+      "target": "loop",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exit",
+      "target": "until",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "exit",
+      "target": "when",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of exit",
+        "definition of when",
+        "exit when the work was done",
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "definition": "exit when the work was done",
+      "cluster": "loop_lifecycle",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "exit",
+      "target": "while",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "for",
+      "target": "function",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of function"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "for",
+      "target": "loop",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of loop"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "for",
+      "target": "package",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "for",
+      "target": "private",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of for",
+        "definition of private",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "function",
+      "target": "in",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of function"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "generic",
+      "target": "interface",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "generic",
+      "target": "or",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of generic"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "generic",
+      "target": "subtype",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "generic",
+      "target": "synchronized",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "generic",
+      "target": "tagged",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "generic",
+      "target": "type",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "goto",
+      "target": "is",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "goto",
+      "target": "or",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of goto"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "goto",
+      "target": "renames",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "goto",
+      "target": "requeue",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "goto",
+      "target": "terminate",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "if",
+      "target": "select",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of if",
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "if",
+      "target": "then",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of if",
+        "definition of then",
+        "If the Engine received a question, then it could select a method",
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "definition": "If the Engine received a question, then it could select a method",
+      "cluster": "method_selection",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "in",
+      "target": "limited",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "in",
+      "target": "others",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of in",
+        "definition of others",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "in",
+      "target": "out",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of in",
+        "definition of out",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "in",
+      "target": "some",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of in",
+        "definition of some",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "interface",
+      "target": "subtype",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "interface",
+      "target": "synchronized",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of interface",
+        "definition of synchronized",
+        "an interface might be synchronized",
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "definition": "an interface might be synchronized",
+      "cluster": "typed_interface",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "interface",
+      "target": "tagged",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "interface",
+      "target": "type",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of type",
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "is",
+      "target": "renames",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "is",
+      "target": "requeue",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "is",
+      "target": "terminate",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of is",
+        "definition of terminate",
+        "nor would she terminate a question before its proof is complete",
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "definition": "nor would she terminate a question before its proof is complete",
+      "cluster": "inquiry_persistence",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "limited",
+      "target": "others",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "limited",
+      "target": "out",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "limited",
+      "target": "some",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "cluster": "parameter_modes",
+      "kind": "doctrine"
+    },
+    {
+      "source": "loop",
+      "target": "until",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "loop",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "loop",
+      "target": "while",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "mod",
+      "target": "or",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of mod"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "mod",
+      "target": "rem",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of mod",
+        "definition of rem",
+        "carry a remainder by rem or mod",
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "definition": "carry a remainder by rem or mod",
+      "cluster": "digit_remainder",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "mod",
+      "target": "reverse",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "mod",
+      "target": "use",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "new",
+      "target": "of",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of new",
+        "definition of of",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "new",
+      "target": "return",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of new",
+        "definition of return",
+        "return a new kind of thought",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "definition": "return a new kind of thought",
+      "cluster": "engine_of_thought",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "not",
+      "target": "null",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of null"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "not",
+      "target": "or",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "not",
+      "target": "raise",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of raise"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "not",
+      "target": "xor",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of xor",
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "null",
+      "target": "raise",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of null",
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "null",
+      "target": "when",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of null",
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "of",
+      "target": "or",
+      "kinds": [
+        "co_mentioned",
+        "thought_context"
+      ],
+      "evidence": [
+        "definition of or",
+        "thought:map"
+      ],
+      "thought": "thought:map",
+      "kind": "thought_context"
+    },
+    {
+      "source": "of",
+      "target": "package",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of package"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "of",
+      "target": "private",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of private"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "of",
+      "target": "record",
+      "kinds": [
+        "co_mentioned",
+        "thought_context"
+      ],
+      "evidence": [
+        "definition of record",
+        "thought:map"
+      ],
+      "thought": "thought:map",
+      "kind": "thought_context"
+    },
+    {
+      "source": "of",
+      "target": "return",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of return",
+        "accept symbols, abstract patterns, return a new kind of thought"
+      ],
+      "cluster": "engine_of_thought",
+      "kind": "doctrine"
+    },
+    {
+      "source": "of",
+      "target": "until",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of until"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "or",
+      "target": "record",
+      "kinds": [
+        "co_mentioned",
+        "shared_definition",
+        "thought_context"
+      ],
+      "evidence": [
+        "definition of or",
+        "definition of record",
+        "a record of a melody, a map, or a calculation",
+        "thought:melody",
+        "thought:map",
+        "thought:calculation"
+      ],
+      "definition": "a record of a melody, a map, or a calculation",
+      "thought": "thought:calculation",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "or",
+      "target": "rem",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of rem"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "or",
+      "target": "xor",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "and/or/xor/abs cannot replace imagination"
+      ],
+      "cluster": "logic_connectives",
+      "kind": "doctrine"
+    },
+    {
+      "source": "others",
+      "target": "out",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of others",
+        "definition of out",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "others",
+      "target": "some",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of others",
+        "definition of some",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "out",
+      "target": "some",
+      "kinds": [
+        "co_mentioned",
+        "doctrine",
+        "shared_definition"
+      ],
+      "evidence": [
+        "definition of out",
+        "definition of some",
+        "Some values would be in, others out",
+        "in/out/others/some; access limited, aliased with care"
+      ],
+      "definition": "Some values would be in, others out",
+      "cluster": "parameter_modes",
+      "kind": "shared_definition"
+    },
+    {
+      "source": "overriding",
+      "target": "pragma",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of pragma",
+        "do this, yet pragma forbids overriding the design"
+      ],
+      "cluster": "design_pragma",
+      "kind": "doctrine"
+    },
+    {
+      "source": "package",
+      "target": "private",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of private",
+        "package of ideas, private at first but meant for all"
+      ],
+      "cluster": "package_of_ideas",
+      "kind": "doctrine"
+    },
+    {
+      "source": "procedure",
+      "target": "range",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of range",
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "procedure",
+      "target": "record",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "protected",
+      "target": "task",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of protected",
+        "protected task waits at an entry"
+      ],
+      "cluster": "protected_bay",
+      "kind": "doctrine"
+    },
+    {
+      "source": "raise",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "when null, raise a signal — never hide it"
+      ],
+      "cluster": "null_doctrine",
+      "kind": "doctrine"
+    },
+    {
+      "source": "range",
+      "target": "record",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "array of records indexed over a range, altered by procedure"
+      ],
+      "cluster": "array_of_records",
+      "kind": "doctrine"
+    },
+    {
+      "source": "rem",
+      "target": "reverse",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "rem",
+      "target": "use",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "renames",
+      "target": "requeue",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "renames",
+      "target": "terminate",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "requeue",
+      "target": "terminate",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "not abort; requeue or goto evidence; never terminate before proof"
+      ],
+      "cluster": "inquiry_persistence",
+      "kind": "doctrine"
+    },
+    {
+      "source": "reverse",
+      "target": "use",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "use digits; rem or mod; reverse sequence"
+      ],
+      "cluster": "digit_remainder",
+      "kind": "doctrine"
+    },
+    {
+      "source": "reverse",
+      "target": "when",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of reverse"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "select",
+      "target": "then",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of select",
+        "definition of then",
+        "if/then select; case/elsif delay; else proceed"
+      ],
+      "cluster": "method_selection",
+      "kind": "doctrine"
+    },
+    {
+      "source": "subtype",
+      "target": "synchronized",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "subtype",
+      "target": "tagged",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "subtype",
+      "target": "type",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "synchronized",
+      "target": "tagged",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "synchronized",
+      "target": "type",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of type",
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "tagged",
+      "target": "type",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of tagged",
+        "definition of type",
+        "tagged type, synchronized interface, subtype bounds, generic instrument"
+      ],
+      "cluster": "typed_interface",
+      "kind": "doctrine"
+    },
+    {
+      "source": "task",
+      "target": "with",
+      "kinds": [
+        "co_mentioned",
+        "doctrine"
+      ],
+      "evidence": [
+        "definition of with",
+        "With Babbage, began a patient task to declare each part"
+      ],
+      "cluster": "with_babbage",
+      "kind": "doctrine"
+    },
+    {
+      "source": "until",
+      "target": "when",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "until",
+      "target": "while",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    },
+    {
+      "source": "use",
+      "target": "with",
+      "kinds": [
+        "co_mentioned"
+      ],
+      "evidence": [
+        "definition of use"
+      ],
+      "kind": "co_mentioned"
+    },
+    {
+      "source": "when",
+      "target": "while",
+      "kinds": [
+        "doctrine"
+      ],
+      "evidence": [
+        "loop begin, while condition, exit when done, until end"
+      ],
+      "cluster": "loop_lifecycle",
+      "kind": "doctrine"
+    }
+  ],
+  "thoughts": [
+    {
+      "id": "thought:melody",
+      "index": 0,
+      "kind": "melody",
+      "symbols": "Bernoulli sequence cards",
+      "pattern": "difference-engine recurrence",
+      "value": "B_n",
+      "related_keywords": [
+        "constant",
+        "or",
+        "record"
+      ]
+    },
+    {
+      "id": "thought:map",
+      "index": 1,
+      "kind": "map",
+      "symbols": "wheel · column · card",
+      "pattern": "declared design of the Analytical Engine",
+      "value": "larger_design",
+      "related_keywords": [
+        "constant",
+        "of",
+        "or",
+        "record"
+      ]
+    },
+    {
+      "id": "thought:calculation",
+      "index": 2,
+      "kind": "calculation",
+      "symbols": "question → method",
+      "pattern": "case / elsif / else selection over arithmetic cards",
+      "value": "named_difference",
+      "related_keywords": [
+        "case",
+        "constant",
+        "else",
+        "elsif",
+        "or",
+        "record"
+      ]
+    }
+  ],
+  "thought_links": [
+    {
+      "source": "case",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "constant",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "constant",
+      "target": "thought:map",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "constant",
+      "target": "thought:melody",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "else",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "elsif",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "of",
+      "target": "thought:map",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "or",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "or",
+      "target": "thought:map",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "or",
+      "target": "thought:melody",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "record",
+      "target": "thought:calculation",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "record",
+      "target": "thought:map",
+      "kind": "keyword_to_thought"
+    },
+    {
+      "source": "record",
+      "target": "thought:melody",
+      "kind": "keyword_to_thought"
+    }
+  ]
+}

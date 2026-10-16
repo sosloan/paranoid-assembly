@@ -19,6 +19,7 @@
 | **File** | `ada_thoughts.rb` |
 | **Source Prose** | `ada-reserved-words.txt` |
 | **Companion Index** | `writeups/ada-reserved-words.json` |
+| **Companion Feed** | `Ada-Feed.json` (keywords, definitions, relations) |
 | **Companion Database** | `Ada.db` (built by `generate_ada_db.rb`) |
 | **Origin** | Ada Lovelace reserved-word narrative, rendered as Ruby `Data` records |
 | **License** | Writeup text CC BY 4.0; reserved-word list is language vocabulary |
@@ -40,9 +41,11 @@
 # Ruby record translation of ada-reserved-words.txt
 # Subject: Ada Lovelace's Analytical Engine vision as typed thoughts
 # Companion index: writeups/ada-reserved-words.json
+# Companion feed:  Ada-Feed.json (keywords, definitions, relations)
 #
 #   ruby ada_thoughts.rb            print the package of thoughts
 #   ruby ada_thoughts.rb --check    self-test (exit 0 on success)
+#   ruby ada_thoughts.rb --feed     write Ada-Feed.json (keywords + defs + relations)
 #
 # "She saw an engine able to accept symbols, abstract their patterns,
 #  and return a new kind of thought."
@@ -253,10 +256,18 @@ module Ada_Thoughts
     # … count, uniqueness, null gates, arithmetic, reverse, lookup …
     true
   end
+
+  def build_feed
+    # … keywords, definitions, doctrine/co-mention/shared/thought relations …
+  end
+
+  def write_feed!(path = "Ada-Feed.json")
+    # … JSON.pretty_generate → Ada-Feed.json …
+  end
 end
 ```
 
-Seventy-three keywords, three thought kinds, and no path where null becomes a quiet zero.
+Seventy-three keywords, three thought kinds, and no path where null becomes a quiet zero. `Ada-Feed.json` freezes the catalog as a feed of definitions with auditable relations.
 
 ---
 

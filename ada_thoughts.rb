@@ -2,6 +2,11 @@
 # Ruby record translation of ada-reserved-words.txt
 # Subject: Ada Lovelace's Analytical Engine vision as typed thoughts
 # Companion index: writeups/ada-reserved-words.json
+# Companion feed:  Ada-Feed.json (keywords, definitions, relations)
+#
+#   ruby ada_thoughts.rb            print the package of thoughts
+#   ruby ada_thoughts.rb --check    self-test (exit 0 on success)
+#   ruby ada_thoughts.rb --feed     write Ada-Feed.json (keywords + defs + relations)
 # Companion database: Ada.db (via generate_ada_db.rb)
 #
 #   ruby ada_thoughts.rb            print the package of thoughts
@@ -280,12 +285,225 @@ module Ada_Thoughts
 
     true
   end
+
+  # Narrative doctrine clusters used when building Ada-Feed.json relations.
+  DOCTRINE_CLUSTERS = [
+    { id: "engine_of_thought", words: %w[accept abstract return new of],
+      note: "accept symbols, abstract patterns, return a new kind of thought" },
+    { id: "null_doctrine", words: %w[null raise exception when],
+      note: "when null, raise a signal — never hide it" },
+    { id: "package_of_ideas", words: %w[package private all at for],
+      note: "package of ideas, private at first but meant for all" },
+    { id: "protected_bay", words: %w[protected task entry],
+      note: "protected task waits at an entry" },
+    { id: "method_selection", words: %w[if then select case elsif else delay],
+      note: "if/then select; case/elsif delay; else proceed" },
+    { id: "loop_lifecycle", words: %w[loop begin while exit when until end],
+      note: "loop begin, while condition, exit when done, until end" },
+    { id: "array_of_records", words: %w[array range record procedure constant],
+      note: "array of records indexed over a range, altered by procedure" },
+    { id: "digit_remainder", words: %w[use digits rem mod reverse],
+      note: "use digits; rem or mod; reverse sequence" },
+    { id: "parameter_modes", words: %w[in out others some access limited aliased],
+      note: "in/out/others/some; access limited, aliased with care" },
+    { id: "typed_interface", words: %w[type tagged interface synchronized subtype generic],
+      note: "tagged type, synchronized interface, subtype bounds, generic instrument" },
+    { id: "design_pragma", words: %w[pragma do overriding],
+      note: "do this, yet pragma forbids overriding the design" },
+    { id: "inquiry_persistence", words: %w[abort requeue goto begin terminate renames is],
+      note: "not abort; requeue or goto evidence; never terminate before proof" },
+    { id: "function_spirit", words: %w[function body],
+      note: "Bernoulli plan was a function in spirit; Engine had no body" },
+    { id: "logic_connectives", words: %w[and or xor not abs],
+      note: "and/or/xor/abs cannot replace imagination" },
+    { id: "with_babbage", words: %w[with task declare],
+      note: "With Babbage, began a patient task to declare each part" },
+    { id: "separate_parts", words: %w[separate],
+      note: "separate parts work together without confusing one another" },
+    { id: "delta_named", words: %w[delta],
+      note: "delta is a difference the Engine could name" }
+  ].freeze
+
+  def word_in_text?(text, word)
+    text.to_s.downcase.match?(/(?<![a-z])#{Regexp.escape(word.to_s.downcase)}(?![a-z])/)
+  end
+
+  def primary_relation_kind(kinds)
+    return "shared_definition" if kinds.include?("shared_definition")
+    return "doctrine" if kinds.include?("doctrine")
+    return "thought_context" if kinds.include?("thought_context")
+
+    "co_mentioned"
+  end
+
+  # Keywords + definitions + relations feed (Ada-Feed.json).
+  def build_feed
+    words = word_list
+    word_set = words.each_with_object({}) { |w, h| h[w] = true }
+
+    definitions = KEYWORDS.each_with_index.map do |k, i|
+      {
+        "id" => "def:#{k.word}",
+        "keyword" => k.word,
+        "index" => i,
+        "text" => k.passage
+      }
+    end
+
+    edge_set = {}
+    add_edge = lambda do |a, b, kind, evidence: nil, **extra|
+      x, y = [a, b].minmax
+      key = "#{x}::#{y}"
+      e = edge_set[key] ||= { "source" => x, "target" => y, "kinds" => [], "evidence" => [] }
+      e["kinds"] << kind unless e["kinds"].include?(kind)
+      Array(evidence).each { |ev| e["evidence"] << ev unless e["evidence"].include?(ev) }
+      extra.each { |mk, mv| e[mk.to_s] = mv }
+      e
+    end
+
+    KEYWORDS.each do |k|
+      words.each do |w|
+        next if w == k.word
+        next unless word_in_text?(k.passage, w)
+
+        add_edge.call(k.word, w, "co_mentioned", evidence: "definition of #{k.word}")
+      end
+    end
+
+    KEYWORDS.group_by(&:passage).each do |passage, ks|
+      next if ks.length < 2
+
+      ks.combination(2).each do |ka, kb|
+        add_edge.call(ka.word, kb.word, "shared_definition", evidence: passage, definition: passage)
+      end
+    end
+
+    DOCTRINE_CLUSTERS.each do |cluster|
+      present = cluster[:words].select { |w| word_set[w] }
+      present.combination(2).each do |a, b|
+        add_edge.call(a, b, "doctrine", evidence: cluster[:note], cluster: cluster[:id])
+      end
+    end
+
+    thoughts = THOUGHTS.each_with_index.map do |t, i|
+      blob = [t.kind, t.symbols, t.pattern, t.value].join(" ")
+      related = words.select { |w| word_in_text?(blob, w) }
+      # Prose: a record of a melody, a map, or a calculation.
+      related |= %w[record or constant]
+      {
+        "id" => "thought:#{t.kind}",
+        "index" => i,
+        "kind" => t.kind.to_s,
+        "symbols" => t.symbols,
+        "pattern" => t.pattern,
+        "value" => t.value.to_s,
+        "related_keywords" => related.uniq.sort
+      }
+    end
+
+    thoughts.each do |t|
+      t["related_keywords"].combination(2).each do |a, b|
+        next unless word_set[a] && word_set[b]
+
+        add_edge.call(a, b, "thought_context", evidence: t["id"], thought: t["id"])
+      end
+    end
+
+    relations = edge_set.values.map do |e|
+      e["kinds"] = e["kinds"].uniq.sort
+      e["evidence"] = Array(e["evidence"]).uniq
+      e["kind"] = primary_relation_kind(e["kinds"])
+      e
+    end.sort_by { |e| [e["source"], e["target"]] }
+
+    rel_index = Hash.new { |h, k| h[k] = [] }
+    relations.each do |e|
+      rel_index[e["source"]] << e
+      rel_index[e["target"]] << e
+    end
+
+    keywords = KEYWORDS.each_with_index.map do |k, i|
+      rels = rel_index[k.word]
+        .map { |e| e["source"] == k.word ? e["target"] : e["source"] }
+        .zip(rel_index[k.word])
+        .group_by(&:first)
+        .map do |other, pairs|
+          kinds = pairs.flat_map { |(_, e)| e["kinds"] }.uniq.sort
+          { "keyword" => other, "kind" => primary_relation_kind(kinds), "kinds" => kinds }
+        end
+        .sort_by { |r| r["keyword"] }
+
+      {
+        "id" => k.word,
+        "index" => i,
+        "keyword" => k.word,
+        "definition_id" => "def:#{k.word}",
+        "definition" => k.passage,
+        "relations" => rels
+      }
+    end
+
+    thought_links = thoughts.flat_map do |t|
+      t["related_keywords"].map do |w|
+        { "source" => w, "target" => t["id"], "kind" => "keyword_to_thought" }
+      end
+    end.sort_by { |l| [l["source"], l["target"]] }
+
+    {
+      "feed" => "Ada-Feed",
+      "version" => "1.0",
+      "title" => "Ada Lovelace Keyword Feed",
+      "description" => "Keywords, definitions, and relations generated from ada_thoughts.rb (Ada_Thoughts::KEYWORDS / THOUGHTS), grounded in ada-reserved-words.txt.",
+      "source" => {
+        "module" => "Ada_Thoughts",
+        "ruby" => "ada_thoughts.rb",
+        "prose" => "ada-reserved-words.txt",
+        "companion_index" => "writeups/ada-reserved-words.json"
+      },
+      "counts" => {
+        "keywords" => keywords.length,
+        "definitions" => definitions.length,
+        "relations" => relations.length,
+        "thoughts" => thoughts.length,
+        "thought_links" => thought_links.length,
+        "doctrine_clusters" => DOCTRINE_CLUSTERS.length
+      },
+      "thought_kinds" => Thought_Kind.map(&:to_s),
+      "doctrine_clusters" => DOCTRINE_CLUSTERS.map { |c|
+        { "id" => c[:id], "keywords" => c[:words].select { |w| word_set[w] }, "note" => c[:note] }
+      },
+      "keywords" => keywords,
+      "definitions" => definitions,
+      "relations" => relations,
+      "thoughts" => thoughts,
+      "thought_links" => thought_links
+    }
+  end
+
+  def write_feed!(path = "Ada-Feed.json")
+    require "json"
+
+    feed = build_feed
+    raise "feed keyword count #{feed["keywords"].length} != #{KEYWORD_COUNT}" if feed["keywords"].length != KEYWORD_COUNT
+    raise "feed definition count mismatch" if feed["definitions"].length != KEYWORD_COUNT
+
+    File.write(path, JSON.pretty_generate(feed) + "\n")
+    feed
+  end
 end
 
 if $PROGRAM_NAME == __FILE__
   if ARGV.include?("--check")
     Ada_Thoughts.self_check!
     puts "Ada_Thoughts self-check passed (#{Ada_Thoughts::KEYWORD_COUNT} keywords, #{Ada_Thoughts::THOUGHTS.length} thoughts)."
+    exit 0
+  end
+
+  if ARGV.include?("--feed")
+    Ada_Thoughts.self_check!
+    path = "Ada-Feed.json"
+    feed = Ada_Thoughts.write_feed!(path)
+    puts "Wrote #{path} (#{feed["counts"]["keywords"]} keywords, #{feed["counts"]["definitions"]} definitions, #{feed["counts"]["relations"]} relations)."
     exit 0
   end
 
