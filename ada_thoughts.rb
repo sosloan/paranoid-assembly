@@ -7,6 +7,11 @@
 #   ruby ada_thoughts.rb            print the package of thoughts
 #   ruby ada_thoughts.rb --check    self-test (exit 0 on success)
 #   ruby ada_thoughts.rb --feed     write Ada-Feed.json (keywords + defs + relations)
+# Companion database: Ada.db (via generate_ada_db.rb)
+#
+#   ruby ada_thoughts.rb            print the package of thoughts
+#   ruby ada_thoughts.rb --check    self-test (exit 0 on success)
+#   ruby generate_ada_db.rb         build Ada.db keywords/definitions/relations
 #
 # "She saw an engine able to accept symbols, abstract their patterns,
 #  and return a new kind of thought."
