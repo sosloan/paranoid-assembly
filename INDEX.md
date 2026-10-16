@@ -95,6 +95,13 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 **Status:** Complete
 **Link:** [writeups/ADA_THOUGHTS_POWER.md](writeups/ADA_THOUGHTS_POWER.md)
 **Ruby:** [ada_thoughts.rb](ada_thoughts.rb)
+### ADA_REAL_TIME_POWER.md
+**Routine:** `ada_real_time.ads` (`package Ada.Real_Time`, RavenSPARK / ProfileR1 subset)
+**Focus:** Protected `ClockTime` own variable, private `Time`/`Time_Span` algebra, static period constructors, epoch `Clock` at elaboration
+**Theme:** Typed time as shared state — instants are not intervals, and periods must exist before tasks run
+**Status:** Complete
+**Link:** [writeups/ADA_REAL_TIME_POWER.md](writeups/ADA_REAL_TIME_POWER.md)
+**Ada:** [ada_real_time.ads](ada_real_time.ads) · companion [ada_synchronous_task_control.ads](ada_synchronous_task_control.ads)
 
 ---
 
