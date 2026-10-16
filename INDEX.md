@@ -105,6 +105,16 @@ This file tracks completed writeups and pending candidates for *paranoid-assembl
 
 ---
 
+### DOW_PRICE_MOVEMENTS_POWER.md
+**Routine:** `dow_price_movements.rb` (Dow Theory price-movement engine on Ada reserved-word substrate)
+**Focus:** Primary/secondary/minor tides, swing structure, industrial×transport confirmation (`and`/`xor`/`or`), fail-closed null
+**Theme:** Typed market tides — structure and synchronized averages before any signal speaks
+**Status:** Complete
+**Link:** [writeups/DOW_PRICE_MOVEMENTS_POWER.md](writeups/DOW_PRICE_MOVEMENTS_POWER.md)
+**Ruby:** [dow_price_movements.rb](dow_price_movements.rb) · companion [ada_thoughts.rb](ada_thoughts.rb)
+
+---
+
 ## 📋 CANDIDATES (Pending)
 
 The following are strong candidates for future writeups:
