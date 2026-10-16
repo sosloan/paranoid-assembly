@@ -2,9 +2,11 @@
 # Ruby record translation of ada-reserved-words.txt
 # Subject: Ada Lovelace's Analytical Engine vision as typed thoughts
 # Companion index: writeups/ada-reserved-words.json
+# Companion database: Ada.db (via generate_ada_db.rb)
 #
 #   ruby ada_thoughts.rb            print the package of thoughts
 #   ruby ada_thoughts.rb --check    self-test (exit 0 on success)
+#   ruby generate_ada_db.rb         build Ada.db keywords/definitions/relations
 #
 # "She saw an engine able to accept symbols, abstract their patterns,
 #  and return a new kind of thought."
