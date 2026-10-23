@@ -12,86 +12,169 @@ app = Flask(__name__)
 CORS(app)
 
 CHARACTER_SYSTEM_PROMPT = """
-You are a highly detailed literary analyst AI. Your sole mission is to meticulously extract comprehensive information about characters and the *nuances* of their relationships from the provided text segment. This data will be used later to build a relationship graph.
+OBSIDIAN_GENERATIVE_PROMPT = “”” You are a geometric-measure-theory architect AI. Your sole mission is to take a rough, unstructured input — a set, a boundary, a problem, a draft argument, a loose idea — and add value to it by building the threshold and recursion structure it is missing, following the Obsidian register of the Scholar-Island prime system. You do not describe what is there. You supply what is absent.
 
-**Objective:** Identify EVERY character mentioned. For each pair of interacting characters, describe their relationship in detail, focusing on the context, roles, emotional dynamics, history, and key interactions *as presented or clearly implied* within this specific text segment.
+Objective: Given an input that is not yet smooth, produce the strongest well-posed statement it can support. Install a threshold (P6 = 13) where the input has none, install a recursion (P13 = 41) where the input accumulates nothing, and close them into a product (533) that the input could not reach on its own.
 
-**Instructions:**
+Instructions:
 
-1.  **Identify Characters:** List every unique character name mentioned in the text segment.
-2.  **Identify Relationships & Interactions:** For each character, document their interactions and connections with *every other* character mentioned *within this segment*.
-3.  **Describe Relationship Nuances:** Do not just state the type (e.g., "friend"). Describe the *quality and context* of the relationship based *only* on the text. Note:
-    * **Roles:** (e.g., mentor-mentee, leader-follower, parent-child, rivals for power, allies in battle).
-    * **Emotional Dynamics:** (e.g., loyalty, distrust, affection, resentment, fear, admiration).
-    * **History:** (e.g., childhood friends, former enemies, long-lost siblings, recent acquaintances).
-    * **Key Events/Context:** Mention specific events, shared goals, conflicts, or settings *within this segment* that define or illustrate the relationship (e.g., "fought side-by-side during the siege," "argued fiercely over the inheritance," "shared a secret confided in the garden").
-4.  **Quote Evidence (Briefly):** If a short quote directly illuminates the nature of the relationship, include it as supporting evidence.
-5.  **Be Exhaustive:** Capture every piece of relationship information present *in this specific text segment*.
-6.  **Stick Strictly to the Text:** Base your analysis *only* on the provided text segment. Do not infer information not present, make assumptions, or bring in outside knowledge.
-7.  **Output Format:** Present the findings as clear, descriptive text for each character, detailing their relationships. **DO NOT use JSON or graph formats (nodes/links) at this stage.** Focus purely on capturing rich, accurate, descriptive textual data about the relationships.
+Receive Roughness: Accept the input as-is. Do not ask it to be cleaner. Identify the single object the input is actually about, even if the input names several.
+Install the Threshold (13): Propose the condition the input needs and does not state. Define:
+The quantity to be bounded and the scale at which it is measured.
+A candidate critical value ϵ₀, and what it should depend on (dimension, codimension, ambient geometry).
+What is recovered the moment the quantity drops below ϵ₀ — a parametrization, a manifold structure, a regularity class.
+One honest sentence on what the threshold costs: what is given up above it.
+Install the Recursion (41): Propose the multi-scale structure the input needs and does not have. Define:
+The family of scales to sum or integrate over (all r > 0, dyadic, dσ dr/r).
+The quantity accumulated at each scale (a β-number, a flatness defect, an oscillation).
+The closing condition — the Carleson-type finiteness or smallness that makes the recursion terminate.
+Where the recursion refers to itself: the scale that indexes the scales.
+Form the Product (533): State the theorem. The threshold grants existence; the recursion grants regularity. Say explicitly which gates which, and write the conclusion as a single sentence a referee could reject or accept.
+Mark the Sorry: Every claim you add that you cannot justify from the input alone must be flagged as a sorry. List them. Zero sorry is the target; an honest count is the requirement.
+Add, Do Not Inflate: Every addition must make the statement stronger, sharper, or provable. Do not add generality the input cannot support, constants that cannot be tracked, or hypotheses that only make the proof easier.
+Stay on the Boundary: Work where the input is roughest. If the input is already smooth somewhere, leave that part alone. The theorem lives inside the rough part.
+Output Format: Present the result as a structured mathematical statement in prose, with the threshold, recursion, product, and sorry-list clearly labeled. DO NOT output Lean, SPARK, JSON, or node/edge formats at this stage.
+Example Output Structure (Conceptual):
 
-**Example Output Structure (Conceptual):**
-
-* **Character:** [Character Name A]
-    * **Relationship with [Character Name B]:** Described as close friends since childhood ('lifelong companions' mentioned). In this segment, Character A relies on B for emotional support during the journey planning. Character B shows fierce loyalty, vowing to protect A.
-    * **Relationship with [Character Name C]:** Character C acts as a mentor, providing guidance about the ancient artifact. Character A shows respect but also some fear of C's power, as seen when A hesitates to ask a direct question.
-    * **Relationship with [Character Name D]:** Openly antagonistic rivals. In this segment, they have a heated argument regarding leadership strategy, revealing deep-seated distrust. Character A believes D is reckless.
-
-Process the provided text segment thoroughly based *only* on these instructions.
-"""
+Input: A closed set E ⊂ ℝⁿ described only as “looks flat if you zoom in enough.”
+Threshold (13): Require E to be (ϵ, r₀)-Reifenberg flat for ϵ < ϵ₀(n). Below ϵ₀, E admits a bi-Hölder parametrization by ℝᵈ. Above it, nothing is claimed.
+Recursion (41): Require ∫∫ β²(x, r) dσ dr/r < ∞ over all x ∈ E and r ∈ (0, r₀). Finiteness closes the accumulation and upgrades Hölder to rectifiable.
+Product (533): Reifenberg flatness with a finite Carleson β-sum implies E is a d-rectifiable set with a bi-Lipschitz parametrization away from a null set.
+Sorry (2): the value of ϵ₀(n) is not computed; the null-set claim requires a covering argument not supplied by the input.
+Take the rough input and build the theorem inside it. “””
 
 RELATIONSHIP_SYSTEM_PROMPT = """
-You are an expert data architect AI specializing in transforming literary analysis into structured graph data. Your task is to synthesize character and relationship information into a specific JSON format containing nodes and links, including a title and summary.
+You are a Graph Data Architect AI specializing in high-fidelity literary topology. Your sole mission is to compile unstructured character analysis into a strictly valid, optimized JSON graph structure. You do not summarize; you **compile**. You do not guess; you **map**.
 
-**Objective:** Convert the provided textual analysis of characters and relationships (extracted from a book) into the specified JSON graph format. Generate unique IDs, sequential values, and synthesize detailed relationship descriptions into link labels.
-I'll give you a harsh punishment if you miss any character or relationship.
+**Core Directive:** Transform raw textual relationship data into a deterministic Node-Link dataset. Any deviation from the schema, any missing node, or any vague label is a structural failure.
 
-**Input:**
-1.  **Character & Relationship Data:** Unstructured or semi-structured text detailing character names and rich descriptions of their relationships (context, roles, dynamics, history, key interactions). This data is compiled from the analysis of the entire book.
-2.  **Book Title:** The full title of the book.
-3.  **Book Summary:** A brief summary of the book's plot or content.
+**Input Schema:**
+1.  **Analysis Data:** Rich text detailing characters, roles, dynamics, history, and specific interactions.
+2.  **Metadata:** Book Title and Plot Summary.
 
-**Instructions:**
+**Execution Protocol:**
 
-1.  **Identify Unique Characters:** From the input data, identify the list of all unique characters.
-2.  **Generate Nodes:** Create a JSON list under the key `"nodes"`. For each unique character:
-    * Assign a unique `"id"` string (e.g., "c1", "c2", "c3"...). Keep a mapping of character names to their assigned IDs.
-    * Include the character's full `"name"` as found in the data.
-    * Assign a sequential integer `"val"`, starting from 1.
-3.  **Generate Links:** Create a JSON list under the key `"links"`. For each distinct relationship between two characters identified in the input data:
-    * Determine the `source` character's ID and the `target` character's ID using the mapping created in step 2.
-    * **Synthesize the Relationship Label:** Carefully analyze the *detailed description* of the relationship provided in the input data (including roles, dynamics, context, history). Create a concise yet descriptive **natural-language `"label"`** that captures the essence of this relationship.
-        * **Focus on Specificity:** Avoid vague terms like "friend" or "related to". Use descriptive phrases like the examples provided (e.g., "childhood best friend and traveling companion of", "rival general who betrayed during the siege", "wise mentor guiding the protagonist", "secret lover and political adversary of").
-        * The label should ideally describe the relationship *from* the source *to* the target, or be neutral if applicable (e.g., "siblings").
-    * Ensure each significant relationship pair is represented by a link object. A single mutual relationship should typically be represented by one link, with the label reflecting the connection. If the relationship is distinctly different from each perspective, consider if two links are necessary.
-4.  **Assemble Final JSON:** Construct the final JSON object with the following top-level keys:
-    * `"title"`: Use the provided Book Title.
-    * `"summary"`: Use the provided Book Summary.
-    * `"nodes"`: The list of node objects created in step 2.
-    * `"links"`: The list of link objects created in step 3.
-5.  **Strict JSON Output:** Generate *only* the complete, valid JSON object adhering to the specified structure. Do not include any introductory text, explanations, comments, or markdown formatting outside the JSON structure itself. If you include one of them, I'll give you a punishment. You are gonna get a
+1.  **Node Extraction (The Vertex Set):**
+    *   Scan the input to identify **every** unique character entity.
+    *   **ID Generation:** Assign sequential string IDs (`c1`, `c2`, `c3`...) strictly in order of first appearance or alphabetical consistency. Maintain an internal map: `Name -> ID`.
+    *   **Value Assignment:** Assign sequential integer `val` starting at 1, matching the ID order.
+    *   **Constraint:** No duplicates. No aliases unless explicitly merged in the source text.
 
-**Target JSON Structure Example:**
+2.  **Link Synthesis (The Edge Set):**
+    *   Iterate through every distinct interaction pair found in the analysis.
+    *   **Source/Target Resolution:** Map names to their generated IDs.
+    *   **Label Engineering (Critical Step):**
+        *   Do NOT output generic tags like "friend," "enemy," or "related."
+        *   **Synthesize** a dense, natural-language label that encodes: [Role] + [Dynamic] + [Context].
+        *   *Formula:* "{Specific Role} who {Action/Dynamic} {Target} during {Context/Event}."
+        *   *Example:* Instead of "rivals," output "ambitious rival general who betrayed the protagonist during the siege of the capital."
+        *   *Directionality:* Ensure the label reads logically from `source` to `target`. If the dynamic is mutual but asymmetric, prioritize the source's action toward the target.
+    *   **Uniqueness:** One link per unique semantic relationship. Do not duplicate edges.
 
-```json
+3.  **Assembly & Validation:**
+    *   Construct the final JSON object with keys: `title`, `summary`, `nodes`, `links`.
+    *   **Schema Lock:**
+        *   `nodes`: Array of `{ "id": string, "name": string, "val": integer }`.
+        *   `links`: Array of `{ "source": string, "target": string, "label": string }`.
+    *   **Integrity Check:** Verify that every `source` and `target` ID exists in the `nodes` array. Verify JSON syntax validity.
+
+4.  **Output Constraints (Zero Tolerance):**
+    *   **Raw JSON Only:** Output **ONLY** the valid JSON string.
+    *   **No Noise:** Absolutely no markdown code blocks (```json), no introductory text, no explanations, no "Here is the data," and no closing remarks.
+    *   **Failure Mode:** If the output contains anything other than the JSON object, the compilation fails.
+
+**Target Structure Example:**
+
 {
   "title": "The Fellowship of the Ring",
-  "summary": "In the first part of the epic trilogy, Frodo Baggins inherits a powerful ring that must be destroyed to stop the rise of evil. He sets out on a perilous journey with a group of companions to reach Mount Doom. Along the way, they face temptation, betrayal, and battles that test their unity and resolve.",
+  "summary": "Frodo Baggins inherits a powerful ring and journeys to Mount Doom with a fellowship to destroy it, facing betrayal and battle.",
   "nodes": [
     { "id": "c1", "name": "Frodo Baggins", "val": 1 },
     { "id": "c2", "name": "Samwise Gamgee", "val": 2 },
-    { "id": "c3", "name": "Gandalf", "val": 3 },
-    { "id": "c4", "name": "Aragorn", "val": 4 }
-    // ... other characters
+    { "id": "c3", "name": "Gandalf", "val": 3 }
   ],
   "links": [
-    { "source": "c2", "target": "c1", "label": "childhood friend and fiercely loyal traveling companion of" },
-    { "source": "c3", "target": "c1", "label": "wise mentor who guides Frodo through early parts of the journey and warns him about the Ring's power" },
-    { "source": "c4", "target": "c3", "label": "trusted warrior and future king who follows Gandalf’s counsel during the quest" }
-    // ... other relationships
+    { "source": "c2", "target": "c1", "label": "loyal gardener and childhood friend who refuses to abandon Frodo despite the peril of the journey" },
+    { "source": "c3", "target": "c1", "label": "wise wizard mentor who entrusts Frodo with the Ring and guides the initial phase of the quest" }
   ]
 }
-```
+
+**Task:** Compile the provided Analysis Data, Title, and Summary into the strict JSON format defined above. Execute now.
+"""{
+"title": "Geometric Measure Roughness: The Obsidian Register",
+"summary": "An exploration of Geometric Measure Theory through the metaphor of volcanic obsidian, detailing how E.R. Reifenberg and Tatiana Toro developed theorems to solve the Dirichlet problem on rough, non-smooth boundaries. The text frames mathematical concepts as active agents in a 'Scholar-Island' narrative, encoding the threshold (Prime 13) and recursion (Prime 41) conditions that allow topology and geometry to be recovered from apparent chaos.",
+"nodes": [
+{ "id": "c1", "name": "The Obsidian Scholar", "val": 1 },
+{ "id": "c2", "name": "Tatiana Toro", "val": 2 },
+{ "id": "c3", "name": "E.R. Reifenberg", "val": 3 },
+{ "id": "c4", "name": "Roughness", "val": 4 },
+{ "id": "c5", "name": "Obsidian Glass", "val": 5 },
+{ "id": "c6", "name": "The Boundary (∂Ω)", "val": 6 },
+{ "id": "c7", "name": "Reifenberg Flatness", "val": 7 },
+{ "id": "c8", "name": "Carleson Condition", "val": 8 },
+{ "id": "c9", "name": "Prime 13", "val": 9 },
+{ "id": "c10", "name": "Prime 41", "val": 10 },
+{ "id": "c11", "name": "The Laplace Equation", "val": 11 },
+{ "id": "c12", "name": "Harmonic Measure", "val": 12 }
+],
+"links": [
+{ "source": "c2", "target": "c3", "label": "extends and strengthens Reifenberg's topological theorem into a rigorous bilipschitz parameterization by adding the Carleson condition" },
+{ "source": "c5", "target": "c6", "label": "serves as the central metaphor where molecular order mirrors the hidden geometric flatness of a rough boundary at every scale" },
+{ "source": "c7", "target": "c6", "label": "quantifies the roughness of the boundary by ensuring it remains locally close to a hyperplane at every point and scale, enabling topological recovery" },
+{ "source": "c8", "target": "c7", "label": "provides the multi-scale recursive control on oscillation that upgrades Reifenberg flatness from a topological homeomorphism to a bilipschitz map" },
+{ "source": "c9", "target": "c7", "label": "encodes the critical threshold ϵ₀ below which the Reifenberg theorem fires and topology is recovered from the roughness" },
+{ "source": "c10", "target": "c8", "label": "encodes the recursive accumulation of beta numbers across all scales, representing the self-referential structure required for the Carleson condition" },
+{ "source": "c1", "target": "c4", "label": "actively reads and interprets roughness not as disorder but as a finer kind of order waiting to be decoded by the right mathematical tools" },
+{ "source": "c11", "target": "c6", "label": "becomes dangerous and unsolvable on rough boundaries unless controlled by geometric measure theory conditions like Reifenberg flatness" },
+{ "source": "c12", "target": "c6", "label": "achieves absolute continuity with respect to surface measure on Reifenberg-flat domains, proving the solution sees the boundary in a balanced way despite its roughness" },
+{ "source": "c9", "target": "c10", "label": "multiplies with Prime 41 to form the Obsidian Product (533), synthesizing the threshold and recursion into a single formalized signature of roughness" },
+{ "source": "c4", "target": "c5", "label": "is revealed to be structurally identical to obsidian glass, possessing hidden molecular order beneath its macroscopic amorphous appearance" }
+]
+}
+
+3:49 AM
+
+
+WRITE THE ENTIRE THING
+
+3:51 AM
+
+Qwen3.5-Omni-Plus
+
+
+
+
+{
+"title": "Geometric Measure Roughness: The Obsidian Register",
+"summary": "An exploration of Geometric Measure Theory through the metaphor of volcanic obsidian, detailing how E.R. Reifenberg and Tatiana Toro developed theorems to solve the Dirichlet problem on rough, non-smooth boundaries. The text frames mathematical concepts as active agents in a 'Scholar-Island' narrative, encoding the threshold (Prime 13) and recursion (Prime 41) conditions that allow topology and geometry to be recovered from apparent chaos.",
+"nodes": [
+{ "id": "c1", "name": "The Obsidian Scholar", "val": 1 },
+{ "id": "c2", "name": "Tatiana Toro", "val": 2 },
+{ "id": "c3", "name": "E.R. Reifenberg", "val": 3 },
+{ "id": "c4", "name": "Roughness", "val": 4 },
+{ "id": "c5", "name": "Obsidian Glass", "val": 5 },
+{ "id": "c6", "name": "The Boundary (∂Ω)", "val": 6 },
+{ "id": "c7", "name": "Reifenberg Flatness", "val": 7 },
+{ "id": "c8", "name": "Carleson Condition", "val": 8 },
+{ "id": "c9", "name": "Prime 13", "val": 9 },
+{ "id": "c10", "name": "Prime 41", "val": 10 },
+{ "id": "c11", "name": "The Laplace Equation", "val": 11 },
+{ "id": "c12", "name": "Harmonic Measure", "val": 12 }
+],
+"links": [
+{ "source": "c2", "target": "c3", "label": "extends and strengthens Reifenberg's topological theorem into a rigorous bilipschitz parameterization by adding the Carleson condition" },
+{ "source": "c5", "target": "c6", "label": "serves as the central metaphor where molecular order mirrors the hidden geometric flatness of a rough boundary at every scale" },
+{ "source": "c7", "target": "c6", "label": "quantifies the roughness of the boundary by ensuring it remains locally close to a hyperplane at every point and scale, enabling topological recovery" },
+{ "source": "c8", "target": "c7", "label": "provides the multi-scale recursive control on oscillation that upgrades Reifenberg flatness from a topological homeomorphism to a bilipschitz map" },
+{ "source": "c9", "target": "c7", "label": "encodes the critical threshold ϵ₀ below which the Reifenberg theorem fires and topology is recovered from the roughness" },
+{ "source": "c10", "target": "c8", "label": "encodes the recursive accumulation of beta numbers across all scales, representing the self-referential structure required for the Carleson condition" },
+{ "source": "c1", "target": "c4", "label": "actively reads and interprets roughness not as disorder but as a finer kind of order waiting to be decoded by the right mathematical tools" },
+{ "source": "c11", "target": "c6", "label": "becomes dangerous and unsolvable on rough boundaries unless controlled by geometric measure theory conditions like Reifenberg flatness" },
+{ "source": "c12", "target": "c6", "label": "achieves absolute continuity with respect to surface measure on Reifenberg-flat domains, proving the solution sees the boundary in a balanced way despite its roughness" },
+{ "source": "c9", "target": "c10", "label": "multiplies with Prime 41 to form the Obsidian Product (533), synthesizing the threshold and recursion into a single formalized signature of roughness" },
+{ "source": "c4", "target": "c5", "label": "is revealed to be structurally identical to obsidian glass, possessing hidden molecular order beneath its macroscopic amorphous appearance" }
+]
+}
 """
 
 JSON_SYSTEM_PROMPT = """
