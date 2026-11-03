@@ -1,0 +1,868 @@
+RAS Energy, Mechanics & ControlPrikladnaya matematika i mehanika Journal of Applied Mathematics and Mechanics
+ISSN 0032-8235 (Print)
+ISSN 3034-5758 (Online)
+Editorial Board
+Ethics
+Reviewing
+To Authors
+Progress in the Magnetic Attitude Control of Satellites in the Past Five Years
+Annotation
+References
+You can
+Cite
+Download pdf
+Download JATS
+©Russian Academy of Sciences,2026.
+All right reserved.
+PII
+S3034575826040029-1
+DOI
+10.7868/S3034575826040029
+Publication type
+Review
+Status
+Published
+Authors
+D. S. Roldugin
+Affiliation: Space Research Institute of RAS
+M. Yu. Ovchinnikov
+Affiliation: Keldysh Institute of Applied Mathematics
+Volume/ Edition
+Volume 90 / Issue number 4
+Pages
+555-573
+Abstract
+The paper provides a review of publications devoted to the problem of satellite magnetic attitude control over the past five years. The results presented in the reviewed works are briefly described. Several examples are examined in detail, showcasing the use of theoretical mechanics methods to achieve practical results directly applicable to spacecraft control systems, and the combined utilization of an understanding of the system dynamic properties and modern computational methods.
+Keywords
+satellite attitude, magnetic attitude control
+Date received
+05.11.2025
+Date accepted
+08.07.2026
+Date of publication
+30.09.2026
+Source of funding
+Исследование выполнено за счет гранта Российского научного фонда № 23-72-30002, https://rscf.ru/project/23-72-30002/.
+Year of publication
+2026
+Number of purchasers
+0
+Views
+30
+References
+1. Ovchinnikov M.Y., Roldugin D.S. A survey on active magnetic attitude control algorithms for small satellites // Progress in Aerospace Sciences. 2019. V. 109. P. 100546. https://doi.org/10.1016/j.paerosci.2019.05.006.
+2. Ovchinnikov M.Y., Roldugin D.S. Modern algorithms for active magnetic orientation of satellites // Spacecraft & Technologies. 2019, vol. 3, no. 2, pp. 73–86. https://doi.org/10.26732/2618-7957-2019-2-73-86
+3. Morozov V.M., Kalenova V.I. Satellite Control Using Magnetic Moments: Controllability and Stabilization Algorithms // Space Research. 2020, vol. 58, no. 3, pp. 199–207. https://doi.org/10.31857/S0023420620030048
+4. Liu S., Huang Q. Controllability and observability of discretized satellite magnetic attitude control system // AIMS Mathematics. 2023. V. 8. № 4. P. 7899–7916. https://doi.org/10.3934/math.2023398
+5. Burmistrov V.V., Zotkin M.Yu., Richnyak A.M. Analysis of the design options for superconducting magnetic actuators in the orientation and stabilization systems of small spacecraft // Proceedings of the Mozhaisky Military Space Academy. 2019, no. 667, pp. 259–266.
+6. Khan S.A., Shiyou Y., Ali A. et al. PCB-integrated embedded planar magnetorquers for small satellites intelligent detumbling // Computers & Electrical Engineering. 2023. V. 108. P. 108719. https://doi.org/10.1016/J.COMPELECENG.2023.108719
+7. Stickler A.C. A Magnetic Control System for Attitude Acquisition // Ithaco Inc. Report № 90345. 1972.
+8. Desouky M.A.A., Abdelkhalik O. A new variant of the B-dot control for spacecraft magnetic detumbling // Acta Astronautica. 2020. V. 171. P. 14–22. https://doi.org/10.1016/J.ACTAASTRO.2020.02.030
+9. Desouky M.A.A., Abdelkhalik O. Time-Optimal Magnetic Attitude Detumbling // J. pacecraft & Rockets. 2020. V. 57. № 3. P. 549–564. https://doi.org/10.2514/1.A34583
+10. Invernizzi D., Lovera M. A projection-based controller for fast spacecraft detumbling using magnetic actuation // Automatica. 2020. V. 113. P. 108779. https://doi.org/10.1016/J.AUTOMATICA.2019.108779
+11. Willis J.B., Fisch P.R.M., Seletskiy A. et al. Building a Better B-Dot: Fast Detumbling with Non-Monotonic Lyapunov Functions // IEEE Aerospace Conference. 2024. P. 1–9. https://doi.org/10.1109/AERO58975.2024.10521370
+12. Kondo K., Kolmanovsky I., Yoshimura Y. et al. Nonlinear Model Predictive Detumbling of Small Satellites with a Single-Axis Magnetorquer // J. Guidance, Control, & Dyn. 2021. V. 44. № 4. P. 1–8. https://doi.org/10.2514/1.G005877
+13. Farissi M.S., Carletta S., Nascetti A. et al. Implementation and Hardware-In-The-Loop Simulation of a Magnetic Detumbling and Pointing Control Based on Three-Axis Magnetometer Data // Aerospace. 2019. V. 6. № 12. P. 133. https://doi.org/10.3390/aerospace6120133
+14. Avanzini G., de Angelis E.L., Giulietti F. et al. Attitude control of Low Earth Orbit satellites by reaction wheels and magnetic torquers // Acta Astronautica. 2019. V. 160. P. 625–634. https://doi.org/10.1016/J.ACTAASTRO.2019.03.013
+15. Kimura K., Shoji Y., Satoh S. et al. Attitude control experiment of a spinning spacecraft using only magnetic torquers // Advances in Space Research. 2023. V. 71. № 12. P. 5386–5399. https://doi.org/10.1016/J.ASR.2023.02.018
+16. Porras-Hermoso A., Piqueras J., Cubas J. et al. On-orbit performance analysis of spinning spacecraft magnetic control laws. Application to the UPMSat-2 mission // Measurement. 2024. V. 225. P. 113962. https://doi.org/10.1016/J.MEASUREMENT.2023.113962
+17. Morales J.E., Kim J., Richardson R.R. Gyroless Spin-Stabilization Controller and Deorbiting Algorithm for CubeSats // Int. J. Aeronautical & Space Sciences. 2021. V. 22. № 2. P. 445–455. https://doi.org/10.1007/s42405-020-00311-5
+18. Roldugin D., Ovchinnikov M. Terminal One Axis Stabilization Properties of a Spinning Satellite Employing Simple Magnetic Attitude Control // Mathematics. 2023. V. 11. № 6. P. 1530. https://doi.org/10.3390/MATH11061530
+19. Roldugin D.S., Ovchinnikov M.Y. Wobble of a spin stabilized satellite with cross products of inertia and magnetic attitude control // Advances in Space Research. 2023. V. 71. № 1. P. 408–419. https://doi.org/10.1016/j.asr.2022.08.073
+20. Tkachev S., Mashtakov Y., Ivanov D. et al. Effect of Reaction Wheel Imbalances on Attitude and Stabilization Accuracy // Aerospace. 2021. V. 8. № 9. https://doi.org/10.3390/aerospace8090252
+21. Roldugin D.S., Tkachev S.S., Bogachev S.A. et al. Comparison of the capabilities of the electromagnetic and flywheel orientation systems of a small space solar observatory // Space Research. 2024, vol. 62, no. 5, pp. 471–481. https://doi.org/10.31857/S0023420624050062
+22. Roldugin D., Tkachev S., Ovchinnikov M. Asymptotic Motion of a Satellite under the Action of Sdot Magnetic Attitude Control // Aerospace. 2022. V. 9. № 11. P. 639. https://doi.org/10.3390/aerospace9110639
+23. Ovchinnikov M.Yu., Roldugin D.S., Borges R.A. et al. Modeling the motion of a spacecraft model on an aerodynamic suspension for testing the uniaxial stabilization mode using magnetic coils // Math. Modeling. 2019, vol. 31, no. 11, pp. 36–46. https://doi.org/10.1134/S0234087919110030
+24. Roldugin D.S. Modeling of scenarios of unambiguous magnetic stabilization of a spacecraft on the Sun based on data from solar sensors // Math. Modeling. 2023, vol. 35, no. 3, pp. 20–34. https://doi.org/10.20948/mm-2023-03-02
+25. Cubas J., de Ruiter A. Magnetic control without attitude determination for spinning spacecraft // Acta Astronautica. 2020. V. 169. P. 108–123. https://doi.org/10.1016/J.ACTAASTRO.2019.12.029
+26. Roldugin D.S. Stability of spacecraft stabilization in the direction of the Sun by magnetic actuators in a sun-synchronous orbit // Space Research. 2023, vol. 61, no. 2, pp. 1–9. https://doi.org/10.31857/S002342062260026X
+27. He Y., Wang Z., Yang S. et al. Sun-pointing safe control for atmospheric environment monitoring satellite using magnetic actuation // Advances in Space Research. 2023. V. 72. № 5. P. 1528–1537. https://doi.org/10.1016/J.ASR.2023.04.044
+28. Chasset C., Berge S., Bodin P. et al. 3-axis magnetic control with multiple attitude profile capabilities in the PRISMA mission // 57th International Astronautical Congress. 2006. P. IAC-06-C1.2.3. https://doi.org/10.2514/6.IAC-06-C1.2.03
+29. Mu S., Zhang N., Baoyin H. Magnetic Attitude Control Scheme for Drag Sail Deorbiting with Limited Sensors // J. Guidance, Control, & Dyn. 2024. V. 47. № 6. P. 1182–1195. https://doi.org/10.2514/1.G007894
+30. Mu S., Zhang N., Chen Y. et al. Magnetic Control Law with Controlled Rotation Rate for Dual Spin Satellite // J. Guidance, Control, & Dyn. 2024. P. 1–7. https://doi.org/10.2514/1.G008171
+31. Ovchinnikov M.Y., Roldugin D.S. Comparison of two magnetic damping laws for the attitude acquisition of a dual spin satellite // Int. J. oSpace Science & Engineering. 2019. V. 5. № 4. P. 369–383. https://doi.org/0.1504/IJSPACESE.2019.105059
+32. Roldugin D.S., Ovchinnikov M.Y. Explicit solution for the attitude motion of a bias momentum satellite under Bdot magnetic damping // Aerospace Science &Technology. 2025. V. 159. P. 110019. https://doi.org/10.1016/J.AST.2025.110019
+33. Ovchinnikov M.Y., Roldugin D.S. Magnetic attitude control and periodic motion for the in-orbit rotation of a dual-spin satellite // Acta Astronautica. 2021. V. 186. P. 203–210. https://doi.org/10.1016/J.ACTAASTRO.2021.05.035
+34. Sharifi E., Damaren C.J. Nonlinear Optimal Approach to Spacecraft Attitude Control Using Magnetic and Impulsive Actuations // J. Guidance, Control, & Dyn. 2020. V. 43. № 6. P. 1154–1163. https://doi.org/10.2514/1.G004913
+35. Sharifi E., Damaren C.J. Hybrid Nonlinear Passivity-Based Control Approach to Magnetic-Impulsive Spacecraft Attitude Regulation // J. Guidance, Control, & Dyn. 2024. V. 47. № 7. P. 1377–1393. https://doi.org/10.2514/1.G005915
+36. Sun L., Wang Z., Zhao G. et al. Magnetic attitude tracking control of gravity gradient microsatellite in orbital transfer // Aeronautical J. 2019. P. 1–14. https://doi.org/10.1017/aer.2019.112
+37. Ahmed Khan S., Tao Z., Fahad S. et al. Reliable attitude control integrating reaction wheels and embedded asymmetric magnetorquers for detumbling CubeSats // Advances in Space Research. 2024. V. 74. № 11. P. 5906–5922. https://doi.org/10.1016/J.ASR.2024.08.056
+38. Ovchinnikov M.Y., Penkov V.I., Roldugin D.S. et al. Single axis stabilization of a fast rotating satellite in the orbital frame using magnetorquers and a rotor // Acta Astronautica. 2020. V. 173. P. 195–201. https://doi.org/10.1016/j.actaastro.2020.04.057
+39. Ignatov A.I., Sazonov V.V. Stabilization of the gravitational orientation mode of an artificial Earth satellite by an electromagnetic control system // Cosmic Res. 2020, vol. 58, no. 1, pp. 40–48. https://doi.org/10.31857/S0023420620010033
+40. Sizov D.A., Aslanov V.S. Attitude Dynamics of Small Magnetic Axisymmetric Satellites in Near-Equatorial Low Earth Orbits/Very Low Earth Orbits // J. Guidance, Control, & Dynamics. 2024. V. 47. № 12. P. 2544–2559. https://doi.org/10.2514/1.G008393
+41. Ignatov A.I., Sazonov V.V. Research of steady-state motions of an artificial Earth satellite in the mode of uniaxial magnetic orientation // Cosmic Res. 2021, vol. 59, no. 2, pp. 135–148. https://doi.org/10.31857/S0023420621020035
+42. Ivanov D.S., Ovchinnikov M.Yu., Pen‘kov V.I. et al. Modeling of a nanosatellite angular motion damping using hysteresis plate // Matem. modelirovanie. 2020, vol. 32, no. 2, pp. 101–112. https://doi.org/10.20948/mm-2020-02-06
+43. Morozov V.M., Kalenova V.I., Rak M.G. On the stabilization of the regular precessions of satellites by means of magnetic moments // Mechanics of Solids. 2021, vol. 56, no. 8, pp. 1486-1499. https://doi.org/10.3103/S0025654421080136
+44. Kalenova V.I., Morozov V.M. Stabilization of Satellite Relative Equilibrium Using Magnetic and Lorentzian Moments // Cosmic Res. 2021, vol. 59, pp. 343-356. https://doi.org/10.1134/S0010952521050051
+45. Morozov V.M., Kalenova V.I. Stabilization of the satellite’s relative equilibrium using magnetic moments, taking into account aerodynamic forces // Cosmic Res. 2022, vol. 60, pp. 213-219. https://doi.org/10.1134/S0010952522030066
+46. Kalenova V.I., Morozov V.M. Linear Nonstationary Systems and Their Applications to Mechanics Problems. Moscow: FIZMATLIT, 2010. 207 p.
+47. Roldugin D.S., Okhitina A.S., Monakhova U.V. et al. Comparison of Feedback Three-Axis Magnetic Attitude Control Strategies // Aerospace. 2023. V. 10. № 12. P. 975. https://doi.org/10.3390/aerospace10120975
+48. Celani F. Quaternion versus Rotation Matrix Feedback for Spacecraft Attitude Stabilization Using Magnetorquers // Aerospace. 2022. V. 9. № 1. P. 24. https://doi.org/10.3390/aerospace9010024
+49. Invernizzi D., Lovera M. Attitude stabilization of inertial pointing spacecraft using magnetic actuators // IFAC-PapersOnLine. 2019. V. 52. № 12. P. 442–447. https://doi.org/10.1016/j.ifacol.2019.11.283
+50. Celani F. Gain Selection for Attitude Stabilization of Earth-Pointing Spacecraft Using Magnetorquers // Aerotecnica Missili & Spazio. 2021. V. 100. № 1. P. 15–24. https://doi.org/10.1007/s42496-020-00062-2
+51. Mashtakov Y.V., Ovchinnikov M.Y., Wöske F. et al. Attitude determination & amp; control system design for gravity recovery missions like GRACE // Acta Astronautica. 2020. V. 173. P. 172–182. https://doi.org/10.1016/J.ACTAASTRO.2020.04.019
+52. Zhou B. Lyapunov differential equations and inequalities for stability and stabilization of linear time-varying systems // Automatica. 2021. V. 131. P. 109785. https://doi.org/10.1016/J.AUTOMATICA.2021.109785
+53. Kul‘kov V.M., Egorov Yu.G., Firsyuk S.O. et al. Modeling of the angular motion dynamics of small spacecraft with a magnetic attitude control system in the three-axis stabilization mode // Dokl. AN. 2019, vol. 488, no. 4, pp. 377–382. https://doi.org/10.31857/S0869-56524884377-382
+54. Desouky M.A.A., Abdelkhalik O. Improved Spacecraft Magnetic Attitude Maneuvering // J. Spacecraft and Rockets. 2019. V. 56. № 5. P. 1–13. https://doi.org/10.2514/1.A34452
+55. Misra R., Wisniewski R., Zuyev A. Attitude Stabilization of a Satellite Having Only Electromagnetic Actuation Using Oscillating Controls // Aerospace. 2022. V. 9. № 8. P. 444. https://doi.org/10.3390/aerospace9080444
+56. Giri D.K., Sinha M. Fast Terminal Sliding-Mode Fault-Tolerant Attitude Control of Magnetically Actuated Satellite // J. Spacecraft and Rockets. 2019. V. 56. № 5. https://doi.org/10.2514/1.A34475
+57. Avanzini G., de Angelis E.L., Giulietti F. Two-timescale magnetic attitude control of Low-Earth-Orbit spacecraft // Aerospace Sci. &Techn. 2021. V. 116. P. 106884. https://doi.org/10.1016/J.AST.2021.106884
+58. Bahu A., Modenini D. Hybrid controller for global, robust, attitude stabilization of a magnetically actuated spacecraft // CEAS Space J. 2021. V. 13. № 4. P. 543–554. https://doi.org/10.1007/s12567-020-00340-6
+59. Yadegari H., Beyramzad J., Khanmirza E. Magnetorquers-based satellite attitude control using interval type-II fuzzy terminal sliding mode control with time delay estimation // Adv. Space Research. 2022. V. 69. № 8. P. 3204–3225. https://doi.org/10.1016/J.ASR.2022.01.018
+60. Gatherer A., Manchester Z. Magnetorquer-Only Attitude Control of Small Satellites using Trajectory Optimization // Adv. Astronautical Sci. 2019. V. 171. P. AAS 19-927.
+61. Bhat S.P. Controllability of nonlinear time-varying systems: applications to spacecraft attitude control using magnetic actuation // IEEE Transactions on Automatic Control. 2005. V. 50. № 11. P. 1725–1735. https://doi.org/10.1109/TAC.2005.858686
+62. Arefkhani H., Sadati S.H., Shahravi M. Satellite attitude control using a novel Constrained Magnetic Linear Quadratic Regulator // Control Engineering Practice. 2020. V. 101. P. 104466. https://doi.org/10.1016/J.CONENGPRAC.2020.104466
+63. Alpatov A., Dron’ M., Golubek A. et al. Combined method for spacecraft deorbiting with angular stabilization of the sail using magnetorquers // CEAS Space J. 2023. V. 15. № 4. P. 613–625. https://doi.org/10.1007/s12567-022-00469-6
+64. Panyalert T., Manuthasna S., Chaisakulsurin J. et al. Characterization and verification of the optimal feedback gain of a satellite magnetorquer-based attitude control system // Advances in Space Research. 2024. V. 74. № 11. P. 5745–5766. https://doi.org/10.1016/J.ASR.2024.08.047
+65. Okhitina A., Roldugin D., Tkachev S. Application of the PSO for the construction of a 3-axis stable magnetically actuated satellite angular motion // Acta Astronautica. 2022. V. 195. P. 86–97. https://doi.org/10.1016/J.ACTAASTRO.2022.03.001
+66. Okhitina A.S., Tkachev S.S. Control Algorithm Parameters Selection for a Three-Axis Magnetic Attitude Control System in the Presence of Disturbances // Cosmic Research. 2025. V. 63. P. 170–185. https://doi.org/10.1134/S0010952525601082
+67. Droby‘sheva A.S., Tkachev S.S. Parametric analysis and estimation of the worst-case orientation accuracy of a spacecraft // Cosmic. Res. 2025. (in print).
+68. Okhitina A.S., Tkachev S.S., Roldugin D.S. Comparative Cost Functions Analysis in the Construction of a Reference Angular Motion Implemented by Magnetorquers // Aerospace. 2023. V. 10. № 5. P. 468. https://doi.org/10.3390/aerospace10050468
+69. Okhitina A., Roldugin D., Tkachev S. et al. Academy transaction note “closed form solution for a minimum deviation magnetically controllable satellite angular trajectory” // Acta Astronautica. 2023. V. 203. P. 60–64. https://doi.org/10.1016/j.actaastro.2022.11.045
+70. Drobysheva A.S., Tkachev S.S., Roldugin D.S. One-axis magnetic attitude control for short-term high-accuracy pointing // Acta Astronautica. 2025. V. 228. P. 675–685. https://doi.org/10.1016/J.ACTAASTRO.2024.12.047
+
+Application of the PSO for the construction of a 3-axis stable magnetically actuated satellite angular motion
+
+Anna Okhitina
+, Dmitry Roldugin
+, Stepan Tkachev
+
+Show more
+
+Cite
+
+Add to Mendeley
+
+Share
+10.1016/j.actaastro.2022.03.001
+Access through your organization
+Purchase PDF
+Application of the PSO for the construction of a 3-axis stable magnetically actuated satellite angular motion
+Article preview
+Recommended articles
+Cited by (14)
+Metrics
+Article preview
+Abstract
+Introduction
+Section snippets
+References (29)
+Highlights
+•
+Attitude trajectory is constructed for a magnetically actuated satellite.
+•
+Particle swarm optimization is used to find the trajectory and minimize torque along the induction vector.
+•
+Feedback control structure is adopted with gravitational and aerodynamic disturbances mitigation.
+•
+Stability of the trajectory maintenance is demonstrated.
+•
+Simulation example illustrates stabilization accuracy of few degrees.
+Abstract
+Particle swarm optimization (PSO) is a non-gradient biologically inspired global optimization method. It utilizes direct calculation of the optimized cost function during the numerical simulation of the process in question. Significantly complex and implicit functions that prohibit clear gradient expression are effectively handled by PSO. This feature is utilized in the paper to construct specific angular trajectory of a magnetically actuated satellite. A cost function is suggested that confines the control torque corresponding to this trajectory to the plane orthogonal to the geomagnetic induction vector. Optimal trajectory coefficients are found by PSO. The control structure is based on the Lyapunov feedback approach and explicitly accommodates the gravitational and aerodynamic torques influence. PSO procedure provides the optimal control gains on this stage. Stability of the resulting motion is demonstrated. Numerical simulation example with different disturbance factors illustrates the expected stabilization accuracy of the order of few degrees.
+Keywords
+Three-axis magnetic control; Attitude control; Particle swarm optimization; Reference motion
+Previous article in this issue
+Next article in this issue
+Introduction
+Small spacecraft (SC) are widely applicable today. They can be used either alone or in a group flight, which allows them to solve a large range of tasks. Small SC are usually made simple to keep the cost and design complexity down, while maintaining high reliability. Therefore, a magnetic attitude control system is often used, since it has low energy consumption, it is small and easy to manufacture. More than a half of CubeSats utilize active magnetic attitude control, which goes up to almost three-quarter with passive magnetic control [1]. An important weak point is the absence of the control torque 𝐌𝑚⁢𝑎⁢𝑔⁡𝑛=𝐦×𝐁𝑚⁢𝑎⁢𝑔⁡𝑛 along the geomagnetic induction vector 𝐁𝑚⁢𝑎⁢𝑔⁡𝑛. However, the direction of vector 𝐁𝑚⁢𝑎⁢𝑔⁡𝑛 changes during the satellite motion along the orbit and all directions become available with time. The system is generally controllable [2,3].
+The problem of providing SC stabilization using only three-axis magnetic attitude control system proposed in Refs. [4,5] is widely considered now. The main concept for the control construction is a Lyapunov feedback law. Feedback gains tuning is a cornerstone problem of this approach. Different suggestions were made for the gains selection procedure [[6], [7], [8], [9], [10]]. An importance of restrictions on the satellite rotation rate [11], inertia tensor uncertainty [12], and overall control torque value [13] is well established. An inherent problem of the simple feedback law is its inability to provide efficient local disturbances rejection. This results in a low stabilization accuracy which is expected and flight-proven [14] to be around 10–20°. Although very low, this accuracy may be enough for a solar panels illumination, wide field of view antenna pointing, simple Earth remote sensing tasks, and different control system failure situations when low accuracy is the only alternative to the complete mission loss. Expanding magnetic control system capabilities to typical tasks requires at least few degrees accuracy which can be achieved by relatively complex control approaches. Sliding control was proposed to alleviate the control direction restriction by providing proper sliding surface and, hence, the satellite trajectory [[15], [16], [17]]. While paper [15] only proposes the local method of proper sliding surface construction [16,17], provides a cost function that directly includes the projection of the control torque on the geomagnetic induction vector direction. This introduces an important flexibility that local methods lack. Present paper essentially adopts the same general idea, but uses direct reference trajectory construction instead of sliding surface approach. Another approach that utilizes the geomagnetic induction vector, and hence the restricted direction, rotation is based on the model predictive control [18,19]. More detailed survey of the developments in the three axis magnetic control is provided in Refs. [20,21].
+Present paper proposes a specific attitude trajectory construction procedure elaborating on the facts of the induction vector rotation and low stabilization accuracy in the orbital reference frame. The latter fact is inherently connected to the restriction in the control torque direction. The satellite encounters relatively well-defined disturbances when stabilized in the orbital reference frame. The disturbing torque that is aligned along the geomagnetic induction vector cannot be suppressed thus leading to inevitably low stabilization accuracy. Instead of the stabilization in the orbital reference frame exactly, the satellite may be stabilized on a trajectory defined by a relatively small attitude angles. This trajectory, just as the exact orbital stabilization, has specific induction vector and disturbances directions associated with every set of attitude angles and time. Maintaining this trajectory, including the disturbances rejection, requires some specific control that is also defined for given attitude and time. Carefully selected trajectory is hopefully characterized by a relatively small control torque along the induction vector. This trajectory can therefore be maintained by the magnetorquers with high accuracy. In the end the satellite is stabilized close to the orbital frame with good (few degrees in total) accuracy instead of the orbital stabilization with low (10–20°) accuracy.
+The construction of the above-mentioned trajectory and control is performed with the Particle Swarm Optimization (PSO) method [[22], [23], [24]] in a two stage procedure. First, the satellite trajectory is constructed. This trajectory is periodic with the double orbital rate. Periodicity of the satellite motion eliminates the necessity of regular trajectory update which is associated with considerable computation effort. Double orbital period complies with the approximate geomagnetic induction vector motion. The satellite trajectory and disturbance torque models define the required control torque. PSO routine is established to search for the trajectory and corresponding torque that has small component along the induction vector. Second stage of the control construction derives the magnetorquers dipole moment from the reference control torque. The control is assigned with the classic feedback structure. Another PSO instance searches for the gains that comply with the restriction on the control torque direction. The final control torque is analyzed for the asymptotic stability. A numerical simulation example illustrates the control capability in the rejection of unknown disturbances.
+Organizational access
+Get full-text access by signing in with your organisation
+Access through your organization
+Other access options
+Purchase PDF
+Need help with access?
+Section snippets
+Motion model
+The following reference frames are used:
+1)
+𝑂⁢𝑥1⁢𝑥2⁢𝑥3 is the satellite-fixed frame (SF), its axes coincide with the principal central axes of inertia;
+2)
+𝑂⁢𝑋1⁢𝑋2⁢𝑋3 is the orbital frame (OF), 𝑂⁢𝑋3 axis is directed along the SC radius vector, 𝑂⁢𝑋2 coincides with the velocity of the SC on a circular orbit, the third axis complements the right-hand frame;
+3)
+𝑂⁢𝑦1⁢𝑦2⁢𝑦3 is the reference frame (RF), which describes the required satellite attitude trajectory.
+The direction of RF axes relative to the orbital frame is
+Construction of a magnetically controllable attitude trajectory
+The construction of an optimal magnetically controllable attitude trajectory consists of two main stages: first, the optimal periodical trajectory coefficients are found; second, the optimal control gains are obtained. Indirect optimization methods, in particular the maximum principle, can hardly be used in this case. The evolutionary optimization method is implemented. This algorithm solves problems with complex forms of a cost function because it is computed during the algorithm execution and 
+Asymptotic stability
+The control is constructed in the previous section on the basis of the Lyapunov function. However, the torque implemented by the magnetorquers differs slightly which questions the stability of the satellite motion. To prove the asymptotic stability of the resulting motion, we linearize equation (1) and kinematic relations and use the Floquet theory [29]. Since the asymptotic stability is proved, this result is applicable to the nonlinear initial system. Disturbance torques influence should not
+Numerical example
+The extended motion model with additional disturbances and the inaccuracy of the SC initial conditions knowledge is considered to illustrate the algorithm performance. The three-axis magnetic attitude control system should ensure SC stabilization on a given trajectory. Parameters and data used in this case are presented in Table 1.
+The results are shown in Fig. 13, Fig. 14, Fig. 15, Fig. 16, Fig. 17, Fig. 18.
+The real trajectory differs from the reference one by 1–3° (Fig. 13, Fig. 14). However,
+Conclusions
+The paper proposes a method for constructing an angular trajectory, which is realizable by the magnetic attitude control system. The PSO method is applied to find the trajectory with the minimum control torque projection on the geomagnetic induction vector. This reference trajectory is close to the stabilization in the orbital reference frame. Another PSO routine optimizes control gains for the Lyapunov-based control. Overall this provides the motion achievable by the pure magnetic control.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+References (29)
+M. Lovera et al.
+Spacecraft attitude control using magnetic actuators
+Automatica
+(2004)
+R. Wisniewski et al.
+Fully magnetic attitude control for spacecraft subject to gravity gradient
+Automatica
+(1999)
+M.Y. Ovchinnikov et al.
+Choosing control parameters for three axis magnetic stabilization in orbital frame
+Acta Astronaut.
+(2015)
+M.Y. Ovchinnikov et al.
+Asymptotic study of a complete magnetic attitude control cycle providing a single-axis orientation
+Acta Astronaut.
+(2012)
+F. Celani
+Robust three-axis attitude stabilization for inertial pointing spacecraft using magnetorquers
+Acta Astronaut.
+(2015)
+M.Y. Ovchinnikov et al.
+Fully magnetic sliding mode control for acquiring three-axis attitude
+Acta Astronaut.
+(2016)
+A. Sofyalı et al.
+Integral sliding mode control of small satellite attitude motion by purely magnetic actuation
+IFAC Proc.
+(2014)
+A. Sofyali et al.
+Robust and global attitude stabilization of magnetically actuated spacecraft through sliding mode
+Aero. Sci. Technol.
+(2018)
+E. Silani et al.
+Magnetic spacecraft attitude control: a survey and some new results
+Control Eng. Pract.
+(2005)
+M. Lovera
+Periodic attitude control for satellites with magnetic actuators: an overview
+IFAC Proc.
+(2001)
+
+View more references
+View full text
+Recommended articles
+Based on reading popularity
+Discussion
+The discrete q-Gaussian distribution 𝒩𝑞⁡(𝜇,𝜎2): Properties and parameters estimation
+Oumaima Ben Mrad, …, Yousri Slaoui
+Physics Letters A • Volume 493 • 2024 • Article 129249
+Research article
+Open access
+A fast numerical method for the conductivity of heterogeneous media with Dirichlet boundary conditions based on discrete sine–cosine transforms
+Léo Morin, Joseph Paux
+Computer Methods in Applied Mechanics and Engineering • Volume 421 • 2024 • Article 116772
+Research article
+Design optimization and ML-based performance prediction of microgrid-hydrogen refueling systems using Gaussian process regression
+Mohamed R. Elkadeem, …, Mohammad A. Abido
+International Journal of Hydrogen Energy • Volume 158 • 2025 • Article 150382
+Research article
+Open access
+Power flow control and reliability improvement through adaptive PSO based network reconfiguration
+Ashenafi Tesfaye Tantu, Degu Bibiso Biramo
+Heliyon • Volume 10, Issue 17 • 2024 • Article e36668
+Research article
+Topological clustering particle swarm optimizer based on adaptive resonance theory for multimodal multi-objective problems
+Qi Yao, …, Mengdan Wu
+Information Sciences • Volume 679 • 2024 • Article 121106
+Research article
+Concurrent multi-fault diagnosis of lithium-ion battery packs using random convolution kernel transformation and Gaussian process classifier
+Dongxu Shen, …, Miao Bai
+Energy • Volume 306 • 2024 • Article 132467
+Cited by (14)
+Research article
+One-axis magnetic attitude control for short-term high-accuracy pointing
+Drobysheva A., …, Roldugin D.
+Acta Astronautica • Volume 228 • 2025
+
+Show abstract
+Short communication
+Academy transaction note “closed form solution for a minimum deviation magnetically controllable satellite angular trajectory”
+Okhitina A., …, Ovchinnikov M.
+Acta Astronautica • Volume 203 • 2023
+Citation Excerpt:
+As a result, the control must compensate this torque foremost, so the control is similar for both cases although it can be achieved by different reference trajectories. An example of numerical simulation of satellite stabilization on the analytically found trajectory using feedback control from Ref. [18] is provided in Fig. 2. Two approaches for the magnetically controllable trajectories construction are compared.
+
+
+Show abstract
+Research article
+A Model Predictive Control Based Magnetorquer-only Attitude Control Approach for a Small Satellite
+Esit M., …, Chingiz Hajiyev C.
+IFAC-PapersOnLine • Volume 55 • 2022
+
+Show abstract
+Comparison of Feedback Three-Axis Magnetic Attitude Control Strategies
+Roldugin D., …, Ovchinnikov M.
+Aerospace • Volume 10 • 2023 • Article 975
+Comparative Cost Functions Analysis in the Construction of a Reference Angular Motion Implemented by Magnetorquers
+Okhitina A., …, Roldugin D.
+Aerospace • Volume 10 • 2023 • Article 468
+APPLICATIONS OF INTELLIGENT OPTIMIZATION ALGORITHMS AND FUZZY LOGIC SYSTEMS IN AEROSPACE: A REVIEW
+VALDEZ F., …, Melin P.
+Applied and Computational Mathematics • Volume 21 • 2022
+
+On genetic algorithm and artificial neural network combined optimization for a Mars rotorcraft blade
+Dewei Tang, 
+Bo Tang
+, 
+Wenqing Shen
+, 
+Kaijie Zhu
+, Qiquan Quan
+, Zongquan Deng
+Show more
+
+Cite
+
+Add to Mendeley
+
+Share
+10.1016/j.actaastro.2022.11.032
+Access through your organization
+Purchase PDF
+Article preview
+Recommended articles
+Cited by (28)
+Metrics
+Article preview
+Abstract
+Introduction
+Section snippets
+References (42)
+Highlights
+•
+A model was built to predict rotor hover performance at low-Reynolds-number.
+•
+Established an optimization model of the planform of the Mars rotorcraft blade.
+•
+The optimized blade consumes 29% less power than the conventional blade.
+•
+The optimization result were verified experimentally in Mars simulated environment.
+Abstract
+The Mars rotorcraft can help the Mars rover to optimize the driving route and explore more efficiently. However, the thin and cold Martian atmosphere can heavily increase the consumed power of the rotorcraft blades and reduce the generated thrust, leading to the reduction in power loading. The aerodynamic force generated by the Mars rotorcraft blade can be significantly influenced by the blade structure, which has several main structural characteristics and needs to be well designed. A multivariable optimization design method of blade structure is proposed based on neural network, genetic algorithm, and computational fluid dynamics simulations. Experiments conducted in the Martian atmosphere simulator indicate that the Mars rotorcraft blades with the hyperbolic chord length distribution and twist have higher power loading in the constant collective pitch angle.
+Keywords
+Mars rotorcraft; Blade structure; Hover performance; Optimization design method
+Previous article in this issue
+Next article in this issue
+Introduction
+A variety of probes are sent to explore Mars and make endeavours to search the origin of life [1], [2], [3]. In recent years, human beings mainly adopted the rover to detect life on Mars [4], [5], [6], [7]. However, the rover’s vision is not enough to observe some sandpits, preventing the rover from planning the fastest and safest path to its destination [8]. The rugged terrain on Mars has an impact on the movement of the rover, making the rover move slowly or even stuck [9], [10]. Flying in the Mars atmosphere, a small Mars aircraft can expand the rover’s field of view [11]. It will observe more of the surrounding terrain by its camera aerially, and share the images with the rover. After receiving the information, the rover can plan the route better. When there are sandpits and cliffs that the rover cannot bypass, the Mars aircraft can also quickly collect a few soil samples within a distance. Maria Smirnova has proposed a concept vehicle that uses magnesium or aluminum burning in 
+CO
+2
+ to obtain propulsion power, but it is difficult to take such a vehicle to Mars due to current technological limitations [12]. Among the many types of aircraft, rotorcraft is more suitable to complete the above tasks [13]. It can take off and land vertically at any point without a runway, not affected by the Martian terrain [14], [15]. It can also use the wind on Mars to blow the blades to recharge the batteries [16]. Besides, when hovering, rotorcraft is also relatively stable [17], [18]. Grip et al. show that rotorcraft can take special missions on Mars [19], [20].
+When the rotor rotates, blades interact with air to generate aerodynamic force that provides lift for the rotorcraft [18]. The results of early Mars exploration show that the air pressure at Martian surface is only 1% of that at Earth’s surface, leading to the low Reynolds number atmospheric environment [21]. Besides, the sound speed of Mars is 72% of that of the earth because of the low average temperature, causing the high Mach number flow field [22], [23], [24], [25]. This extreme environment reduces the mechanical efficiency of the rotor and increases the power consumed by the rotor [26]. Considering that the blade structure determines the aerodynamic performance of the blade itself, it is necessary to design an improved blade structure for the Mars rotorcraft to reduce the power consumption during the Mars exploration mission.
+The structural characteristics of the blade include airfoil, twist, and planform (also can be seen as blade chord length distribution). To calculate the aerodynamic performance of blades with different structural characteristics for analysis, simulation is an effective method. A simulation method that uses computational fluid dynamics (CFD) can predict the generated thrust and consumed power of the rotor blade without manufacturing the rotors with different structures [27], [28]. In the past period, the suitable blade airfoil of the Mars rotorcraft has been studied through the two-dimensional CFD simulation and algorithms [29]. Koning et al. used Blade Element Momentum Theory (BEMT) combined with an iterative algorithm to optimize the Mars rotorcraft airfoil [30], [31], [32]. Bohorquez [33], Anyoji [34] and Zhao [35] used a combination of two-dimensional simulation and experimental verification to design the optimal Mars rotorcraft airfoil in different flight conditions and blade diameters. Uwatoko et al. combined Genetic Algorithm (GA) with the two-dimensional simulation method to optimize the airfoil and planform in the Martian environment [27]. However, to the best of our knowledge, there are few studies on the blade optimization design method of the Mars rotorcraft blade planform and the twist. In addition, the hovering performance of the Mars rotorcraft blade needs to be calculated by the more convenient simulation method.
+In this study, a standard geometrical configuration of Mars rotorcraft blade is defined based on BEMT. A reliable three-dimensional simulation method is adopted combining with the genetic algorithm and neural network to optimize the blade structure parameters suitable for the Mars rotorcraft. The CFD simulation and experimental results clarify that the optimized Mars rotorcraft blade, with a hyperbolic chord length distribution and a specific twist angle, consumes much less power than the conventional blade. In addition, the flow field of the optimized blade structure is discussed to explain its grand performance in the Martian atmosphere.
+Organizational access
+Get full-text access by signing in with your organisation
+Access through your organization
+Other access options
+Purchase PDF
+Need help with access?
+Section snippets
+Mars rotorcraft
+The Research Center for Aerospace Mechanism and Control in Harbin Institute of Technology, China developed prototypes of the “MarsBird” Mars rotorcrafts. The “MarsBird-III” rotorcraft has two rotors mounted one above the other, as shown in Fig. 1. The two rotors are coaxial, rotating with the same axis and turning in the opposite direction so that the opposite torques from the rotors cancel each other out. The upper rotor and the lower rotor all have two blades with a diameter of 1000 mm. Two
+Analysis based on Blade Element Momentum Theory
+Based on the Momentum Theory (MT) and conventional theory of helicopter on the earth, the thrust coefficient 
+C
+T
+ and power coefficient 
+C
+P
+ of the rotor blade, directly reflecting the value of the thrust and power, is expressed as follows:
+C
+T
+=
+T
+ρ
+A
+(
+Ω
+R
+)
+2
+/
+2
+C
+P
+=
+P
+ρ
+A
+(
+Ω
+R
+)
+3
+/
+2
+where 
+T
+ is the thrust generated by the rotor; 
+P
+ is the power consumed by the rotor; 
+ρ
+ is gas density; 
+A
+ is the rotor disk area; 
+Ω
+ is the rotational speed of the rotor; and 
+R
+ is the rotor radius.
+Based on BEMT, 
+C
+T
+ and 
+C
+P
+ are related to
+Optimization design procedure
+Based on the above theory, the structure parameters of the blade with hyperbolic chord length distribution and linear twist should be designed and optimized to reduce the power consumed by the Mars rotorcraft. As the ratio of the generated thrust 
+T
+ to the consumed power 
+P
+, the power loading can be calculated by CFD simulation. Maximizing the power loading can minimize the consumed power 
+P
+. Therefore, the optimization design method aims to obtain the optimal structural parameters to maximize the 
+Hover performance simulation
+The proxy model and GA can only predict the power loading as objective function while Computational Fluid Dynamics can obtain the accurate results of different kinds of blades. The industrial CFD code ANSYS® computes the flow field and the hover performance of the Mars rotorcraft blade.
+Effects of the hyperbola and twist
+The CFD method is used to verify what effects the hyperbolic chord distribution and twist angle would have on the performance of the blade. The chord length distribution and the twist angle of the conventional blade have been relatively changed (other parameters remain unchanged) to show the effects of the changing structural parameters. Fig. 9 shows the comparison of the simulation results of the three blades: the conventional blade, the hyperbolic blade (with a 300 mm hyperbolic chord
+Conclusions
+A blade optimization design method using computational fluid dynamics simulation coupled with genetic algorithm and neural network is applied to the optimization of the Mars rotorcraft blade structure. The hover performance of the rotor blade with optimized structural parameters in the Martian atmosphere is obtained by simulations and experiments.
+The theory of blade planform and twist based on blade element momentum theory shows that the Mars rotorcraft blade with hyperbolic chord length
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgments
+This work was supported by the National Natural Science Foundation of China under Grants 51975139, 51935005, 52105012, 52111530038 and the Fundamental Research Funds for the Central Universities (Grant No. HIT.OCEF.2021013).
+References (42)
+SalottiJ.-M. et al.
+Preliminary study of rescue systems for mars landing
+Acta Astronaut.
+(2021)
+PaissoniC. et al.
+Deep space transportation enhanced by 20 kW-class hall thrusters
+Acta Astronaut.
+(2020)
+HassanalianM. et al.
+Performance analysis of fixed wing space drones in different solar system bodies
+Acta Astronaut.
+(2018)
+ZouY. et al.
+Scientific objectives and payloads of Tianwen-1, China’s first mars exploration mission
+Adv. Space Res.
+(2021)
+TerzeZ. et al.
+Discrete mechanics and optimal control optimization of flapping wing dynamics for mars exploration
+Aerosp. Sci. Technol.
+(2020)
+HassanalianM. et al.
+Evolution of space drones for planetary exploration: A review
+Prog. Aerosp. Sci.
+(2018)
+SmirnovaM.
+Mars transportation vehicle concept
+Acta Astronaut.
+(2014)
+SchorbachV. et al.
+Wind as a back-up energy source for mars missions
+Acta Astronaut.
+(2022)
+ForshawJ.L. et al.
+Architecture and systems design of a reusable martian twin rotor tailsitter
+Acta Astronaut.
+(2012)
+ZhaoJ. et al.
+Mars atmospheric entry trajectory optimization with maximum parachute deployment altitude using adaptive mesh refinement
+Acta Astronaut.
+(2019)
+
+View more references
+View full text
+Recommended articles
+Based on reading popularity
+Research article
+Fault-tolerant real-time tasks scheduling with dynamic fault handling
+Gang Chen, …, Wang Yi
+Journal of Systems Architecture • Volume 102 • 2020 • Article 101688
+Research article
+Repeated nanoscratch and double nanoscratch tests of Lu2O3 transparent ceramics: Material removal and deformation mechanism, and theoretical model of penetration depth
+Chen Li, …, Xiaoshuang Rao
+Journal of the European Ceramic Society • Volume 38, Issue 2 • 2018 • Pages 705-718
+Research article
+Computational fluid dynamics (CFD), artificial neural network (ANN) and genetic algorithm (GA) as a hybrid method for the analysis and optimization of micro-photocatalytic reactors: NOx abatement as a case study
+Jéssica O.B. Lira, …, Cíntia Soares
+Chemical Engineering Journal • Volume 431, Part 1 • 2022 • Article 133771
+Research article
+Material removal mechanism and grinding force modelling of ultrasonic vibration assisted grinding for SiC ceramics
+Chen Li, …, Xiaoshuang Rao
+Ceramics International • Volume 43, Issue 3 • 2017 • Pages 2981-2993
+Research article
+Deformation mechanism and force modelling of the grinding of YAG single crystals
+Chen Li, …, Han Huang
+International Journal of Machine Tools and Manufacture • Volume 143 • 2019 • Pages 23-37
+Research article
+A unified framework for the mathematical modelling, predictive analysis, and optimization of reaction systems using computational fluid dynamics, deep neural network and genetic algorithm: A case of butadiene synthesis
+Dela Quarme Gbadago, …, Sungwon Hwang
+Chemical Engineering Journal • Volume 409 • 2021 • Article 128163
+Cited by (28)
+Research article
+A Mars quadcopter capable of autonomous flight and sample collection: Structure and avionics
+Zhu K., …, Deng Z.
+Acta Astronautica • Volume 214 • 2024
+
+Show abstract
+Research article
+Multi-objective optimization of turbine blade profiles based on multi-agent reinforcement learning
+Li L., …, Wang Y.
+Energy Conversion and Management • Volume 297 • 2023 • Article 117637
+Citation Excerpt:
+Under the condition of unchanged thrust, the efficiency of the optimized blade profile increased by about 10 %. Dewei Tang et al. [10] employed an Artificial Neural Network (ANN) to establish a connection between rotorcraft blade profile parameters and power. Compared with conventional blade, the optimized blades increased power loading by 24 %.
+
+
+Show abstract
+Research article
+Open access
+Artificial neural network-based optimization of baffle geometries for maximized heat transfer efficiency in microchannel heat sinks
+Shuqi Z., …, Farouk Deifalla A.
+Case Studies in Thermal Engineering • Volume 49 • 2023 • Article 103331
+Citation Excerpt:
+Similarly, ANNs are faster and more computationally efficient than numerical simulations, especially for complex systems, by leveraging parallel processing and optimization algorithms. In engineering applications, ANNs find applications in various fields, including process optimization, control systems, pattern recognition, fault diagnosis, image and speech recognition, forecasting, and decision support systems [65–67]. In the present study, Nu and ΔP were defined as responses, while the horizontal pitch of the baffles (s), the attack angle of the baffles (α), and the vertical pitch of the baffles (d) were the input variables.
+
+
+Show abstract
+Research article
+Conceptual design and aerodynamic analysis of a Mars octocopter for sample collection
+Zhu K., …, Deng Z.
+Acta Astronautica • Volume 207 • 2023
+Citation Excerpt:
+The flow field is divided into two parts: the internal flow field that rotates around the axis with the rotors and the relatively static external flow field. The numerical approach has been validated by hovering experiments in Ref. [42]. The grid of the internal and external flow fields is shown in Fig. 8.
+
+
+Show abstract
+Review of Key Technologies of Rotary-Wing Mars UAVs for Mars Exploration
+Zhao P., …, Deng Z.
+Inventions • Volume 8 • 2023 • Article 151
+Blade Twist Effects on Aerodynamic Performance and Noise Reduction in a Multirotor Propeller
+Sun J., …, Liu H.
+Drones • Volume 7 • 2023 • Article 252
+
+High-voltage discharge characteristics of a hybrid-wall Hall thruster with an aft-loaded magnetic field
+
+Xingyu Liu a
+, Hong Li a b
+, 
+Zhongkai An c
+, Yongjie Ding a b, Liqiu Wei a b, Daren Yu a b, 
+Wei Mao d
+
+Show more
+
+Cite
+
+Add to Mendeley
+
+Share
+10.1016/j.actaastro.2022.11.054
+Access through your organization
+Purchase PDF
+Article preview
+Recommended articles
+Cited by (23)
+Metrics
+Article preview
+Abstract
+Introduction
+Section snippets
+References (33)
+Highlights
+•
+Metal-ceramic hybrid channel wall improves high-voltage performance of Hall thrusters.
+•
+Optimal length of metallic segment exists and is strongly related to magnetic field.
+•
+Too long metallic segment augments electron wall loss and then ionization loss.
+Abstract
+Hall thrusters generally use a U-shaped insulated wall to form an annular discharge channel. As high-power and high-specific-impulse Hall thrusters develop, the disadvantages of this conventional topology—in terms of material and mechanical strength, processing, and manufacturing—are gradually being exposed. Therefore, in this study, a new wall material was employed, and its effects were investigated numerically and experimentally. A boron nitride ceramic wall was retained in the strong discharge area owing to its excellent secondary electron emission characteristics; while a metallic wall was applied upstream of the channel, forming a segmented hybrid wall. A Hall thruster with an aft-loaded magnetic field, which offers a long lifetime, was adopted for this study. The particle-in-cell simulation shows that the length of the metallic wall has a significant impact on thruster performance. The same trend was observed in the experiments. Under the optimal metallic wall length, the anode efficiency is improved by approximately 4% compared to that of the ceramic-wall-only case. The physics involved is analyzed and qualified by comparing the simulated and measured results. The findings of this study provide valuable guidance for the optimal design of high-power, high-specific-impulse Hall thrusters.
+Keywords
+Electric propulsion; Hall thruster; High voltage; Wall material; Aft-loaded magnetic field
+Previous article in this issue
+Next article in this issue
+Introduction
+Electric propulsion has the advantages of a high specific impulse, high efficiency, and high payload ratio compared with conventional chemical propulsion. Thus, it is gradually replacing chemical propulsion in spacecraft in orbit missions, and the application of electric propulsion has become a key index for measuring the performance of satellite platforms [1]. A Hall thruster is an electric propulsion device that uses magnetic confinement to ionize gas and an electrostatic field to accelerate ions. It has the advantages of a simple structure, long service life, and high reliability compared to other types of electric propulsion devices [[2], [3], [4]]. Therefore, it has received significant attention from the scientific community. At present, medium- and low-power Hall thrusters have been widely studied and applied in altitude control, position keeping, and other missions that require low thrust. In the future, Hall thrusters will be used in deep space exploration and long-distance cargo transportation missions because of their good economy and high thrust density, which promotes the development of high-power and high-specific-impulse Hall thrusters [5,6].
+A conventional Hall thruster has an annular discharge channel formed by an insulated wall made of a boron nitride (BN) ceramic; the anode is located at the bottom of the channel. The insulated wall covers the high-potential anode for electrical isolation and protects the magnetic circuit from high-energy plasma. The interaction between the insulated wall and electrons produces secondary electrons, which not only “cool” the bulk electrons but also participate in cross-field transport. Therefore, the secondary electron emission (SEE) of the wall materials has a significant impact on propellant ionization and acceleration processes. Theoretical and experimental studies have shown that BN ceramics can optimize the performance of Hall thrusters, owing to their suitable SEE characteristics [7]. However, BN ceramics have certain disadvantages. First, their mechanical properties are poor; because the structure of the channel wall is a U-shaped cantilever, the BN ceramic must be sufficiently thick to ensure sufficient structural strength to overcome the strong vibration generated in the satellite launch stage. This would make a channel wall, used in high-power and high-specific-impulse Hall thrusters, cumbersome. Additionally, the radial space occupied by the wall poses challenges in designing an efficient magnetic circuit, and the coil power loss is considerably increased. Second, the wall surface was coated with conducting film during the ground test. A nonuniform coating causes a difference in the local wall conductivity. Consequently, high voltage micro-discharge occurs near the anode, where the local conductivity is large, which can cause the thruster to shut down in certain situations and delay the test process. Third, limited by the molding equipment and processing, it is difficult to fabricate an entire BN channel wall of a large size, which is required for high-power and high-specific-impulse Hall thrusters. These shortcomings of BN ceramics impede their future application in Hall thrusters. Therefore, new wall materials or design schemes are required to solve these problems and maintain the competitive advantage of Hall thrusters in space-propulsion missions.
+Research on replacing the wall materials of Hall thrusters was conducted as early as the 1990s, and comprehensive results were obtained around the year 2000. Tahara et al. [7] demonstrated that the wall material has a significant influence on the distribution of the ionization region under different magnetic field intensities and discharge voltages. The ionization region is closer to the acceleration region because of the high SEE coefficient of the BN ceramic, and the generated ions can be effectively accelerated to obtain the highest operation efficiency. Gascon et al. [8] conducted a comparative study on the discharge characteristics of an SPT-100 Hall thruster by replacing the BN ceramic with graphite, Al2O3, and SiC. They found that the discharge current (mainly electronic current) and oscillation increased significantly after the replacement, and the maximum difference in efficiency was as high as 20% relative to that of the BN ceramic. Additionally, studies on the partial replacement of low-emission electrode materials have been conducted. The simulation results of Qing et al. [9,10] showed that when a low-emission graphite electrode is placed near the ionization region, and a positive bias voltage higher than the discharge voltage is applied, closed potential contour pockets (PCPs) can be created inside the channel. These PCPs can effectively reduce plume divergence. However, adding a high-voltage electrode incurs additional power consumption, resulting in an increase in the electronic current, which is not conducive to improving thruster efficiency. The substantial decline in performance has led to a temporary suspension of research on the replacement of wall materials and segmented electrodes.
+Relevant research has restarted since long-lifetime technologies such as “magnetic shielding” and “aft-loading magnetic field” were proposed around 2010. The main feature is that the acceleration and partial ionization regions are pushed outside the thruster channel; consequently, the electron temperature inside the channel significantly decreases. As secondary electrons are only generated when the incident electron temperature exceeds a certain threshold, the influence of the SEE characteristics of the wall materials on the discharge, is reduced. Therefore, research on replacing the wall materials has become popular. Grimaud et al. [11] confirmed that the decrease in the electron temperature inside the channel, caused by the change in magnetic field characteristics, is the main reason for the decrease in the dependence of the performance on the properties of wall materials in magnetically shielded Hall thrusters. Goebel et al. [12] compared the discharge performance of graphite and BN walls on a 6 kW H6MS Hall thruster with a magnetically shielded design. The experimental results showed that the efficiency and thrust decreased slightly, by 1%, with a graphite wall. On a 200 W Hall thruster with an aft-loaded magnetic field, Ding et al. [13,14] found that the performance of a titanium wall is slightly lower than that of a BN ceramic wall, and the maximum difference in efficiency is approximately 3%.
+Magnetic shielding and aft-loading technologies can significantly decrease the interaction between the plasma and the wall, greatly reducing the sensitivity of the discharge process to the SEE characteristics of the wall materials. However, the performance of all the other wall materials did not exceed that of the BN ceramic. This indicates that the BN ceramic is still the best wall material for the strong discharge area of Hall thrusters, from the perspective of performance benefits.
+In most of the aforementioned studies, the channel wall adopted a single material. However, the requirement for the SEE characteristics of the wall material varies in different discharge regions. The SEE from the wall is not necessary to cool the bulk electrons upstream of the channel, where the electron temperature is relatively low. Nevertheless, the high electron temperature area downstream of the channel requires a high SEE to control the electron temperature and improve ionization. A single material cannot meet all the SEE requirements along the entire discharge channel. Research on the segmented electrode wall showed that it regulates the ion beam current, but additional power is lost on the segmented electrode [9,10]. Thus, the overall efficiency may be reduced. The thruster structure also becomes more complex owing to the additional power supply connection and necessary electrode insulation. Moreover, it becomes more difficult for thrusters with segmented electrodes to control the enhanced electron cross-field transport at high discharge voltages, and thus is not favorable for the realization of a high specific impulse.
+In this study, to overcome the disadvantages of the BN ceramic as the only material of the channel wall, and satisfy the different SEE requirements at different discharge regions, a hybrid wall structure is proposed. The BN ceramic wall was retained downstream of the channel, where the discharge was strong and the electron temperature was high, whereas a metallic wall was used upstream of the channel. As for the magnetic field, it was verified in our previous work that the aft-loaded magnetic field is suitable and efficient for high-voltage operations [15]. The application of an aft-loaded magnetic field also results in a long thruster lifetime and low sensitivity to the wall material. Therefore, to promote the development of high-power and high-specific-impulse Hall thrusters, a hybrid-wall Hall thruster with an aft-loaded magnetic field is adopted, and the influence of the length of the metallic wall on the high-voltage discharge characteristics is studied numerically and experimentally.
+The remainder of this paper is organized as follows. In Section 2, the influence of a hybrid wall on the discharge performance of a Hall thruster, with an aft-loaded magnetic field, is simulated and a qualitative understanding is established. Section 3 presents the measured high-voltage discharge characteristics of the hybrid-wall Hall thruster. In Section 4, the physics involved in the numerical and experimental phenomena are analyzed and discussed. Finally, the conclusions are presented in Section 5.
+Organizational access
+Get full-text access by signing in with your organisation
+Access through your organization
+Other access options
+Purchase PDF
+Need help with access?
+Section snippets
+Numerical model
+To evaluate the effect of the metal-ceramic hybrid wall on the discharge of the Hall thruster, a particle-in-cell (PIC) simulation was performed. The PIC method has demonstrated its capability to simulate the discharge behavior of Hall thrusters before; the PIC numerical program used in this study was independently developed by our research team [16]. Using this program, many research achievements have been made in the basic research of various configurations of Hall thrusters and cusped field
+Experimental verification
+The above simulation indicates that the application of a metal-ceramic hybrid wall with an appropriate length ratio can effectively improve the ionization and, consequently, the discharge performance. Accordingly, experiments were designed and performed to verify the simulated effects.
+Analysis and discussion
+Propellant ionization is the most important physical process in Hall thrusters. Section 2.3 indicates that the length of the metallic wall significantly affects the ionization efficiency and anode efficiency of the Hall thruster. The ionization reaction rate inside the channel is Sion = β(Te)nena, which is positively correlated with electron temperature Te, electron density ne, and atomic density na. Because the neutral gas mass flow rate and anode temperature in various cases were the same in
+Conclusion
+In this study, a metal-ceramic hybrid wall structure was employed in a Hall thruster, and its effect at a high discharge voltage was investigated numerically and experimentally. The results indicate that the hybrid wall affects the discharge process of the Hall thruster through the near-wall sheath. Within a characterized length of the metallic wall of less than 45%, the electron density in the middle region of the channel and the ionization efficiency were optimized. However, an excessively
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgement
+This work is funded by National Natural Science Foundation of China (Nos. 52076054 and 51736003), and Advanced Space Propulsion Laboratory of Beijing Institute of Control Engineering and Beijing Engineering Research Center of Efficient and Green Aerospace Propulsion Technology (No. LabASP2019-04).
+References (33)
+F. Cichocki et al.
+Three-dimensional neutralizer effects on a Hall-effect thruster near plume
+Acta Astronaut.
+(2021)
+C.A. Paissoni et al.
+Deep space transportation enhance by 20 kW-Class Hall thrusters
+Acta Astronaut.
+(2020)
+G.J. Xia et al.
+Performance optimization of a krypton Hall thruster with a rotating propellant supply
+Acta Astronaut.
+(2020)
+H. Tahara et al.
+Effects of channel wall material on thrust performance and plasma characteristics of Hall-effect thrusters
+Vacuum
+(2006)
+Y.J. Ding et al.
+A 200-W permanent magnet Hall thruster discharge with graphite channel wall
+Phys. Lett.
+(2018)
+G.J. Xia et al.
+Performance improvement of Hall thrusters with high discharge voltage
+Vacuum
+(2020)
+V. Vahedi et al.
+A Monte Carlo collision model for the particle-in-cell method: applications to argon and oxygen discharges
+Comput. Phys. Commun.
+(1995)
+I. Levchenko et al.
+Recent progress and perspectives of space electric propulsion systems based on smart nanomaterials
+Nat. Commun.
+(2018)
+S.J. Hall et al.
+Performance and high-speed characterization of a 100-kW nested Hall thruster
+J. Propul. Power
+(2022)
+J.D. Frieman et al.
+Extended Performance Characterization of the NASA HERMes Hall Thruster
+(2022)
+
+View more references
+View full text
+Recommended articles
+Based on reading popularity
+Research article
+Experimental study of nitrogen conversion during char combustion under a pressurized O2/H2O atmosphere
+Chenxi Bai, …, Jiangquan Wu
+Fuel • Volume 311 • 2022 • Article 122529
+Research article
+The ‘Other’ side of recruitment: Methods of assistance in social interaction
+Kobin H. Kendrick
+Journal of Pragmatics • Volume 178 • 2021 • Pages 68-82
+Research article
+Aerodynamic performance enhancement of a variable-geometry dual-mode combustor designed by the method of characteristics
+Youyin Wang, …, Wen Bao
+Aerospace Science and Technology • Volume 108 • 2021 • Article 106353
+Research article
+Analysis of the maximum flight Mach number of hydrocarbon-fueled scramjet engines under the flight cruising constraint and the combustor cooling requirement
+Youyin Wang, …, Wen Bao
+Aerospace Science and Technology • Volume 98 • 2020 • Article 105594
+Research article
+Mechanism and effect assessment of sub-atmospheric pressure and co-flow air to suppress the flicker of buoyancy-driven methane laminar diffusion flame
+Xiao Yang, …, Yukun Qin
+Fuel Processing Technology • Volume 242 • 2023 • Article 107649
+Research article
+Effect of relative position between cathode and magnetic separatrix on the discharge characteristic of Hall thrusters
+Yongjie Ding, …, Daren Yu
+Vacuum • Volume 154 • 2018 • Pages 167-173
+Cited by (23)
+Short communication
+Study of the effect of neutral flow distribution on the performance of Hall micro thruster
+Lu S., …, Long J.
+Vacuum • Volume 233 • 2025 • Article 113933
+
+Show abstract
+Research article
+Study on a hybrid-produced magnetic-field Hall thruster
+Yu D., …, Li H.
+Acta Astronautica • Volume 220 • 2024
+Citation Excerpt:
+To achieve a long lifetime, the magnetic field was designed to be aft loaded. In an aft-loaded magnetic field, the strong-field region is shifted from inside the channel to the outside, thereby reducing the bombardment of high-energy ions on the wall [23]. The magnetic field lines of the permanent magnets are directional and exhibit natural aft loading properties.
+
+
+Show abstract
+Research article
+Optimizing a Hall thruster with aft-loaded magnetic field by aft-loading design of gas flow
+Liu X., …, Mao W.
+Vacuum • Volume 222 • 2024 • Article 112987
+Citation Excerpt:
+However, in the typical topological structure of a Hall thruster, a specific structure for injecting neutral gas downstream of the channel from the walls made of BN ceramics cannot be realized. Previously, a hybrid-wall Hall thruster with BN ceramic walls near the channel outlet and metallic walls upstream of the ceramic walls was reported, enabling a neutral gas injection channel in a section of the metallic walls [27]. Therefore, in this study, an aft-loading design for the neutral gas flow field was developed, and experimental verification was performed based on a hybrid-wall Hall thruster with an aft-loaded magnetic field.
+
+
+Show abstract
+Research article
+Experimental study on the discharge of a xenon-assisted krypton Hall thruster
+Liu X., …, Mao W.
+Acta Astronautica • Volume 216 • 2024
+
+Show abstract
+Research article
+Effect of magnetic field strength on the performance characterization of a low-power wall-less Hall thruster
+Ren L., …, DIng W.
+Vacuum • Volume 220 • 2024 • Article 112820
+Citation Excerpt:
+From the above results, it can be concluded that when Br is too high (Br > 121 mT), the reduction in propellant and voltage utilization efficiency is the primary reason for the degradation in thruster performance. In previous studies, it was found that the position and length of the ionization region are affected by the magnetic field strength [22,38]. Therefore, further research is needed to clarify the effect of magnetic field strength on the ionization process of the WLHT.
+
+
+Show abstract
+Research article
+Improving the specific impulse of Hall thrusters using a wide channel design
+Liu X., …, Mao W.
+Journal of Physics D: Applied Physics • Volume 57 • 2024 • Article 255202
+
+Show abstract
+Magnetic spacecraft attitude control: a survey and some new results
+Author links open overlay panel
+Enrico Silani
+, Marco Lovera
+
+Show more
+
+Add to Mendeley
+
+Share
+
+Cite
+https://doi.org/10.1016/j.conengprac.2003.12.017
+Get rights and content
+
+View accessibility information
+Abstract
+The problem of attitude stabilization of a small satellite using magnetic actuators is considered, a review of the existing approaches based on linear and nonlinear control theory (with particular emphasis on periodic control) is proposed and a solution to the problem in terms of model-based predictive control is presented and analyzed. Simulation results are also given, which show the feasibility of the predictive approach.
+Introduction
+Attitude control systems (ACS) play a fundamental role in the operation of spacecraft as they constitutes a mandatory feature both for the survival of a satellite and for the satisfactory achievement of mission goals. While a number of possible approaches to the control of attitude dynamics has been developed through the years, a particularly effective and reliable one is constituted by the use of electromagnetic actuators, which turn out to be specially suitable in practice for low Earth orbit (LEO) satellites. Such actuators operate on the basis of the interaction between a set of three orthogonal, current-driven magnetic coils and the magnetic field of the Earth (Wertz, 1978; Sidi, 1997) and therefore provide a very simple solution to the problem of generating torques on board a satellite. The major drawback of this control technique is that the torques which can be applied to the spacecraft for attitude control purposes are constrained to lie in the plane orthogonal to the magnetic field vector. In particular, three axis magnetic stabilization is only possible if the considered orbit “sees” a variation of the magnetic field which is sufficient to guarantee the stabilizability of the spacecraft (see Bhat & Dham, 2003).
+The use of magnetic coils for control purposes has been the subject of extensive study since the early years of satellite missions (see White, Shigemoto, & Bourquin, 1961), both for attitude control and for momentum management on spacecraft controlled with reaction wheels (see Camillo & Markley, 1980) for an overview of magnetic momentum dumping). Until recent years, however, only approximate solutions to the problem of dealing with such time-varying actuators were available (see, e.g., Stickler & Alfriend, 1976; Arduini & Baiocco, 1997). In particular, while periodic control has been already proved successful in various applications (see, e.g., Arcara, Bittanti, & Lovera, 2000), the feasibility of periodic techniques for the control of small satellites using magnetic actuators has become only recently a topic of active research (see, e.g., the recent works (Pittelkau, 1993; De Marchi, Rocco, Morea, & Lovera, 1999; Wisniewski and Blanke, 1999; Wisniewski and Markley, 1999, Wang and Shtessel, 1999; Lovera, De Marchi, & Bittanti, 2002).
+In the recent literature, both the linear and the nonlinear attitude control problems have been investigated; the former has been studied mostly in an LQ perspective, while the latter has been investigated using Lyapunov methods and exploiting periodicity of the Earth magnetic field in order to apply Krasovski–La Salle Theorem for the stability analysis. No actual periodic nonlinear controllers have been developed so far, to the best knowledge of the authors. In the light of the above considerations, the aim of this paper is twofold. First of all to present a detailed survey of the (numerous) approaches to the analysis and design of magnetic attitude control systems which have been proposed in the last 10–15 years. In addition, a novel approach to the magnetic attitude control problem, based on a predictive approach is proposed in this paper. The novel idea is to consider the magnetically controlled spacecraft as a time invariant system and to incorporate the time-varying actuators in the problem formulation via an appropriate set of constraints. It is possible to show that the state feedback problem can be given a simple closed-form solution, and that actuator saturation constraints can also be dealt with in the same framework. The proposed control design methodology has been tested in a simulation study for a spacecraft of the MITA class (see Della Torre, Lupi, Sabatini, & Coppola, 1999) and the (satisfactory) results obtained so far have been also reported.
+The paper is organized as follows: in Section 2, a description of the dynamics of a spacecraft will be presented, and a linearized dynamic model derived; 3 Linear design methods, 4 Nonlinear design methods offer an overview of the relevant results in linear and nonlinear control which are available in the literature for this problem; Section 5 presents the (novel) predictive approach to the magnetic attitude control problems, while in Section 6 the results obtained with the predictive magnetic controller in a simulation study are shown.
+Access through your organization
+Check access to the full text by signing in through your organization.
+
+Access through your organization
+Section snippets
+Attitude dynamics
+The attitude dynamics of a rigid spacecraft can be expressed by the well-known Euler's equations, as follows (Wertz, 1978):
+I
+ω
+̇
+=−
+ω
+×
+I
+ω
++
+T
+mag
++
+T
+d
+,
+where 
+ω
+∈
+R
+3
+ is the vector of spacecraft angular rate, expressed in body frame, 
+I
+∈
+R
+3×3
+ is the inertia matrix, 
+T
+mag
+∈
+R
+3
+ is the vector of magnetic control torques and 
+T
+d
+∈
+R
+3
+ the vector of external disturbance torques.
+The most common parameterization for spacecraft attitude is given by the four Euler parameters, which lead to the following representation for the
+Linear design methods
+The main issues in the design of a linear attitude controller based on magnetic actuators are the following:
+(1)
+As shown in the previous section, the local dynamics of a magnetically controlled spacecraft is (approximately) time periodic, therefore the stabilization problem cannot be faced by means of conventional LTI design tools.
+(2)
+The spacecraft is subject to external disturbances, which can be decomposed in a secular (i.e., constant) and a cyclic (i.e., periodic, with period equal to the orbit
+Nonlinear design methods
+Nonlinear control plays a major role in the attitude stabilization problem, as every spacecraft, in the initial part of its life, will have to deal with an “attitude acquisition” phase, in which usually large rotations and high angular rates must be dealt with. Perhaps the most popular control law for spacecraft detumbling and initial acquisition using magnetic actuators is the so-called “b-dot” algorithm, which was originally proposed in Stickler and Alfriend (1976). The “b-dot” control law is 
+Magnetic predictive attitude control
+The aim of this section is to propose a novel approach to the magnetic attitude control problem based on the application of predictive control ideas. Precisely, the magnetically controlled spacecraft is modelled as a time-invariant system with three independent control inputs, and the presence of magnetic actuators is taken into account via a suitable set of constraints.
+A simulation case study
+In this section, some simulation results obtained by the application of the above-described model-based predictive control techniques to the dynamic of the MITA spacecraft are presented.
+Concluding remarks
+The attitude control problem for a spacecraft using magnetic actuators has been considered and analyzed in the framework of periodic control theory. A set of solutions in terms of classical LQ and H∞ periodic control and nonlinear control have been discussed and extensions thereof, aiming at achieving robustness of the control law with respect to uncertain parameters have been proposed.
+Acknowledgements
+Paper supported by the Italian National Research Project “New Techniques of Identification and Adaptive Control for Industrial Systems”.
+References (48)
+V.A. Bushenkov et al.
+Attitude stabilization of a satellite by magnetic coils
+Acta Astronautica
+(2002)
+M. Lovera
+Optimal magnetic momentum control for inertially pointing spacecraft
+European Journal of Control
+(2001)
+D.Q. Mayne et al.
+Constrained model predictive controlStability and optimality
+Automatica
+(2000)
+A. Varga et al.
+Gradient-based approach to solve optimal periodic output feedback control problems
+Automatica
+(1998)
+R. Wisniewski et al.
+Fully magnetic attitude control for spacecraft subject to gravity gradient
+Automatica
+(1999)
+Annoni, G., Marchi, E. D., Diani, F., Lovera, M., & Morea, G. (1999). Standardising tools for attitude control system...
+P. Arcara et al.
+Active control of vibrations in helicopters by periodic optimal control
+IEEE Transactions on Control Systems Technology
+(2000)
+C. Arduini et al.
+Active magnetic damping attitude control for gravity gradient stabilized spacecraft
+Journal of Guidance and Control
+(1997)
+Astolfi, A., & Lovera, M. (2002). Global spacecraft attitude control using magnetic actuators. In 2002 American Control...
+Bhat, S., & Dham, A. (2003). Controllability of spacecraft attitude under magnetic actuation. In IEEE conference on...
+
+View more references
+Cited by (322)
+Model predictive control-status and challenges
+2013, Zidonghua Xuebao/Acta Automatica Sinica
+
+Show abstract
+A study of reaction wheel configurations for a 3-axis satellite attitude control
+2010, Advances in Space Research
+
+Show abstract
+An overview of prescribed performance control and its application to spacecraft attitude system
+2021, Proceedings of the Institution of Mechanical Engineers. Part I: Journal of Systems and Control Engineering
+Fundamentals of spacecraft attitude determination and control
+2014, Fundamentals of Spacecraft Attitude Determination and Control
+Design of attitude control systems for CubeSat-class nanosatellite
+2013, Journal of Control Science and Engineering
+Controllability of nonlinear time-varying systems: Applications to spacecraft attitude control using magnetic actuation
+2005, IEEE Transactions on Automatic Control
