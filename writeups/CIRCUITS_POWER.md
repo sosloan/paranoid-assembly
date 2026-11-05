@@ -107,3 +107,9 @@ Every major paragraph carries a systems invariant: constrain defects early, pres
 `circuits.txt` is power because it documents a strategic decision at the exact leverage point where software becomes hardware reality. The paranoia is explicit: enforce structure early, choose a language that resists silent failure, and build generators that can survive scale and platform turnover.
 
 In Grove's terms, this is how infrastructure survives: not by optimism, but by disciplined constraints before tape-out.
+
+---
+
+## COMPANION
+
+Interactive circuits and graphs for this writeup live in **[graph-examples.html](graph-examples.html)** — logic gates, a live half-adder, the GDS compile DAG, the generator library graph, a force-directed module netlist, and a Manhattan routing channel.
